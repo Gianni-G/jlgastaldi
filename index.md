@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[Bio](./another-page.html) | [Publications](./publications.html) | [Projects](./publications.html) | [Outreach](./publications.html)
+[Bio](./bio.html) | [Publications](./publications.html) | [Projects](./publications.html) | [Outreach](./publications.html)
 
 There should be whitespace between paragraphs.
 
