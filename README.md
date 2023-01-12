@@ -1,2 +1,0 @@
-# jlgastaldi
-Professional Webpage
