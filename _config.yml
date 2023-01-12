@@ -3,4 +3,4 @@ logo: /assets/img/G.jpeg
 description: Juan Luis Gastaldi is a Philosopher of Sciences
 show_downloads: false
 google_analytics:
-theme: architect
+theme: jekyll-theme-minimal
