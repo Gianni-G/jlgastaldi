@@ -1,6 +1,5 @@
-title: Juan Luis Gastaldi
-logo: /assets/img/G.jpeg
-description: Juan Luis Gastaldi is a Philosopher of Sciences
-show_downloads: false
+title: Cayman theme
+description: Cayman is a clean, responsive theme for GitHub Pages.
+show_downloads: true
 google_analytics:
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
