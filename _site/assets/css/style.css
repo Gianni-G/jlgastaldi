@@ -1000,4 +1000,67 @@ a:hover {
   color: #819198;
 }
 
+.test {
+  color: green;
+  background-image: url("../img/heatmap.jpg");
+  height: 200px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  position: relative;
+}
+
+.page-header {
+  color: #fff;
+  text-align: center;
+  background-color: white;
+  background-image: url("../img/heatmap.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  position: relative;
+}
+
+@media screen and (min-width: 64em) {
+  .page-header {
+    padding: 5rem 6rem;
+  }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .page-header {
+    padding: 3rem 4rem;
+  }
+}
+@media screen and (max-width: 42em) {
+  .page-header {
+    padding: 2rem 1rem;
+  }
+}
+.buttoms {
+  position: sticky;
+  top: 0em;
+  max-height: 5em;
+  padding: 1rem 1rem;
+  background-image: url("../img/heatmap.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 64em) {
+  .buttoms {
+    padding: 1rem 1rem;
+  }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .buttoms {
+    padding: 3rem 4rem;
+  }
+}
+@media screen and (max-width: 42em) {
+  .buttoms {
+    padding: 2rem 1rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
