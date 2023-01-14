@@ -10,11 +10,11 @@ plugins:
 
 github:
   home: ./
-  news: ./news.html
-  publications: ./publications.html
-  projects: ./projects.html
-  teaching: ./teaching.html
-  contact: ./contact.html
+  news: ./p.news.html
+  publications: ./p.publications.html
+  projects: ./p.projects.html
+  teaching: ./p.teaching.html
+  contact: ./p.contact.html
 
 img:
   photo: ./assets/img/G.jpg

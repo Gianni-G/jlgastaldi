@@ -1,8 +1,8 @@
-<!-- ---
+---
 layout: default
-title: Another page
-description: This is just another page
---- -->
+# title: Another page
+# description: This is just another page
+---
 
 ## Teaching
 
