@@ -1,123 +1,23 @@
----
+<!-- ---
 layout: default
----
+title: Another page
+description: This is just another page
+--- -->
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# About
 
-[Link to another page](./another-page.html).
+I am a philosopher and historian of science, specialized in philosophy and history of formal knowledge (mathematics, logic and computer science), from the beginning of the 19th century to our days
 
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+After graduating with a degree in political sciences (UNR, Argentina), I continued my studies in philosophy and mathematics at the École Normale Supérieure of Paris, as well as at the universities of Paris-​1 and Paris-​6. I defended a PhD with a dissertation on the mathematization of logic in the 19th century. At present, I am a Marie Skłodowska-​Curie Fellow at the ETH Chair of History and Philosophy of Mathematics. I am also an external researcher at the SPHERE laboratory of the Université de Paris. From 2012 to 2019, I was a senior lecturer in philosophy at the Fine Arts Academy of Montpellier (MO.CO.ESBA) and during 2012-​2013, I was a Fellow at the Akademie Schloss Solitude (Stuttgart).
 
 
-### Definition lists can be used with HTML syntax.
+My research focuses on the formalization of meaning as a central problem of modern and contemporary philosophy, determined by a complex articulation between logic, mathematics and semiology. Developing the principles of historical epistemology, I propose an understanding of the emergence and evolution of formal knowledge, from early 19th century mathematized logic to contemporary computer science, guided by the problematic constitution of a theory of formal languages at the intersection of natural and social sciences.
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+I am is currently leading an H2020 project, in collaboration with theoretical computer scientists and linguists, aimed at developing a semiology of mathematics by providing a conceptual and technical framework for the automatic analysis of mathematical corpora, based on a generalization of new techniques of grammatical inference for natural language.
 
-```
-The final element.
-```
+# News
+
+- Lecture 2
+- Lecture 1
+[back](./)
