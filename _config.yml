@@ -9,6 +9,9 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 github:
-  publications: https://github.com/Gianni-G/jlgastaldi/blob/main/publications.md
-  contact: ./publications.md
-  news: ./publications.html
+  about: ./about.html
+  news: ./news.html
+  publications: ./publications.html
+  projects: ./projects.html
+  teaching: ./teaching.html
+  contact: ./contact.md
