@@ -18,12 +18,13 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      
-      <a href="{{ https://github.com/Gianni-G/jlgastaldi/blob/main/another-page.md }}" class="btn">News</a>
-      <a href="{{ ../another-page.html }}" class="btn">Publications</a>
-      <a href="{{ site.github.publications }}" class="btn">Projects</a>
-      <a href="{{ site.github.news }}" class="btn">Projects</a>
-      <a href="{{ site.github.contact }}" class="btn">Projects</a>
+
+      <a href="{{ site.github.about }}" class="btn">About</a>
+      <a href="{{ site.github.news }}" class="btn">News</a>
+      <a href="{{ site.github.publications }}" class="btn">Publications</a>
+      <a href="{{ site.github.projects }}" class="btn">Projects</a>
+      <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
+      <a href="{{ site.github.contact }}" class="btn">Contact</a>
 
     </header>
 
