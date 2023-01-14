@@ -14,4 +14,7 @@ github:
   publications: ./publications.html
   projects: ./projects.html
   teaching: ./teaching.html
-  contact: ./contact.md
+  contact: ./contact.html
+
+img:
+  photo: ./assets/img/G.jpg
