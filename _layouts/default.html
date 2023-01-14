@@ -20,14 +20,21 @@
       <h1 class="project-name"><a href="{{ site.github.home }}" style="color:white;text-decoration: none;"> {{ page.title | default: site.title | default: site.github.repository_name }}</a></h1>
       <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
 
+      <!-- <a href="{{ site.github.news }}" class="btn">News</a>
+      <a href="{{ site.github.publications }}" class="btn">Publications</a>
+      <a href="{{ site.github.projects }}" class="btn">Projects</a>
+      <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
+      <a href="{{ site.github.contact }}" class="btn">Contact</a> -->
+
+    </header>
+
+    <div>
       <a href="{{ site.github.news }}" class="btn">News</a>
       <a href="{{ site.github.publications }}" class="btn">Publications</a>
       <a href="{{ site.github.projects }}" class="btn">Projects</a>
       <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
       <a href="{{ site.github.contact }}" class="btn">Contact</a>
-
-    </header>
-
+    </div>
     <main id="content" class="main-content" role="main">
       {{ content }}
 
