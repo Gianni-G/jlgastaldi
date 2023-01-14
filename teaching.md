@@ -4,8 +4,8 @@ title: Another page
 description: This is just another page
 --- -->
 
-## Publications
+## Teaching
 
-Why Can Computers Understand Natural Language
+[Philosophy of Language and Computation](https://rycolab.io/classes/phil-f22/)
 
 [back](./)

@@ -4,8 +4,8 @@ title: Another page
 description: This is just another page
 --- -->
 
-## Publications
+## About
 
-Why Can Computers Understand Natural Language
+I am a philosopher of science working at ETH Zürich.
 
 [back](./)
