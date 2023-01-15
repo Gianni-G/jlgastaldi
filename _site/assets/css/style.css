@@ -1066,9 +1066,9 @@ a:hover {
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
-  color: rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.8);
+  color: white;
+  background-color: rgb(211, 219, 238);
+  border-color: white;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
@@ -1076,10 +1076,10 @@ a:hover {
 }
 
 .btn:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(84, 124, 217);
+  border-color: white;
 }
 
 .btn + .btn {

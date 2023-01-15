@@ -75,9 +75,10 @@
 .btn {
     display: inline-block;
     margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.8);
+    color:white;
+    // background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(211, 219, 238, 1);
+    border-color: white;
     border-style: solid;
     border-width: 1px;
     border-radius: 0.3rem;
@@ -85,11 +86,13 @@
     }
 
 .btn:hover {
-color: rgba(255, 255, 255, 0.8);
+color: white;
 text-decoration: none;
-background-color: rgba(255, 255, 255, .3);
-border-color: rgba(255, 255, 255, .2);
+// background-color: rgba(255, 255, 255, .3);
+background-color: rgb(84, 124, 217);
+border-color: white;
 }
+
 .btn + .btn {
 margin-left: 1rem;
 }
