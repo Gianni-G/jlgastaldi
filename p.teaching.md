@@ -4,7 +4,7 @@ title: Juan Luis Gastaldi
 # description: This is just another page
 ---
 
-## Teaching
+# Teaching
 
 [Philosophy of Language and Computation](https://rycolab.io/classes/phil-f22/)
 

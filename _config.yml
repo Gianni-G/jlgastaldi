@@ -10,7 +10,8 @@ plugins:
 
 github:
   home: ./
-  news: ./p.news.html
+  about: ./p.about.html
+  cv: ./p.cv.html
   publications: ./p.publications.html
   projects: ./p.projects.html
   teaching: ./p.teaching.html
