@@ -75,12 +75,12 @@ img {
         padding: .5rem 1rem;
     }
     }
-    @media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 42em) and (max-width: 64em) {
     .buttoms {
         padding: 1rem 4rem;
     }
     }
-    @media screen and (max-width: 42em) {
+@media screen and (max-width: 42em) {
     .buttoms {
         padding: .5rem 1rem;
     }
@@ -100,39 +100,41 @@ img {
     }
 
 .btn:hover {
-color: white;
-text-decoration: none;
-// background-color: rgba(255, 255, 255, .3);
-background-color: #8db0fe;
-border-color: white;
-}
+    color: white;
+    text-decoration: none;
+    background-color: #8db0fe;
+    border-color: white;
+    }
 
 .btn + .btn {
-margin-left: 1rem;
-}
+    margin-left: 1rem;
+    }
+
 @media screen and (min-width: 64em) {
-.btn {
-    padding: 0.75rem 1rem;
-}
-}
+    .btn {
+        padding: 0.75rem 1rem;
+    }
+    }
+
 @media screen and (min-width: 42em) and (max-width: 64em) {
-.btn {
-    padding: 0.6rem 0.9rem;
-    font-size: 0.9rem;
-}
-}
+    .btn {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.9rem;
+    }
+    }
+
 @media screen and (max-width: 42em) {
-.btn {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 0.9rem;
-}
-.btn + .btn {
-    margin-top: 1rem;
-    margin-left: 0;
-}
-}
+    .btn {
+        // display: block;
+        width: 18%;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    .btn + .btn {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+    }
 
 .site-footer {
     text-align: right;
