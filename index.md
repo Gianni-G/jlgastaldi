@@ -4,6 +4,8 @@ title: Juan Luis Gastaldi
 # description: This is just another page
 ---
 
+This website is under Construction !
+
 # About
 
 I am a philosopher and historian of science, specialized in philosophy and history of formal knowledge (mathematics, logic and computer science), from the beginning of the 19th century to our days
@@ -20,5 +22,6 @@ I am currently leading an H2020 project, in collaboration with theoretical compu
 
 - Lecture 2
 - Lecture 1
-- 
+  
+
 [back](./)

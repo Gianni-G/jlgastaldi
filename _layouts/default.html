@@ -16,12 +16,26 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <div style="height:230px">
-        <img src="{{ site.img.photo }}" alt="Juan Luis Gastaldi" style="float:left;width:200px;height:200px;">
-        <h1 class="project-name"><a href="{{ site.github.home }}" style="color:white;text-decoration: none;"> {{ page.title | default: site.title | default: site.github.repository_name }}</a></h1>
+        <div class="container">
+
+          <div class="image">
+            <a href="{{ site.github.home }}">
+              <img src="{{ site.img.photo }}" alt="Juan Luis Gastaldi">
+            </a>
+          </div>
+          
+          <div class="jlg">
+            <h1>
+              <a href="{{ site.github.home }}" style="color:white;text-decoration:none;">
+                Juan Luis Gastaldi
+              </a>
+            </h1>
+          </div>
+          
       </div>
-      <div>
-        <a href="{{ site.github.news }}" class="btn">News</a>
+
+      <div class="buttoms">
+        <a href="{{ site.github.home }}" class="btn">About</a>
         <a href="{{ site.github.publications }}" class="btn">Publications</a>
         <a href="{{ site.github.projects }}" class="btn">Projects</a>
         <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
@@ -29,18 +43,6 @@
       </div>
         
     </header>
-
-
-    <!-- <div id="header_scroll" style="position:fixed;top:250px" class="page-header" role="banner"> -->
-      <!-- <div id="header_scroll" class="page-header" style="position:sticky;top: 0em;max-height: 5em;padding: 1rem 1rem; background-image: linear-gradient(120deg, #531212, #a83e3e)"> -->
-    <!-- <div id="header_scroll" class="buttoms">
-      <a href="{{ site.github.news }}" class="btn">News</a>
-      <a href="{{ site.github.publications }}" class="btn">Publications</a>
-      <a href="{{ site.github.projects }}" class="btn">Projects</a>
-      <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
-      <a href="{{ site.github.contact }}" class="btn">Contact</a>
-    </div> -->
-
 
     <main id="content" class="main-content" role="main">
       {{ content }}
