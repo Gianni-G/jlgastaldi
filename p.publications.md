@@ -70,4 +70,18 @@ https://github.com/Gianni-G/semiolog. Software package for the analysis of mathe
 
 - J. L. Gastaldi and B. Serra. “Swipe, ou l’écriture tout court.” In: Formules 22 (2020).
 
+- J. L. Gastaldi. “La Ville Lumière”. In: Atlas Solitude. Ed. by S. Editions. Solitude Editions, 2015. Chap. Akademie Schloss Solitude, pp. 199–203.
+
+- J. L. Gastaldi. Superpositions. Texte pour l’exposition de Michaël Sellam: “des choses, de l’espace”, Galerie Vasistas. 2014.
+
+- J.L.Gastaldi.“BéréniceSerra:AD64”.In:Infra7(2013).
+
+- J. L. Gastaldi. “Ouverture”. In: Quinze ans d’art à HEC. Espace d’art contemporain HEC, 2013, pp. 102–105.
+
+- J.L.GastaldiandD.Alvaro.“Spanishtranslationof:Jean-LucNancy,“Lesdifférencesparallèles (Deleuze & Derrida)””. In: Por amor a Derrida. Ed. by M. Cragnolini. La Cebra, 2008, pp. 249–262.
+
+- J. L. Gastaldi. “De l’ “intéressant” dans l’art”. In: L’exposition des idées. E.N.S./Villa Arson, 2007.
+
+- J. L. Gastaldi and S. Lorenzi. “Rencontre”. In: L’exposition des idées. E.N.S./Villa Arson, 2007.
+
 [back](./)
