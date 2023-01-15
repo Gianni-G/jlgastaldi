@@ -1,6 +1,6 @@
 ---
 layout: default
-# title: Another page
+title: Juan Luis Gastaldi
 # description: This is just another page
 ---
 
