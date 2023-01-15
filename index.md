@@ -14,10 +14,11 @@ After graduating with a degree in political sciences (UNR, Argentina), I continu
 My research focuses on the formalization of meaning as a central problem of modern and contemporary philosophy, determined by a complex articulation between logic, mathematics and semiology. Developing the principles of historical epistemology, I propose an understanding of the emergence and evolution of formal knowledge, from early 19th century mathematized logic to contemporary computer science, guided by the problematic constitution of a theory of formal languages at the intersection of natural and social sciences.
 
 
-I am is currently leading an H2020 project, in collaboration with theoretical computer scientists and linguists, aimed at developing a semiology of mathematics by providing a conceptual and technical framework for the automatic analysis of mathematical corpora, based on a generalization of new techniques of grammatical inference for natural language.
+I am currently leading an H2020 project, in collaboration with theoretical computer scientists and linguists, aimed at developing a semiology of mathematics by providing a conceptual and technical framework for the automatic analysis of mathematical corpora, based on a generalization of new techniques of grammatical inference for natural language.
 
 # News
 
 - Lecture 2
 - Lecture 1
+- 
 [back](./)
