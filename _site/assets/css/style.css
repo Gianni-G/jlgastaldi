@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1059,22 +1060,40 @@ img {
     padding: 2rem 1rem;
   }
 }
-.buttoms {
+.buttons {
   padding-top: 1em;
 }
 
 @media screen and (min-width: 64em) {
-  .buttoms {
+  #buttons_h {
     padding: 0.5rem 1rem;
   }
 }
 @media screen and (min-width: 42em) and (max-width: 64em) {
-  .buttoms {
+  #buttons_h {
     padding: 1rem 4rem;
   }
 }
 @media screen and (max-width: 42em) {
-  .buttoms {
+  #buttons_h {
+    display: none;
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  #buttons_v {
+    display: none;
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  #buttons_v {
+    display: none;
+    padding: 1rem 4rem;
+  }
+}
+@media screen and (max-width: 42em) {
+  #buttons_v {
     padding: 0.5rem 1rem;
   }
 }
@@ -1091,10 +1110,8 @@ img {
 }
 
 .btn:hover {
-  color: white;
   text-decoration: none;
   background-color: #8db0fe;
-  border-color: white;
 }
 
 .btn + .btn {
@@ -1114,7 +1131,7 @@ img {
 }
 @media screen and (max-width: 42em) {
   .btn {
-    width: 18%;
+    width: 50%;
     padding: 0.75rem;
     font-size: 0.9rem;
   }
@@ -1152,6 +1169,151 @@ img {
 
 .site-footer-credits {
   color: #819198;
+}
+
+/* JMenu 1.0 RC1 | MIT License | https://github.com/jamesjohnson280/JMenu */
+/* Menu bar and fonts */
+.jmenu:hover {
+  text-decoration: none;
+}
+
+/* Menu Button */
+input.jm-menu-btn {
+  display: none; /* Hide the checkbox */
+}
+
+input[type=checkbox].jm-menu-btn ~ .jm-collapse {
+  display: none; /* Hide menu on load */
+}
+
+input[type=checkbox]:checked.jm-menu-btn ~ .jm-collapse {
+  display: block; /* Open when menu button is clicked */
+}
+
+label.jm-menu-btn {
+  color: white; /* Light gray */
+  cursor: pointer;
+  display: block;
+  padding: 16px 32px;
+}
+
+label.jm-menu-btn:hover {
+  color: #fff;
+}
+
+.jm-collapse {
+  /* Add border between menu and menu button when it's open */
+}
+
+/* Menu Items */
+.jmenu ul,
+.jmenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links */
+.jmenu a {
+  color: white; /* Light gray */
+  display: inline-block;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+.jmenu a:hover {
+  color: #fff; /* White */
+}
+
+/* Submenu Items */
+.jmenu ul ul {
+  display: none; /* Hidden by default */
+}
+
+/* Dropdowns */
+.jm-dropdown:hover ul {
+  display: block;
+}
+
+.jm-dropdown:hover a {
+  /* Make top-level menu item stay highlighted when hovering over children */
+  color: #fff;
+}
+
+.jm-dropdown ul {
+  background: #fff; /* White */
+  padding: 0;
+}
+
+.jm-dropdown ul a,
+.jm-dropdown:hover ul a {
+  color: #0072bc; /* Blue */
+}
+
+.jm-dropdown ul a:hover,
+.jm-dropdown:hover ul a:hover {
+  color: #000; /* Black*/
+}
+
+/* Tertiary+ Menu Items */
+.jm-dropdown ul ul {
+  border-bottom: 1px #ccc solid; /* Light gray */
+  border-top: 1px #ccc solid;
+  box-shadow: none;
+  margin-bottom: 16px;
+  max-width: 100%;
+  position: relative;
+}
+
+/* Icons */
+.jm-icon-dropdown {
+  border: solid #959595; /* Light gray */
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  margin: 0 0 3px 8px;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+li:hover .jm-icon-dropdown {
+  border-color: #fff; /* White */
+}
+
+.jm-icon-menu::before {
+  content: "☰";
+}
+
+@media (min-width: 768px) {
+  /* Menu items */
+  .jmenu li {
+    display: inline-block;
+  }
+  .jmenu a {
+    padding: 16px;
+  }
+  /* Dropdowns */
+  .jm-dropdown {
+    position: relative;
+  }
+  .jm-dropdown li a {
+    display: block;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+  .jm-dropdown ul {
+    padding: 8px 0;
+    position: absolute;
+    min-width: 100%;
+  }
+  /* Menu Button */
+  input.jm-menu-btn,
+  label.jm-menu-btn {
+    display: none; /* Hide menu button */
+  }
+  input[type=checkbox].jm-menu-btn ~ .jm-collapse,
+  .jm-collapse {
+    display: block; /* Show menu */
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
