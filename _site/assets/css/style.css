@@ -1001,20 +1001,42 @@ a:hover {
   color: #819198;
 }
 
-.test {
-  color: green;
+.page-header {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+  height: 100%;
   background-image: url("../img/heatmap.jpg");
-  height: 200px;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  position: relative;
+  position: sticky;
 }
 
+@media screen and (min-width: 64em) {
+  .page-header {
+    padding: 4rem 10rem;
+    top: -25%;
+  }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .page-header {
+    padding: 3rem 4rem;
+    top: -25%;
+  }
+}
+@media screen and (max-width: 42em) {
+  .page-header {
+    padding: 2rem 1rem;
+    top: -35%;
+  }
+}
 .container {
+  height: 80%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 img {
@@ -1023,67 +1045,56 @@ img {
 
 .image {
   flex-basis: 23%;
+  min-width: 100px;
   display: block;
   margin-left: 0;
 }
 
 .jlg {
-  padding-left: 2em;
-}
-
-.page-header {
-  color: #fff;
+  padding-left: 15%;
+  float: center;
+  color: white;
   text-decoration: none;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0);
-  height: 300px;
-  background-image: url("../img/heatmap.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-  position: sticky;
-  top: -200px;
 }
 
 @media screen and (min-width: 64em) {
-  .page-header {
-    padding: 4rem 10rem;
+  .jlg {
+    font-size: 200%;
   }
 }
 @media screen and (min-width: 42em) and (max-width: 64em) {
-  .page-header {
-    padding: 3rem 4rem;
+  .jlg {
+    font-size: 100%;
   }
 }
 @media screen and (max-width: 42em) {
-  .page-header {
-    padding: 2rem 1rem;
+  .jlg {
+    font-size: 80%;
   }
 }
-.buttons {
-  padding-top: 1em;
+#buttons_h {
+  height: 20%;
 }
 
 @media screen and (min-width: 64em) {
   #buttons_h {
-    padding: 0.5rem 1rem;
+    padding-top: 0.5rem;
   }
 }
 @media screen and (min-width: 42em) and (max-width: 64em) {
   #buttons_h {
-    padding: 1rem 4rem;
+    padding-top: 5%;
   }
 }
 @media screen and (max-width: 42em) {
   #buttons_h {
     display: none;
-    padding: 0.5rem 1rem;
   }
 }
 #buttons_v {
   position: absolute;
   left: 0;
-  top: 200px;
+  top: 80%;
 }
 
 @media screen and (min-width: 42em) {
