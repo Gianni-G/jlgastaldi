@@ -109,21 +109,23 @@ img {
     }
 
 #buttons_v{
-
+    // float: left;
+    // clear: both;
+    position: absolute;
+    left: 0;
+    top: 200px;
 }
 
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 42em) {
     #buttons_v {
         display: none;
-        padding: .5rem 1rem;
     }
     }
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    #buttons_v {
-        display: none;
-        padding: 1rem 4rem;
-    }
-    }
+// @media screen and (min-width: 42em) and (max-width: 64em) {
+//     #buttons_v {
+//         display: none;
+//     }
+//     }
 @media screen and (max-width: 42em) {
     #buttons_v {
         padding: .5rem 1rem;
@@ -132,7 +134,7 @@ img {
 
 
 .btn {
-    display: inline-block;
+    // display: inline-block;
     margin-bottom: 1rem;
     color:white;
     // background-color: rgba(255, 255, 255, 0.5);
@@ -170,46 +172,17 @@ img {
 
 @media screen and (max-width: 42em) {
     .btn {
-        // display: block;
-        width: 50%;
-        padding: 0.75rem;
+        display: block;
+        // width: 50%;
+        // padding: 0.75rem;
         font-size: 0.9rem;
+        min-width: 55px;
     }
     .btn + .btn {
         margin-top: 1rem;
         margin-left: 0;
     }
     }
-
-.site-footer {
-    text-align: right;
-    padding-top: 2rem;
-    margin-top: 2rem;
-    border-top: solid 1px $hr-border-color;
-  
-    @include large {
-      font-size: .7rem;
-    }
-  
-    @include medium {
-      font-size: .7rem;
-    }
-  
-    @include small {
-      font-size: 0.6rem;
-    }
-  }
-  
-.site-footer-owner {
-    display: block;
-    font-weight: bold;
-  }
-  
-.site-footer-credits {
-    color: $blockquote-text-color;
-  }
-
-
 
 
 /* JMenu 1.0 RC1 | MIT License | https://github.com/jamesjohnson280/JMenu */
@@ -228,13 +201,14 @@ img {
     // border-style: solid;
     // border-width: 1px;
     // border-radius: 0.3rem;
-    // transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    // margin-left: 0%;
   }
 .jmenu:hover {
     // color: white;
     text-decoration: none;
     // background-color: #8db0fe;
-    // border-color: white;
+    border-color: white;
     }
   
   /* Menu Button */
@@ -265,7 +239,6 @@ img {
     /* Add border between menu and menu button when it's open */
     // border-top: 1px white solid; /* Light Gray */
   }
-  
   
   /* Menu Items */
   .jmenu ul,
@@ -346,47 +319,74 @@ img {
     content: '\2630';
   }
   
-  @media (min-width: 768px) {
+//   @media (min-width: 768px) {
     
-    /* Menu items */
-    .jmenu li {
-      display: inline-block;
-    }
+//     /* Menu items */
+//     .jmenu li {
+//       display: inline-block;
+//     }
     
-    .jmenu a {
-      padding: 16px;
-    }
+//     .jmenu a {
+//       padding: 16px;
+//     }
     
-    /* Dropdowns */
-    .jm-dropdown {
-      position: relative;
-    }
+//     /* Dropdowns */
+//     .jm-dropdown {
+//       position: relative;
+//     }
     
-    .jm-dropdown li a {
-      display: block;
-      padding: 8px 16px;
-      white-space: nowrap;
-    }
+//     .jm-dropdown li a {
+//       display: block;
+//       padding: 8px 16px;
+//       white-space: nowrap;
+//     }
     
-    .jm-dropdown ul {
-    //   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .5);
-      padding: 8px 0;
-      position: absolute;
-      min-width: 100%;
-    }
+//     .jm-dropdown ul {
+//     //   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .5);
+//       padding: 8px 0;
+//       position: absolute;
+//       min-width: 100%;
+//     }
     
-    /* Menu Button */
-    input.jm-menu-btn,
-    label.jm-menu-btn {
-      display: none; /* Hide menu button */
-    }
+//     /* Menu Button */
+//     input.jm-menu-btn,
+//     label.jm-menu-btn {
+//       display: none; /* Hide menu button */
+//     }
     
-    input[type='checkbox'].jm-menu-btn ~ .jm-collapse,
-    .jm-collapse {
-      display: block; /* Show menu */
+//     input[type='checkbox'].jm-menu-btn ~ .jm-collapse,
+//     .jm-collapse {
+//       display: block; /* Show menu */
+//     }
+  
+//   }
+
+
+
+.site-footer {
+    text-align: right;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: solid 1px $hr-border-color;
+  
+    @include large {
+      font-size: .7rem;
     }
   
+    @include medium {
+      font-size: .7rem;
+    }
+  
+    @include small {
+      font-size: 0.6rem;
+    }
   }
-
-
-
+  
+.site-footer-owner {
+    display: block;
+    font-weight: bold;
+  }
+  
+.site-footer-credits {
+    color: $blockquote-text-color;
+  }

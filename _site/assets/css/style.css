@@ -1080,16 +1080,15 @@ img {
     padding: 0.5rem 1rem;
   }
 }
-@media screen and (min-width: 64em) {
-  #buttons_v {
-    display: none;
-    padding: 0.5rem 1rem;
-  }
+#buttons_v {
+  position: absolute;
+  left: 0;
+  top: 200px;
 }
-@media screen and (min-width: 42em) and (max-width: 64em) {
+
+@media screen and (min-width: 42em) {
   #buttons_v {
     display: none;
-    padding: 1rem 4rem;
   }
 }
 @media screen and (max-width: 42em) {
@@ -1098,7 +1097,6 @@ img {
   }
 }
 .btn {
-  display: inline-block;
   margin-bottom: 1rem;
   color: white;
   background-color: #b8d0f9;
@@ -1131,50 +1129,24 @@ img {
 }
 @media screen and (max-width: 42em) {
   .btn {
-    width: 50%;
-    padding: 0.75rem;
+    display: block;
     font-size: 0.9rem;
+    min-width: 55px;
   }
   .btn + .btn {
     margin-top: 1rem;
     margin-left: 0;
   }
 }
-.site-footer {
-  text-align: right;
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: solid 1px #eff0f1;
-}
-@media screen and (min-width: 64em) {
-  .site-footer {
-    font-size: 0.7rem;
-  }
-}
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .site-footer {
-    font-size: 0.7rem;
-  }
-}
-@media screen and (max-width: 42em) {
-  .site-footer {
-    font-size: 0.6rem;
-  }
-}
-
-.site-footer-owner {
-  display: block;
-  font-weight: bold;
-}
-
-.site-footer-credits {
-  color: #819198;
-}
-
 /* JMenu 1.0 RC1 | MIT License | https://github.com/jamesjohnson280/JMenu */
 /* Menu bar and fonts */
+.jmenu {
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
 .jmenu:hover {
   text-decoration: none;
+  border-color: white;
 }
 
 /* Menu Button */
@@ -1283,37 +1255,35 @@ li:hover .jm-icon-dropdown {
   content: "☰";
 }
 
-@media (min-width: 768px) {
-  /* Menu items */
-  .jmenu li {
-    display: inline-block;
+.site-footer {
+  text-align: right;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: solid 1px #eff0f1;
+}
+@media screen and (min-width: 64em) {
+  .site-footer {
+    font-size: 0.7rem;
   }
-  .jmenu a {
-    padding: 16px;
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .site-footer {
+    font-size: 0.7rem;
   }
-  /* Dropdowns */
-  .jm-dropdown {
-    position: relative;
+}
+@media screen and (max-width: 42em) {
+  .site-footer {
+    font-size: 0.6rem;
   }
-  .jm-dropdown li a {
-    display: block;
-    padding: 8px 16px;
-    white-space: nowrap;
-  }
-  .jm-dropdown ul {
-    padding: 8px 0;
-    position: absolute;
-    min-width: 100%;
-  }
-  /* Menu Button */
-  input.jm-menu-btn,
-  label.jm-menu-btn {
-    display: none; /* Hide menu button */
-  }
-  input[type=checkbox].jm-menu-btn ~ .jm-collapse,
-  .jm-collapse {
-    display: block; /* Show menu */
-  }
+}
+
+.site-footer-owner {
+  display: block;
+  font-weight: bold;
+}
+
+.site-footer-credits {
+  color: #819198;
 }
 
 /*# sourceMappingURL=style.css.map */
