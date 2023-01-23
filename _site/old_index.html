@@ -26,6 +26,14 @@
     <meta name="theme-color" content="#b8d0f9">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="/assets/css/style.css?v=">
+    
+    <!-- <script>
+      var colors = ['#3b4cc0', '#6282ea', '#8db0fe','#b8d0f9','#dddddd','#f5c4ad','#f49a7b','#de604d','#b40426'];
+      var random_color = colors[Math.floor(Math.random() * colors.length)];
+      // document.getElementById('btn1').style.color = random_color;
+      $("#btn1").css("background-color",random_color);
+    </script> -->
+
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -39,6 +47,7 @@
 
   </head>
   <body>
+
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
@@ -52,13 +61,16 @@
           
           <div class="jlg">
             <h1>
-              <a href="./" style="color:white;text-decoration:none;">
+              <a href="./" style="color: white;
+              text-decoration:none">
                 Juan Luis Gastaldi
               </a>
             </h1>
           </div>
           
       </div>
+
+
 
       <nav id= "buttons_h" >
         <a href="./p.about.html" class="btn">About</a>
@@ -74,13 +86,9 @@
 
       <nav id="buttons_v" class="jmenu">
         <!-- <label for="menu-btn" class="jm-menu-btn jm-icon-menu"> -->
-        <label for="menu-btn" class="btn jm-icon-menu">
-          
-        </label>
+        <label for="menu-btn" class="btn jm-icon-menu"></label>
         <input type="checkbox" id="menu-btn" class="jm-menu-btn">
         <ul class="jm-collapse">
-
-
           <li>
             <a href="./p.about.html" class="btn">About</a>
           </li>
