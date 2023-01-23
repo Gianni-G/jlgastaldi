@@ -1036,13 +1036,13 @@ img {
   text-decoration: none;
   text-align: center;
   background-color: rgba(255, 255, 255, 0);
-  height: 350px;
+  height: 300px;
   background-image: url("../img/heatmap.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   position: sticky;
-  top: -250px;
+  top: -200px;
 }
 
 @media screen and (min-width: 64em) {
@@ -1087,6 +1087,11 @@ img {
 }
 
 @media screen and (min-width: 42em) {
+  #buttons_v {
+    display: none;
+  }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
   #buttons_v {
     display: none;
   }
@@ -1165,8 +1170,6 @@ input[type=checkbox]:checked.jm-menu-btn ~ .jm-collapse {
 label.jm-menu-btn {
   color: white; /* Light gray */
   cursor: pointer;
-  display: block;
-  padding: 16px 32px;
 }
 
 label.jm-menu-btn:hover {

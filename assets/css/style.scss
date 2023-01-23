@@ -40,14 +40,14 @@ img {
     text-decoration: none;
     text-align: center;
     background-color: rgba(255, 255, 255, 0);
-    height: 350px;
+    height: 300px;
     background-image: url("../img/heatmap.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
     // position: relative;
     position:sticky;
-    top: -250px;
+    top: -200px;
   }
 
 @media screen and (min-width: 64em) {
@@ -121,11 +121,11 @@ img {
         display: none;
     }
     }
-// @media screen and (min-width: 42em) and (max-width: 64em) {
-//     #buttons_v {
-//         display: none;
-//     }
-//     }
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    #buttons_v {
+        display: none;
+    }
+    }
 @media screen and (max-width: 42em) {
     #buttons_v {
         padding: .5rem 1rem;
@@ -173,7 +173,7 @@ img {
 @media screen and (max-width: 42em) {
     .btn {
         display: block;
-        // width: 50%;
+        // width: 100%;
         // padding: 0.75rem;
         font-size: 0.9rem;
         min-width: 55px;
@@ -201,8 +201,12 @@ img {
     // border-style: solid;
     // border-width: 1px;
     // border-radius: 0.3rem;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    // margin-left: 0%;
+    transition: color 0.2s, background-color 0.2s,
+    border-color 0.2s;
+    // position: absolute;
+    // left: 20px;
+    // top: 200px;
+
   }
 .jmenu:hover {
     // color: white;
@@ -227,8 +231,8 @@ img {
   label.jm-menu-btn {
     color: white; /* Light gray */
     cursor: pointer;
-    display: block;
-    padding: 16px 32px;
+    // display: block;
+    // padding: 16px 32px;
   }
   
   label.jm-menu-btn:hover {
