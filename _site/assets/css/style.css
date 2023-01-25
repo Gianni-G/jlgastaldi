@@ -737,28 +737,6 @@ a:hover {
   }
 }
 
-.page-header {
-  color: #fff;
-  text-align: center;
-  background-color: #de604d;
-  background-image: linear-gradient(120deg, #531212, #de604d);
-}
-@media screen and (min-width: 64em) {
-  .page-header {
-    padding: 5rem 6rem;
-  }
-}
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .page-header {
-    padding: 3rem 4rem;
-  }
-}
-@media screen and (max-width: 42em) {
-  .page-header {
-    padding: 2rem 1rem;
-  }
-}
-
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
@@ -1013,27 +991,20 @@ a:hover {
   background-size: cover;
   position: sticky;
   top: -20vh;
-  padding: 2.5vh 2.5vw;
+  line-height: 1;
 }
 
-@media screen and (min-width: 64em) {
-  .page-header {
-    padding: 2.5vh 4vw;
-  }
-}
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .page-header {
-    padding: 2.5vh 4rem;
-  }
-}
 .container {
+  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: left;
+  padding-left: 1rem;
+  padding-top: 2.5vh;
 }
 
 img {
-  max-height: 15vh;
+  height: 15vh;
   border-radius: 0.3rem;
 }
 
@@ -1066,11 +1037,6 @@ img {
     padding-left: 2vw;
   }
 }
-@media screen and (min-width: 64em) {
-  #buttons_h {
-    padding: 0.5rem 2rem;
-  }
-}
 @media screen and (max-width: 42em) {
   #buttons_h {
     display: none;
@@ -1086,8 +1052,14 @@ img {
     display: none;
   }
 }
+@media screen and (max-width: 42em) {
+  #buttons_v {
+    height: 10vh;
+    padding-top: 2.5vh;
+    padding-left: 1rem;
+  }
+}
 .btn {
-  margin-bottom: 1rem;
   color: white;
   background-color: #b8d0f9;
   border-color: white;
@@ -1095,6 +1067,8 @@ img {
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  max-height: 5vh;
+  margin-top: 0.5vh;
 }
 
 .btn:hover {
@@ -1102,18 +1076,8 @@ img {
   background-color: #8db0fe;
 }
 
-.btn + .btn {
-  margin-left: 1rem;
-}
-
-@media screen and (min-width: 64em) {
-  .btn {
-    padding: 0.75rem 1rem;
-  }
-}
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .btn {
-    padding: 0.6rem 0.9rem;
     font-size: 0.9rem;
   }
 }
@@ -1123,7 +1087,6 @@ img {
     font-size: 0.9rem;
   }
   .btn + .btn {
-    margin-top: 1rem;
     margin-left: 0;
   }
 }
