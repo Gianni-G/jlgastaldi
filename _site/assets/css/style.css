@@ -1185,63 +1185,8 @@ label.jm-menu-btn:hover {
   color: #fff; /* White */
 }
 
-/* Submenu Items */
-.jmenu ul ul {
-  display: none; /* Hidden by default */
-}
-
-/* Dropdowns */
-.jm-dropdown:hover ul {
-  display: block;
-}
-
-.jm-dropdown:hover a {
-  /* Make top-level menu item stay highlighted when hovering over children */
-  color: #fff;
-}
-
-.jm-dropdown ul {
-  background: #fff; /* White */
-  padding: 0;
-}
-
-.jm-dropdown ul a,
-.jm-dropdown:hover ul a {
-  color: #0072bc; /* Blue */
-}
-
-.jm-dropdown ul a:hover,
-.jm-dropdown:hover ul a:hover {
-  color: #000; /* Black*/
-}
-
-/* Tertiary+ Menu Items */
-.jm-dropdown ul ul {
-  border-bottom: 1px #ccc solid; /* Light gray */
-  border-top: 1px #ccc solid;
-  box-shadow: none;
-  margin-bottom: 16px;
-  max-width: 100%;
-  position: relative;
-}
-
-/* Icons */
-.jm-icon-dropdown {
-  border: solid #959595; /* Light gray */
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  margin: 0 0 3px 8px;
-  padding: 3px;
-  transform: rotate(45deg);
-}
-
-li:hover .jm-icon-dropdown {
-  border-color: #fff; /* White */
-}
-
 .jm-icon-menu::before {
   content: "☰";
-  max-width: 15%;
 }
 
 .site-footer {

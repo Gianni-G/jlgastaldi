@@ -175,7 +175,6 @@ img {
 @media screen and (max-width: 42em) {
     .btn {
         display: block;
-        // width: 100%;
         // padding: 0.75rem;
         font-size: 0.9rem;
         // min-width: 55px;
@@ -198,7 +197,7 @@ img {
     transition: color 0.2s, background-color 0.2s,
     border-color 0.2s;
     display: block;
-    // max-width: 15%;
+    // max-width: 25%;
 
   }
 .jmenu:hover {
@@ -216,30 +215,30 @@ img {
   input[type='checkbox'].jm-menu-btn ~ .jm-collapse {
     display: none; /* Hide menu on load */
   }
-
-  input[type='checkbox']:checked.jmenu {
-    // max-width: 100%;
-  }
   
   input[type='checkbox']:checked.jm-menu-btn ~ .jm-collapse {
     display: block; /* Open when menu button is clicked */
-    // max-width: 100%;
   }
   
   label.jm-menu-btn {
     color: white; /* Light gray */
     cursor: pointer;
+    
+    
     // display: block;
     // padding: 16px 32px;
   }
   
   label.jm-menu-btn:hover {
     color: #fff;
+    
   }
   
   .jm-collapse {
     /* Add border between menu and menu button when it's open */
     // border-top: 1px white solid; /* Light Gray */
+    
+    
   }
   
   /* Menu Items */
@@ -262,64 +261,64 @@ img {
     color: #fff; /* White */
   }
   
-  /* Submenu Items */
-  .jmenu ul ul {
-    display: none; /* Hidden by default */
-  }
+  // /* Submenu Items */
+  // .jmenu ul ul {
+  //   display: none; /* Hidden by default */
+  // }
   
-  /* Dropdowns */
+  // /* Dropdowns */
   
-  .jm-dropdown:hover ul {
-    display: block;
-  }
+  // .jm-dropdown:hover ul {
+  //   display: block;
+  // }
   
-  .jm-dropdown:hover a {
-    /* Make top-level menu item stay highlighted when hovering over children */
-    color: #fff; 
-  }
+  // .jm-dropdown:hover a {
+  //   /* Make top-level menu item stay highlighted when hovering over children */
+  //   color: #fff; 
+  // }
   
-  .jm-dropdown ul {
-    background: #fff; /* White */
-    padding: 0;
-  }
+  // .jm-dropdown ul {
+  //   background: #fff; /* White */
+  //   padding: 0;
+  // }
   
-  .jm-dropdown ul a,
-  .jm-dropdown:hover ul a {
-    color: #0072bc; /* Blue */
-  }
+  // .jm-dropdown ul a,
+  // .jm-dropdown:hover ul a {
+  //   color: #0072bc; /* Blue */
+  // }
   
-  .jm-dropdown ul a:hover,
-  .jm-dropdown:hover ul a:hover {
-    color: #000; /* Black*/
-  }
+  // .jm-dropdown ul a:hover,
+  // .jm-dropdown:hover ul a:hover {
+  //   color: #000; /* Black*/
+  // }
   
-  /* Tertiary+ Menu Items */
-  .jm-dropdown ul ul {
-    border-bottom: 1px #ccc solid; /* Light gray */
-    border-top: 1px #ccc solid;
-    box-shadow: none;
-    margin-bottom: 16px;
-    max-width: 100%;
-    position: relative;
-  }
+  // /* Tertiary+ Menu Items */
+  // .jm-dropdown ul ul {
+  //   border-bottom: 1px #ccc solid; /* Light gray */
+  //   border-top: 1px #ccc solid;
+  //   box-shadow: none;
+  //   margin-bottom: 16px;
+  //   max-width: 100%;
+  //   position: relative;
+  // }
   
-  /* Icons */
-  .jm-icon-dropdown {
-      border: solid #959595; /* Light gray */
-      border-width: 0 2px 2px 0;
-      display: inline-block;
-      margin: 0 0 3px 8px;
-      padding: 3px;
-      transform: rotate(45deg);
-  } 
+  // /* Icons */
+  // .jm-icon-dropdown {
+  //     border: solid #959595; /* Light gray */
+  //     border-width: 0 2px 2px 0;
+  //     display: inline-block;
+  //     margin: 0 0 3px 8px;
+  //     padding: 3px;
+  //     transform: rotate(45deg);
+  // } 
   
-  li:hover .jm-icon-dropdown {
-      border-color: #fff; /* White */
-  } 
+  // li:hover .jm-icon-dropdown {
+  //     border-color: #fff; /* White */
+  // } 
   
   .jm-icon-menu::before {
     content: '\2630';
-    max-width: 15%;
+    
   }
   
 //   @media (min-width: 768px) {
