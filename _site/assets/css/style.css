@@ -1026,11 +1026,6 @@ a:hover {
     padding: 2.5vh 4rem;
   }
 }
-@media screen and (max-width: 42em) {
-  .page-header {
-    padding: 2.5vh 1rem;
-  }
-}
 .container {
   display: flex;
   align-items: center;
@@ -1046,7 +1041,6 @@ img {
   flex-basis: 15vh;
   min-width: 100px;
   display: block;
-  margin-left: 0;
 }
 
 .jlg {
@@ -1092,11 +1086,6 @@ img {
     display: none;
   }
 }
-@media screen and (max-width: 42em) {
-  #buttons_v {
-    padding: 0rem 1rem;
-  }
-}
 .btn {
   margin-bottom: 1rem;
   color: white;
@@ -1132,7 +1121,6 @@ img {
   .btn {
     display: block;
     font-size: 0.9rem;
-    min-width: 55px;
   }
   .btn + .btn {
     margin-top: 1rem;
@@ -1143,6 +1131,7 @@ img {
 /* Menu bar and fonts */
 .jmenu {
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  display: block;
 }
 
 .jmenu:hover {
@@ -1252,6 +1241,7 @@ li:hover .jm-icon-dropdown {
 
 .jm-icon-menu::before {
   content: "☰";
+  max-width: 15%;
 }
 
 .site-footer {
