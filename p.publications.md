@@ -14,24 +14,24 @@ title: Juan Luis Gastaldi
 
 - J. L. Gastaldi. “Why Can Computers Understand Natural Language?” In: Philosophy & Technology 34.1 (2021), pp. 149–214. ISSN: 2210-5441. DOI: 10.1007/s13347-020-00393-9. URL: https://doi.org/10.1007/ s13347-020-00393-9.
 
-- J.L.GastaldiandL.Pellissier.“Thecalculusoflanguage:explicitrepresentationofemergentlinguistic structure through type-theoretical paradigms”. In: Interdisciplinary Science Reviews 46.4 (2021), pp. 569–590. DOI: 10.1080/03080188.2021.1890484.
+- J. L. Gastaldi and L.Pellissier. “The calculus of language: explicit representation of emergent linguistic structure through type-theoretical paradigms”. In: Interdisciplinary Science Reviews 46.4 (2021), pp. 569–590. DOI: 10.1080/03080188.2021.1890484.
 
-- J.L.Gastaldi.“Frege’sHabilitationsschrift:Magnitude,NumberandtheProblemsofComputabil- ity”. In: History and Philosophy of Computing. 2016, pp. 168–185. DOI: 10.1007/978-3-319-47286-7_12.
+- J. L. Gastaldi. “Frege’s Habilitationsschrift: Magnitude,Number and the Problems of Computability”. In: History and Philosophy of Computing. 2016, pp. 168–185. DOI: 10.1007/978-3-319-47286-7_12.
 
 - J. L. Gastaldi. “Par-delà métaphore et littéralité. Le statut des mathématiques dans l’œuvre de Deleuze”. In: Implications Philosophiques (2016). URL: http://www.implications-philosophiques.org/actualite/une/par- dela-metaphore-et-litteralite/.
 
-- J.L.Gastaldi.“Frege’sHabilitationsschriftandtheFunctionalApproachtoMagnitudes”.In:Prelimi- nary proceedings of the Third international conference on the history and philosophy of computing (HaPoC 2015) : 8-11 Oct. 2015, Pisa (Italy. Ed. by F. Gadducci. Pisa: Pisa University Press, 2015. ISBN: 9788867415762.
+- J. L. Gastaldi.“Frege’s Habilitationsschrift and the Functional Approach to Magnitudes”.In:Preliminary proceedings of the Third international conference on the history and philosophy of computing (HaPoC 2015) : 8-11 Oct. 2015, Pisa (Italy. Ed. by F. Gadducci. Pisa: Pisa University Press, 2015. ISBN: 9788867415762.
 
 - J. L. Gastaldi. “La politique avant l’être. Deleuze, ontologie et politique”. In: Cités 40 (2009), pp. 59–73. ISSN: 12995495, 19696876. URL: http://www.jstor.org/stable/40599521.
 
 
 ### Contributions to Books
 
-- J.L.Gastaldi.“Boole’sUntruthTables:TheFormalConditionsofMeaningBeforetheEmergence of Propositional Logic”. In: Logic in question. Ed. by J.-Y. Béziau et al. Springer, forthcoming (estimated date: 21 Jan 2023).
+- J. L. Gastaldi. “Boole’s Untruth Tables: The Formal Conditions of Meaning Before the Emergence of Propositional Logic”. In: Logic in question. Ed. by J.-Y. Béziau et al. Springer, forthcoming (estimated date: 21 Jan 2023).
 
-- J.L.Gastaldi.“DeMorgan’sDeMorgan’sLaws:DualityintheEmergenceofFormalLogic”.In: Duality in 19th and 20th century mathematical thinking. Ed. by R. Krömer, E. Haffner, and K. Volkert. Birkhäuser, forthcoming (estimated date: 2023 Q1).
+- J. L. Gastaldi. “De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic”. In: Duality in 19th and 20th century mathematical thinking. Ed. by R. Krömer, E. Haffner, and K. Volkert. Birkhäuser, forthcoming (estimated date: 2023 Q1).
 
-- J.L.Gastaldi.“L’archéologieàl’épreuvedessavoirsformels.Mathématiquesetformalisationdansle projet d’une archéologie des savoirs”. In: L’épistémologie historique. Histoire et méthodes. Ed. by J.-F. Braunstein, I. M. Diez, and M. Vagelli. Éditions de la Sorbonne, 2019.
+- J. L. Gastaldi. “L’archéologie à l’épreuve des savoirs formels.Mathématiques et formalisation dans le projet d’une archéologie des savoirs”. In: L’épistémologie historique. Histoire et méthodes. Ed. by J.-F. Braunstein, I. M. Diez, and M. Vagelli. Éditions de la Sorbonne, 2019.
 
 - J. L. Gastaldi. “Le sens d’une Logique du Sens: Deleuze, Frege et le rendez-vous manqué”. In: Gilles Deleuze: Politiques de la Philosophie. Ed. by A. Jdey. Métis Press, 2015, pp. 205–227.
 
@@ -41,7 +41,7 @@ title: Juan Luis Gastaldi
 
 ### Preprints
 
-- J.L.Gastaldi and L.Pellissier.“TheLogicofLanguage:fromtheDistributionaltotheStructuralist Hypothesis through Types and Interaction”. Working paper or preprint. Dec. 2020. URL: https://hal. archives-ouvertes.fr/hal-03064480.
+- J. L. Gastaldi and L. Pellissier. “The Logic of Language: from the Distributional to the Structuralist Hypothesis through Types and Interaction”. Working paper or preprint. Dec. 2020. URL: https://hal. archives-ouvertes.fr/hal-03064480.
 
 
 ### Submitted and in Progress
@@ -51,8 +51,8 @@ title: Juan Luis Gastaldi
 - La notion de contexte dans l’analyse automatique du language.
 In collaboration with Christian Rétoré and Richard Moot. To appear as a chapter in Godart-Wendling, Béatrice (ed.) Les concepts fondateurs de la philosophie du langage: Contexte, volume series, ISTE.
 
-- HandbookoftheHistoryandPhilosophyofMathematicalPractice.
-Editor of the section “Semiology of Mathematical Practice”. Work to be published by Springer; Chief Editor: Bharath Sriraman. Confirmed contibutors: Jeremy Avigad, Karine Chemla, Anna Kiel Steensen, Ladislav Kvasz, Reviel Netz, Lucien Vinciguerra, Roy Wagner, David Waszek, Mikkel Willum Johansen & Henrik Kragh Sørensen. https://meteor.springer.com/historyandphilosophymaths/?id=915&tab=About&mode= ReadPage&entity=6886.
+- Handbook of the History and Philosophy of Mathematical Practice.
+Editor of the section “Semiology of Mathematical Practice”. Work to be published by Springer; Chief Editor: Bharath Sriraman. Confirmed contibutors: Jeremy Avigad, Karine Chemla, Anna Kiel Steensen, Ladislav Kvasz, Reviel Netz, Lucien Vinciguerra, Roy Wagner and David Waszek. https://meteor.springer.com/historyandphilosophymaths/?id=915&tab=About&mode= ReadPage&entity=6886.
 
 - Computing Cultures: Historical and Philosophical Perspectives
 Guest editor of th SI “Computing Cultures: Historical and Philosophical Perspectives”, Minds and Machines. With Luc Pellissier. https://www.springer.com/journal/11023/updates/18800754.
@@ -74,11 +74,11 @@ https://github.com/Gianni-G/semiolog. Software package for the analysis of mathe
 
 - J. L. Gastaldi. Superpositions. Texte pour l’exposition de Michaël Sellam: “des choses, de l’espace”, Galerie Vasistas. 2014.
 
-- J.L.Gastaldi.“BéréniceSerra:AD64”.In:Infra7(2013).
+- J.L.Gastaldi.“Bérénice Serra: AD64”. In: Infra 7 (2013).
 
 - J. L. Gastaldi. “Ouverture”. In: Quinze ans d’art à HEC. Espace d’art contemporain HEC, 2013, pp. 102–105.
 
-- J.L.GastaldiandD.Alvaro.“Spanishtranslationof:Jean-LucNancy,“Lesdifférencesparallèles (Deleuze & Derrida)””. In: Por amor a Derrida. Ed. by M. Cragnolini. La Cebra, 2008, pp. 249–262.
+- J. L. Gastaldi and D. Alvaro. “Spanish translation of: Jean-Luc Nancy, “Les différences parallèles (Deleuze & Derrida)””. In: Por amor a Derrida. Ed. by M. Cragnolini. La Cebra, 2008, pp. 249–262.
 
 - J. L. Gastaldi. “De l’ “intéressant” dans l’art”. In: L’exposition des idées. E.N.S./Villa Arson, 2007.
 
