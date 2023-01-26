@@ -1,24 +1,86 @@
 ---
 ---
 
-@import 'jekyll-theme-cayman';
+// @import 'jekyll-theme-cayman';
+// @import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
+// Breakpoints
+$large-breakpoint: 64em !default;
+$medium-breakpoint: 42em !default;
+$small-breakpoint: 18em !default;
+
+// Headers
+$header-heading-color: #fff !default;
+$header-bg-color: #de604d !default;
+$header-bg-color-secondary: #531212 !default;
+
+// Text
+$section-headings-color: #de604d !default;
+$body-text-color: #606c71 !default;
+$body-link-color: #8db0fe !default;
+$blockquote-text-color: #819198 !default;
+
+// Code
+$code-bg-color: #f3f6fa !default;
+$code-text-color: #8db0fe !default;
+
+// Borders
+$border-color: #dce6f0 !default;
+$table-border-color: #e9ebec !default;
+$hr-border-color: #eff0f1 !default;
+
+
+
+@mixin large {
+  @media screen and (min-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: #{$medium-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin xsmall {
+  @media screen and (max-width: #{$small-breakpoint}) {
+    @content;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $body-text-color;
+}
 
 .page-header {
-    color: #fff;
+    color: white;
     text-decoration: none;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0);
-    height: 30vh;
+    background-color: white;
+    height: 25vh;
     background-image: url("../img/heatmap.jpg");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    // background-position: center; /* Center the image */
+    // background-repeat: no-repeat; /* Do not repeat the image */
+    // background-repeat: repeat-x;
     background-size: cover;
-    // position: relative;
+    // background-size:50%;
     position:sticky;
-    top: -20vh;
+    top: -15vh;
     // padding: 2.5vh 2.5vw;
-    line-height: 1;
+    // line-height: 1;
 
     
   }
@@ -43,161 +105,221 @@
 // }
 
 .container {
-    height: 20vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: left;
-    padding-left: 1rem;
-    padding-top: 2.5vh;
+    // padding-left: 1rem;
+    // padding-top: 2.5vh;
 
+    @include large {
+      max-width: 64rem;
+      padding: 0rem 6rem;
+      margin: 0 auto;
+      // font-size: 1.1rem;
+    }
+  
+    @include medium {
+      padding: 0rem 4rem;
+      // font-size: 1.1rem;
+    }
+  
+    @include small {
+      padding: 0rem 1rem;
+      // font-size: 1rem;
+    }
   }
 
+// img {
+//     max-width: 100%;
+//   }
+
 img {
-    // max-width: 100%;
-    height: 15vh;
+    height: 20vh;
     border-radius: 0.3rem;
   }
 
-.image {
-    flex-basis: 15vh;
-    min-width: 100px;
-    // order: 1;
-    display: block;
-    // margin-left: 0;
+// .image {
+//     flex-basis: 20vh;
+//     min-width: 100px;
+//     height: 20vh;
+//     width: 20vh;
+//     // order: 1;
+//     display: block;
+//     // margin-left: 0;
     
-  }
+//   }
+
+
+.subcontainer{
+  height: 100%;
+  width: 100%;
+  line-height: 1.25;
+}
+
 
 .jlg {
     // order: 2;
-    padding-left: 15%;
-    float: center;
-    color:white;
+    padding-top: 2.5vh;
+    // float: center;
     text-decoration:none;
+    height: 15vh;
+    font-weight:bolder;
+    // -webkit-text-stroke: 1px #b8d0f9; /* width and color */
+
+    @include large {
+      max-width: 64rem;
+      // padding: 0rem 6rem;
+      // margin: 0 auto;
+      font-size: 400%;
+    }
+  
+    @include medium {
+      // padding: 0rem 4rem;
+      font-size: 300%;
+    }
+  
+    @include small {
+      // padding: 0rem 1rem;
+      font-size: 200%;
+    }
+
+    @include xsmall {
+      // padding: 0rem 1rem;
+      font-size: 160%;
+    }
   }
-  @media screen and (min-width: 64em) {
-    .jlg {
-        font-size: 200%;
-    }
-    }
-    @media screen and (min-width: 42em) and (max-width: 64em) {
-    .jlg {
-        font-size: 100%;
-    }
-    }
-    @media screen and (max-width: 42em) {
-    .jlg {
-        font-size: 80%;
-        padding-left: 2vw;
-    }
-    }
+  // @media screen and (min-width: 64em) {
+  //   .jlg {
+  //       font-size: 200%;
+  //   }
+  //   }
+  //   @media screen and (min-width: 42em) and (max-width: 64em) {
+  //   .jlg {
+  //       font-size: 100%;
+  //   }
+  //   }
+  //   @media screen and (max-width: 42em) {
+  //   .jlg {
+  //       font-size: 80%;
+  //       padding-left: 2vw;
+  //   }
+  //   }
 
 
 #buttons_h{
-    
-}
+  height: 10vh;
+  // padding-top: 2.5vh;
 
-@media screen and (min-width: 64em) {
-    #buttons_h {
-        // padding: .5rem 2rem;
-        // padding-top: .5rem;
-    }
-    }
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    #buttons_h {
-        // display: none;
-        // padding: 1rem 4rem;
-        // padding-top: 5%;
-    }
-    }
-@media screen and (max-width: 42em) {
-    #buttons_h {
-        display: none;
-        
-    }
-    }
+  @include small {
+    display: none;
+  }
+}
 
 #buttons_v{
-    // float: left;
-    // clear: both;
-    // position: absolute;
-    // left: 0;
-    // top: 80%;
+  height: 10vh;
+
+  @include large {
+    display: none;
+  }
+
+  @include medium {
+    display: none;
+  }
 }
 
-.buttons_v{
+// .buttons_v{
 
-}
+// }
 
-@media screen and (min-width: 42em) {
-    #buttons_v {
-        display: none;
-    }
-    }
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    #buttons_v {
-        display: none;
-    }
-    }
-@media screen and (max-width: 42em) {
-    #buttons_v {
-      height: 10vh;
-      padding-top: 2.5vh;
-      padding-left: 1rem;
+// @media screen and (min-width: 42em) {
+//     #buttons_v {
+//         display: none;
+//     }
+//     }
+// @media screen and (min-width: 42em) and (max-width: 64em) {
+//     #buttons_v {
+//         display: none;
+//     }
+//     }
+// @media screen and (max-width: 42em) {
+//     #buttons_v {
+//       height: 10vh;
+//       padding-top: 2.5vh;
+//       padding-left: 1rem;
         
-    }
-    }
+//     }
+//     }
 
 
 .btn {
-    // display: inline-block;
-    // margin-bottom: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
     color:white;
+    text-decoration: none;
     background-color: #b8d0f9;
     border-color: white;
     border-style: solid;
     border-width: 1px;
     border-radius: 0.3rem;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    max-height: 5vh;
-    margin-top: .5vh;
+    // height: 2rem;
+    min-width: 60px;
+
+    @include large {
+      padding: 0.5rem;
+    }
+  
+    @include medium {
+      padding: 0.5rem;
+    }
+  
+    @include small {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    // @include xsmall {
+    //   padding: 0.75rem;
+    //   font-size: 0.9rem;
+    // }
+    
     }
 
 .btn:hover {
-    // color: white;
     text-decoration: none;
     background-color: #8db0fe;
-    // border-color: white;
     }
 
 .btn + .btn {
-    // margin-left: 1rem;
+    margin-left: .5vw;
     }
 
-@media screen and (min-width: 64em) {
-    .btn {
-        // padding: 0.75rem 1rem;
-    }
-    }
+// @media screen and (min-width: 64em) {
+//     .btn {
+//         // padding: 0.75rem 1rem;
+//     }
+//     }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    .btn {
-        // padding: 0.6rem 0.9rem;
-        font-size: 0.9rem;
-    }
-    }
+// @media screen and (min-width: 42em) and (max-width: 64em) {
+//     .btn {
+//         // padding: 0.6rem 0.9rem;
+//         font-size: 0.9rem;
+//     }
+//     }
 
-@media screen and (max-width: 42em) {
-    .btn {
-        display: block;
-        // padding: 0.75rem;
-        font-size: 0.9rem;
-        // min-width: 55px;
-    }
-    .btn + .btn {
-        // margin-top: 1rem;
-        margin-left: 0;
-    }
-    }
+// @media screen and (max-width: 42em) {
+//     .btn {
+//         display: block;
+//         // padding: 0.75rem;
+//         font-size: 0.9rem;
+//         // min-width: 55px;
+//     }
+//     .btn + .btn {
+//         // margin-top: 1rem;
+//         margin-left: 0;
+//     }
+//     }
 
 
 /* JMenu 1.0 RC1 | MIT License | https://github.com/jamesjohnson280/JMenu */
@@ -253,6 +375,14 @@ img {
     /* Add border between menu and menu button when it's open */
     // border-top: 1px white solid; /* Light Gray */
     
+    // list-style-type: disc;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+    
+    
     
   }
   
@@ -262,13 +392,14 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
+    // display: inline-block;
   }
   
   /* Links */
   .jmenu a {
     color: white; /* Light gray */
     display: inline-block;
-    padding: 16px 32px;
+    // padding: 16px 32px;
     text-decoration: none;
   }
   
@@ -333,7 +464,6 @@ img {
   
   .jm-icon-menu::before {
     content: '\2630';
-    
   }
   
 //   @media (min-width: 768px) {
@@ -378,6 +508,197 @@ img {
   
 //   }
 
+
+.main-content {
+  word-wrap: break-word;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  @include large {
+    max-width: 64rem;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  @include medium {
+    padding: 2rem 4rem;
+    font-size: 1.1rem;
+  }
+
+  @include small {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+  
+  kbd {
+    background-color: #fafbfc;
+    border: 1px solid #c6cbd1;
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
+    color: #444d56;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 10px;
+    padding: 3px 5px;
+    vertical-align: middle;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: $section-headings-color;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  code {
+    padding: 2px 4px;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.9rem;
+    color: $code-text-color;
+    background-color: $code-bg-color;
+    border-radius: 0.3rem;
+  }
+
+  pre {
+    padding: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    color: $code-text-color;
+    word-wrap: normal;
+    background-color: $code-bg-color;
+    border: solid 1px $border-color;
+    border-radius: 0.3rem;
+
+    > code {
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      color: $code-text-color;
+      word-break: normal;
+      white-space: pre;
+      background: transparent;
+      border: 0;
+    }
+  }
+
+  .highlight {
+    margin-bottom: 1rem;
+
+    pre {
+      margin-bottom: 0;
+      word-break: normal;
+    }
+  }
+
+  .highlight pre,
+  pre {
+    padding: 0.8rem;
+    overflow: auto;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    border-radius: 0.3rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  pre code,
+  pre tt {
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+
+    &:before,
+    &:after {
+      content: normal;
+    }
+  }
+
+  ul,
+  ol {
+    margin-top: 0;
+  }
+
+  blockquote {
+    padding: 0 1rem;
+    margin-left: 0;
+    color: $blockquote-text-color;
+    border-left: 0.3rem solid $border-color;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+    -webkit-overflow-scrolling: touch;
+
+    th {
+      font-weight: bold;
+    }
+
+    th,
+    td {
+      padding: 0.5rem 1rem;
+      border: 1px solid $table-border-color;
+    }
+  }
+
+  dl {
+    padding: 0;
+
+    dt {
+      padding: 0;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    dd {
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  hr {
+    height: 2px;
+    padding: 0;
+    margin: 1rem 0;
+    background-color: $hr-border-color;
+    border: 0;
+  }
+}
 
 
 .site-footer {
