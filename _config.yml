@@ -20,3 +20,6 @@ github:
 img:
   photo: ./assets/img/G.jpg
   background: ./assets/img/heatmap.jpg
+
+# pdf:
+#   2023s: ./pdf.test.html

@@ -46,7 +46,7 @@ title: Juan Luis Gastaldi
 
 ### Submitted and in Progress
 
-- Content from Expressions: The Place of Textuality in Deep Learning Approaches to Mathematics. Submitted to Synthèse (under review).
+- [Content from Expressions: The Place of Textuality in Deep Learning Approaches to Mathematics](./pdf.test.html). Submitted to Synthèse (under review).
 
 - La notion de contexte dans l’analyse automatique du language.
 In collaboration with Christian Rétoré and Richard Moot. To appear as a chapter in Godart-Wendling, Béatrice (ed.) Les concepts fondateurs de la philosophie du langage: Contexte, volume series, ISTE.
