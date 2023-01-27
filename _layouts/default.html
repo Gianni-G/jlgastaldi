@@ -17,6 +17,9 @@
 
 
     {% include head-custom.html %}
+
+    <script src="{{ 'assets/js/random-color.js' }}"></script>
+    
   </head>
 
   <body>
@@ -26,9 +29,10 @@
     <header class="page-header" role="banner">
         <div class="container">
 
-          <div class="image">
+          <!-- <div class="image"> -->
+          <div >
             <a href="{{ site.github.home }}">
-              <img src="{{ site.img.photo }}" clase="image" alt="Juan Luis Gastaldi">
+              <img id="photo" src="{{ site.img.photo }}" class="image" alt="Juan Luis Gastaldi">
             </a>
           </div>
           

@@ -5,6 +5,8 @@ title: Juan Luis Gastaldi
 ---
 
 <script src="{{ 'assets/js/random-color.js' }}"></script>
+<script src="{{ 'assets/js/img_fade.js' }}"></script>
+
 
 # Publications
 
