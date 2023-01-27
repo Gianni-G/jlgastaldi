@@ -4,6 +4,8 @@ title: Juan Luis Gastaldi
 # description: This is just another page
 ---
 
+<script src="{{ 'assets/js/random-color.js' }}"></script>
+
 # Publications
 
 ### Doctoral Dissertation
@@ -35,9 +37,9 @@ title: Juan Luis Gastaldi
 
 - J. L. Gastaldi. “Le sens d’une Logique du Sens: Deleuze, Frege et le rendez-vous manqué”. In: Gilles Deleuze: Politiques de la Philosophie. Ed. by A. Jdey. Métis Press, 2015, pp. 205–227.
 
-- J.L.Gastaldi.“L’esthétiqueauseindesmots:Discours,figure,oulerenouvellementduprojetcri- tique”. In: Le Moment philosophique des années 1960 en France. Ed. by P. Maniglier. Presses Universitaires de France, 2011, pp. 537–556.
+- J.L.Gastaldi.“L’esthétique au sein des mots: Discours, figure, ou le renouvellement du projet critique”. In: Le Moment philosophique des années 1960 en France. Ed. by P. Maniglier. Presses Universitaires de France, 2011, pp. 537–556.
 
-- J.L.Gastaldi.“Qu’est-cequ’unefigure?Lyotardetleproblèmedufondementd’unethéoriedel’ex- pression”. fre. In: Lyotard à Nanterre. Ed. by C. Pagès. Continents philosophiques. Paris: Klincksieck, 2010. ISBN: 978-2-252-03774-4.
+- J. L. Gastaldi.“Qu’est-ce qu’une figure? Lyotard et le problème du fondement d’une théorie de l’expression”. In: Lyotard à Nanterre. Ed. by C. Pagès. Continents philosophiques. Paris: Klincksieck, 2010. ISBN: 978-2-252-03774-4.
 
 ### Preprints
 
