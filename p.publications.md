@@ -4,8 +4,8 @@ title: Juan Luis Gastaldi
 # description: This is just another page
 ---
 
-<script src="{{ 'assets/js/random-color.js' }}"></script>
-<script src="{{ 'assets/js/img_fade.js' }}"></script>
+<!-- <script src="{{ 'assets/js/random-color.js' }}"></script> -->
+<!-- <script src="{{ 'assets/js/img_fade.js' }}"></script> -->
 
 
 # Publications
