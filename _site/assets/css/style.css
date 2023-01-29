@@ -20,32 +20,42 @@ body {
   position: sticky;
   top: -15vh;
 }
-
-.container {
+@media only screen and (orientation: landscape) and (min-width: 64em) {
+  .page-header {
+    max-width: 64rem;
+    padding: 0rem 6rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 42em) and (max-width: 64em) {
+  .page-header {
+    padding: 0rem 4rem;
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (orientation: landscape) and (max-width: 42em) {
+  .page-header {
+    padding: 0rem 1rem;
+    font-size: 0.8rem;
+    height: 25vh;
+  }
+}
+@media only screen and (orientation: landscape) and (max-width: 18em) {
+  .page-header {
+    padding: 0rem 1rem;
+    font-size: 0.8rem;
+    height: 30vh;
+  }
+}
+.page-header .container {
   height: 25vh;
   display: flex;
   align-items: center;
   justify-content: left;
 }
 @media only screen and (orientation: portrait) {
-  .container {
-    padding: 0rem 1rem;
-  }
-}
-@media only screen and (orientation: landscape) and (min-width: 64em) {
-  .container {
-    max-width: 64rem;
-    padding: 0rem 6rem;
-    margin: 0 auto;
-  }
-}
-@media only screen and (orientation: landscape) and (min-width: 42em) and (max-width: 64em) {
-  .container {
-    padding: 0rem 4rem;
-  }
-}
-@media only screen and (orientation: landscape) and (max-width: 42em) {
-  .container {
+  .page-header {
     padding: 0rem 1rem;
   }
 }
@@ -58,25 +68,26 @@ img {
 .subcontainer {
   height: 100%;
   width: 100%;
-  line-height: 1.25;
 }
 
 .jlg {
-  padding-top: 4vh;
   text-decoration: none;
-  height: 13.5vh;
+  height: 15vh;
+  line-height: 15vh;
   font-weight: bolder;
+  vertical-align: middle;
 }
 @media only screen and (orientation: landscape) {
   .jlg {
     max-width: 64rem;
   }
 }
-#buttons_h {
+.buttons_h {
   height: 10vh;
+  line-height: 10vh;
 }
 @media only screen and (orientation: portrait) {
-  #buttons_h {
+  .buttons_h {
     display: none;
   }
 }
@@ -92,7 +103,8 @@ img {
 
 .btn {
   display: inline-block;
-  margin-bottom: 1rem;
+  line-height: normal;
+  vertical-align: middle;
   color: white;
   text-decoration: none;
   border-color: white;
@@ -101,6 +113,11 @@ img {
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   min-width: 60px;
+}
+@media only screen and (orientation: landscape) and (max-width: 42em) {
+  .btn {
+    min-width: 0;
+  }
 }
 
 .btn:hover {
@@ -201,7 +218,7 @@ label.jm-menu-btn:hover {
 @media only screen and (orientation: landscape) and (max-width: 42em) {
   .main-content {
     padding: 0rem 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (orientation: portrait) {

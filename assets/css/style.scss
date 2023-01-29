@@ -97,6 +97,31 @@ body {
     // padding: 2.5vh 2.5vw;
     // line-height: 1;
 
+    @include landscape {
+
+      @include large {
+        max-width: 64rem;
+        padding: 0rem 6rem;
+        margin: 0 auto;
+        font-size: 1.1rem;
+      }
+
+      @include medium {
+        padding: 0rem 4rem;
+        font-size: 1.1rem;
+      }
+
+      @include small {
+        padding: 0rem 1rem;
+        font-size: .8rem;
+        height: 25vh;
+      }
+
+      @include xsmall {
+        padding: 0rem 1rem;
+        font-size: .8rem;
+        height: 30vh;
+      }
     
   }
 
@@ -108,48 +133,30 @@ body {
     // padding-left: 1rem;
     // padding-top: 2.5vh;
 
-    // @include large {
-    //   max-width: 64rem;
-    //   padding: 0rem 6rem;
-    //   margin: 0 auto;
-    //   // font-size: 1.1rem;
-    // }
-  
-    // @include medium {
-    //   padding: 0rem 4rem;
-    //   // font-size: 1.1rem;
-    // }
-  
-    // @include small {
-    //   padding: 0rem 1rem;
-    //   // font-size: 1rem;
-    // }
+    // @include landscape {
+
+    //   @include large {
+    //     max-width: 64rem;
+    //     padding: 0rem 6rem;
+    //     margin: 0 auto;
+    //     font-size: 1.1rem;
+    //   }
+
+    //   @include medium {
+    //     padding: 0rem 4rem;
+    //     font-size: 1.1rem;
+    //   }
+
+    //   @include small {
+    //     padding: 0rem 1rem;
+    //     font-size: .8rem;
+    //   }
+
+    }
 
     @include portrait {
       padding: 0rem 1rem;
     }
-
-    @include landscape {
-
-      @include large {
-        max-width: 64rem;
-        padding: 0rem 6rem;
-        margin: 0 auto;
-        // font-size: 1.1rem;
-      }
-
-      @include medium {
-        padding: 0rem 4rem;
-        // font-size: 1.1rem;
-      }
-
-      @include small {
-        padding: 0rem 1rem;
-        // font-size: 1rem;
-      }
-
-    }
-
 
   }
 
@@ -177,17 +184,20 @@ img {
 .subcontainer{
   height: 100%;
   width: 100%;
-  line-height: 1.25;
+  // line-height: 1.25;
 }
 
 
 .jlg {
     // order: 2;
-    padding-top: 4vh;
+    // padding-top: 4vh;
     // float: center;
     text-decoration:none;
-    height: 13.5vh;
+    // height: 13.5vh;
+    height: 15vh;
+    line-height: 15vh;
     font-weight:bolder;
+    vertical-align: middle;
     // -webkit-text-stroke: 1px #b8d0f9; /* width and color */
 
     // @include large {
@@ -237,8 +247,12 @@ img {
 
 
 
-#buttons_h{
+.buttons_h{
   height: 10vh;
+  line-height: 10vh;
+  // vertical-align: middle;
+  // line-height: normal;
+  // line-height: 10vh;
   // padding-top: 2.5vh;
 
   // @include small {
@@ -292,7 +306,10 @@ img {
 
 .btn {
     display: inline-block;
-    margin-bottom: 1rem;
+    line-height: normal;
+    vertical-align: middle;
+    // padding: 100;
+    // margin-bottom: 1rem;
     color:white;
     text-decoration: none;
     // background-color: #b8d0f9;
@@ -303,24 +320,21 @@ img {
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     // height: 2rem;
     min-width: 60px;
+    // padding: .2rem;
 
-    // @include large {
-    //   padding: 0.5rem;
-    // }
-  
-    // @include medium {
-    //   padding: 0.5rem;
-    // }
-  
-    // @include small {
-    //   padding: 0.5rem;
-    //   font-size: 0.9rem;
-    // }
+    @include landscape {
 
-    // @include xsmall {
-    //   padding: 0.75rem;
-    //   font-size: 0.9rem;
-    // }
+      @include large {
+      }
+
+      @include medium {
+      }
+
+      @include small {
+        min-width: 0;
+      }
+
+    }
     
     }
 
@@ -555,23 +569,6 @@ img {
     margin-top: 0;
   }
 
-  // @include large {
-  //   max-width: 64rem;
-  //   padding: 2rem 6rem;
-  //   margin: 0 auto;
-  //   font-size: 1.1rem;
-  // }
-
-  // @include medium {
-  //   padding: 2rem 4rem;
-  //   font-size: 1.1rem;
-  // }
-
-  // @include small {
-  //   padding: 2rem 1rem;
-  //   font-size: 1rem;
-  // }
-
   @include landscape {
 
     @include large {
@@ -588,7 +585,7 @@ img {
     
     @include small {
       padding: 0rem 1rem;
-      font-size: 1rem;
+      font-size: .9rem;
     }
   }
 
