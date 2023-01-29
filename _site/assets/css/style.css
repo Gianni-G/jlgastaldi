@@ -27,19 +27,24 @@ body {
   align-items: center;
   justify-content: left;
 }
-@media screen and (min-width: 64em) {
+@media only screen and (orientation: portrait) {
+  .container {
+    padding: 0rem 1rem;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 64em) {
   .container {
     max-width: 64rem;
     padding: 0rem 6rem;
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media only screen and (orientation: landscape) and (min-width: 42em) and (max-width: 64em) {
   .container {
     padding: 0rem 4rem;
   }
 }
-@media screen and (max-width: 42em) {
+@media only screen and (orientation: landscape) and (max-width: 42em) {
   .container {
     padding: 0rem 1rem;
   }
@@ -62,32 +67,15 @@ img {
   height: 13.5vh;
   font-weight: bolder;
 }
-@media screen and (min-width: 64em) {
+@media only screen and (orientation: landscape) {
   .jlg {
     max-width: 64rem;
-    font-size: 400%;
   }
 }
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .jlg {
-    font-size: 300%;
-  }
-}
-@media screen and (max-width: 42em) {
-  .jlg {
-    font-size: 200%;
-  }
-}
-@media screen and (max-width: 18em) {
-  .jlg {
-    font-size: 160%;
-  }
-}
-
 #buttons_h {
   height: 10vh;
 }
-@media screen and (max-width: 42em) {
+@media only screen and (orientation: portrait) {
   #buttons_h {
     display: none;
   }
@@ -96,12 +84,7 @@ img {
 #buttons_v {
   height: 10vh;
 }
-@media screen and (min-width: 64em) {
-  #buttons_v {
-    display: none;
-  }
-}
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media only screen and (orientation: landscape) {
   #buttons_v {
     display: none;
   }
@@ -118,22 +101,6 @@ img {
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   min-width: 60px;
-}
-@media screen and (min-width: 64em) {
-  .btn {
-    padding: 0.5rem;
-  }
-}
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .btn {
-    padding: 0.5rem;
-  }
-}
-@media screen and (max-width: 42em) {
-  .btn {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-  }
 }
 
 .btn:hover {
@@ -217,7 +184,7 @@ label.jm-menu-btn:hover {
 .main-content :first-child {
   margin-top: 0;
 }
-@media screen and (min-width: 64em) {
+@media only screen and (orientation: landscape) {
   .main-content {
     max-width: 64rem;
     padding: 2rem 6rem;
@@ -225,13 +192,7 @@ label.jm-menu-btn:hover {
     font-size: 1.1rem;
   }
 }
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .main-content {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
-  }
-}
-@media screen and (max-width: 42em) {
+@media only screen and (orientation: portrait) {
   .main-content {
     padding: 2rem 1rem;
     font-size: 1rem;

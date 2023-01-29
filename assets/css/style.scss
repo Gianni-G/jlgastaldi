@@ -56,6 +56,21 @@ $hr-border-color: #eff0f1 !default;
   }
 }
 
+@mixin landscape {
+  @media only screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media only screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+
+
+
 body {
   padding: 0;
   margin: 0;
@@ -93,22 +108,49 @@ body {
     // padding-left: 1rem;
     // padding-top: 2.5vh;
 
-    @include large {
-      max-width: 64rem;
-      padding: 0rem 6rem;
-      margin: 0 auto;
-      // font-size: 1.1rem;
-    }
+    // @include large {
+    //   max-width: 64rem;
+    //   padding: 0rem 6rem;
+    //   margin: 0 auto;
+    //   // font-size: 1.1rem;
+    // }
   
-    @include medium {
-      padding: 0rem 4rem;
-      // font-size: 1.1rem;
-    }
+    // @include medium {
+    //   padding: 0rem 4rem;
+    //   // font-size: 1.1rem;
+    // }
   
-    @include small {
+    // @include small {
+    //   padding: 0rem 1rem;
+    //   // font-size: 1rem;
+    // }
+
+    @include portrait {
       padding: 0rem 1rem;
-      // font-size: 1rem;
     }
+
+    @include landscape {
+
+      @include large {
+        max-width: 64rem;
+        padding: 0rem 6rem;
+        margin: 0 auto;
+        // font-size: 1.1rem;
+      }
+
+      @include medium {
+        padding: 0rem 4rem;
+        // font-size: 1.1rem;
+      }
+      
+      @include small {
+        padding: 0rem 1rem;
+        // font-size: 1rem;
+      }
+
+    }
+
+
   }
 
 // img {
@@ -148,27 +190,49 @@ img {
     font-weight:bolder;
     // -webkit-text-stroke: 1px #b8d0f9; /* width and color */
 
-    @include large {
+    // @include large {
+    //   max-width: 64rem;
+    //   // padding: 0rem 6rem;
+    //   // margin: 0 auto;
+    //   font-size: 400%;
+    // }
+  
+    // @include medium {
+    //   // padding: 0rem 4rem;
+    //   font-size: 200%;
+    // }
+  
+    // @include small {
+    //   // padding: 0rem 1rem;
+    //   font-size: 200%;
+    // }
+
+    // @include xsmall {
+    //   // padding: 0rem 1rem;
+    //   font-size: 160%;
+    // }
+
+    @include landscape {
       max-width: 64rem;
       // padding: 0rem 6rem;
       // margin: 0 auto;
-      font-size: 400%;
+      // font-size: 400%;
     }
   
-    @include medium {
-      // padding: 0rem 4rem;
-      font-size: 300%;
-    }
+    // @include medium {
+    //   // padding: 0rem 4rem;
+    //   font-size: 200%;
+    // }
   
-    @include small {
+    @include portrait {
       // padding: 0rem 1rem;
-      font-size: 200%;
+      // font-size: 200%;
     }
 
-    @include xsmall {
-      // padding: 0rem 1rem;
-      font-size: 160%;
-    }
+    // @include xsmall {
+    //   // padding: 0rem 1rem;
+    //   font-size: 160%;
+    // }
 }
 
 
@@ -177,7 +241,11 @@ img {
   height: 10vh;
   // padding-top: 2.5vh;
 
-  @include small {
+  // @include small {
+  //   display: none;
+  // }
+
+  @include portrait {
     display: none;
   }
 }
@@ -185,11 +253,15 @@ img {
 #buttons_v{
   height: 10vh;
 
-  @include large {
-    display: none;
-  }
+  // @include large {
+  //   display: none;
+  // }
 
-  @include medium {
+  // @include medium {
+  //   display: none;
+  // }
+
+  @include landscape() {
     display: none;
   }
 }
@@ -232,18 +304,18 @@ img {
     // height: 2rem;
     min-width: 60px;
 
-    @include large {
-      padding: 0.5rem;
-    }
+    // @include large {
+    //   padding: 0.5rem;
+    // }
   
-    @include medium {
-      padding: 0.5rem;
-    }
+    // @include medium {
+    //   padding: 0.5rem;
+    // }
   
-    @include small {
-      padding: 0.5rem;
-      font-size: 0.9rem;
-    }
+    // @include small {
+    //   padding: 0.5rem;
+    //   font-size: 0.9rem;
+    // }
 
     // @include xsmall {
     //   padding: 0.75rem;
@@ -483,22 +555,36 @@ img {
     margin-top: 0;
   }
 
-  @include large {
+  // @include large {
+  //   max-width: 64rem;
+  //   padding: 2rem 6rem;
+  //   margin: 0 auto;
+  //   font-size: 1.1rem;
+  // }
+
+  // @include medium {
+  //   padding: 2rem 4rem;
+  //   font-size: 1.1rem;
+  // }
+
+  // @include small {
+  //   padding: 2rem 1rem;
+  //   font-size: 1rem;
+  // }
+
+  @include landscape {
     max-width: 64rem;
     padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
   }
 
-  @include medium {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
-  }
-
-  @include small {
+  @include portrait {
     padding: 2rem 1rem;
     font-size: 1rem;
   }
+
+
   
   kbd {
     background-color: #fafbfc;
