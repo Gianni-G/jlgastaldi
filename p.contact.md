@@ -4,7 +4,7 @@ title: Juan Luis Gastaldi
 # description: This is just another page
 ---
 
-<base target="_blank">
+<!-- <base target="_blank"> -->
 
 
 # Contact
