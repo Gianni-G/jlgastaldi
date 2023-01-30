@@ -167,14 +167,6 @@ img {
   height: 10vh;
   line-height: 10vh;
   text-align: center;
-  // vertical-align: middle;
-  // line-height: normal;
-  // line-height: 10vh;
-  // padding-top: 2.5vh;
-
-  // @include small {
-  //   display: none;
-  // }
 
   @include portrait {
     display: none;
@@ -186,41 +178,10 @@ img {
   line-height: 10vh;
   text-align: center;
 
-  // @include large {
-  //   display: none;
-  // }
-
-  // @include medium {
-  //   display: none;
-  // }
-
   @include landscape {
     display: none;
   }
 }
-
-// .buttons_v{
-
-// }
-
-// @media screen and (min-width: 42em) {
-//     #buttons_v {
-//         display: none;
-//     }
-//     }
-// @media screen and (min-width: 42em) and (max-width: 64em) {
-//     #buttons_v {
-//         display: none;
-//     }
-//     }
-// @media screen and (max-width: 42em) {
-//     #buttons_v {
-//       height: 10vh;
-//       padding-top: 2.5vh;
-//       padding-left: 1rem;
-        
-//     }
-//     }
 
 
 .btn {
@@ -253,8 +214,13 @@ img {
       }
 
     }
-    
+
+    @include portrait {
+      min-width: 40px;
+      min-height: 10px;
     }
+    
+  }
 
 .btn:hover {
     text-decoration: none;
@@ -298,15 +264,9 @@ img {
 
 /* Menu bar and fonts */
 .jmenu {
-    // box-sizing: border-box;
-    // line-height: 1;
-
     transition: color 0.2s, background-color 0.2s,
     border-color 0.2s;
     display: block;
-
-    // max-width: 25%;
-
   }
 .jmenu:hover {
     // color: white;
@@ -510,6 +470,11 @@ img {
   @include portrait {
     padding: 2rem 1rem;
     font-size: 1rem;
+
+    @include small {
+      font-size: .8rem;
+    }
+
   }
 
 

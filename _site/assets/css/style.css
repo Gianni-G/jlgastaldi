@@ -125,6 +125,12 @@ img {
     min-width: 0;
   }
 }
+@media only screen and (orientation: portrait) {
+  .btn {
+    min-width: 40px;
+    min-height: 10px;
+  }
+}
 
 .btn:hover {
   text-decoration: none;
@@ -231,6 +237,11 @@ label.jm-menu-btn:hover {
   .main-content {
     padding: 2rem 1rem;
     font-size: 1rem;
+  }
+}
+@media only screen and (orientation: portrait) and (max-width: 42em) {
+  .main-content {
+    font-size: 0.8rem;
   }
 }
 .main-content kbd {
