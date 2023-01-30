@@ -69,8 +69,6 @@ $hr-border-color: #eff0f1 !default;
 }
 
 
-
-
 body {
   padding: 0;
   margin: 0;
@@ -83,86 +81,42 @@ body {
 .page-header {
     color: white;
     text-decoration: none;
-    text-align: center;
     background-color: white;
     height: 25vh;
     background-image: url("../img/heatmap.jpg");
-    // background-position: center; /* Center the image */
-    // background-repeat: no-repeat; /* Do not repeat the image */
-    // background-repeat: repeat-x;
     background-size: cover;
-    // background-size:50%;
     position:sticky;
     top: -15vh;
-    // padding: 2.5vh 2.5vw;
-    // line-height: 1;
-
-    @include landscape {
-
-      @include large {
-        max-width: 64rem;
-        padding: 0rem 6rem;
-        margin: 0 auto;
-        font-size: 1.1rem;
-      }
-
-      @include medium {
-        padding: 0rem 4rem;
-        font-size: 1.1rem;
-      }
-
-      @include small {
-        padding: 0rem 1rem;
-        font-size: .8rem;
-        height: 25vh;
-      }
-
-      @include xsmall {
-        padding: 0rem 1rem;
-        font-size: .8rem;
-        height: 30vh;
-      }
-    
-  }
-
+    // display: flex;
+    // justify-content: center;
+}
+  
 .container {
     height: 25vh;
     display: flex;
     align-items: center;
     justify-content: left;
-    // padding-left: 1rem;
-    // padding-top: 2.5vh;
+  
+    @include landscape {
+      @include large {
+        max-width: 64rem;
+        padding: 0rem 6rem;
+        margin: 0 auto;
+      }
 
-    // @include landscape {
-
-    //   @include large {
-    //     max-width: 64rem;
-    //     padding: 0rem 6rem;
-    //     margin: 0 auto;
-    //     font-size: 1.1rem;
-    //   }
-
-    //   @include medium {
-    //     padding: 0rem 4rem;
-    //     font-size: 1.1rem;
-    //   }
-
-    //   @include small {
-    //     padding: 0rem 1rem;
-    //     font-size: .8rem;
-    //   }
-
+      @include medium {
+        padding: 0rem 4rem;
+      }
+      
+      @include small {
+        padding: 0rem 1rem;
+      }
     }
-
     @include portrait {
       padding: 0rem 1rem;
     }
 
   }
-
-// img {
-//     max-width: 100%;
-//   }
 
 img {
     height: 20vh;
@@ -184,65 +138,22 @@ img {
 .subcontainer{
   height: 100%;
   width: 100%;
-  // line-height: 1.25;
 }
 
 
 .jlg {
-    // order: 2;
-    // padding-top: 4vh;
-    // float: center;
+    text-align: center;
     text-decoration:none;
     // height: 13.5vh;
     height: 15vh;
     line-height: 15vh;
     font-weight:bolder;
     vertical-align: middle;
-    // -webkit-text-stroke: 1px #b8d0f9; /* width and color */
-
-    // @include large {
-    //   max-width: 64rem;
-    //   // padding: 0rem 6rem;
-    //   // margin: 0 auto;
-    //   font-size: 400%;
-    // }
-  
-    // @include medium {
-    //   // padding: 0rem 4rem;
-    //   font-size: 200%;
-    // }
-  
-    // @include small {
-    //   // padding: 0rem 1rem;
-    //   font-size: 200%;
-    // }
-
-    // @include xsmall {
-    //   // padding: 0rem 1rem;
-    //   font-size: 160%;
-    // }
 
     @include landscape {
-      max-width: 64rem;
-      // padding: 0rem 6rem;
-      // margin: 0 auto;
-      // font-size: 400%;
+      font-size: 4vw;
+      line-height: 2.5;
     }
-  
-    // @include medium {
-    //   // padding: 0rem 4rem;
-    //   font-size: 200%;
-    // }
-  
-    @include portrait {
-      // padding: 0rem 1rem;
-      // font-size: 200%;
-    }
-
-    // @include xsmall {
-    //   // padding: 0rem 1rem;
-    //   font-size: 160%;
-    // }
 }
 
 
@@ -250,6 +161,7 @@ img {
 .buttons_h{
   height: 10vh;
   line-height: 10vh;
+  text-align: center;
   // vertical-align: middle;
   // line-height: normal;
   // line-height: 10vh;
@@ -275,7 +187,7 @@ img {
   //   display: none;
   // }
 
-  @include landscape() {
+  @include landscape {
     display: none;
   }
 }
@@ -308,19 +220,17 @@ img {
     display: inline-block;
     line-height: normal;
     vertical-align: middle;
-    // padding: 100;
-    // margin-bottom: 1rem;
     color:white;
     text-decoration: none;
-    // background-color: #b8d0f9;
+    text-align: center;
     border-color: white;
     border-style: solid;
     border-width: 1px;
     border-radius: 0.3rem;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    // height: 2rem;
     min-width: 60px;
-    // padding: .2rem;
+    padding: .4vh .7vw .4vh;
+    font-size: 1.4vw;
 
     @include landscape {
 
@@ -332,6 +242,7 @@ img {
 
       @include small {
         min-width: 0;
+
       }
 
     }

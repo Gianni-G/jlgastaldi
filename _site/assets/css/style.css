@@ -12,7 +12,6 @@ body {
 .page-header {
   color: white;
   text-decoration: none;
-  text-align: center;
   background-color: white;
   height: 25vh;
   background-image: url("../img/heatmap.jpg");
@@ -20,42 +19,32 @@ body {
   position: sticky;
   top: -15vh;
 }
-@media only screen and (orientation: landscape) and (min-width: 64em) {
-  .page-header {
-    max-width: 64rem;
-    padding: 0rem 6rem;
-    margin: 0 auto;
-    font-size: 1.1rem;
-  }
-}
-@media only screen and (orientation: landscape) and (min-width: 42em) and (max-width: 64em) {
-  .page-header {
-    padding: 0rem 4rem;
-    font-size: 1.1rem;
-  }
-}
-@media only screen and (orientation: landscape) and (max-width: 42em) {
-  .page-header {
-    padding: 0rem 1rem;
-    font-size: 0.8rem;
-    height: 25vh;
-  }
-}
-@media only screen and (orientation: landscape) and (max-width: 18em) {
-  .page-header {
-    padding: 0rem 1rem;
-    font-size: 0.8rem;
-    height: 30vh;
-  }
-}
-.page-header .container {
+
+.container {
   height: 25vh;
   display: flex;
   align-items: center;
   justify-content: left;
 }
+@media only screen and (orientation: landscape) and (min-width: 64em) {
+  .container {
+    max-width: 64rem;
+    padding: 0rem 6rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 42em) and (max-width: 64em) {
+  .container {
+    padding: 0rem 4rem;
+  }
+}
+@media only screen and (orientation: landscape) and (max-width: 42em) {
+  .container {
+    padding: 0rem 1rem;
+  }
+}
 @media only screen and (orientation: portrait) {
-  .page-header {
+  .container {
     padding: 0rem 1rem;
   }
 }
@@ -71,6 +60,7 @@ img {
 }
 
 .jlg {
+  text-align: center;
   text-decoration: none;
   height: 15vh;
   line-height: 15vh;
@@ -79,12 +69,15 @@ img {
 }
 @media only screen and (orientation: landscape) {
   .jlg {
-    max-width: 64rem;
+    font-size: 4vw;
+    line-height: 2.5;
   }
 }
+
 .buttons_h {
   height: 10vh;
   line-height: 10vh;
+  text-align: center;
 }
 @media only screen and (orientation: portrait) {
   .buttons_h {
@@ -107,12 +100,15 @@ img {
   vertical-align: middle;
   color: white;
   text-decoration: none;
+  text-align: center;
   border-color: white;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   min-width: 60px;
+  padding: 0.4vh 0.7vw 0.4vh;
+  font-size: 1.4vw;
 }
 @media only screen and (orientation: landscape) and (max-width: 42em) {
   .btn {
