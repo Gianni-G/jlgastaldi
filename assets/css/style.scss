@@ -18,7 +18,7 @@ $header-bg-color-secondary: #531212 !default;
 // Text
 $section-headings-color: #de604d !default;
 $body-text-color: #606c71 !default;
-$body-link-color: #8db0fe !default;
+$body-link-color: #5470de !default;
 $blockquote-text-color: #819198 !default;
 
 // Code
@@ -72,11 +72,21 @@ $hr-border-color: #eff0f1 !default;
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-family: "Helvetica Light", Helvetica, Arial, sans-serif;
+  // font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
   font-size: 16px;
   line-height: 1.5;
   color: $body-text-color;
+}
+
+a {
+  color: $body-link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .page-header {
@@ -140,6 +150,64 @@ img {
 }
 
 
+.btn {
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  min-width: 60px;
+  padding: .4vh .7vw .4vh;
+  font-size: 1.4vw;
+  font-family: 'Courier New', Courier, monospace;
+
+  
+  @include landscape {
+
+    @include large {
+      font-size: large;
+    }
+
+    @include medium {
+    }
+
+    @include small {
+      min-width: 0;
+
+    }
+
+  }
+
+  @include portrait {
+    min-width: 7em;
+    min-height: 10px;
+    font-size: 3vw;
+    @include large {
+      font-size: large;
+    }
+    @include medium {
+      font-size: large;
+    }
+  }
+  
+}
+
+.btn:hover {
+  text-decoration: none;
+  // background-color: #dddddd;
+  filter:saturate(0%);
+  }
+
+.btn + .btn {
+  margin-left: .5vw;
+  }
+
 .jlg {
     text-align: center;
     text-decoration:none;
@@ -148,6 +216,9 @@ img {
     line-height: 15vh;
     font-weight:bolder;
     vertical-align: middle;
+    font-weight: 100;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    
 
     @include landscape {
       font-size: 4vw;
@@ -163,6 +234,23 @@ img {
       height: 9vh;
       padding-top: 6vh;
     }
+}
+
+.jlg_btn {
+
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  padding: .4vh 2vw .4vh;
+
+}
+.jlg_btn:hover {
+  text-decoration: none;
+  filter:saturate(0%);
 }
 
 
@@ -197,63 +285,6 @@ img {
 }
 
 
-.btn {
-    display: inline-block;
-    line-height: normal;
-    vertical-align: middle;
-    color:white;
-    text-decoration: none;
-    text-align: center;
-    border-color: white;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 0.3rem;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    min-width: 60px;
-    padding: .4vh .7vw .4vh;
-    font-size: 1.4vw;
-    font-family: 'Courier New', Courier, monospace;
-
-    
-    @include landscape {
-
-      @include large {
-        font-size: large;
-      }
-
-      @include medium {
-      }
-
-      @include small {
-        min-width: 0;
-
-      }
-
-    }
-
-    @include portrait {
-      min-width: 7em;
-      min-height: 10px;
-      font-size: 3vw;
-      @include large {
-        font-size: large;
-      }
-      @include medium {
-        font-size: large;
-      }
-    }
-    
-  }
-
-.btn:hover {
-    text-decoration: none;
-    // background-color: #dddddd;
-    filter:saturate(0%);
-    }
-
-.btn + .btn {
-    margin-left: .5vw;
-    }
 
 // @media screen and (min-width: 64em) {
 //     .btn {
@@ -672,6 +703,14 @@ img {
   }
 }
 
+.mstdn > span{
+  color:#9baec8;
+  font-size:12px;
+  padding-left:3px;
+}
+.mstdn > span:before{
+  content:"@";
+}
 
 .site-footer {
     text-align: right;

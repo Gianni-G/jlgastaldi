@@ -3,11 +3,19 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-family: "Helvetica Light", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
   font-size: 16px;
   line-height: 1.5;
   color: #606c71;
+}
+
+a {
+  color: #5470de;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .page-header {
@@ -57,66 +65,6 @@ img {
 .subcontainer {
   height: 100%;
   width: 100%;
-}
-
-.jlg {
-  text-align: center;
-  text-decoration: none;
-  height: 15vh;
-  line-height: 15vh;
-  font-weight: bolder;
-  vertical-align: middle;
-}
-@media only screen and (orientation: landscape) {
-  .jlg {
-    font-size: 4vw;
-    line-height: 15vh;
-  }
-}
-@media only screen and (orientation: landscape) and (min-width: 64em) {
-  .jlg {
-    font-size: 68px;
-  }
-}
-@media only screen and (orientation: portrait) {
-  .jlg {
-    font-size: 4vh;
-    line-height: 1em;
-    height: 9vh;
-    padding-top: 6vh;
-  }
-}
-
-.buttons_h {
-  height: 10vh;
-  line-height: 10vh;
-  text-align: center;
-}
-@media only screen and (orientation: portrait) {
-  .buttons_h {
-    display: none;
-  }
-}
-@media only screen and (orientation: portrait) and (min-width: 64em) {
-  .buttons_h {
-    display: unset;
-  }
-}
-
-.buttons_v {
-  height: 10vh;
-  line-height: 10vh;
-  text-align: center;
-}
-@media only screen and (orientation: landscape) {
-  .buttons_v {
-    display: none;
-  }
-}
-@media only screen and (orientation: portrait) and (min-width: 64em) {
-  .buttons_v {
-    display: none;
-  }
 }
 
 .btn {
@@ -171,6 +119,84 @@ img {
 
 .btn + .btn {
   margin-left: 0.5vw;
+}
+
+.jlg {
+  text-align: center;
+  text-decoration: none;
+  height: 15vh;
+  line-height: 15vh;
+  font-weight: bolder;
+  vertical-align: middle;
+  font-weight: 100;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media only screen and (orientation: landscape) {
+  .jlg {
+    font-size: 4vw;
+    line-height: 15vh;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 64em) {
+  .jlg {
+    font-size: 68px;
+  }
+}
+@media only screen and (orientation: portrait) {
+  .jlg {
+    font-size: 4vh;
+    line-height: 1em;
+    height: 9vh;
+    padding-top: 6vh;
+  }
+}
+
+.jlg_btn {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  padding: 0.4vh 2vw 0.4vh;
+}
+
+.jlg_btn:hover {
+  text-decoration: none;
+  filter: saturate(0%);
+}
+
+.buttons_h {
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+}
+@media only screen and (orientation: portrait) {
+  .buttons_h {
+    display: none;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 64em) {
+  .buttons_h {
+    display: unset;
+  }
+}
+
+.buttons_v {
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+}
+@media only screen and (orientation: landscape) {
+  .buttons_v {
+    display: none;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 64em) {
+  .buttons_v {
+    display: none;
+  }
 }
 
 /* JMenu 1.0 RC1 | MIT License | https://github.com/jamesjohnson280/JMenu */
@@ -422,6 +448,16 @@ label.jm-menu-btn:hover {
   margin: 1rem 0;
   background-color: #eff0f1;
   border: 0;
+}
+
+.mstdn > span {
+  color: #9baec8;
+  font-size: 12px;
+  padding-left: 3px;
+}
+
+.mstdn > span:before {
+  content: "@";
 }
 
 .site-footer {

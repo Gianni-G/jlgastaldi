@@ -50,9 +50,16 @@ var colors = [
 // '#bc1c2c',
 // '#b40426'
 ];
+
 var buttons = document.getElementsByClassName("btn");
 for (let i = 0; i < buttons.length; i++) {
     var random_color = colors[Math.floor(Math.random() * colors.length)];
     var random_color_hover = colors[Math.floor(Math.random() * colors.length)];
-    buttons[i].style.backgroundColor = random_color;
+    buttons[i].style.backgroundColor = random_color;}
+
+var jlg_btn = document.getElementsByClassName("jlg_btn");
+for (let i = 0; i < buttons.length; i++) {
+    var random_color = colors[Math.floor(Math.random() * colors.length)];
+    var random_color_hover = colors[Math.floor(Math.random() * colors.length)];
+    jlg_btn[i].style.backgroundColor = random_color;
 }
