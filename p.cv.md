@@ -7,7 +7,3 @@ title: Juan Luis Gastaldi
 <!-- <script src="{{ 'assets/js/random-color.js' }}"></script> -->
 
 # CV
-
-- Lecture
-
-[back](./)
