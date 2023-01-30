@@ -30,11 +30,15 @@ My research focuses on the formalization of meaning as a central problem of mode
 # News
 
 ### 03/02/2023
-Lecture at NYU. "Why Can Computers Understand Natural Language?"
+*Why Can Computers Understand Natural Language?*\
+Lecture at NYU.\
+12:00 pm EST. Zoom.
 
 ### 31/01/2023
-Lecture at the [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)
-365 Fifth Avenue, New York, USA. 10:00 am. Room 5209.
+*Neural Approaches to Mathematics*\
+Lecture at the [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)\
+365 Fifth Avenue, New York, USA. 10:00 am EST. Room 5209.
 
 ### 02/12/2022
-Lecture at the University of Chapman: "Content from Expressions: from Distributional Properties of Numerals to Arithmetical Content"
+*Content from Expressions: from Distributional Properties of Numerals to Arithmetical Content*\
+Lecture at the University of Chapman
