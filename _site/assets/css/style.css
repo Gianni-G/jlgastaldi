@@ -97,14 +97,24 @@ img {
     display: none;
   }
 }
+@media only screen and (orientation: portrait) and (min-width: 64em) {
+  .buttons_h {
+    display: unset;
+  }
+}
 
-#buttons_v {
+.buttons_v {
   height: 10vh;
   line-height: 10vh;
   text-align: center;
 }
 @media only screen and (orientation: landscape) {
-  #buttons_v {
+  .buttons_v {
+    display: none;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 64em) {
+  .buttons_v {
     display: none;
   }
 }
@@ -141,6 +151,16 @@ img {
     min-width: 7em;
     min-height: 10px;
     font-size: 3vw;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 64em) {
+  .btn {
+    font-size: large;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 42em) and (max-width: 64em) {
+  .btn {
+    font-size: large;
   }
 }
 

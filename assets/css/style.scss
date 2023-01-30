@@ -174,16 +174,25 @@ img {
 
   @include portrait {
     display: none;
+    @include large {
+      display: unset;
+    }
   }
 }
 
-#buttons_v{
+.buttons_v{
   height: 10vh;
   line-height: 10vh;
   text-align: center;
 
   @include landscape {
     display: none;
+  }
+
+  @include portrait {
+    @include large {
+      display: none;
+    }
   }
 }
 
@@ -226,6 +235,12 @@ img {
       min-width: 7em;
       min-height: 10px;
       font-size: 3vw;
+      @include large {
+        font-size: large;
+      }
+      @include medium {
+        font-size: large;
+      }
     }
     
   }
