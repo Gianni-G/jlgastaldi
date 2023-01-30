@@ -127,8 +127,9 @@ img {
 }
 @media only screen and (orientation: portrait) {
   .btn {
-    min-width: 40px;
+    min-width: 10em;
     min-height: 10px;
+    font-size: 3vw;
   }
 }
 
@@ -182,6 +183,7 @@ label.jm-menu-btn:hover {
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-inline-start: 0;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* Menu Items */

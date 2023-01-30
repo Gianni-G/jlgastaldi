@@ -216,8 +216,9 @@ img {
     }
 
     @include portrait {
-      min-width: 40px;
+      min-width: 10em;
       min-height: 10px;
+      font-size: 3vw;
     }
     
   }
@@ -312,6 +313,7 @@ img {
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-inline-start: 0;
+    background-color:rgba($color: white, $alpha: .7)
     
     
     
