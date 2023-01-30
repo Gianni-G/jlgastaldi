@@ -87,8 +87,6 @@ body {
     background-size: cover;
     position:sticky;
     top: -15vh;
-    // display: flex;
-    // justify-content: center;
 }
   
 .container {
@@ -154,6 +152,13 @@ img {
       font-size: 4vw;
       line-height: 2.5;
     }
+
+    @include portrait {
+      font-size: 4vh;
+      line-height: 1em;
+      height: 9vh;
+      padding-top: 6vh;
+    }
 }
 
 
@@ -178,6 +183,8 @@ img {
 
 #buttons_v{
   height: 10vh;
+  line-height: 10vh;
+  text-align: center;
 
   // @include large {
   //   display: none;

@@ -73,6 +73,14 @@ img {
     line-height: 2.5;
   }
 }
+@media only screen and (orientation: portrait) {
+  .jlg {
+    font-size: 4vh;
+    line-height: 1em;
+    height: 9vh;
+    padding-top: 6vh;
+  }
+}
 
 .buttons_h {
   height: 10vh;
@@ -87,6 +95,8 @@ img {
 
 #buttons_v {
   height: 10vh;
+  line-height: 10vh;
+  text-align: center;
 }
 @media only screen and (orientation: landscape) {
   #buttons_v {
