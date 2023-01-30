@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 body {
   padding: 0;
@@ -145,7 +146,12 @@ img {
     font-size: 4vh;
     line-height: 1em;
     height: 9vh;
-    padding-top: 6vh;
+    padding: 5vh 10vw 1vh;
+  }
+}
+@media only screen and (orientation: portrait) and (max-width: 42em) {
+  .jlg {
+    font-size: 5vw;
   }
 }
 
@@ -491,3 +497,5 @@ label.jm-menu-btn:hover {
 .site-footer-credits {
   color: #819198;
 }
+
+/*# sourceMappingURL=style.css.map */

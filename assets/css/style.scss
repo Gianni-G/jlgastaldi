@@ -231,7 +231,11 @@ img {
       font-size: 4vh;
       line-height: 1em;
       height: 9vh;
-      padding-top: 6vh;
+      padding: 5vh 10vw 1vh;
+
+      @include small {
+        font-size: 5vw;
+      }
     }
 }
 
