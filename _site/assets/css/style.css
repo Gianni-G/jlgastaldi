@@ -4,13 +4,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Light", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #606c71;
 }
 
 .page-header {
-  color: white;
   text-decoration: none;
   background-color: white;
   height: 25vh;
@@ -70,7 +70,12 @@ img {
 @media only screen and (orientation: landscape) {
   .jlg {
     font-size: 4vw;
-    line-height: 2.5;
+    line-height: 15vh;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 64em) {
+  .jlg {
+    font-size: 68px;
   }
 }
 @media only screen and (orientation: portrait) {
@@ -119,6 +124,12 @@ img {
   min-width: 60px;
   padding: 0.4vh 0.7vw 0.4vh;
   font-size: 1.4vw;
+  font-family: "Courier New", Courier, monospace;
+}
+@media only screen and (orientation: landscape) and (min-width: 64em) {
+  .btn {
+    font-size: large;
+  }
 }
 @media only screen and (orientation: landscape) and (max-width: 42em) {
   .btn {
@@ -273,6 +284,7 @@ label.jm-menu-btn:hover {
   margin-bottom: 1rem;
   font-weight: normal;
   color: #de604d;
+  font-family: "Courier New", Courier, monospace;
 }
 .main-content p {
   margin-bottom: 1em;

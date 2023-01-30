@@ -73,13 +73,14 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Light", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: $body-text-color;
 }
 
 .page-header {
-    color: white;
+    // color: white;
     text-decoration: none;
     background-color: white;
     height: 25vh;
@@ -150,7 +151,10 @@ img {
 
     @include landscape {
       font-size: 4vw;
-      line-height: 2.5;
+      line-height: 15vh;
+      @include large {
+        font-size: 68px;
+      }
     }
 
     @include portrait {
@@ -199,10 +203,13 @@ img {
     min-width: 60px;
     padding: .4vh .7vw .4vh;
     font-size: 1.4vw;
+    font-family: 'Courier New', Courier, monospace;
 
+    
     @include landscape {
 
       @include large {
+        font-size: large;
       }
 
       @include medium {
@@ -510,6 +517,7 @@ img {
     margin-bottom: 1rem;
     font-weight: normal;
     color: $section-headings-color;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   p {
