@@ -214,7 +214,6 @@ img {
     // height: 13.5vh;
     height: 15vh;
     line-height: 15vh;
-    font-weight:bolder;
     vertical-align: middle;
     font-weight: 100;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -237,7 +236,7 @@ img {
 }
 
 .jlg_btn {
-
+  display: inline-block;
   color:white;
   text-decoration: none;
   text-align: center;
@@ -246,6 +245,20 @@ img {
   border-width: 1px;
   border-radius: 0.3rem;
   padding: .4vh 2vw .4vh;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  line-height: normal;
+
+  // @include portrait {
+  //   min-width: 7em;
+  //   min-height: 10px;
+  //   font-size: 3vw;
+  //   @include large {
+  //     font-size: large;
+  //   }
+  //   @include medium {
+  //     font-size: large;
+  //   }
+  // }
 
 }
 .jlg_btn:hover {
