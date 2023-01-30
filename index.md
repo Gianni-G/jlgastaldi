@@ -31,13 +31,14 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 ### 03/02/2023
 *Why Can Computers Understand Natural Language?*\
-Lecture at NYU.\
+Lecture at [Digital Theory Lab](https://digitaltheorylab.org), NYU.\
 12:00 pm EST. Zoom.
 
 ### 31/01/2023
-*Neural Approaches to Mathematics*\
+[*Neural Approaches to Mathematics*](https://itsatcuny.org/calendar/2023/1/30/its-tutorial-talk-juan-luis-gastaldi)\
 Lecture at the [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)\
-365 Fifth Avenue, New York, USA. 10:00 am EST. Room 5209.
+365 Fifth Avenue, New York, USA.\
+10:00 am EST. Room 5209.
 
 ### 02/12/2022
 *Content from Expressions: from Distributional Properties of Numerals to Arithmetical Content*\
