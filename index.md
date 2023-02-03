@@ -32,7 +32,7 @@ My research focuses on the formalization of meaning as a central problem of mode
 ### 03/02/2023
 *Why Can Computers Understand Natural Language?*\
 Lecture at [Digital Theory Lab](https://digitaltheorylab.org), NYU.\
-12:00 pm EST. Zoom.
+12:00 pm EST. Zoom.\
 [[Slides]](./assets/pdf/slides/gastaldi_230203_nyu.pdf)
 
 ### 31/01/2023
