@@ -32,3 +32,6 @@ Choses de prix: Métaphysique comparée de l’objet d’art et de la marchandis
 
 Formal Mediums: Arts&Mathematics Platform. (4K€)
 Research Platform in art and mathematics, associating artists and theoreticians of the Akademie Schloss Solitude. Project Coordinators: Juan Luis Gastaldi and Mladen Alexiev. Project funded by the Akademie Schloss Solitude.
+
+[Tensor](./tensor.html)
+[Tensor 2](./tensor2.html)
