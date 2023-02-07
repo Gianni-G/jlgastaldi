@@ -8,4 +8,5 @@ title: Juan Luis Gastaldi
 
 # CV
 
+[Tensor](./tensor.html)
 tba
