@@ -35,5 +35,6 @@ Research Platform in art and mathematics, associating artists and theoreticians 
 
 [Tensor](./tensor.html)
 
-<!-- [Tensor 2](./assets/graphs/tensor2.html) -->
+[Tensor LFS](./assets/graphs/tensor2.html)
+
 [Tensor 2](./tensor2.html)
