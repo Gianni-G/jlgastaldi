@@ -34,4 +34,5 @@ Formal Mediums: Arts&Mathematics Platform. (4K€)
 Research Platform in art and mathematics, associating artists and theoreticians of the Akademie Schloss Solitude. Project Coordinators: Juan Luis Gastaldi and Mladen Alexiev. Project funded by the Akademie Schloss Solitude.
 
 [2D Tensor](./assets/graphs/pmi.html)
+
 [3D Tensor](./assets/graphs/3D.html)
