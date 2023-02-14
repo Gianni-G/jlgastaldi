@@ -33,7 +33,8 @@ My research focuses on the formalization of meaning as a central problem of mode
 *Peeking into the AI Language Modeling Black Box*\
 Lunch Talk at the [Department of Philosophy](https://www.cmu.edu/dietrich/philosophy/), CMU.\
 5000 Forbes Avenue Pittsburgh, PA 15213.\
-12:00 pm EST. Baker Hall, room 150.
+12:00 pm EST. Baker Hall, room 150.\
+[[Slides]](./assets/pdf/slides/gastaldi_230215_cmu.pdf)
 
 ### 03/02/2023
 *Why Can Computers Understand Natural Language?*\
