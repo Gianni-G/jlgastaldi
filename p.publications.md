@@ -8,7 +8,7 @@ title: Juan Luis Gastaldi
 
 # Publications
 
-- J. L. Gastaldi (2023). “De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic”. In: *Duality in 19th and 20th century mathematical thinking*. Ed. by R. Krömer, E. Haffner, and K. Volkert. Birkhäuser, forthcoming.
+- J. L. Gastaldi (2023). “De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic”. In: *Duality in 19th and 20th century mathematical thinking*. Ed. by R. Krömer, E. Haffner, and K. Volkert. Birkhäuser, forthcoming. [[PDF]](./assets/pdf/Gastaldi2023s_a.pdf)
 
 - J. L. Gastaldi (2022). “[Boole’s Untruth Tables: The Formal Conditions of Meaning Before the Emergence of Propositional Logic](https://link.springer.com/chapter/10.1007/978-3-030-94452-0_7)”. In: Béziau, JY., Desclés, JP., Moktefi, A., Pascu, A.C. (eds) *Logic in Question. Studies in Universal Logic*. Birkhäuser, Cham. DOI: 10.1007/978-3-030-94452-0_7.
 
