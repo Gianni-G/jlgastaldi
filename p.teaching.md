@@ -65,7 +65,7 @@ Invited Lecturer
 
 ### 1999-2005
 
-*Faculty of Political Sciences \& Faculty of Economics, National University of Rosario* (Rosario, Argentina)\
+*Faculty of Political Sciences - Faculty of Economics, National University of Rosario* (Rosario, Argentina)\
 Teaching Assistant
 
 - “Epistemology of Social Sciences”
