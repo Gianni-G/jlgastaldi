@@ -4,24 +4,12 @@ title: Juan Luis Gastaldi
 # description: This is just another page
 ---
 
-<script src="{{ 'assets/js/random-color.js' }}"></script>
+<!-- <script src="{{ 'assets/js/random-color.js' }}"></script> -->
 
 * * *
 <p style="text-align: center;">This website is under construction !</p>
 
 * * *
- 
-
-
-
-
-<!-- // var colors = ['#3b4cc0', '#6282ea', '#8db0fe','#b8d0f9','#dddddd','#f5c4ad','#f49a7b','#de604d','#b40426'];
-// var buttons = document.getElementsByClassName("btn");
-// for (let i = 0; i < buttons.length; i++) {
-//     var random_color = colors[Math.floor(Math.random() * colors.length)];
-//     buttons[i].style.backgroundColor = random_color;
-// } -->
-
 
 I am a philosopher and historian of science, specialized in the philosophy and history of formal knowledge (mathematics, logic and computer science), from the beginning of the 19th century to our days.
 
@@ -32,7 +20,7 @@ My research focuses on the formalization of meaning as a central problem of mode
 ### 15/02/2023
 *Peeking into the AI Language Modeling Black Box*\
 Lunch Talk at the [Department of Philosophy](https://www.cmu.edu/dietrich/philosophy/), CMU.\
-5000 Forbes Avenue Pittsburgh, PA 15213.\
+5000 Forbes Avenue Pittsburgh, PA, USA.\
 12:00 pm EST. Baker Hall, room 150.\
 [[Slides]](./assets/pdf/slides/gastaldi_230215_cmu.pdf)
 
@@ -50,4 +38,6 @@ Lecture at the [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)\
 
 ### 02/12/2022
 *Content from Expressions: from Distributional Properties of Numerals to Arithmetical Content*\
-Lecture at the University of Chapman
+Lecture at the [OCIE Seminar in the History and Philosophy of Mathematics and Logic](https://faculty.ucr.edu/~reck/OCIE-Group.html) (Chapman Universituy)\
+225 E Palm Ave, Orange, CA, USA.
+4:00 pm PST. Doti Hall, Room 105.
