@@ -8,7 +8,8 @@ title: Juan Luis Gastaldi
 
 ### 2019-Present
 
-*ETH Zurich (Department of Humanities, Socialand Political Sciences): Lecturer.*
+*D-GESS, ETH Zurich (Zurich, Switzerland)*\
+Lecturer
 
 - 2023SS: “[Philosophy of Language and Computation II](https://rycolab.io/classes/phil-s23/)” (with Ryan Cotterell)
 - 2022AS: “[Philosophy of Language and Computation](https://rycolab.io/classes/phil-f22/)” (with Ryan Cotterell)
@@ -22,14 +23,16 @@ title: Juan Luis Gastaldi
 
 ### 2018-2020
 
-*CentraleSupélec Engineering School: Short-term Lecturer.*
+*CentraleSupélec Engineering School (Paris, France)*\
+Short-term Lecturer
 
 - 2020AS: “Computing Culture: Social Sciences in the Face of AI”
 - 2018AS: “Historical, Philosophical and Ethical Perspectives on AI and Data Sciences” (with B. Duchemann and N. Brault).
 
 ### 2012-2019
 
-*MO.CO.ESBA: Professor of Philosophy and History of Ideas.*
+*MO.CO.ESBA (Montpellier, France)*\
+Professor of Philosophy and History of Ideas
 
 - 2018: “Form(s) and formalism(s)”
 - 2017: “Reflections on the end of postmodernity”
@@ -47,28 +50,25 @@ title: Juan Luis Gastaldi
 
 ### 2017
 
-*Czech Academy of Science (Institute of Philosophy): Visiting Professor.*
+*Institute of Philosophy, Czech Academy of Science (Prague, Czech Republic)*\
+Visiting Professor
 
 - 2017AS: “Sociology of Science and Scientific Knowledge” (with Jan Marsalek).
 
 ### 2010-2011
 
-*National University of Rosario (UNR), Argentina (Department of Philosophy): Invited Lecturer.*
+*Faculty of Humanities and Arts, National University of Rosario (Rosario, Argentina)*\
+Invited Lecturer
 
 - 2011AS: “The sense of a logic of sense”
 - 2010AS: “Gilles Deleuze: Philosophy, Logic and Mathematics”
 
-### 2004-2005
+### 1999-2005
 
-*UNR, Argentina (Department of Political Sciences): Teaching Assistant.*
+*Faculty of Political Sciences \& Faculty of Economics, National University of Rosario (Rosario, Argentina)*\
+Teaching Assistant
 
 - “Epistemology of Social Sciences”
-- “Political Theory II”.
-
-### 1999-2004
-
-*UNR, Argentina (Department of Political Sciences, Department of Economics): Teaching Assistant.*
-
 - “Political Theory II”
 - “Sociology”
 - “Introduction to Social Sciences”
