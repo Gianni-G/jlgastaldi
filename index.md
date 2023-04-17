@@ -21,8 +21,8 @@ My research focuses on the formalization of meaning as a central problem of mode
 *The Language of Mathematics: Epistemological Consequences of Applying AI Methods to Mathematics*\
 Lecture at the [Research Seminar of the Cohn Institute for the History and Philosophy of Science and Ideas](https://humanities.tau.ac.il/cohn/news/research_seminar_17-4-2023).\
 Tel Aviv University.\
-17:00 pm (GMT+3). Gilman building (Humanities), room 496.
-<!-- [[Slides]](./assets/pdf/slides/gastaldi_230215_cmu.pdf) -->
+17:00 pm (GMT+3). Gilman building (Humanities), room 496.\
+[[Slides]](./assets/pdf/slides/gastaldi_170403_cohn.pdf)
 
 ### 15/02/2023
 *Peeking into the AI Language Modeling Black Box*\
