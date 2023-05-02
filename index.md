@@ -21,7 +21,7 @@ My research focuses on the formalization of meaning as a central problem of mode
 *Understanding Language (Models): AI Language Models From a Structuralist Perspective*\
 Lecture at the [The Linguistic Circle of Copenhagen](https://lingvistkredsen.ku.dk/kalender/foraar-2023/understanding-language/).\
 University of Copenhagen, Copenhagen, Denmark.\
-14:00-19:00 (CEST). Søndre Campus, lokale 4A.0.56.
+14:00-19:00 (CEST). Søndre Campus, lokale 4A.0.56.\
 [[Slides]](./assets/pdf/slides/gastaldi_230502_cph.pdf)
 
 ### 17/04/2023
