@@ -19,7 +19,7 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 ### 02/05/2023
 *Structuralisme et Intelligence Artificielle*\
-Lecture at the SPeHPS Seminar\
+Lecture at the SPHePS Seminar\
 <!-- [The Linguistic Circle of Copenhagen](https://lingvistkredsen.ku.dk/kalender/foraar-2023/understanding-language/).\ -->
 Paris, France.\
 17:00-20:00 (CEST)\
