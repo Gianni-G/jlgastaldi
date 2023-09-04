@@ -6,13 +6,14 @@ title: Juan Luis Gastaldi
 
 # Publications
 
-- T.-D. Bradley, J. L. Gastaldi and J. Terilla (2023). “The structure of meaning in language: parallel narratives in linear algebra and category theory”. *Notices of the AMS*. Forthcoming (February 2024).
+- T.-D. Bradley, J. L. Gastaldi and J. Terilla (2023). “The structure of meaning in language: parallel narratives in linear algebra and category theory”. *Notices of the AMS*. Forthcoming (February 2024).\
 [[PDF]](./assets/pdf/pubs/BradleyGastaldiTerilla2023.pdf){:target="_blank"}
 
 - V. Zouhar, C. Meister, J. L. Gastaldi, L. Du, M. Sachan, R. Cotterell (2023). “[Tokenization and the Noiseless Channel](https://aclanthology.org/2023.acl-long.284/){:target="_blank"}”. In *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 5184–5207, Toronto, Canada. Association for Computational Linguistics.
-
-- V. Zouhar, C. Meister, J. L. Gastaldi, L. Du, T. Vieira, M. Sachan, R. Cotterell (2023). “[A Formal Perspective on Byte-Pair Encoding](https://aclanthology.org/2023.findings-acl.38/){:target="_blank"}”. In *Findings of the Association for Computational Linguistics: ACL 2023*, pages 598–614, Toronto, Canada. Association for Computational Linguistics.
 [[PDF]](./assets/pdf/pubs/ZouharGastaldietal2023a.pdf){:target="_blank"}
+
+- V. Zouhar, C. Meister, J. L. Gastaldi, L. Du, T. Vieira, M. Sachan, R. Cotterell (2023). “[A Formal Perspective on Byte-Pair Encoding](https://aclanthology.org/2023.findings-acl.38/){:target="_blank"}”. In *Findings of the Association for Computational Linguistics: ACL 2023*, pages 598–614, Toronto, Canada. Association for Computational Linguistics.\
+[[PDF]](./assets/pdf/pubs/ZouharGastaldietal2023b.pdf){:target="_blank"}
 
 - J. L. Gastaldi (2023). “De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic”. In: *Duality in 19th and 20th century mathematical thinking*. Ed. by R. Krömer, E. Haffner, and K. Volkert. Birkhäuser, forthcoming.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023b.pdf){:target="_blank"}
