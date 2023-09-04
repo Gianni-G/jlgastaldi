@@ -6,6 +6,9 @@ title: Juan Luis Gastaldi
 
 # Publications
 
+- T.-D. Bradley, J. L. Gastaldi and J. Terilla. “The structure of meaning in language: parallel narratives in linear algebra and category theory”. Notices of the AMS. Forthcoming (February 2024).
+[[PDF]](./assets/pdf/pubs/BradleyGastaldiTerilla2023.pdf){:target="_blank"}
+
 - J. L. Gastaldi (2023). “De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic”. In: *Duality in 19th and 20th century mathematical thinking*. Ed. by R. Krömer, E. Haffner, and K. Volkert. Birkhäuser, forthcoming.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023a_s.pdf){:target="_blank"}
 
@@ -56,8 +59,6 @@ title: Juan Luis Gastaldi
 - J. L. Gastaldi. Section “Semiology of Mathematical Practice” (ed.). In Bharath Sriraman (Chief Editor) [*Handbook of the History and Philosophy of Mathematical Practice*](https://meteor.springer.com/historyandphilosophymaths/?id=915&tab=About&mode=ReadPage&entity=6886){:target="_blank"}, Springer. Forthcoming.
 
 - J. L. Gastaldi and L. Pellissier (eds.). “[Computing Cultures: Historical and Philosophical Perspectives](https://www.springer.com/journal/11023/updates/18800754){:target="_blank"}”, Special Issue of *Minds and Machines*.
-
-- T.-D. Bradley, J. L. Gastaldi and J. Terilla. “Rethinking Language with Category Theory”. Notices of the AMS. Forthcoming.
 
 
 ## Outreach
