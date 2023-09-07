@@ -9,6 +9,9 @@ title: Juan Luis Gastaldi
 - T.-D. Bradley, J. L. Gastaldi and J. Terilla (2023). “The structure of meaning in language: parallel narratives in linear algebra and category theory”. *Notices of the AMS*. Forthcoming (February 2024).\
 [[PDF]](./assets/pdf/pubs/BradleyGastaldiTerilla2023.pdf){:target="_blank"}
 
+- J. L. Gastaldi (2023). “How to Do Maths with Words. Neural Machine Learning Applications to Mathematics and Their Philosophical Significance”. In: *Handbook of the History and Philosophy of Mathematical Practice*. Ed. by Bharath Sriraman. Springer. Forthcoming.\
+[[PDF]](./assets/pdf/pubs/Gastaldi2023c_s.pdf){:target="_blank"}
+
 - V. Zouhar, C. Meister, J. L. Gastaldi, L. Du, M. Sachan, R. Cotterell (2023). “[Tokenization and the Noiseless Channel](https://aclanthology.org/2023.acl-long.284/){:target="_blank"}”. In *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 5184–5207, Toronto, Canada. Association for Computational Linguistics.\
 [[PDF]](./assets/pdf/pubs/ZouharGastaldietal2023a.pdf){:target="_blank"}
 
@@ -16,7 +19,7 @@ title: Juan Luis Gastaldi
 [[PDF]](./assets/pdf/pubs/ZouharGastaldietal2023b.pdf){:target="_blank"}
 
 - J. L. Gastaldi (2023). “De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic”. In: *Duality in 19th and 20th century mathematical thinking*. Ed. by R. Krömer, E. Haffner, and K. Volkert. Birkhäuser, forthcoming.\
-[[PDF]](./assets/pdf/pubs/Gastaldi2023b.pdf){:target="_blank"}
+[[PDF]](./assets/pdf/pubs/Gastaldi2023b_s.pdf){:target="_blank"}
 
 - J. L. Gastaldi (2022). “[Boole’s Untruth Tables: The Formal Conditions of Meaning Before the Emergence of Propositional Logic](https://link.springer.com/chapter/10.1007/978-3-030-94452-0_7){:target="_blank"}”. In: Béziau, JY., Desclés, JP., Moktefi, A., Pascu, A.C. (eds) *Logic in Question. Studies in Universal Logic*. Birkhäuser, Cham. DOI: 10.1007/978-3-030-94452-0_7.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2022.pdf){:target="_blank"}
