@@ -17,13 +17,21 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
-### 02/05/2023
+### 13/09/2023
+*The Language of Mathematics. Epistemological Consequences of the Application of Neural Models to Mathematics*\
+Lecture at [PhilML'23](https://sites.google.com/view/philml-tuebingen/program).\
+Eberhard Karls Universität Tübingen\
+Tübingen, Germany.\
+14:00 (CEST). AI Research Building, Lecture Hall Maria-von-Linden-Str. 6.\
+[Slides] TBA
+<!-- [[Slides]](./assets/pdf/slides/gastaldi_230524_spheps.pdf) -->
+
+### 24/05/2023
 *Structuralisme et Intelligence Artificielle*\
 Lecture at the SPHePS Seminar\
 <!-- [The Linguistic Circle of Copenhagen](https://lingvistkredsen.ku.dk/kalender/foraar-2023/understanding-language/).\ -->
 Paris, France.\
 17:00-20:00 (CEST)\
-<!-- . Søndre Campus, lokale 4A.0.56.\ -->
 [[Slides]](./assets/pdf/slides/gastaldi_230524_spheps.pdf)
 
 ### 02/05/2023
