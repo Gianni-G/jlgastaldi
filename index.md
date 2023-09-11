@@ -11,9 +11,9 @@ title: Juan Luis Gastaldi
 
 * * *
 
-I am a philosopher and historian of science, specialized in the philosophy and history of formal knowledge (mathematics, logic and computer science), from the beginning of the 19th century to our days.
+I am a philosopher of science, specialized in the philosophy and history of formal knowledge (mathematics, logic, and computer science), philosophy of language and Natural Language Processing.
 
-My research focuses on the formalization of meaning as a central problem of modern and contemporary philosophy, determined by a complex articulation between logic, mathematics and linguistics. Developing the principles of historical epistemology, I propose an understanding of the emergence and evolution of formal knowledge, from early 19th century mathematized logic to contemporary computer science, guided by the problematic constitution of a theory of formal languages at the intersection of natural and social sciences.
+My research focuses on the formalization of meaning as a central problem of modern and contemporary science, determined by a complex articulation between logic, mathematics, linguistics, and computer science. Developing the principles of historical epistemology, I propose an understanding of the emergence and evolution of formal knowledge, from early 19th century mathematized logic to contemporary computer science, guided by the problematic constitution of a theory of formal languages at the intersection of natural and social sciences. More recently, I have focused on the technical, theoretical, and philosophical aspects of neural computational models of language, addressing each one of those dimensions through a renewal of the structuralist tradition.
 
 # News
 
