@@ -8,4 +8,4 @@ title: Juan Luis Gastaldi
 
 # CV
 
-tba
+[Updated March 2023](./assets/pdf/cv/gastaldi_cv_2303.pdf)

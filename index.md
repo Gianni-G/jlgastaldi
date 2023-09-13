@@ -23,8 +23,7 @@ Lecture at [PhilML'23](https://sites.google.com/view/philml-tuebingen/program).\
 Eberhard Karls Universität Tübingen\
 Tübingen, Germany.\
 14:00 (CEST). AI Research Building, Lecture Hall Maria-von-Linden-Str. 6.\
-[Slides] TBA
-<!-- [[Slides]](./assets/pdf/slides/gastaldi_230524_spheps.pdf) -->
+[[Slides]](./assets/pdf/slides/gastaldi_230913_philml.pdf)
 
 ### 24/05/2023
 *Structuralisme et Intelligence Artificielle*\
