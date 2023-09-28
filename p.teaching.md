@@ -14,7 +14,7 @@ Lecturer
 - 2023SS: “[Philosophy of Language and Computation II](https://rycolab.io/classes/phil-s23/){:target="_blank"}” (with Ryan Cotterell)
 - 2022AS: “[Philosophy of Language and Computation](https://rycolab.io/classes/phil-f22/){:target="_blank"}” (with Ryan Cotterell)
 - 2022AS: “Images of Computing”
-- 2022SS: “[Around 1936: The New Language of Science](https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2022S&ansicht=ALLE&lerneinheitId=159865&lang=en){:target="_blank"}”
+- 2022SS: “[Around 1936: The New Language of Science](https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2022S&ansicht=ALLE&lerneinheitId=159865&lang=en){:target="_blank"}” [[syllabus]](./assets/pdf/syllabus/syl_around1936.pdf){:target="_blank"}
 - 2021AS: “Images of the Human”
 - 2021SS: “[History of Formal Logic: The Emergence of Boolean Logic](https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2021S&ansicht=ALLE&lerneinheitId=152038&lang=en){:target="_blank"}”
 - 2021SS: “[Rebooting AI: Human and social aspects of Artificial Intelligence](https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2021S&ansicht=ALLE&lerneinheitId=152039&lang=en){:target="_blank"}” (with O. Del Fabbro, A. Nardo, V. Rampton and D. Trninic)
