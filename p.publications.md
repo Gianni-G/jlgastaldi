@@ -12,6 +12,9 @@ title: Juan Luis Gastaldi
 - J. L. Gastaldi (2023). “How to Do Maths with Words. Neural Machine Learning Applications to Mathematics and Their Philosophical Significance”. In: *Handbook of the History and Philosophy of Mathematical Practice*. Ed. by Bharath Sriraman. Springer. Forthcoming.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023c_s.pdf){:target="_blank"}
 
+- J. L. Gastaldi (2023). “Introduction to the Semiology of Mathematical Practices”. In: *Handbook of the History and Philosophy of Mathematical Practice*. Ed. by Bharath Sriraman. Springer. Forthcoming.\
+[[PDF]](./assets/pdf/pubs/Gastaldi2023d_s.pdf){:target="_blank"}
+
 - V. Zouhar, C. Meister, J. L. Gastaldi, L. Du, M. Sachan, R. Cotterell (2023). “[Tokenization and the Noiseless Channel](https://aclanthology.org/2023.acl-long.284/){:target="_blank"}”. In *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 5184–5207, Toronto, Canada. Association for Computational Linguistics.\
 [[PDF]](./assets/pdf/pubs/ZouharGastaldietal2023a.pdf){:target="_blank"}
 
