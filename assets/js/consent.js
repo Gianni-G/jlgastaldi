@@ -4,30 +4,9 @@ document.getElementById('cookie-consent-banner').style.display = 'none';
 
 if(localStorage.getItem('consentMode') === null) {
 
-document.getElementById('btn-accept-all').addEventListener('click', function() {
+document.getElementById('btn-accept').addEventListener('click', function() {
     setConsent({
-    necessary: true,
     analytics: true,
-    preferences: true,
-    marketing: true
-    });
-    hideBanner();
-});
-document.getElementById('btn-accept-some').addEventListener('click', function() {
-    setConsent({
-    necessary: true,
-    analytics: document.getElementById('consent-analytics').checked,
-    preferences: document.getElementById('consent-preferences').checked,
-    marketing: document.getElementById('consent-marketing').checked
-    });
-    hideBanner();
-});
-document.getElementById('btn-reject-all').addEventListener('click', function() {
-    setConsent({
-    necessary: false,
-    analytics: false,
-    preferences: false,
-    marketing: false
     });
     hideBanner();
 });
