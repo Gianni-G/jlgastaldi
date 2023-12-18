@@ -6,6 +6,9 @@ title: Juan Luis Gastaldi
 
 # Publications
 
+- J. L. Gastaldi (2023). “[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/article/10.1007/s11023-023-09653-x)”. In: *Minds and Machines* (2023). ISSN : 1572-8641. DOI : 10.1007/s11023-023-09653-x\
+[[PDF]](./assets/pdf/pubs/Gastaldi2023e.pdf){:target="_blank"}
+
 - T.-D. Bradley, J. L. Gastaldi and J. Terilla (2023). “The structure of meaning in language: parallel narratives in linear algebra and category theory”. *Notices of the AMS*. Forthcoming (February 2024).\
 [[PDF]](./assets/pdf/pubs/BradleyGastaldiTerilla2023.pdf){:target="_blank"}
 

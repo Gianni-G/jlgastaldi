@@ -16,6 +16,19 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 13/12/2023
+New paper out!\
+“[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/article/10.1007/s11023-023-09653-x)”. In: *Minds and Machines* (2023). ISSN : 1572-8641. DOI : 10.1007/s11023-023-09653-x\
+[[PDF]](./assets/pdf/pubs/Gastaldi2023e.pdf){:target="_blank"}
+
+### 10/11/2023
+*Des statistiques à l’algèbre et au-delà : la logique des normes émergentes en langage naturel.* (with John Terilla)\
+Lecture at the workshop *Logique, Langage et Computation* .\
+IRPhiL, Lyon 3.\
+Lyon, France.\
+10:45 (CEST). Espace Marc Bloch, MSH-LSE 14, av. Berthelot.\
+[[Slides]](./assets/pdf/slides/gastaldi_231110_lyon.pdf)
+
 ### 13/09/2023
 *The Language of Mathematics. Epistemological Consequences of the Application of Neural Models to Mathematics*\
 Lecture at [PhilML'23](https://sites.google.com/view/philml-tuebingen/program).\
