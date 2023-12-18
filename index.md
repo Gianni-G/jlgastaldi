@@ -18,7 +18,8 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 ### 13/12/2023
 New paper out!\
-“[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/article/10.1007/s11023-023-09653-x)”. In: *Minds and Machines* (2023). ISSN : 1572-8641. DOI : 10.1007/s11023-023-09653-x\
+“[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/article/10.1007/s11023-023-09653-x)”. \
+In: *Minds and Machines* (2023). ISSN : 1572-8641. DOI : 10.1007/s11023-023-09653-x\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023e.pdf){:target="_blank"}
 
 ### 10/11/2023
