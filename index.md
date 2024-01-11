@@ -16,6 +16,12 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 11/01/2024
+New paper out!\
+With [Tai-Danae Bradley](https://www.math3ma.com/about) and [John Terilla](https://qcpages.qc.cuny.edu/~jterilla/)\
+“[The structure of meaning in language: parallel narratives in linear algebra and category theory](https://www.ams.org/journals/notices/202402/noti2868/noti2868.html?adat=February%202024&trk=2868&galt=none&cat=feature&pdfissue=202402&pdffile=rnoti-p174.pdf)”. *Notices of the AMS* (February 2024). DOI: 10.1090/noti2868\
+[[PDF]](./assets/pdf/pubs/BradleyGastaldiTerilla2023.pdf){:target="_blank"}
+
 ### 13/12/2023
 New paper out!\
 “[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/article/10.1007/s11023-023-09653-x)”. \
