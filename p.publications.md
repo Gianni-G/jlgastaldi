@@ -12,10 +12,10 @@ title: Juan Luis Gastaldi
 - J. L. Gastaldi (2023). “[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/article/10.1007/s11023-023-09653-x)”. In: *Minds and Machines* (2023). ISSN : 1572-8641. DOI : 10.1007/s11023-023-09653-x\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023e.pdf){:target="_blank"}
 
-- J. L. Gastaldi (2023). “How to Do Maths with Words. Neural Machine Learning Applications to Mathematics and Their Philosophical Significance”. In: *Handbook of the History and Philosophy of Mathematical Practice*. Ed. by Bharath Sriraman. Springer. Forthcoming.\
+- J. L. Gastaldi (2023). “[How to Do Maths with Words. Neural Machine Learning Applications to Mathematics and Their Philosophical Significance](https://link.springer.com/referenceworkentry/10.1007/978-3-030-19071-2_142-1)”. In: Sriraman, B. (eds) *Handbook of the History and Philosophy of Mathematical Practice*. Springer, Cham. DOI: 10.1007/978-3-030-19071-2_142-1\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023c_s.pdf){:target="_blank"}
 
-- J. L. Gastaldi (2023). “Introduction to the Semiology of Mathematical Practices”. In: *Handbook of the History and Philosophy of Mathematical Practice*. Ed. by Bharath Sriraman. Springer. Forthcoming.\
+- J. L. Gastaldi (2023). “[Introduction to the Semiology of Mathematical Practices](https://link.springer.com/referenceworkentry/10.1007/978-3-030-19071-2_130-2)”.  In: Sriraman, B. (eds) *Handbook of the History and Philosophy of Mathematical Practice*. Springer, Cham. DOI: 10.1007/978-3-030-19071-2_130-2.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023d_s.pdf){:target="_blank"}
 
 - V. Zouhar, C. Meister, J. L. Gastaldi, L. Du, M. Sachan, R. Cotterell (2023). “[Tokenization and the Noiseless Channel](https://aclanthology.org/2023.acl-long.284/){:target="_blank"}”. In *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 5184–5207, Toronto, Canada. Association for Computational Linguistics.\

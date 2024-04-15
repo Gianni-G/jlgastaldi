@@ -6,15 +6,37 @@ title: Juan Luis Gastaldi
 
 <!-- <script src="{{ 'assets/js/random-color.js' }}"></script> -->
 
-I am a philosopher of science, specialized in the philosophy of language and formal sciences (mathematics, logic, and computer science). After being a Professor in Philosophy and History of Ideas at MO.CO.ESBA (Montpellier, France) and a Marie Skłodowska-Curie Postdoctoral Fellow at ETH (D-GESS), I decided to pursue a second PhD in Natural Language Processing at the Computer Science Department of ETH.
+I am a philosopher of science, specialized in the philosophy of language and formal sciences (mathematics, logic, and computer science). After being a Professor in Philosophy and History of Ideas at MO.CO.ESBA (Montpellier, France) and a Marie Skłodowska-Curie Research Fellow at ETH (D-GESS), I decided to pursue a second PhD in Natural Language Processing at the Computer Science Department of ETH.
 
-My interests revolve around the linguistic aspects of formal sciences and the formal aspects of language and other sign systems, from a technical, philosophical, and historical perspective. I am also interested in the relationship between language and thought, the nature of meaning, and the possibility that a theory of language can inform both a theory of culture and a theory of science. My current research focuses on the computational and conceptual aspects of segmentation (and tokenization) and their relation to linguistic structure and meaning.
+My interests revolve around the linguistic aspects of formal sciences and the formal aspects of language and other sign systems, from a theoretical, philosophical, and historical perspective. I am also interested in the relationship between language and thought, the nature of meaning, and the possibility that a theory of language can inform both a theory of culture and a theory of science. My current research focuses on the computational and conceptual aspects of segmentation (and tokenization) and their relation to linguistic structure and meaning.
 
 <!-- I am a philosopher of science, specialized in the philosophy and history of formal knowledge (mathematics, logic, and computer science), philosophy of language and Natural Language Processing.
 
 My research focuses on the formalization of meaning as a central problem of modern and contemporary science, determined by a complex articulation between logic, mathematics, linguistics, and computer science. Developing the principles of historical epistemology, I propose an understanding of the emergence and evolution of formal knowledge, from early 19th century mathematized logic to contemporary computer science, guided by the problematic constitution of a theory of formal languages at the intersection of natural and social sciences. More recently, I have focused on the technical, theoretical, and philosophical aspects of neural computational models of language, addressing each one of those dimensions through a renewal of the structuralist tradition. -->
 
 # News
+
+### 09/04/2024
+*Notes on Critical AI*\
+Lecture at Meta (New York)\
+372 Farley, Farley Building, New York, USA.\
+11:00 am EST.
+
+### 05/04/2024
+[*Notes on Critical AI*](https://itsatcuny.org/calendar/2024/4/5/critical-ai-with-juan-luis-gastaldi)\
+Lecture at the [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)\
+365 Fifth Avenue, New York, USA.\
+1:00 pm EST. Room 5209.
+
+### 03/03/2024
+New paper out!\
+“[How to Do Maths with Words. Neural Machine Learning Applications to Mathematics and Their Philosophical Significance](https://link.springer.com/referenceworkentry/10.1007/978-3-030-19071-2_142-1)”. In: Sriraman, B. (eds) *Handbook of the History and Philosophy of Mathematical Practice*. Springer, Cham. DOI: 10.1007/978-3-030-19071-2_142-1\
+[[PDF]](./assets/pdf/pubs/Gastaldi2023c_s.pdf){:target="_blank"}
+
+### 28/01/2024
+New paper out!\
+“[Introduction to the Semiology of Mathematical Practices](https://link.springer.com/referenceworkentry/10.1007/978-3-030-19071-2_130-2)”.  In: Sriraman, B. (eds) *Handbook of the History and Philosophy of Mathematical Practice*. Springer, Cham. DOI: 10.1007/978-3-030-19071-2_130-2.\
+[[PDF]](./assets/pdf/pubs/Gastaldi2023d_s.pdf){:target="_blank"}
 
 ### 11/01/2024
 New paper out!\
