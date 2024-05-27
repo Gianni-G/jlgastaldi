@@ -16,11 +16,20 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
-### 09/04/2024
-*Notes on Critical AI*\
+### 28/05/2024
+*Critique de la Raison Linguistique*\
 Lecture at Meta (New York)\
 372 Farley, Farley Building, New York, USA.\
 11:00 am EST.
+
+### 09/04/2024
+*Notes on Critical AI*\
+Lecture at the Conference [*Critique de l’Intelligence Artificielle*](https://llcp.univ-paris8.fr/colloque-international-critique-de-l-intelligence-artificielle-enjeux) .\
+LLCP, Université Paris 8.\
+Paris, France.\
+9:00 (CEST). 2, rue de la Liberté – 93200 Saint-Denis.\
+<!-- [[Slides]](./assets/pdf/slides/gastaldi_231110_lyon.pdf) -->
+[Slides] (à venir), [Graphe 1](assets/pdf/slides/C.html),[Graphe 2](assets/pdf/slides/Cop.html),[Graphe 3](assets/pdf/slides/C+Cop.html),[Graphe 4](assets/pdf/slides/C_Cop.html)
 
 ### 05/04/2024
 [*Notes on Critical AI*](https://itsatcuny.org/calendar/2024/4/5/critical-ai-with-juan-luis-gastaldi)\
