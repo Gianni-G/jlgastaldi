@@ -22,7 +22,7 @@ Lecture at the Conference [*Critique de l’Intelligence Artificielle*](https://
 LLCP, Université Paris 8.\
 Paris, France.\
 9:00 (CEST). 2, rue de la Liberté – 93200 Saint-Denis.\
-[Slides (à venir), [Graphe 1](assets/pdf/slides/C.html),[Graphe 2](assets/pdf/slides/Cop.html),[Graphe 3](assets/pdf/slides/C+Cop.html),[Graphe 4](assets/pdf/slides/C_Cop.html)]
+[[Slides](assets/pdf/slides/gastaldi_240528_paris8.pdf){:target="_blank"}, [Graphe 1](assets/pdf/slides/C.html){:target="_blank"},[Graphe 2](assets/pdf/slides/Cop.html){:target="_blank"},[Graphe 3](assets/pdf/slides/C+Cop.html){:target="_blank"},[Graphe 4](assets/pdf/slides/C_Cop.html){:target="_blank"}]
 
 ### 09/04/2024
 *Notes on Critical AI*\
