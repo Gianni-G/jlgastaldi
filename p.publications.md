@@ -63,17 +63,22 @@ title: Juan Luis Gastaldi
 - J. L. Gastaldi (2010). “[Qu’est-ce qu’une figure? Lyotard et le problème du fondement d’une théorie de l’expression](https://www.klincksieck.com/livre/9782252037744/lyotard-a-nanterre){:target="_blank"}”. In: *Lyotard à Nanterre*. Ed. by C. Pagès. Continents philosophiques. Paris: Klincksieck, 2010. ISBN: 978-2-252-03774-4.
 
 
+## Edited Works
+
+- J. L. Gastaldi (ed.) (2024). Section “Semiology of Mathematical Practice” (ed.). In Bharath Sriraman (Chief Editor) [*Handbook of the History and Philosophy of Mathematical Practice*](https://link.springer.com/search?query=Gastaldi&facet-eisbn=978-3-031-40846-5&facet-content-type=ReferenceWorkEntry){:target="_blank"}, Springer, Cham. DOI: 10.1007/978-3-031-40846-5
+
+- J. L. Gastaldi and L. Pellissier (eds.) (2024). “[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/journal/11023/volumes-and-issues/34-1/supplement){:target="_blank"}”, Special Issue of *Minds and Machines*.
+
+
 ## Submitted and in Progress
+
+- J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, R. Cotterell. “The Foundations of Tokenization: Statistical and Computational Concerns”. Submitted to NeurIPS 2024.
 
 - J. L. Gastaldi. “Content from Expressions: The Place of Textuality in Deep Learning Approaches to Mathematics”. Under review.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023b_s.pdf){:target="_blank"}
 
 - J. L. Gastaldi, R. Moot, Ch. Rétoré. “Le Contexte en Traitement Automatique des Langues”. To appear as a chapter in Godart-Wendling, Béatrice (ed.) [*Les concepts fondateurs de la philosophie du langage: Contexte*](https://www.istegroup.com/fr/series/les-concepts-fondateurs-de-la-philosophie-du-langage/){:target="_blank"}, volume series, ISTE.\
 [[PDF]](./assets/pdf/pubs/GastaldiRetore2023_s.pdf){:target="_blank"}
-
-- J. L. Gastaldi. Section “Semiology of Mathematical Practice” (ed.). In Bharath Sriraman (Chief Editor) [*Handbook of the History and Philosophy of Mathematical Practice*](https://meteor.springer.com/historyandphilosophymaths/?id=915&tab=About&mode=ReadPage&entity=6886){:target="_blank"}, Springer. Forthcoming.
-
-- J. L. Gastaldi and L. Pellissier (eds.). “[Computing Cultures: Historical and Philosophical Perspectives](https://www.springer.com/journal/11023/updates/18800754){:target="_blank"}”, Special Issue of *Minds and Machines*.
 
 
 ## Outreach
