@@ -16,6 +16,14 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 14/06/2024
+*Frege Mathématicien*\
+Lecture at the Workshop [*Frege dans l'Histoire des Sciences*](https://stl.univ-lille.fr/agenda/agenda/frege-dans-lhistoire-des-sciences-1) .\
+UMR STL, Université de Lille.\
+Lille, France.\
+10:30 (CEST). Site de Pont de Bois, Salle B1.663.\
+[[Slides TBA], [Graph](https://frege-habilitationsschrift.onrender.com){:target="_blank"}]
+
 ### 28/05/2024
 *Critique de la Raison Linguistique*\
 Lecture at the Conference [*Critique de l’Intelligence Artificielle*](https://llcp.univ-paris8.fr/colloque-international-critique-de-l-intelligence-artificielle-enjeux) .\
