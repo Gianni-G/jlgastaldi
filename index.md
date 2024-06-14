@@ -22,7 +22,7 @@ Lecture at the Workshop [*Frege dans l'Histoire des Sciences*](https://stl.univ-
 UMR STL, Université de Lille.\
 Lille, France.\
 10:30 (CEST). Site de Pont de Bois, Salle B1.663.\
-[[Slides TBA], [Graph](https://frege-habilitationsschrift.onrender.com){:target="_blank"}]
+[[Slides](assets/pdf/slides/gastaldi_240614_lille.pdf){:target="_blank"}, [Graph](https://frege-habilitationsschrift.onrender.com){:target="_blank"}]
 
 ### 28/05/2024
 *Critique de la Raison Linguistique*\
