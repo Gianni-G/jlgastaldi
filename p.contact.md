@@ -10,9 +10,17 @@ title: Juan Luis Gastaldi
 # Contact
 
 <script language="JavaScript">
-user = 'juan.luis.gastaldi'; site = 'gess.ethz.ch';
+user = 'juan.luis.gastaldi'; site = 'inf.ethz.ch';
 document.write('<a href=\"mailto:' + user + '@' + site + '\">');
 document.write(user + '@' + site + '</a>');
+</script>
+
+<p></p>
+
+<script language="JavaScript">
+user = 'giannig'; site = 'bsky.social';
+document.write('<a href=\"https://sigmoid.social/@' + user + '@' + site + '\">');
+document.write('@' + user + '.' + site + '</a>');
 </script>
 
 <p></p>
