@@ -25,7 +25,7 @@ title: Juan Luis Gastaldi
 <!-- [[PDF]](./assets/pdf/pubs/GastaldiRetore2023_s.pdf){:target="_blank"} -->
 [PDF] (Please contact me to obtain a copy)
 
-- J. L. Gastaldi (2024). “De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic”. In: [*Duality in 19th and 20th Century Mathematical Thinking*](https://link.springer.com/chapter/10.1007/978-3-031-59797-8_3). Ed. by R. Krömer and E. Haffner. Cham: Springer Nature Switzerland, 2024, pp. 61–99. ISBN: 978-3-031-59797-8. DOI: 10.1007/978-3-031-59797-8_3.\
+- J. L. Gastaldi (2024). “[De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic](https://link.springer.com/chapter/10.1007/978-3-031-59797-8_3)”. In: *Duality in 19th and 20th Century Mathematical Thinking*. Ed. by R. Krömer and E. Haffner. Cham: Springer Nature Switzerland, 2024, pp. 61–99. ISBN: 978-3-031-59797-8. DOI: 10.1007/978-3-031-59797-8_3.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023b_s.pdf){:target="_blank"}
 
 - V. Zouhar, C. Meister, J. L. Gastaldi, L. Du, M. Sachan, R. Cotterell (2023). “[Tokenization and the Noiseless Channel](https://aclanthology.org/2023.acl-long.284/){:target="_blank"}”. In *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 5184–5207, Toronto, Canada. Association for Computational Linguistics.\
