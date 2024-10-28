@@ -23,7 +23,7 @@ title: Juan Luis Gastaldi
 
 - J. L. Gastaldi, R. Moot, Ch. Rétoré (2024). “Le Contexte en Traitement Automatique des Langues”. In: [*Le contexte en question*](https://www.istegroup.com/fr/produit/le-contexte-en-question/). Ed. by G. Hassler. ISTE, 2024. ISBN: 9781836120032.\
 <!-- [[PDF]](./assets/pdf/pubs/GastaldiRetore2023_s.pdf){:target="_blank"} -->
-[PDF] (Please contact me to obtain a copy)
+[Please contact me to obtain a copy]
 
 - J. L. Gastaldi (2024). “[De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic](https://link.springer.com/chapter/10.1007/978-3-031-59797-8_3)”. In: *Duality in 19th and 20th Century Mathematical Thinking*. Ed. by R. Krömer and E. Haffner. Cham: Springer Nature Switzerland, 2024, pp. 61–99. ISBN: 978-3-031-59797-8. DOI: 10.1007/978-3-031-59797-8_3.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023b_s.pdf){:target="_blank"}
