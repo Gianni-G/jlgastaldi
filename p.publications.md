@@ -79,7 +79,7 @@ title: Juan Luis Gastaldi
 
 ## Submitted
 
-- J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, and R. Cotterell. “[The Foundations of Tokenization: Statistical and Computational Concerns](https://arxiv.org/abs/2407.11606)”. 2024. arXiv: 2407.11606 [cs.CL].
+- J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, and R. Cotterell. “[The Foundations of Tokenization: Statistical and Computational Concerns](https://arxiv.org/abs/2407.11606)”. 2024. arXiv: 2407.11606 [cs.CL].\
 [[PDF]](./assets/pdf/pubs/GastaldiTerillaEtAl2024.pdf){:target="_blank"}
 
 - J. L. Gastaldi. “Content from Expressions: The Place of Textuality in Deep Learning Approaches to Mathematics”. Under review at *Synthese*.\
