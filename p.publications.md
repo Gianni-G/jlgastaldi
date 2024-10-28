@@ -21,14 +21,18 @@ title: Juan Luis Gastaldi
 - J. L. Gastaldi (2024). “[Introduction to the Semiology of Mathematical Practices](https://link.springer.com/referenceworkentry/10.1007/978-3-031-40846-5_130)”. In: *Handbook of the History and Philosophy of Mathematical Practice*. Ed. by B. Sriraman. Cham: Springer International Publishing, 2024, pp. 2955–2970. ISBN: 978-3-031-40846-5. DOI: 10.1007/978-3-031-40846-5_130.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023d_s.pdf){:target="_blank"}
 
+- J. L. Gastaldi, R. Moot, Ch. Rétoré (2024). “Le Contexte en Traitement Automatique des Langues”. In: [*Le contexte en question*](https://www.istegroup.com/fr/produit/le-contexte-en-question/). Ed. by G. Hassler. ISTE, 2024. ISBN: 9781836120032.\
+<!-- [[PDF]](./assets/pdf/pubs/GastaldiRetore2023_s.pdf){:target="_blank"} -->
+[PDF] (Please contact me to obtain a copy)
+
+- J. L. Gastaldi (2024). “De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic”. In: [*Duality in 19th and 20th Century Mathematical Thinking*](https://link.springer.com/chapter/10.1007/978-3-031-59797-8_3). Ed. by R. Krömer and E. Haffner. Cham: Springer Nature Switzerland, 2024, pp. 61–99. ISBN: 978-3-031-59797-8. DOI: 10.1007/978-3-031-59797-8_3.\
+[[PDF]](./assets/pdf/pubs/Gastaldi2023b_s.pdf){:target="_blank"}
+
 - V. Zouhar, C. Meister, J. L. Gastaldi, L. Du, M. Sachan, R. Cotterell (2023). “[Tokenization and the Noiseless Channel](https://aclanthology.org/2023.acl-long.284/){:target="_blank"}”. In *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 5184–5207, Toronto, Canada. Association for Computational Linguistics.\
 [[PDF]](./assets/pdf/pubs/ZouharGastaldietal2023a.pdf){:target="_blank"}
 
 - V. Zouhar, C. Meister, J. L. Gastaldi, L. Du, T. Vieira, M. Sachan, R. Cotterell (2023). “[A Formal Perspective on Byte-Pair Encoding](https://aclanthology.org/2023.findings-acl.38/){:target="_blank"}”. In *Findings of the Association for Computational Linguistics: ACL 2023*, pages 598–614, Toronto, Canada. Association for Computational Linguistics.\
 [[PDF]](./assets/pdf/pubs/ZouharGastaldietal2023b.pdf){:target="_blank"}
-
-- J. L. Gastaldi (2023). “De Morgan’s De Morgan’s Laws: Duality in the Emergence of Formal Logic”. In: *Duality in 19th and 20th century mathematical thinking*. Ed. by R. Krömer, E. Haffner, and K. Volkert. Birkhäuser, forthcoming.\
-[[PDF]](./assets/pdf/pubs/Gastaldi2023b_s.pdf){:target="_blank"}
 
 - J. L. Gastaldi (2022). “[Boole’s Untruth Tables: The Formal Conditions of Meaning Before the Emergence of Propositional Logic](https://link.springer.com/chapter/10.1007/978-3-030-94452-0_7){:target="_blank"}”. In: Béziau, JY., Desclés, JP., Moktefi, A., Pascu, A.C. (eds) *Logic in Question. Studies in Universal Logic*. Birkhäuser, Cham. DOI: 10.1007/978-3-030-94452-0_7.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2022.pdf){:target="_blank"}
