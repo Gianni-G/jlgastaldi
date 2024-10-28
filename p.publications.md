@@ -9,11 +9,11 @@ title: Juan Luis Gastaldi
 - M. Giulianelli, L. Malagutti, J. L. Gastaldi, B. DuSell, T. Vieira, and R. Cotterell (2024). “[On the Proper Treatment of Tokenization in Psycholinguistics](https://arxiv.org/abs/2410.02691)”. To appear in the *Proceedings of EMNLP 2024*. arXiv: 2410.02691\
 [[PDF]](./assets/pdf/pubs/GiulianelliMalaguttiGastaldiEtAl2024.pdf){:target="_blank"}
 
+- J. L. Gastaldi (2024). “[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/article/10.1007/s11023-023-09653-x)”. In: *Minds and Machines* 34.1 (2024), pp. 1–10. ISSN : 1572-8641. DOI : 10.1007/s11023-023-09653-x\
+[[PDF]](./assets/pdf/pubs/Gastaldi2024a.pdf){:target="_blank"}
+
 - T.-D. Bradley, J. L. Gastaldi and J. Terilla (2024). “[The structure of meaning in language: parallel narratives in linear algebra and category theory](https://www.ams.org/journals/notices/202402/noti2868/noti2868.html?adat=February%202024&trk=2868&galt=none&cat=feature&pdfissue=202402&pdffile=rnoti-p174.pdf)”. *Notices of the AMS* (February 2024). DOI: 10.1090/noti2868\
 [[PDF]](./assets/pdf/pubs/BradleyGastaldiTerilla2023.pdf){:target="_blank"}
-
-- J. L. Gastaldi (2023). “[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/article/10.1007/s11023-023-09653-x)”. In: *Minds and Machines* (2023). ISSN : 1572-8641. DOI : 10.1007/s11023-023-09653-x\
-[[PDF]](./assets/pdf/pubs/Gastaldi2023e.pdf){:target="_blank"}
 
 - J. L. Gastaldi (2023). “[How to Do Maths with Words. Neural Machine Learning Applications to Mathematics and Their Philosophical Significance](https://link.springer.com/referenceworkentry/10.1007/978-3-030-19071-2_142-1)”. In: Sriraman, B. (eds) *Handbook of the History and Philosophy of Mathematical Practice*. Springer, Cham. DOI: 10.1007/978-3-030-19071-2_142-1\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023c_s.pdf){:target="_blank"}
