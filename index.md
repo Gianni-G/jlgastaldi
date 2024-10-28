@@ -16,6 +16,10 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 19/09/2024 - 22/10/2024
+I will be visiting the [ITS](https://itsatcuny.org) at The Graduate Center, CUNY\
+365 Fifth Avenue, New York, USA.
+
 ### 14/06/2024
 *Frege Mathématicien*\
 Lecture at the Workshop [*Frege dans l'Histoire des Sciences*](https://stl.univ-lille.fr/agenda/agenda/frege-dans-lhistoire-des-sciences-1) .\
