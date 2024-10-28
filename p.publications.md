@@ -6,6 +6,9 @@ title: Juan Luis Gastaldi
 
 # Publications
 
+- M. Giulianelli, L. Malagutti, J. L. Gastaldi, B. DuSell, T. Vieira, and R. Cotterell (2024). “[On the Proper Treatment of Tokenization in Psycholinguistics](https://arxiv.org/abs/2410.02691)”. To appear in the *Proceedings of EMNLP 2024*. arXiv: 2410.02691\
+[[PDF]](./assets/pdf/pubs/GiulianelliMalaguttiGastaldiEtAl2024.pdf){:target="_blank"}
+
 - T.-D. Bradley, J. L. Gastaldi and J. Terilla (2024). “[The structure of meaning in language: parallel narratives in linear algebra and category theory](https://www.ams.org/journals/notices/202402/noti2868/noti2868.html?adat=February%202024&trk=2868&galt=none&cat=feature&pdfissue=202402&pdffile=rnoti-p174.pdf)”. *Notices of the AMS* (February 2024). DOI: 10.1090/noti2868\
 [[PDF]](./assets/pdf/pubs/BradleyGastaldiTerilla2023.pdf){:target="_blank"}
 
