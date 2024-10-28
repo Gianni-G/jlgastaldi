@@ -19,7 +19,7 @@ document.write(user + '@' + site + '</a>');
 
 <script language="JavaScript">
 user = 'giannig'; site = 'bsky.social';
-document.write('<a href=\"https://sigmoid.social/@' + user + '@' + site + '\">');
+document.write('<a href=\"https://bsky.app/profile/' + user + '.' + site + '\">');
 document.write('@' + user + '.' + site + '</a>');
 </script>
 
