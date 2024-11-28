@@ -22,8 +22,7 @@ Lecture at the [Workshop on AI & DH (Part 1)](https://www.crihn.org/nouvelles/20
 CRIHN, Université de Montréal.\
 Montréal, Canada.\
 11:30 (EST). Salle C-3061, Carrefour des arts et des sciences, 3150 rue Jean Brillant, and online (advance registration required).\
-[Slides]
-<!-- [[Slides](assets/pdf/slides/gastaldi_240528_paris8.pdf){:target="_blank"}, [Graph 1](assets/pdf/slides/C.html){:target="_blank"},[Graph 2](assets/pdf/slides/Cop.html){:target="_blank"},[Graph 3](assets/pdf/slides/C+Cop.html){:target="_blank"},[Graph 4](assets/pdf/slides/C_Cop.html){:target="_blank"}] -->
+[[Slides](assets/pdf/slides/gastaldi_241128_montreal.pdf)]
 
 ### 6/11/2024 - 12/11/2024
 I will be visiting the [IHES](https://www.ihes.fr/en/) at the Paris-Saclay University.\
