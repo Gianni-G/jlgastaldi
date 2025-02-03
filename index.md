@@ -16,6 +16,18 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 07/02/2025
+*The Structure, Not the Prompt. For a Critical Formalism*\
+Lecture at the [Vernacular AI Symposium](https://as.nyu.edu/research-centers/remarque/events/Spring-2025/vernacular-ai--2-day-symposium.html).\
+Digital Theory Lab, New York University.\
+New York, U.S.A.\
+2:00 (EST). The Remarque Institute, 60 5th Avenue, 8th floor, and online (advance [registration](https://as.nyu.edu/research-centers/remarque/events/Spring-2025/vernacular-ai--2-day-symposium.html) required).\
+[Slides] TBA
+
+### 22/01/2025
+Our paper “[The Foundations of Tokenization: Statistical and Computational Concerns](https://arxiv.org/abs/2407.11606)”\
+has been accepted to ICLR 2025!
+
 ### 28/11/2024
 *Sous les distributions, la structure! Unearthing structural(ist) features from linguistic distributions*\
 Lecture at the [Workshop on AI & DH (Part 1)](https://www.crihn.org/nouvelles/2024/11/12/workshop-on-ai-dh-part-1/).\
