@@ -22,7 +22,7 @@ Lecture at the [Vernacular AI Symposium](https://as.nyu.edu/research-centers/rem
 Digital Theory Lab, New York University.\
 New York, U.S.A.\
 2:00 (EST). The Remarque Institute, 60 5th Avenue, 8th floor, and online (advance [registration](https://as.nyu.edu/research-centers/remarque/events/Spring-2025/vernacular-ai--2-day-symposium.html) required).\
-[Slides] TBA
+[[Slides](assets/pdf/slides/gastaldi_250207_nyu.pdf)]
 
 ### 22/01/2025
 Our paper “[The Foundations of Tokenization: Statistical and Computational Concerns](https://arxiv.org/abs/2407.11606)”\
