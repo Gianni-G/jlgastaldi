@@ -16,6 +16,14 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 25/03/2025
+*How to Do Maths With Words. The Role of Language in Neural Machine Learning Applications to Mathematics*\
+Lecture at the seminar [Bridging Histories. Literacy, computer science and mathematics in the 20th and 21st centuries.](https://www.newton.ac.uk/seminar/45895/).\
+Isaac Newton Institute for Mathematical Sciences\
+Cambridge, UK\
+3:00 (GMT). INI, 20 Clarkson Road, Seminar Room 2, and online.\
+[[Slides](assets/pdf/slides/gastaldi_250325_cambridge.pdf)]
+
 ### 07/02/2025
 *The Structure, Not the Prompt. For a Critical Formalism*\
 Lecture at the [Vernacular AI Symposium](https://as.nyu.edu/research-centers/remarque/events/Spring-2025/vernacular-ai--2-day-symposium.html).\
