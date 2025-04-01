@@ -7,7 +7,7 @@ title: Juan Luis Gastaldi
 # Publications
 
 - J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, and R. Cotterell. (2024) “[The Foundations of Tokenization: Statistical and Computational Concerns](https://arxiv.org/abs/2407.11606)”. Accepted at *ICLR 2025*.  arXiv: 2407.11606\
-[[PDF]](./assets/pdf/pubs/GastaldiTerillaEtAl2024.pdf){:target="_blank"}
+[[PDF]](./assets/pdf/pubs/GastaldiTerillaEtAl2025.pdf){:target="_blank"}
 
 - M. Giulianelli, L. Malagutti, J. L. Gastaldi, B. DuSell, T. Vieira, and R. Cotterell (2024). “[On the Proper Treatment of Tokenization in Psycholinguistics](https://arxiv.org/abs/2410.02691)”. To appear in the *Proceedings of EMNLP 2024*. arXiv: 2410.02691\
 [[PDF]](./assets/pdf/pubs/GiulianelliMalaguttiGastaldiEtAl2024.pdf){:target="_blank"}
