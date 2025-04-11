@@ -16,6 +16,13 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 11/04/2025
+[*Toward a Critical Formalism: From the Philosophy to the Theory of Distributional Language Models*](https://itsatcuny.org/calendar/2025/4/foundationsofai11)\
+Lecture at the simposium *Foundations of AI*, [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)\
+365 Fifth Avenue, New York, USA.\
+10:00 am EDT. Rooms 9206/9207.
+[Slides]
+
 ### 25/03/2025
 *How to Do Maths With Words. The Role of Language in Neural Machine Learning Applications to Mathematics.*\
 Lecture at the seminar [Bridging Histories. Literacy, computer science and mathematics in the 20th and 21st centuries.](https://www.newton.ac.uk/seminar/45895/).\
