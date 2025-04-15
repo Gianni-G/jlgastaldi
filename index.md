@@ -16,12 +16,20 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 15/04/2025
+[*Épistémologie de l’apprentissage machine – pour un formalisme critique*](https://epistemologie.umontpellier.fr/hiphis/conferences.html)\
+Invited lecture at the seminar *HiPhiS*, (UM, U. Paul Valery, IRES, CNRS)\
+Université de Montpellier - campus Triolet (bât. 16), Montpellier, France.\
+5:30 pm CEST. Faculté des Sciences, salle de cours SC-16.01.\
+[[Slides](assets/pdf/slides/gastaldi_250415_hiphis.pdf)]
+
+
 ### 11/04/2025
 [*Toward a Critical Formalism: From the Philosophy to the Theory of Distributional Language Models*](https://itsatcuny.org/calendar/2025/4/foundationsofai11)\
-Lecture at the simposium *Foundations of AI*, [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)\
+Invited lecture at the simposium *Foundations of AI*, [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)\
 365 Fifth Avenue, New York, USA.\
-10:00 am EDT. Rooms 9206/9207.
-[Slides]
+10:00 am EDT. Rooms 9206/9207.\
+[[Slides](assets/pdf/slides/gastaldi_250411_cuny.pdf)]
 
 ### 25/03/2025
 *How to Do Maths With Words. The Role of Language in Neural Machine Learning Applications to Mathematics.*\
