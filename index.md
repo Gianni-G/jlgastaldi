@@ -16,6 +16,10 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 22/04/2025
+Audition Concours CNRS, Section 53 (DR).
+[[Slides](assets/gastaldi_cnrs_dr.pdf)]
+
 ### 15/04/2025
 [*Épistémologie de l’apprentissage machine – pour un formalisme critique*](https://epistemologie.umontpellier.fr/hiphis/conferences.html)\
 Invited lecture at the seminar *HiPhiS*, (UM, U. Paul Valery, IRES, CNRS)\
