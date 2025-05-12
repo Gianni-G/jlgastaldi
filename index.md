@@ -17,7 +17,7 @@ My research focuses on the formalization of meaning as a central problem of mode
 # News
 
 ### 12/05/2025
-Audition Concours CNRS, Section 53 (CR).\
+Audition Concours CNRS, Section 53 (CR).
 [[Slides](assets/gastaldi_cnrs_cr.pdf)]
 
 ### 24/04/2025
