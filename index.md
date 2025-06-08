@@ -17,30 +17,30 @@ My research focuses on the formalization of meaning as a central problem of mode
 # News
 
 ### 12/06/2025
-[*Toward a Critical Formalism: Philosophical and Theoretical Effects of a Mathematical Critique of LLMs*](https://www.unive.it/web/en/14779/home)\
-Invited lecture at the symposium *Chat Token Vector* ([AI MODELS](https://pric.unive.it/projects/ai-models/home))\
+*Toward a Critical Formalism: Philosophical and Theoretical Effects of a Mathematical Critique of LLMs*\
+Invited lecture at the symposium [*Chat Token Vector*](https://www.unive.it/web/en/14779/home) ([AI MODELS](https://pric.unive.it/projects/ai-models/home))\
 Ca' Foscari University - DFBC, Venice, Italy.\
 9:00 am CEST. Baratto Hall.\
 <!-- [[Slides](assets/pdf/slides/gastaldi_250415_hiphis.pdf)] -->
 [Slides: TBA]
 
 ### 24/04/2025
-“[The Foundations of Tokenization: Statistical and Computational Concerns](https://arxiv.org/abs/2407.11606)”\
+[*The Foundations of Tokenization: Statistical and Computational Concerns*](https://arxiv.org/abs/2407.11606)\
 [ICLR 2025](https://iclr.cc/virtual/2025/poster/30592)\
 Singapore EXPO - 1 Expo Drive, Singapore.\
 Poster Session, Hall 3 + Hall 2B #561\
 [[Poster](https://iclr.cc/media/PosterPDFs/ICLR%202025/30592.png?t=1745002431.6738753)]
 
 ### 15/04/2025
-[*Épistémologie de l'apprentissage machine - pour un formalisme critique*](https://epistemologie.umontpellier.fr/hiphis/conferences.html)\
-Invited lecture at the seminar *HiPhiS*, (UM, U. Paul Valery, IRES, CNRS)\
+*Épistémologie de l'apprentissage machine - pour un formalisme critique*\
+Invited lecture at the seminar [*HiPhiS*](https://epistemologie.umontpellier.fr/hiphis/conferences.html), (UM, U. Paul Valery, IRES, CNRS)\
 Université de Montpellier - campus Triolet (bât. 16), Montpellier, France.\
 5:30 pm CEST. Faculté des Sciences, salle de cours SC-16.01.\
 [[Slides](assets/pdf/slides/gastaldi_250415_hiphis.pdf)]
 
 ### 11/04/2025
-[*Toward a Critical Formalism: From the Philosophy to the Theory of Distributional Language Models*](https://itsatcuny.org/calendar/2025/4/foundationsofai11)\
-Invited lecture at the symposium *Foundations of AI*, [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)\
+*Toward a Critical Formalism: From the Philosophy to the Theory of Distributional Language Models.*\
+Invited lecture at the symposium [*Foundations of AI*](https://itsatcuny.org/calendar/2025/4/foundationsofai11), [ITS](https://itsatcuny.org) (The Graduate Center, CUNY)\
 365 Fifth Avenue, New York, USA.\
 10:00 am EDT. Rooms 9206/9207.\
 [[Slides](assets/pdf/slides/gastaldi_250411_cuny.pdf)]
