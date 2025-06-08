@@ -22,7 +22,7 @@ Invited lecture at the symposium *Chat Token Vector* ([AI MODELS](https://pric.u
 Ca' Foscari University - DFBC, Venice, Italy.\
 9:00 am CEST. Baratto Hall.\
 <!-- [[Slides](assets/pdf/slides/gastaldi_250415_hiphis.pdf)] -->
-[TBA]
+[Slides: TBA]
 
 ### 24/04/2025
 “[The Foundations of Tokenization: Statistical and Computational Concerns](https://arxiv.org/abs/2407.11606)”\
