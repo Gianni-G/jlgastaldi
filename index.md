@@ -16,6 +16,13 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 08/07/2025
+*What are Neural Language Models the Model of? Epistemological and Theoretical Perspectives on LLMs.*\
+Keynote lecture at the *NeuroMod* Annual Meeting\
+Université Côte d'Azur\
+4:45 pm CEST.\
+[[Slides](assets/pdf/slides/gastaldi_250708_antibes.pdf), [Graph](assets/pdf/slides/nucleus_3d.html){:target="_blank"}]
+
 ### 12/06/2025
 *Toward a Critical Formalism: Philosophical and Theoretical Effects of a Mathematical Critique of LLMs*\
 Invited lecture at the symposium [*Chat Token Vector*](https://www.unive.it/web/en/14779/home) ([AI MODELS](https://pric.unive.it/projects/ai-models/home))\
