@@ -16,20 +16,28 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 22/07/2025
+*Remarks on the Distributional Foundations of Language Models.*\
+Plenary talk at the seminar [*Linguistics and Language Models: What Can They Learn from Each Other?*](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25301).\
+Leibniz Center for Informatics - Dagstuhl, Germany.\
+10:45 am CEST, Schloss Dagstuhl.\
+<!-- [[Slides](assets/pdf/slides/gastaldi_250722_dagstuhl.pdf)] -->
+[Slides, TBA]
+
 ### 08/07/2025
 *What are Neural Language Models the Model of? Epistemological and Theoretical Perspectives on LLMs.*\
-Keynote lecture at the *NeuroMod* Annual Meeting\
-Université Côte d'Azur\
-4:45 pm CEST.\
-[[Slides](assets/pdf/slides/gastaldi_250708_antibes.pdf), [Graph](assets/pdf/slides/nucleus_3d.html){:target="_blank"}]
+Keynote lecture at the [*NeuroMod*](https://neuromod.univ-cotedazur.eu) Annual Meeting.\
+Université Côte d'Azur - Antibes, France.\
+4:45 pm CEST. Thalazur Hotel.\
+[[Slides](assets/pdf/slides/gastaldi_250708_neuromod.pdf)]
 
 ### 12/06/2025
 *Toward a Critical Formalism: Philosophical and Theoretical Effects of a Mathematical Critique of LLMs*\
 Invited lecture at the symposium [*Chat Token Vector*](https://www.unive.it/web/en/14779/home) ([AI MODELS](https://pric.unive.it/projects/ai-models/home))\
 Ca' Foscari University - DFBC, Venice, Italy.\
 9:00 am CEST. Baratto Hall.\
-<!-- [[Slides](assets/pdf/slides/gastaldi_250415_hiphis.pdf)] -->
-[[Slides](assets/pdf/slides/gastaldi_250612_venice.pdf), [Graph](assets/pdf/slides/nucleus_3d.html){:target="_blank"}]
+<!-- [[Slides](assets/pdf/slides/gastaldi_250612_venice.pdf), [Graph](assets/pdf/slides/nucleus_3d.html){:target="_blank"}] -->
+[[Slides](assets/pdf/slides/gastaldi_250612_venice.pdf)]
 
 ### 24/04/2025
 [*The Foundations of Tokenization: Statistical and Computational Concerns*](https://arxiv.org/abs/2407.11606)\
