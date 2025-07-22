@@ -21,8 +21,8 @@ My research focuses on the formalization of meaning as a central problem of mode
 Plenary talk at the seminar [*Linguistics and Language Models: What Can They Learn from Each Other?*](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25301).\
 Leibniz Center for Informatics - Dagstuhl, Germany.\
 10:45 am CEST, Schloss Dagstuhl.\
-<!-- [[Slides](assets/pdf/slides/gastaldi_250722_dagstuhl.pdf)] -->
-[Slides, TBA]
+[[Slides](assets/pdf/slides/gastaldi_250722_dagstuhl.pdf)]
+<!-- [Slides, TBA] -->
 
 ### 08/07/2025
 *What are Neural Language Models the Model of? Epistemological and Theoretical Perspectives on LLMs.*\
