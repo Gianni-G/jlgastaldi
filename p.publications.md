@@ -6,10 +6,16 @@ title: Juan Luis Gastaldi
 
 # Publications
 
-- J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, and R. Cotterell. (2024) “[The Foundations of Tokenization: Statistical and Computational Concerns](https://arxiv.org/abs/2407.11606)”. Accepted at *ICLR 2025*.  arXiv: 2407.11606\
+- T. Vieira, B. LeBrun, M. Giulianelli, J. L. Gastaldi, B. DuSell, J. Terilla, T. J. O’Donnell, and R. Cotterell. (2025) “[From Language Models over Tokens to Language Models over Characters](https://openreview.net/forum?id=sQS0roNQZR)”. Proceedings of the 42nd International Conference on Machine Learning (ICML), Vancouver, Canada. PMLR 267, 2025.\
+[[PDF]](./assets/pdf/pubs/VieiraGastaldiEtAl2025a.pdf){:target="_blank"}
+
+- T. Vieira, T. Liu, C. Pasti, Y. Emara, B. DuSell, B. LeBrun, M. Giulianelli, J. L. Gastaldi, T. J. O’Donnell, and R. Cotterell. (2025) “[Language Models over Canonical Byte-Pair Encodings](https://openreview.net/forum?id=eCVrfVDNSY)”. Proceedings of the 42nd International Conference on Machine Learning (ICML), Vancouver, Canada. PMLR 267, 2025.\
+[[PDF]](./assets/pdf/pubs/VieiraGastaldiEtAl2025b.pdf){:target="_blank"}
+
+- J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, and R. Cotterell. (2025) “[The Foundations of Tokenization: Statistical and Computational Concerns](https://openreview.net/forum?id=B5iOSxM2I0)”. ICLR 2025.  arXiv: 2407.11606\
 [[PDF]](./assets/pdf/pubs/GastaldiTerillaEtAl2025.pdf){:target="_blank"}
 
-- M. Giulianelli, L. Malagutti, J. L. Gastaldi, B. DuSell, T. Vieira, and R. Cotterell (2024). “[On the Proper Treatment of Tokenization in Psycholinguistics](https://arxiv.org/abs/2410.02691)”. To appear in the *Proceedings of EMNLP 2024*. arXiv: 2410.02691\
+- M. Giulianelli, L. Malagutti, J. L. Gastaldi, B. DuSell, T. Vieira, and R. Cotterell (2024). “[On the Proper Treatment of Tokenization in Psycholinguistics](https://aclanthology.org/2024.emnlp-main.1032/)”. Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 18556–18572, November 12-16, 2024\
 [[PDF]](./assets/pdf/pubs/GiulianelliMalaguttiGastaldiEtAl2024.pdf){:target="_blank"}
 
 - J. L. Gastaldi (2024). “[Computing Cultures: Historical and Philosophical Perspectives](https://link.springer.com/article/10.1007/s11023-023-09653-x)”. In: *Minds and Machines* 34.1 (2024), pp. 1–10. ISSN : 1572-8641. DOI : 10.1007/s11023-023-09653-x\
@@ -85,8 +91,6 @@ title: Juan Luis Gastaldi
 - J. L. Gastaldi. “Content from Expressions: The Place of Textuality in Deep Learning Approaches to Mathematics”. Under review at *Synthese*.\
 [[PDF]](./assets/pdf/pubs/Gastaldi2023b_s.pdf){:target="_blank"}
 
-- T. Vieira, B. LeBrun, M. Giulianelli, J. L. Gastaldi, B. DuSell, J. Terilla, T. J. O’Donnell, and R. Cotterell. (2024) “[From Language Models over Tokens to Language Models over Characters](https://arxiv.org/abs/2412.03719)”. arXiv: 2412.03719. Under review.
-[[PDF]](./assets/pdf/pubs/VieiraGastaldiEtAl2024.pdf){:target="_blank"}
 
 ## Outreach
 

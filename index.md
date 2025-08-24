@@ -37,7 +37,7 @@ Invited lecture at the symposium [*Chat Token Vector*](https://www.unive.it/web/
 Ca' Foscari University - DFBC, Venice, Italy.\
 9:00 am CEST. Baratto Hall.\
 <!-- [[Slides](assets/pdf/slides/gastaldi_250612_venice.pdf), [Graph](assets/pdf/slides/nucleus_3d.html){:target="_blank"}] -->
-[[Slides](assets/pdf/slides/gastaldi_250612_venice.pdf)]
+[[Slides](assets/pdf/slides/gastaldi_250612_venice.pdf), [Video](https://www.youtube.com/watch?v=Nhrb27QZhr4)]
 
 ### 24/04/2025
 [*The Foundations of Tokenization: Statistical and Computational Concerns*](https://arxiv.org/abs/2407.11606)\
@@ -182,7 +182,7 @@ University of Copenhagen, Copenhagen, Denmark.\
 Lecture at the [Research Seminar of the Cohn Institute for the History and Philosophy of Science and Ideas](https://humanities.tau.ac.il/cohn/news/research_seminar_17-4-2023).\
 Tel Aviv University, Tel Aviv, Israel.\
 17:00 pm (GMT+3). Gilman building (Humanities), room 496.\
-[[Slides]](./assets/pdf/slides/gastaldi_170403_cohn.pdf)
+[[Slides](./assets/pdf/slides/gastaldi_170403_cohn.pdf), [Video](https://www.youtube.com/watch?v=XFlmGigE2rQ)]
 
 ### 14/04/2023 - 21/05/2023
 Visiting researcher at the [Cohn Institute for the History and Philosophy of Science and Ideas](https://en-humanities.tau.ac.il/cohn).\
