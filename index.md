@@ -16,6 +16,14 @@ My research focuses on the formalization of meaning as a central problem of mode
 
 # News
 
+### 01/10/2025
+*Language and Mathematics in the Time of AI. Philosophical and Theoretical Perspectives.*\
+Invited talk at the kickoff conference of [*Mathematicae Lingua Franca (MALINCA)*](https://malinca.gitlabpages.inria.fr/malinca.gitlab.io/events-kickoff/) (ERC Synergy).\
+Institut Henri Poincaré - Paris, France.\
+4:30 am CEST, 11 Rue Pierre et Marie Curie.\
+<!-- [[Slides](assets/pdf/slides/gastaldi_250722_dagstuhl.pdf), [Graph](assets/pdf/slides/nucleus_3d.html){:target="_blank"}] -->
+<!-- [Slides, TBA] -->
+
 ### 22/07/2025
 *Remarks on the Distributional Foundations of Language Models.*\
 Plenary talk at the seminar [*Linguistics and Language Models: What Can They Learn from Each Other?*](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25301).\
