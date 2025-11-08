@@ -6,15 +6,22 @@ title: Juan Luis Gastaldi
 
 <!-- <script src="{{ 'assets/js/random-color.js' }}"></script> -->
 
-I am a philosopher of science, specialized in the philosophy of language and formal sciences (mathematics, logic, and computer science). After being a Professor in Philosophy and History of Ideas at MO.CO.ESBA (Montpellier, France) and a Marie Skłodowska-Curie Research Fellow at ETH (D-GESS), I decided to pursue a second PhD in Natural Language Processing at the Computer Science Department of ETH.
+I am a philosopher of science, specialized in the philosophy of language and formal sciences (mathematics, logic, and computer science). After being a Professor in Philosophy and History of Ideas at MO.CO.ESBA (Montpellier, France) and a Marie Skłodowska-Curie Research Fellow at ETH (D-GESS), I am currently a researcher at ETH Zurich's Institute for Machine Learning (IML), where I am pursuing a second PhD in Computer Science and Natural Language Processing.
 
-My interests revolve around the linguistic aspects of formal sciences and the formal aspects of language and other sign systems, from a theoretical, philosophical, and historical perspective. I am also interested in the relationship between language and thought, the nature of meaning, and the possibility that a theory of language can inform both a theory of culture and a theory of science. My current research focuses on the computational and conceptual aspects of segmentation (and tokenization) and their relation to linguistic structure and meaning.
+My interests revolve around the linguistic aspects of formal sciences and the formal aspects of language and other sign systems, from a theoretical, philosophical, and historical perspective. I am also interested in the relationship between language and thought, the nature of meaning, and the possibility that a theory of language can inform both a theory of culture and a theory of science. My current research focuses on the computational and conceptual aspects of segmentation (and tokenization) and their relation to linguistic structure and meaning, at the crossroads of Computer Sciences, the Human Sciences, and AI.
 
 <!-- I am a philosopher of science, specialized in the philosophy and history of formal knowledge (mathematics, logic, and computer science), philosophy of language and Natural Language Processing.
 
 My research focuses on the formalization of meaning as a central problem of modern and contemporary science, determined by a complex articulation between logic, mathematics, linguistics, and computer science. Developing the principles of historical epistemology, I propose an understanding of the emergence and evolution of formal knowledge, from early 19th century mathematized logic to contemporary computer science, guided by the problematic constitution of a theory of formal languages at the intersection of natural and social sciences. More recently, I have focused on the technical, theoretical, and philosophical aspects of neural computational models of language, addressing each one of those dimensions through a renewal of the structuralist tradition. -->
 
 # News
+
+### 📌  16/05/2025
+I was [ranked first](https://sncs.fr/2024/12/18/concours-cnrs-2025/#CID53) in the French National Scientific Research Center (CNRS) competition for a full-time tenured research position ("Chargé de Recherche") in the interdisciplinary section "Sciences in Society" (CID 53).\
+**Update 01/07/2025**\
+The appointment was rejected *without motive* by the Admission (non-scientific) Committee.\
+**Update 08/07/2025**\
+The CID 53 released an [ofﬁcial motion](https://www.cnrs.fr/comitenational/doc/motions/P25/CID-53-Motion_-Reflexions_l_interdisciplinarite_sciences-humaines-et-sociales_sciences-naturelles-et-formelles.pdf) in reaction to the decision of the Admission Committee.
 
 ### 01/10/2025
 *Language and Mathematics in the Time of AI. Philosophical and Theoretical Perspectives.*\
