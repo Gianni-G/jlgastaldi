@@ -31,9 +31,9 @@ document.write('<a href=\"https://sigmoid.social/@' + user + '@' + site + '\">')
 document.write('@' + user + '@' + site + '</a>');
 </script>
 
-<a href="https://twitter.com/gastaldi_gianni?ref_src=twsrc%5Etfw">
+<!-- <a href="https://twitter.com/gastaldi_gianni?ref_src=twsrc%5Etfw">
 @gastaldi_gianni
-</a>
+</a> -->
 
 <!-- <a href="https://twitter.com/gastaldi_gianni?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @gastaldi_gianni</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 

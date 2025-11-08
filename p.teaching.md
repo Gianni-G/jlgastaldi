@@ -10,7 +10,8 @@ title: Juan Luis Gastaldi
 *D-GESS, ETH Zurich* (Zurich, Switzerland)\
 Lecturer
 
-- 2025SS: “Philosophy of Language and Computation II” (with Ryan Cotterell)
+- 2026SS: “Philosophy of Language and Computation I” (with Ryan Cotterell)
+- 2025SS: “[Philosophy of Language and Computation II](https://rycolab.io/classes/phil-s25/){:target="_blank"}” (with Ryan Cotterell)
 - 2024SS: “[Philosophy of Language and Computation I](https://rycolab.io/classes/phil-s24/){:target="_blank"}” (with Ryan Cotterell)
 - 2023SS: “[Philosophy of Language and Computation II](https://rycolab.io/classes/phil-s23/){:target="_blank"}” (with Ryan Cotterell)
 - 2022AS: “[Philosophy of Language and Computation](https://rycolab.io/classes/phil-f22/){:target="_blank"}” (with Ryan Cotterell)
