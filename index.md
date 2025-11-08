@@ -20,7 +20,8 @@ The CID 53 released an [ofﬁcial motion](https://www.cnrs.fr/comitenational/doc
 
 ### 29/10/2025
 
-My interview on *Formalism* at the [Skholé](https://open.spotify.com/show/2z3HJvPiFEsnxALWfqDAnR){:target="_blank"} podcast of the [Canada Research Laboratory on Digital Textualities](https://www.ecrituresnumeriques.ca/en){:target="_blank"} is finally out! (Many thanks to Yann Audin and Arilys Jia)
+My interview on *Formalism* at the [Skholé](https://open.spotify.com/show/2z3HJvPiFEsnxALWfqDAnR){:target="_blank"} podcast of the [Canada Research Laboratory on Digital Textualities](https://www.ecrituresnumeriques.ca/en){:target="_blank"} is finally out!\
+Many thanks to Yann Audin and Arilys Jia!
 
 
 ### 01/10/2025
