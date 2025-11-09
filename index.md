@@ -11,18 +11,10 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 
 # News
 
-### 📌  16/05/2025
-I was [ranked first](https://sncs.fr/2024/12/18/concours-cnrs-2025/#CID53){:target="_blank"} in the French National Scientific Research Center (CNRS) competition for a full-time tenured research position ("Chargé de Recherche") in the interdisciplinary section "Sciences in Society" (CID 53).\
-**Update 01/07/2025**\
-The appointment was rejected *without motive* by the Admission (non-scientific) Committee.\
-**Update 08/07/2025**\
-The CID 53 released an [ofﬁcial motion](https://www.cnrs.fr/comitenational/doc/motions/P25/CID-53-Motion_-Reflexions_l_interdisciplinarite_sciences-humaines-et-sociales_sciences-naturelles-et-formelles.pdf){:target="_blank"} in reaction to the decision of the Admission Committee.
-
 ### 29/10/2025
 
 My interview on *Formalism* at the [Skholé](https://open.spotify.com/show/2z3HJvPiFEsnxALWfqDAnR){:target="_blank"} podcast of the [Canada Research Laboratory on Digital Textualities](https://www.ecrituresnumeriques.ca/en){:target="_blank"} is finally out!\
 Many thanks to Yann Audin and Arilys Jia!
-
 
 ### 01/10/2025
 *Language and Mathematics in the Time of AI. Philosophical and Theoretical Perspectives.*\
@@ -53,6 +45,14 @@ Ca' Foscari University - DFBC, Venice, Italy.\
 9:00 am CEST. Baratto Hall.\
 <!-- [[Slides](assets/pdf/slides/gastaldi_250612_venice.pdf), [Graph](assets/pdf/slides/nucleus_3d.html){:target="_blank"}] -->
 [[Slides](assets/pdf/slides/gastaldi_250612_venice.pdf){:target="_blank"}, [Video](https://www.youtube.com/watch?v=Nhrb27QZhr4){:target="_blank"}]
+
+### 16/05/2025
+I was [ranked first](https://sncs.fr/2024/12/18/concours-cnrs-2025/#CID53){:target="_blank"} in the French National Scientific Research Center (CNRS) competition for a full-time tenured research position ("Chargé de Recherche") in the interdisciplinary section "Sciences in Society" (CID 53).\
+**Update 01/07/2025**\
+The appointment was rejected *without motive* by the Admission (non-scientific) Committee.\
+**Update 08/07/2025**\
+The CID 53 released an [ofﬁcial motion](https://www.cnrs.fr/comitenational/doc/motions/P25/CID-53-Motion_-Reflexions_l_interdisciplinarite_sciences-humaines-et-sociales_sciences-naturelles-et-formelles.pdf){:target="_blank"} in reaction to the decision of the Admission Committee.
+
 
 ### 24/04/2025
 [*The Foundations of Tokenization: Statistical and Computational Concerns*](https://arxiv.org/abs/2407.11606){:target="_blank"}\
