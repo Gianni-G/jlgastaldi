@@ -15,7 +15,7 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 ### 28/04/2026
 
 *Critique and Formalism: The Role of Formal Sciences for an Internalist Critique of LLMs.* \
-Invited talk at the symposium [*Créativités Artificielles*]([https://malinca.gitlabpages.inria.fr/malinca.gitlab.io/events-kickoff/](https://xr2c2.univ-cotedazur.fr/colloque-creativites-artificielles)) (Université de Montréal, Université Côte d’Azur). \
+Invited talk at the symposium [*Créativités Artificielles*](https://xr2c2.univ-cotedazur.fr/colloque-creativites-artificielles) (Université de Montréal, Université Côte d’Azur). \
 Université Côte d’Azur - Nice, France. \
 10:00 am CEST, Campus Georges Méliès, Campus Valrose. \
 [[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260428_creativites.pdf){:target="_blank"}, [Graph](https://www.giannigastaldi.com/assets/pdf/slides/nucleus_4d_small.html){:target="_blank"}]
