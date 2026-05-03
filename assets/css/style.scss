@@ -119,10 +119,9 @@ a {
   
     @include landscape {
       @include large {
-        max-width: 64rem;
-        font-size: 0.9rem;
-        // padding: 0rem 6rem;
-        padding: .4vh .5vw; 
+        // max-width: 64rem;
+        max-width: 80rem;
+        padding: 0rem 6rem;
         margin: 0 auto;
       }
 
