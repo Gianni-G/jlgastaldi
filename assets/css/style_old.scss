@@ -89,16 +89,16 @@ a {
   }
 }
 
-// .page-header {
-//     // color: white;
-//     text-decoration: none;
-//     background-color: white;
-//     height: 25vh;
-//     background-image: url("../img/heatmap.jpg");
-//     background-size: cover;
-//     position:sticky;
-//     top: -15vh;
-// }
+.page-header {
+    // color: white;
+    text-decoration: none;
+    background-color: white;
+    height: 25vh;
+    background-image: url("../img/heatmap.jpg");
+    background-size: cover;
+    position:sticky;
+    top: -15vh;
+}
   
 .container {
     height: 25vh;
@@ -274,60 +274,10 @@ img {
 
 
 
-// .buttons_h{
-//   height: 10vh;
-//   line-height: 10vh;
-//   text-align: center;
-
-//   @include portrait {
-//     display: none;
-//     @include large {
-//       display: unset;
-//     }
-//   }
-// }
-
-// .buttons_v{
-//   height: 10vh;
-//   line-height: 10vh;
-//   text-align: center;
-
-//   @include landscape {
-//     display: none;
-//   }
-
-//   @include portrait {
-//     @include large {
-//       display: none;
-//     }
-//   }
-// }
-
-
-.page-header {
-  background-color: white;
-  height: 15vh;                      // reduced — no longer needs to include nav
-  background-image: url("../img/heatmap.jpg");
-  background-size: cover;
-  // no more position: sticky, no more top: -15vh
-}
-
-.sticky-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-image: url("../img/heatmap.jpg");
-  background-size: cover;
+.buttons_h{
   height: 10vh;
   line-height: 10vh;
   text-align: center;
-}
-
-// Remove height/line-height from .buttons_h and .buttons_v
-// since .sticky-nav now handles that
-.buttons_h {
-  text-align: center;
-  white-space: nowrap;
 
   @include portrait {
     display: none;
@@ -337,7 +287,9 @@ img {
   }
 }
 
-.buttons_v {
+.buttons_v{
+  height: 10vh;
+  line-height: 10vh;
   text-align: center;
 
   @include landscape {
@@ -350,6 +302,8 @@ img {
     }
   }
 }
+
+
 
 // @media screen and (min-width: 64em) {
 //     .btn {

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+
+
+    <meta charset="UTF-8">
+
+{% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#b8d0f9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    <!-- <script type="text/javascript" src="{{ 'assets/js/random-color.js' }}"></script> -->
+
+
+    {% include head-custom.html %}
+
+    <script src="{{ 'assets/js/random-color.js' }}"></script>
+
+  </head>
+
+  <body>
+
+    <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
+
+    <header class="page-header" role="banner">
+        <div class="container">
+
+          <!-- <div class="image"> -->
+          <div id="photo">
+            <a href="{{ site.github.home }}">
+              <img src="{{ site.img.photo }}" class="image" alt="Juan Luis Gastaldi">
+            </a>
+          </div>
+          
+          <div class="subcontainer">
+            <div class="jlg">
+              <!-- <a href="{{ site.github.home }}" style="color: white; text-decoration:none;"> -->
+              <!-- <a href="{{ site.github.home }}" style="font-size: 64px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;" class="btn"> -->
+              <a href="{{ site.github.home }}" class="jlg_btn">
+                Juan Luis Gastaldi
+              </a>
+            </div>
+
+            <nav class= "buttons_h">
+              <a href="{{ site.github.about }}" id="btn" class="btn">About</a>
+              <a href="{{ site.github.cv }}" class="btn">CV</a>
+              <a href="{{ site.github.publications }}" class="btn">Publications</a>
+              <a href="{{ site.github.projects }}" class="btn">Projects</a>
+              <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
+              <a href="{{ site.github.contact }}" class="btn">Contact</a>
+            </nav>
+      
+            <nav class="buttons_v">
+      
+              <label for="menu-btn" class="btn jm-icon-menu"></label>
+              <input type="checkbox" id="menu-btn" class="jm-menu-btn">
+              <ul class="jm-collapse">
+                <li class="jmenu">
+                  <a href="{{ site.github.about }}" class="btn">About</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.cv }}" class="btn">CV</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.publications }}" class="btn">Publications</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.projects }}" class="btn">Projects</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.contact }}" class="btn">Contact</a>
+                </li>
+                <!-- <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li> -->
+              </ul>
+            </nav>
+          </div>
+
+          
+      </div>
+
+
+
+        
+    </header>
+
+
+    <main id="content" class="main-content" role="main">
+
+      {{ content }}
+
+
+    </main>
+
+    <div id="cookie-consent-banner" class="cookie-consent-banner">
+      <!-- <h3>Cookie settings</h3> -->
+      <p>This site uses cookies to analyze traffic. By using this site, you agree to its use of cookies.</p>
+      <button id="btn-accept" class="cookie-consent-button btn-success">Got it</button>
+    </div>
+    <script src="../assets/js/consent.js"></script>
+
+    <script src="../assets/js/random-color.js"></script>
+    <script src="../assets/js/img_fade.js"></script>
+
+
+  </body>
+</html>
