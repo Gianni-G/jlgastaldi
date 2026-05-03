@@ -18,7 +18,7 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 Invited talk at the Seminar [*Technologies de l’esprit. Machines à co-habiter*](https://llcp.univ-paris8.fr/seminaire-technologies-de-l-esprit-machines-a-co-habiter-2025-2026){:target="_blank"} (LLCP, Université Paris 8).\
 [La Générale](https://www.lagenerale.fr){:target="_blank"} - Paris, France.\
 6:30 pm CEST, 39 rue Gassendi, 75014 Paris.\
-[[Slides]]
+[Slides]
 
 
 ### 28/04/2026
@@ -32,7 +32,7 @@ Université Côte d’Azur - Nice, France.\
 
 ### 03/04/2026
 *New preprint out!*\
-(“Projective metric geometry of tropical nuclei: gap matrices, event loci, and order chambers”)[https://arxiv.org/abs/2601.07900]{:target="_blank"}\
+[“Projective metric geometry of tropical nuclei: gap matrices, event loci, and order chambers”](https://arxiv.org/abs/2601.07900){:target="_blank"}\
 With Samantha Jarvis, Thomas Seiller, and John Terilla.
 
 

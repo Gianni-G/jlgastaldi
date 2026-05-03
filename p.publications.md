@@ -88,7 +88,7 @@ title: Juan Luis Gastaldi
 
 ## Submitted
 
-- J. L. Gastaldi, S. Jarvis, Th. Seiller, J. Terilla. “Projective metric geometry of tropical nuclei: gap matrices, event loci, and order chambers”. (arXiv:2601.07900)[https://arxiv.org/abs/2601.07900].\
+- J. L. Gastaldi, S. Jarvis, Th. Seiller, J. Terilla (2026). “Projective metric geometry of tropical nuclei: gap matrices, event loci, and order chambers”. [arXiv:2601.07900](https://arxiv.org/abs/2601.07900).\
 [[PDF]](./assets/pdf/pubs/GastaldiEtAl2026.pdf){:target="_blank"}
 
 - J. L. Gastaldi. “Content from Expressions: The Place of Textuality in Deep Learning Approaches to Mathematics”. Under review at *Synthese*.\
