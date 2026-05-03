@@ -89,19 +89,20 @@ a {
   }
 }
 
-.page-header {
-    // color: white;
-    text-decoration: none;
-    background-color: white;
-    height: 25vh;
-    background-image: url("../img/heatmap.jpg");
-    background-size: cover;
-    position:sticky;
-    top: -15vh;
-}
+// .page-header {
+//     // color: white;
+//     text-decoration: none;
+//     background-color: white;
+//     height: 25vh;
+//     background-image: url("../img/heatmap.jpg");
+//     background-size: cover;
+//     position:sticky;
+//     top: -15vh;
+// }
   
 .container {
     height: 25vh;
+    // height: 10vh;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -274,10 +275,80 @@ img {
 
 
 
-.buttons_h{
+// .buttons_h{
+//   height: 10vh;
+//   line-height: 10vh;
+//   text-align: center;
+
+//   @include portrait {
+//     display: none;
+//     @include large {
+//       display: unset;
+//     }
+//   }
+// }
+
+// .buttons_v{
+//   height: 10vh;
+//   line-height: 10vh;
+//   text-align: center;
+
+//   @include landscape {
+//     display: none;
+//   }
+
+//   @include portrait {
+//     @include large {
+//       display: none;
+//     }
+//   }
+// }
+
+#photo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 15vh;
+  // background-image: url("../img/heatmap.jpg");
+  // background-size: cover;
+  
+  @include landscape {
+    @include large { padding: 0rem 6rem; }
+    @include medium { padding: 0rem 4rem; }
+    @include small { padding: 0rem 1rem; }
+  }
+  @include portrait {
+    padding: 0rem 1rem;
+  }
+}
+
+.page-header {
+  background-color: white;
+  background-image: url("../img/heatmap.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 10vh;                  // just name + buttons now
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-image: url("../img/heatmap.jpg");
+  background-size: cover;
   height: 10vh;
   line-height: 10vh;
   text-align: center;
+}
+
+// Remove height/line-height from .buttons_h and .buttons_v
+// since .sticky-nav now handles that
+.buttons_h {
+  text-align: center;
+  white-space: nowrap;
 
   @include portrait {
     display: none;
@@ -287,9 +358,7 @@ img {
   }
 }
 
-.buttons_v{
-  height: 10vh;
-  line-height: 10vh;
+.buttons_v {
   text-align: center;
 
   @include landscape {
@@ -302,8 +371,6 @@ img {
     }
   }
 }
-
-
 
 // @media screen and (min-width: 64em) {
 //     .btn {

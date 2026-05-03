@@ -26,21 +26,27 @@
 
     <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
 
-    <div id="photo">
-      <a href="{{ site.github.home }}">
-        <img src="{{ site.img.photo }}" class="image" alt="Juan Luis Gastaldi">
-      </a>
-    </div>
 
     <header class="page-header" role="banner">
-      <div class="container">
-        <div class="subcontainer">
-          <div class="jlg">
-            <a href="{{ site.github.home }}" class="jlg_btn">
-              Juan Luis Gastaldi
+        <div class="container">
+
+          <!-- <div class="image"> -->
+          <div id="photo">
+            <a href="{{ site.github.home }}">
+              <img src="{{ site.img.photo }}" class="image" alt="Juan Luis Gastaldi">
             </a>
           </div>
-            <nav class="buttons_h">
+          
+          <div class="subcontainer">
+            <div class="jlg">
+              <!-- <a href="{{ site.github.home }}" style="color: white; text-decoration:none;"> -->
+              <!-- <a href="{{ site.github.home }}" style="font-size: 64px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;" class="btn"> -->
+              <a href="{{ site.github.home }}" class="jlg_btn">
+                Juan Luis Gastaldi
+              </a>
+            </div>
+
+            <nav class= "buttons_h">
               <a href="{{ site.github.about }}" id="btn" class="btn">About</a>
               <a href="{{ site.github.cv }}" class="btn">CV</a>
               <a href="{{ site.github.publications }}" class="btn">Publications</a>
@@ -48,22 +54,41 @@
               <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
               <a href="{{ site.github.contact }}" class="btn">Contact</a>
             </nav>
+      
             <nav class="buttons_v">
+      
               <label for="menu-btn" class="btn jm-icon-menu"></label>
               <input type="checkbox" id="menu-btn" class="jm-menu-btn">
               <ul class="jm-collapse">
-                <li class="jmenu"><a href="{{ site.github.about }}" class="btn">About</a></li>
-                <li class="jmenu"><a href="{{ site.github.cv }}" class="btn">CV</a></li>
-                <li class="jmenu"><a href="{{ site.github.publications }}" class="btn">Publications</a></li>
-                <li class="jmenu"><a href="{{ site.github.projects }}" class="btn">Projects</a></li>
-                <li class="jmenu"><a href="{{ site.github.teaching }}" class="btn">Teaching</a></li>
-                <li class="jmenu"><a href="{{ site.github.contact }}" class="btn">Contact</a></li>
+                <li class="jmenu">
+                  <a href="{{ site.github.about }}" class="btn">About</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.cv }}" class="btn">CV</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.publications }}" class="btn">Publications</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.projects }}" class="btn">Projects</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
+                </li>
+                <li class="jmenu">
+                  <a href="{{ site.github.contact }}" class="btn">Contact</a>
+                </li>
+                <!-- <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li> -->
               </ul>
             </nav>
-        </div>
-      </div>
-    </header>
+          </div>
 
+          
+      </div>
+
+    </header>
 
     <main id="content" class="main-content" role="main">
 
