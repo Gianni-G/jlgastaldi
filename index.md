@@ -12,13 +12,46 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 # News
 
 
+### 11/05/2026
+
+*Ce que les mathématiques peuvent apporter à la critique des LLMs.*\
+Invited talk at the Seminar [*Technologies de l’esprit. Machines à co-habiter*](https://llcp.univ-paris8.fr/seminaire-technologies-de-l-esprit-machines-a-co-habiter-2025-2026){:target="_blank"} (LLCP, Université Paris 8).\
+[La Générale](https://www.lagenerale.fr){:target="_blank"} - Paris, France.\
+6:30 pm CEST, 39 rue Gassendi, 75014 Paris.\
+[[Slides]]
+
+
 ### 28/04/2026
 
-*Critique and Formalism: The Role of Formal Sciences for an Internalist Critique of LLMs.* \
-Invited talk at the symposium [*Créativités Artificielles*](https://xr2c2.univ-cotedazur.fr/colloque-creativites-artificielles) (Université de Montréal, Université Côte d’Azur). \
-Université Côte d’Azur - Nice, France. \
-10:00 am CEST, Campus Georges Méliès, Campus Valrose. \
+*Critique and Formalism: The Role of Formal Sciences for an Internalist Critique of LLMs.*\
+Invited talk at the symposium [*Créativités Artificielles*](https://xr2c2.univ-cotedazur.fr/colloque-creativites-artificielles) (Université de Montréal, Université Côte d’Azur).\
+Université Côte d’Azur - Nice, France.\
+10:00 am CEST, Campus Georges Méliès, Campus Valrose.\
 [[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260428_creativites.pdf){:target="_blank"}, [Graph](https://www.giannigastaldi.com/assets/pdf/slides/nucleus_4d_small.html){:target="_blank"}]
+
+
+### 03/04/2026
+*New preprint out!*\
+(“Projective metric geometry of tropical nuclei: gap matrices, event loci, and order chambers”)[https://arxiv.org/abs/2601.07900]{:target="_blank"}\
+With Samantha Jarvis, Thomas Seiller, and John Terilla.
+
+
+### 15/03/2026
+
+*Interpretability in the Data: Word embeddings and the Nucleus of a Matrix.*\
+With John Terilla. Invited talk at the *Merkin Center Workshops* (Caltech).\
+Merkin Center for Pure and Applied Mathematics - Pasadena, US.\
+10:00 am PST, 1200 East California Boulevard.
+
+
+### 20/01/2026
+
+*Empiricism vs. Formalism in the Study of Embeddings.*\
+French-Danish Workshop [*Reasoning in the Embedding Space*](https://www.seiller.org/CLoVe.html) (CNRS France, IT University of Copenhagen).\
+Pioneer Center for Artificial Intelligence - Copenhagen, Denmark.\
+9:00 am CEST,  Observatory of the Botanical Garden, Øster Voldgade 3.\
+[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260120_reasoning.pdf){:target="_blank"}]
+
 
 ### 29/10/2025
 
