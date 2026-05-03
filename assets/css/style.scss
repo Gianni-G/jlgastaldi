@@ -101,7 +101,8 @@ a {
 // }
   
 .container {
-    height: 25vh;
+    // height: 25vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -303,13 +304,33 @@ img {
 //   }
 // }
 
+#photo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 15vh;
+  background-image: url("../img/heatmap.jpg");
+  background-size: cover;
+  
+  @include landscape {
+    @include large { padding: 0rem 6rem; }
+    @include medium { padding: 0rem 4rem; }
+    @include small { padding: 0rem 1rem; }
+  }
+  @include portrait {
+    padding: 0rem 1rem;
+  }
+}
 
 .page-header {
   background-color: white;
-  height: 15vh;                      // reduced — no longer needs to include nav
   background-image: url("../img/heatmap.jpg");
   background-size: cover;
-  // no more position: sticky, no more top: -15vh
+  background-position: bottom;
+  height: 10vh;                  // just name + buttons now
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .sticky-nav {
