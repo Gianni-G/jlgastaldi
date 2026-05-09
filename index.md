@@ -16,7 +16,7 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 
 *Ce que les mathématiques peuvent apporter à la critique des LLMs.*\
 Invited talk at the Seminar [*Technologies de l’esprit. Machines à co-habiter*](https://llcp.univ-paris8.fr/seminaire-technologies-de-l-esprit-machines-a-co-habiter-2025-2026){:target="_blank"} (LLCP, Université Paris 8).\
-[La Générale](https://www.lagenerale.fr){:target="_blank"} - Paris, France.\
+[La Générale](https://www.lagenerale.fr/fr/projet/technologies-de-lesprit-machines-a-coexister-34221){:target="_blank"} - Paris, France.\
 6:30 pm CEST, 39 rue Gassendi, 75014 Paris.\
 [Slides]
 
