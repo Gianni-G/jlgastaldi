@@ -18,7 +18,7 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 Invited talk at the Seminar [*Technologies de l’esprit. Machines à co-habiter*](https://llcp.univ-paris8.fr/seminaire-technologies-de-l-esprit-machines-a-co-habiter-2025-2026){:target="_blank"} (LLCP, Université Paris 8).\
 [La Générale](https://www.lagenerale.fr/fr/projet/technologies-de-lesprit-machines-a-coexister-34221){:target="_blank"} - Paris, France.\
 6:30 pm CEST, 39 rue Gassendi, 75014 Paris.\
-[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260511_generale.pdf){:target="_blank"}, [Paper](https://www.ams.org/journals/notices/202402/rnoti-p174.pdf), [Graph](https://www.giannigastaldi.com/assets/pdf/slides/nucleus_4d_small.html){:target="_blank"}, Glossary]
+[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260511_generale.pdf){:target="_blank"}, [Paper](https://www.ams.org/journals/notices/202402/rnoti-p174.pdf), [Graph](https://www.giannigastaldi.com/assets/pdf/slides/nucleus_4d_small.html){:target="_blank"}, [Glossary](https://www.giannigastaldi.com/assets/pdf/slides/glossaire_lagenerale.html){:target="_blank"}]
 
 
 ### 28/04/2026

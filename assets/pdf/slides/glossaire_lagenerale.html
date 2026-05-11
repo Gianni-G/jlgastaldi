@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glossaire</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #b8d0f9;
+    --ink: #1a1208;
+    --muted: #6b5e4a;
+    --rule: #c8b99a;
+    --ml-color: #2d5a3d;
+    --ml-light: #e8f2ec;
+    --alg-color: #1e3a5f;
+    --alg-light: #e5edf5;
+    --cat-color: #5a1e3a;
+    --cat-light: #f5e5ee;
+    --accent: #ee8669;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+    padding: 0 0 80px;
+  }
+
+  /* HEADER */
+  header {
+    border-bottom: 2px solid var(--ink);
+    padding: 48px 5vw 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, var(--ml-color) 0 33.3%, var(--alg-color) 33.3% 66.6%, var(--cat-color) 66.6% 100%);
+  }
+
+  .header-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  /* FILTER BAR */
+  .filter-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 28px 5vw 0;
+    align-items: center;
+  }
+
+  .filter-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-right: 4px;
+  }
+
+  .filter-btn {
+    border: 1.5px solid currentColor;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    padding: 6px 16px;
+    border-radius: 2px;
+    transition: background 0.18s, color 0.18s, transform 0.12s;
+    font-weight: 400;
+  }
+
+  .filter-btn:hover { transform: translateY(-1px); }
+
+  .filter-btn[data-filter="all"] {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .filter-btn[data-filter="all"].active {
+    background: var(--ink); color: var(--bg);
+  }
+
+  .filter-btn[data-filter="ml"] {
+    color: var(--ml-color);
+  }
+  .filter-btn[data-filter="ml"].active {
+    background: var(--ml-color); color: #fff;
+  }
+
+  .filter-btn[data-filter="alg"] {
+    color: var(--alg-color);
+  }
+  .filter-btn[data-filter="alg"].active {
+    background: var(--alg-color); color: #fff;
+  }
+
+  .filter-btn[data-filter="cat"] {
+    color: var(--cat-color);
+  }
+  .filter-btn[data-filter="cat"].active {
+    background: var(--cat-color); color: #fff;
+  }
+
+  .count-badge {
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin-left: auto;
+    font-style: italic;
+  }
+
+  /* GLOSSARY GRID */
+  .glossary {
+    padding: 36px 5vw 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+    gap: 1px;
+    border-top: 1px solid var(--rule);
+    margin-top: 28px;
+  }
+
+  /* ENTRY CARD */
+  .entry {
+    border: 1px solid var(--rule);
+    padding: 28px 28px 24px;
+    background: var(--bg);
+    transition: opacity 0.25s, transform 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .entry::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .entry[data-cat="ml"]::before { background: var(--ml-color); }
+  .entry[data-cat="alg"]::before { background: var(--alg-color); }
+  .entry[data-cat="cat"]::before { background: var(--cat-color); }
+
+  .entry.hidden {
+    display: none;
+  }
+
+  .entry-tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 2px 8px;
+    border-radius: 1px;
+    margin-bottom: 12px;
+  }
+
+  .entry[data-cat="ml"] .entry-tag { background: var(--ml-light); color: var(--ml-color); }
+  .entry[data-cat="alg"] .entry-tag { background: var(--alg-light); color: var(--alg-color); }
+  .entry[data-cat="cat"] .entry-tag { background: var(--cat-light); color: var(--cat-color); }
+
+  .entry-term {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.18rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .entry-alt {
+    font-style: italic;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .entry-def {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: #2e2416;
+  }
+
+  /* FOOTER */
+  .no-results {
+    padding: 60px 5vw;
+    text-align: center;
+    color: var(--muted);
+    font-style: italic;
+    display: none;
+    grid-column: 1/-1;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Glossaire</h1>
+  <p class="subtitle">Termes clés en apprentissage machine, algèbre linéaire &amp; théorie des catégories</p>
+</header>
+
+<div class="filter-bar">
+  <span class="filter-label">Filtrer&nbsp;:</span>
+  <button class="filter-btn active" data-filter="all">Tous</button>
+  <button class="filter-btn" data-filter="ml">Apprentissage machine</button>
+  <button class="filter-btn" data-filter="alg">Algèbre linéaire</button>
+  <button class="filter-btn" data-filter="cat">Théorie des catégories</button>
+  <span class="count-badge" id="count"></span>
+</div>
+
+<div class="glossary" id="glossary">
+
+  <!-- ══ APPRENTISSAGE MACHINE ══ -->
+
+  <div class="entry" data-cat="ml">
+    <span class="entry-tag">Apprentissage machine</span>
+    <div class="entry-term">Réseau de neurones artificiel</div>
+    <p class="entry-def">Système informatique composé d'un grand nombre d'unités de calcul simples (les « neurones ») reliées entre elles. En recevant des exemples, il ajuste progressivement la force de ces connexions pour apprendre à reconnaître des formes, traduire du texte ou prendre des décisions.</p>
+  </div>
+
+  <div class="entry" data-cat="ml">
+    <span class="entry-tag">Apprentissage machine</span>
+    <div class="entry-term">Couche</div>
+    <span class="entry-alt">d'un réseau de neurones artificiel</span>
+    <p class="entry-def">Groupe de neurones qui traitent l'information ensemble à une même étape du réseau. Les couches se succèdent : la première reçoit les données brutes, les suivantes extraient des caractéristiques de plus en plus abstraites, et la dernière produit le résultat final (par exemple, la catégorie d'une image).</p>
+  </div>
+
+  <div class="entry" data-cat="ml">
+    <span class="entry-tag">Apprentissage machine</span>
+    <div class="entry-term">Fonction de coût</div>
+    <p class="entry-def">Mesure qui indique à quel point les prédictions du modèle sont éloignées des bonnes réponses. Plus cette valeur est faible, mieux le modèle se comporte. L'entraînement consiste précisément à faire baisser cette mesure le plus possible.</p>
+  </div>
+
+  <div class="entry" data-cat="ml">
+    <span class="entry-tag">Apprentissage machine</span>
+    <div class="entry-term">Descente du gradient</div>
+    <p class="entry-def">Méthode d'optimisation qui consiste à ajuster les paramètres du modèle pas à pas, toujours dans la direction qui réduit le plus la fonction de coût. C'est l'équivalent de descendre une colline en choisissant à chaque instant la pente la plus raide vers la vallée.</p>
+  </div>
+
+  <div class="entry" data-cat="ml">
+    <span class="entry-tag">Apprentissage machine</span>
+    <div class="entry-term">Embedding</div>
+    <span class="entry-alt">ou vecteur de mots</span>
+    <p class="entry-def">Représentation numérique d'un mot (ou d'un concept) sous la forme d'une liste de nombres. Des mots proches syntaxiquement ou sémantiquement auront souvent des listes de nombres similaires. Cela permet à une machine de manipuler des mots comme s'ils étaient des points dans un espace géométrique.</p>
+  </div>
+
+  <div class="entry" data-cat="ml">
+    <span class="entry-tag">Apprentissage machine</span>
+    <div class="entry-term">Information mutuelle ponctuelle</div>
+    <span class="entry-alt">PMI — Pointwise Mutual Information</span>
+    <p class="entry-def">Mesure statistique qui quantifie à quel point deux mots (ou événements) ont tendance à apparaître ensemble plus souvent que le hasard ne le prédirait. Si « café » et « tasse » cooccurrent fréquemment, leur PMI sera élevé, révélant leur association dans des textes.</p>
+  </div>
+
+  <div class="entry" data-cat="ml">
+    <span class="entry-tag">Apprentissage machine</span>
+    <div class="entry-term">Espace d'embedding</div>
+    <span class="entry-alt">ou espace latent, espace de plongement</span>
+    <p class="entry-def">Espace mathématique multidimensionnel dans lequel chaque mot, image ou concept est représenté par un point (son vecteur d'embedding). Les distances et directions dans cet espace ont un sens : des concepts similaires sont proches, et certaines directions correspondent à des propriétés sémantiques.</p>
+  </div>
+
+  <div class="entry" data-cat="ml">
+    <span class="entry-tag">Apprentissage machine</span>
+    <div class="entry-term">Distribution de probabilité</div>
+    <p class="entry-def">Description mathématique de l'ensemble des résultats possibles d'un phénomène aléatoire, accompagnée de leur chance respective d'occurrence. Par exemple, un modèle de langage produit une distribution sur tout le vocabulaire pour indiquer, à chaque pas, quelle est la probabilité de chaque mot possible.</p>
+  </div>
+
+  <!-- ══ ALGÈBRE LINÉAIRE ══ -->
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Algèbre linéaire</div>
+    <p class="entry-def">Branche des mathématiques qui étudie les vecteurs, les matrices et les transformations linéaires. C'est le langage naturel de l'apprentissage machine : toutes les données et opérations d'un réseau de neurones s'expriment sous forme de tableaux de nombres (matrices) et de leurs transformations.</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Fonction</div>
+    <p class="entry-def">Règle mathématique qui associe à chaque valeur d'entrée exactement une valeur de sortie. On peut la voir comme une « machine » : on y insère un nombre (ou un vecteur), elle en ressort un autre selon une règle précise.</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Fonction (ou transformation) linéaire</div>
+    <p class="entry-def">Fonction qui respecte deux propriétés fondamentales : elle préserve les additions et les mises à l'échelle. Concrètement, elle transforme des droites en droites et conserve l'origine. Les couches d'un réseau de neurones réalisent essentiellement des transformations linéaires (suivies de petites non-linéarités).</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Opérateur</div>
+    <p class="entry-def">Terme général pour désigner une transformation qui agit sur des objets mathématiques (vecteurs, fonctions…) pour en produire d'autres. En algèbre linéaire, un opérateur linéaire transforme des vecteurs de manière cohérente et peut souvent être représenté par une matrice.</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Point fixe</div>
+    <p class="entry-def">Valeur qui reste inchangée lorsqu'on lui applique une transformation donnée. Autrement dit, si <em>f</em> est une fonction et <em>x</em> un point fixe, alors <em>f(x) = x</em>. Ce concept est central dans l'analyse de la stabilité des systèmes dynamiques et des algorithmes itératifs.</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Décomposition en valeurs singulières</div>
+    <span class="entry-alt">SVD — Singular Value Decomposition</span>
+    <p class="entry-def">Technique qui « démonte » n'importe quelle matrice en trois matrices plus simples, révélant sa structure profonde. Elle permet notamment de compresser des données, de réduire le bruit et de découvrir les dimensions les plus importantes cachées dans un jeu de données.</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Vecteur propre</div>
+    <p class="entry-def">Vecteur qui, lorsqu'une transformation linéaire lui est appliquée, ne change pas de direction : il est simplement allongé ou raccourci. Ces vecteurs révèlent les « axes naturels » d'une transformation et jouent un rôle clé dans la compréhension de sa géométrie.</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Valeur propre</div>
+    <p class="entry-def">Nombre qui indique de combien un vecteur propre est allongé (ou raccourci, ou retourné) par une transformation linéaire. Une valeur propre de 2 signifie que le vecteur est doublé ; une valeur de −1 signifie qu'il est retourné sans changer de longueur.</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Matrice</div>
+    <p class="entry-def">Tableau rectangulaire de nombres organisés en lignes et en colonnes. En apprentissage machine, les matrices servent à stocker les données (par exemple, les pixels d'une image) et à encoder les paramètres (poids) d'un réseau de neurones.</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Multiplication de matrice</div>
+    <p class="entry-def">Opération combinant deux matrices pour en produire une troisième, en effectuant des sommes de produits de leurs éléments selon une règle précise. C'est l'opération fondamentale qui permet d'enchaîner des transformations linéaires, et elle est au cœur de chaque calcul dans un réseau de neurones.</p>
+  </div>
+
+  <div class="entry" data-cat="alg">
+    <span class="entry-tag">Algèbre linéaire</span>
+    <div class="entry-term">Factorisation de matrice</div>
+    <p class="entry-def">Décomposition d'une matrice en un produit de matrices plus simples ou plus petites. Cette technique permet de révéler une structure cachée dans les données, de réduire leur dimensionnalité ou d'accélérer les calculs. La SVD en est l'exemple le plus utilisé.</p>
+  </div>
+
+  <!-- ══ THÉORIE DES CATÉGORIES ══ -->
+
+  <div class="entry" data-cat="cat">
+    <span class="entry-tag">Théorie des catégories</span>
+    <div class="entry-term">Théorie des catégories</div>
+    <p class="entry-def">Branche des mathématiques qui étudie les structures et les relations entre structures de façon très abstraite, sans s'intéresser à la nature précise des objets mais uniquement à la manière dont ils se connectent. Elle est parfois appelée « mathématiques des mathématiques » et fournit un langage unificateur pour de nombreux domaines.</p>
+  </div>
+
+  <div class="entry" data-cat="cat">
+    <span class="entry-tag">Théorie des catégories</span>
+    <div class="entry-term">Catégorie</div>
+    <span class="entry-alt">au sens de la théorie des catégories</span>
+    <p class="entry-def">Structure mathématique composée d'objets et de flèches (morphismes) reliant ces objets, soumise à des règles de composition. Par exemple, les ensembles et les fonctions entre eux forment une catégorie. L'intérêt est de raisonner sur les relations plutôt que sur la nature interne des objets.</p>
+  </div>
+
+  <div class="entry" data-cat="cat">
+    <span class="entry-tag">Théorie des catégories</span>
+    <div class="entry-term">Profoncteur</div>
+    <p class="entry-def">Généralisation d'un foncteur qui établit une relation entre deux catégories en associant à chaque paire d'objets (un de chaque catégorie) un ensemble de « preuves de relation ». Les profoncteurs servent notamment à modéliser des relations pondérées ou probabilistes entre structures, avec des applications en traitement du langage.</p>
+  </div>
+
+  <div class="entry" data-cat="cat">
+    <span class="entry-tag">Théorie des catégories</span>
+    <div class="entry-term">Préfaisseau</div>
+    <p class="entry-def">Foncteur contravariant d'une catégorie vers la catégorie des ensembles. Concrètement, il associe à chaque objet un ensemble de « données locales » et à chaque morphisme une façon de restreindre ces données. C'est un outil fondamental pour représenter des informations qui varient selon les contextes.</p>
+  </div>
+
+  <div class="entry" data-cat="cat">
+    <span class="entry-tag">Théorie des catégories</span>
+    <div class="entry-term">Foncteur</div>
+    <p class="entry-def">Application qui transforme une catégorie en une autre tout en respectant sa structure : il envoie les objets sur des objets et les flèches sur des flèches de façon compatible avec la composition. On peut le voir comme une « traduction » fidèle d'un langage mathématique dans un autre.</p>
+  </div>
+
+  <div class="entry" data-cat="cat">
+    <span class="entry-tag">Théorie des catégories</span>
+    <div class="entry-term">Noyau d'un profoncteur</div>
+    <p class="entry-def">Ensemble des points fixes de l'opérateur distributionnel construit à partir d'un profoncteur</p>
+  </div>
+
+  <div class="entry" data-cat="cat">
+    <span class="entry-tag">Théorie des catégories</span>
+    <div class="entry-term">Morphisme</div>
+    <p class="entry-def">Flèche reliant deux objets au sein d'une catégorie, représentant une relation ou une transformation structurée entre eux. Selon la catégorie considérée, un morphisme peut être une fonction, une implication logique, une inégalité ou toute autre relation respectant les règles de la catégorie.</p>
+  </div>
+
+  <div class="entry" data-cat="cat">
+    <span class="entry-tag">Théorie des catégories</span>
+    <div class="entry-term">Produit</div>
+    <p class="entry-def">Construction catégorielle qui généralise l'idée de produit cartésien (paire ordonnée). Le produit de deux objets A et B est un objet qui « contient » toute l'information de A et de B conjointement, défini non par sa nature interne mais par ses relations avec les autres objets.</p>
+  </div>
+
+  <div class="entry" data-cat="cat">
+    <span class="entry-tag">Théorie des catégories</span>
+    <div class="entry-term">Coproduit</div>
+    <p class="entry-def">Construction duale du produit : là où le produit combine deux objets de façon conjointe (« A et B »), le coproduit les combine de façon disjonctive (« A ou B »). Dans la catégorie des ensembles, le coproduit correspond à l'union disjointe ; en programmation, il correspond au type somme.</p>
+  </div>
+
+  <p class="no-results" id="no-results">Aucun terme trouvé pour cette catégorie.</p>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const entries = document.querySelectorAll('.entry');
+  const countEl = document.getElementById('count');
+  const noResults = document.getElementById('no-results');
+
+  function updateCount(visible) {
+    const total = entries.length;
+    countEl.textContent = visible === total ? `${total} termes` : `${visible} / ${total} termes`;
+  }
+
+  function filter(cat) {
+    let visible = 0;
+    entries.forEach(e => {
+      const show = cat === 'all' || e.dataset.cat === cat;
+      e.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+    updateCount(visible);
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filter(btn.dataset.filter);
+    });
+  });
+
+  updateCount(entries.length);
+</script>
+</body>
+</html>
