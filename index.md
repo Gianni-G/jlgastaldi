@@ -12,6 +12,11 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 # News
 
 
+### 24/05/2026
+
+The recording of my presentation at [La Générale](https://www.lagenerale.fr/fr/projet/technologies-de-lesprit-machines-a-coexister-34221){:target="_blank"} is online! Check it out [here](https://p-node.org/broadcasts/machines-a-coexister){:target="_blank"}.
+
+
 ### 11/05/2026
 
 *Ce que les mathématiques peuvent apporter à la critique des LLMs.*\
