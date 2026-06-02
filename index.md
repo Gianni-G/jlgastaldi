@@ -11,6 +11,12 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 
 # News
 
+### 03/06/2026
+
+*New preprint out!*\
+[“A calculus of types in Isbell nuclei”](https://hal.science/hal-05640508){:target="_blank"}\
+With Samantha Jarvis, Thomas Seiller, and John Terilla.
+
 ### 02/06/2026
 
 CNRS
