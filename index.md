@@ -11,6 +11,11 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 
 # News
 
+### 02/06/2026
+
+CNRS
+
+[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260602_cnrs.pdf){:target="_blank"}, [Graph](https://www.giannigastaldi.com/assets/pdf/slides/nucleus_4d_small.html){:target="_blank"}]
 
 ### 24/05/2026
 
