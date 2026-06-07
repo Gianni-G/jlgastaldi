@@ -11,17 +11,19 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 
 # News
 
+### 18/06/2026
+
+Invited talk at the seminar [*Systèmes complexes en sciences sociales*]
+(https://cams.ehess.fr/seminaire-systemes-complexes-en-sciences-sociales)\
+EHESS - Paris, France.\
+2pm CEST, 54 bd Raspail 75006 (room A4-32, 4th floor)
+
 ### 03/06/2026
 
 *New preprint out!*\
 [“A calculus of types in Isbell nuclei”](https://hal.science/hal-05640508){:target="_blank"}\
 With Samantha Jarvis, Thomas Seiller, and John Terilla.
 
-### 02/06/2026
-
-CNRS
-
-[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260602_cnrs.pdf){:target="_blank"}, [Graph](https://www.giannigastaldi.com/assets/pdf/slides/nucleus_4d_small.html){:target="_blank"}]
 
 ### 24/05/2026
 
