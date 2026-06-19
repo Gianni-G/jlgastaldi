@@ -16,7 +16,8 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 Invited talk at the seminar [*Systèmes complexes en sciences sociales*]
 (https://cams.ehess.fr/seminaire-systemes-complexes-en-sciences-sociales)\
 EHESS - Paris, France.\
-2pm CEST, 54 bd Raspail 75006 (room A4-32, 4th floor)
+2pm CEST, 54 bd Raspail 75006 (room A4-32, 4th floor)\
+[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260619_cams.pdf){:target="_blank"}, [Graph](https://www.giannigastaldi.com/assets/pdf/slides/nucleus_4d_small.html){:target="_blank"}]
 
 ### 03/06/2026
 
