@@ -11,8 +11,17 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 
 # News
 
+### 07/07/2026
+
+*Wherefore art thou critique? From literary criticism to critical formalism in the age of AI*\
+Featured speaker at the [*Literary AI: Computational Writing and the Media of Language*](https://literaryai.org) Workshop\
+School of Arts and Social Sciences, Monash University Malaysia\
+[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260707_literaryai.pdf){:target="_blank"}]
+
+
 ### 18/06/2026
 
+*Explicabilité formelle et interprétabilité théorique des modèles neuronaux*\
 Invited talk at the seminar [*Systèmes complexes en sciences sociales*]
 (https://cams.ehess.fr/seminaire-systemes-complexes-en-sciences-sociales)\
 EHESS - Paris, France.\
