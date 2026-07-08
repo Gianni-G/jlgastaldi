@@ -4,6 +4,26 @@ title: Juan Luis Gastaldi
 # description: This is just another page
 ---
 
+# Selected Publications
+
+- J. L. Gastaldi, S. Jarvis, Th. Seiller, J. Terilla (2026). “A calculus of types in Isbell nuclei”. [arXiv:2606.03369](https://arxiv.org/abs/2606.03369).\
+[[PDF]](./assets/pdf/pubs/GastaldiEtAl2026b.pdf){:target="_blank"}
+
+- J. L. Gastaldi, S. Jarvis, Th. Seiller, J. Terilla (2026). “Projective metric geometry of tropical nuclei: gap matrices, event loci, and order chambers”. [arXiv:2601.07900](https://arxiv.org/abs/2601.07900).\
+[[PDF]](./assets/pdf/pubs/GastaldiEtAl2026a.pdf){:target="_blank"}
+
+- J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, and R. Cotterell. (2025) “[The Foundations of Tokenization: Statistical and Computational Concerns](https://openreview.net/forum?id=B5iOSxM2I0)”. ICLR 2025.  arXiv: 2407.11606\
+[[PDF]](./assets/pdf/pubs/GastaldiTerillaEtAl2025.pdf){:target="_blank"}
+
+- T.-D. Bradley, J. L. Gastaldi and J. Terilla (2024). “[The structure of meaning in language: parallel narratives in linear algebra and category theory](https://www.ams.org/journals/notices/202402/noti2868/noti2868.html?adat=February%202024&trk=2868&galt=none&cat=feature&pdfissue=202402&pdffile=rnoti-p174.pdf)”. *Notices of the AMS* (February 2024). DOI: 10.1090/noti2868\
+[[PDF]](./assets/pdf/pubs/BradleyGastaldiTerilla2023.pdf){:target="_blank"}
+
+- J. L. Gastaldi and L. Pellissier (2021). “[The calculus of language: explicit representation of emergent linguistic structure through type-theoretical paradigms](https://www.tandfonline.com/doi/full/10.1080/03080188.2021.1890484){:target="_blank"}”. In: *Interdisciplinary Science Reviews* 46.4 (2021), pp. 569–590. DOI: 10.1080/03080188.2021.1890484.\
+[[PDF]](./assets/pdf/pubs/GastaldiPellissier2021.pdf){:target="_blank"}
+
+- J. L. Gastaldi (2021). “[Why Can Computers Understand Natural Language?](https://link.springer.com/article/10.1007/s13347-020-00393-9){:target="_blank"}” In: *Philosophy & Technology* 34.1 (2021), pp. 149–214. ISSN: 2210-5441. DOI: 10.1007/s13347-020-00393-9.\
+[[PDF]](./assets/pdf/pubs/Gastaldi2021.pdf){:target="_blank"}
+
 # Publications
 
 - T. Vieira, B. LeBrun, M. Giulianelli, J. L. Gastaldi, B. DuSell, J. Terilla, T. J. O’Donnell, and R. Cotterell. (2025) “[From Language Models over Tokens to Language Models over Characters](https://openreview.net/forum?id=sQS0roNQZR)”. Proceedings of the 42nd International Conference on Machine Learning (ICML), Vancouver, Canada. PMLR 267, 2025.\
@@ -11,9 +31,6 @@ title: Juan Luis Gastaldi
 
 - T. Vieira, T. Liu, C. Pasti, Y. Emara, B. DuSell, B. LeBrun, M. Giulianelli, J. L. Gastaldi, T. J. O’Donnell, and R. Cotterell. (2025) “[Language Models over Canonical Byte-Pair Encodings](https://openreview.net/forum?id=eCVrfVDNSY)”. Proceedings of the 42nd International Conference on Machine Learning (ICML), Vancouver, Canada. PMLR 267, 2025.\
 [[PDF]](./assets/pdf/pubs/VieiraGastaldiEtAl2025b.pdf){:target="_blank"}
-
-- J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, and R. Cotterell. (2025) “[The Foundations of Tokenization: Statistical and Computational Concerns](https://openreview.net/forum?id=B5iOSxM2I0)”. ICLR 2025.  arXiv: 2407.11606\
-[[PDF]](./assets/pdf/pubs/GastaldiTerillaEtAl2025.pdf){:target="_blank"}
 
 - M. Giulianelli, L. Malagutti, J. L. Gastaldi, B. DuSell, T. Vieira, and R. Cotterell (2024). “[On the Proper Treatment of Tokenization in Psycholinguistics](https://aclanthology.org/2024.emnlp-main.1032/)”. Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 18556–18572, November 12-16, 2024\
 [[PDF]](./assets/pdf/pubs/GiulianelliMalaguttiGastaldiEtAl2024.pdf){:target="_blank"}

@@ -14,8 +14,9 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 ### 07/07/2026
 
 *Wherefore art thou critique? From literary criticism to critical formalism in the age of AI*\
-Featured speaker at the [*Literary AI: Computational Writing and the Media of Language*](https://literaryai.org) Workshop\
+Featured speaker at the [*Literary AI: Computational Writing and the Media of Language*](https://literaryai.org){:target="_blank"} Workshop\
 School of Arts and Social Sciences, Monash University Malaysia\
+20:00 Kuala Lumpur (MYT UTC+8) (online)\
 [[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260707_literaryai.pdf){:target="_blank"}]
 
 
