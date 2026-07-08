@@ -6,16 +6,16 @@ title: Juan Luis Gastaldi
 
 # Selected Publications
 
-- J. L. Gastaldi, S. Jarvis, Th. Seiller, J. Terilla (2026). “A calculus of types in Isbell nuclei”. [arXiv:2606.03369](https://arxiv.org/abs/2606.03369).\
+- J. L. Gastaldi, S. Jarvis, Th. Seiller, J. Terilla (2026). “[A calculus of types in Isbell nuclei](https://arxiv.org/abs/2606.03369){:target="_blank"}”. arXiv:2606.03369.\
 [[PDF]](./assets/pdf/pubs/GastaldiEtAl2026b.pdf){:target="_blank"}
 
-- J. L. Gastaldi, S. Jarvis, Th. Seiller, J. Terilla (2026). “Projective metric geometry of tropical nuclei: gap matrices, event loci, and order chambers”. [arXiv:2601.07900](https://arxiv.org/abs/2601.07900).\
+- J. L. Gastaldi, S. Jarvis, Th. Seiller, J. Terilla (2026). “[Projective metric geometry of tropical nuclei: gap matrices, event loci, and order chambers](https://arxiv.org/abs/2601.07900){:target="_blank"}”. arXiv:2601.07900.\
 [[PDF]](./assets/pdf/pubs/GastaldiEtAl2026a.pdf){:target="_blank"}
 
-- J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, and R. Cotterell. (2025) “[The Foundations of Tokenization: Statistical and Computational Concerns](https://openreview.net/forum?id=B5iOSxM2I0)”. ICLR 2025.  arXiv: 2407.11606\
+- J. L. Gastaldi, J. Terilla, L. Malagutti, B. DuSell, T. Vieira, and R. Cotterell. (2025) “[The Foundations of Tokenization: Statistical and Computational Concerns](https://openreview.net/forum?id=B5iOSxM2I0){:target="_blank"}”. ICLR 2025.  arXiv: 2407.11606\
 [[PDF]](./assets/pdf/pubs/GastaldiTerillaEtAl2025.pdf){:target="_blank"}
 
-- T.-D. Bradley, J. L. Gastaldi and J. Terilla (2024). “[The structure of meaning in language: parallel narratives in linear algebra and category theory](https://www.ams.org/journals/notices/202402/noti2868/noti2868.html?adat=February%202024&trk=2868&galt=none&cat=feature&pdfissue=202402&pdffile=rnoti-p174.pdf)”. *Notices of the AMS* (February 2024). DOI: 10.1090/noti2868\
+- T.-D. Bradley, J. L. Gastaldi and J. Terilla (2024). “[The structure of meaning in language: parallel narratives in linear algebra and category theory](https://www.ams.org/journals/notices/202402/noti2868/noti2868.html?adat=February%202024&trk=2868&galt=none&cat=feature&pdfissue=202402&pdffile=rnoti-p174.pdf){:target="_blank"}”. *Notices of the AMS* (February 2024). DOI: 10.1090/noti2868\
 [[PDF]](./assets/pdf/pubs/BradleyGastaldiTerilla2023.pdf){:target="_blank"}
 
 - J. L. Gastaldi and L. Pellissier (2021). “[The calculus of language: explicit representation of emergent linguistic structure through type-theoretical paradigms](https://www.tandfonline.com/doi/full/10.1080/03080188.2021.1890484){:target="_blank"}”. In: *Interdisciplinary Science Reviews* 46.4 (2021), pp. 569–590. DOI: 10.1080/03080188.2021.1890484.\
