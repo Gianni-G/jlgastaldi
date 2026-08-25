@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
   <head>
 
 
@@ -13,12 +13,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-    <!-- <script type="text/javascript" src="{{ 'assets/js/random-color.js' }}"></script> -->
+    <!-- <script type="text/javascript" src="{{ '/assets/js/random-color.js' | relative_url }}"></script> -->
 
 
     {% include head-custom.html %}
 
-    <script src="{{ 'assets/js/random-color.js' }}"></script>
+    <script src="{{ '/assets/js/random-color.js' | relative_url }}"></script>
 
   </head>
 
@@ -32,27 +32,27 @@
 
           <!-- <div class="image"> -->
           <div id="photo">
-            <a href="{{ site.github.home }}">
-              <img src="{{ site.img.photo }}" class="image" alt="Juan Luis Gastaldi">
+            <a href="{{ site.github.home | replace: './', '/' | relative_url }}">
+              <img src="{{ site.img.photo | replace: './', '/' | relative_url }}" class="image" alt="Juan Luis Gastaldi">
             </a>
           </div>
           
           <div class="subcontainer">
             <div class="jlg">
-              <!-- <a href="{{ site.github.home }}" style="color: white; text-decoration:none;"> -->
-              <!-- <a href="{{ site.github.home }}" style="font-size: 64px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;" class="btn"> -->
-              <a href="{{ site.github.home }}" class="jlg_btn">
+              <!-- <a href="{{ site.github.home | replace: './', '/' | relative_url }}" style="color: white; text-decoration:none;"> -->
+              <!-- <a href="{{ site.github.home | replace: './', '/' | relative_url }}" style="font-size: 64px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;" class="btn"> -->
+              <a href="{{ site.github.home | replace: './', '/' | relative_url }}" class="jlg_btn">
                 Juan Luis Gastaldi
               </a>
             </div>
 
             <nav class= "buttons_h">
-              <a href="{{ site.github.about }}" id="btn" class="btn">About</a>
-              <a href="{{ site.github.cv }}" class="btn">CV</a>
-              <a href="{{ site.github.publications }}" class="btn">Publications</a>
-              <a href="{{ site.github.projects }}" class="btn">Projects</a>
-              <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
-              <a href="{{ site.github.contact }}" class="btn">Contact</a>
+              <a href="{{ site.github.about | replace: './', '/' | relative_url }}" id="btn" class="btn">About</a>
+              <a href="{{ site.github.cv | replace: './', '/' | relative_url }}" class="btn">CV</a>
+              <a href="{{ site.github.publications | replace: './', '/' | relative_url }}" class="btn">Publications</a>
+              <a href="{{ site.github.projects | replace: './', '/' | relative_url }}" class="btn">Projects</a>
+              <a href="{{ site.github.teaching | replace: './', '/' | relative_url }}" class="btn">Teaching</a>
+              <a href="{{ site.github.contact | replace: './', '/' | relative_url }}" class="btn">Contact</a>
             </nav>
       
             <nav class="buttons_v">
@@ -61,22 +61,22 @@
               <input type="checkbox" id="menu-btn" class="jm-menu-btn">
               <ul class="jm-collapse">
                 <li class="jmenu">
-                  <a href="{{ site.github.about }}" class="btn">About</a>
+                  <a href="{{ site.github.about | replace: './', '/' | relative_url }}" class="btn">About</a>
                 </li>
                 <li class="jmenu">
-                  <a href="{{ site.github.cv }}" class="btn">CV</a>
+                  <a href="{{ site.github.cv | replace: './', '/' | relative_url }}" class="btn">CV</a>
                 </li>
                 <li class="jmenu">
-                  <a href="{{ site.github.publications }}" class="btn">Publications</a>
+                  <a href="{{ site.github.publications | replace: './', '/' | relative_url }}" class="btn">Publications</a>
                 </li>
                 <li class="jmenu">
-                  <a href="{{ site.github.projects }}" class="btn">Projects</a>
+                  <a href="{{ site.github.projects | replace: './', '/' | relative_url }}" class="btn">Projects</a>
                 </li>
                 <li class="jmenu">
-                  <a href="{{ site.github.teaching }}" class="btn">Teaching</a>
+                  <a href="{{ site.github.teaching | replace: './', '/' | relative_url }}" class="btn">Teaching</a>
                 </li>
                 <li class="jmenu">
-                  <a href="{{ site.github.contact }}" class="btn">Contact</a>
+                  <a href="{{ site.github.contact | replace: './', '/' | relative_url }}" class="btn">Contact</a>
                 </li>
                 <!-- <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -102,10 +102,10 @@
       <p>This site uses cookies to analyze traffic. By using this site, you agree to its use of cookies.</p>
       <button id="btn-accept" class="cookie-consent-button btn-success">Got it</button>
     </div>
-    <script src="../assets/js/consent.js"></script>
+    <script src="{{ '/assets/js/consent.js' | relative_url }}"></script>
 
-    <script src="../assets/js/random-color.js"></script>
-    <script src="../assets/js/img_fade.js"></script>
+    <script src="{{ '/assets/js/random-color.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/img_fade.js' | relative_url }}"></script>
 
 
   </body>

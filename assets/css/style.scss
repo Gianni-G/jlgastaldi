@@ -808,3 +808,143 @@ img {
   background-color: #e9d5ca;
   color: #ee8669;
 }
+
+// Course pages (layout: course)
+// ------------------------------------------------------------------
+// A light banner carrying the course identity and the institution logo,
+// in place of the photo + section buttons of the `default` layout.
+// The Sorbonne logos are dark navy (#263068) on transparency, so the
+// banner stays light.
+
+$course-color: #263068 !default;
+$course-accent: #e6332a !default;
+$course-header-bg: #fff !default;
+
+.course-header {
+  background-color: $course-header-bg;
+  border-bottom: 3px solid $course-color;
+}
+
+.course-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @include landscape {
+    @include large {
+      max-width: 64rem;
+      padding: 2rem 6rem;
+      margin: 0 auto;
+    }
+
+    @include medium {
+      padding: 1.5rem 4rem;
+    }
+
+    @include small {
+      padding: 1rem;
+    }
+  }
+
+  @include portrait {
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.course-identity {
+  min-width: 0;
+}
+
+.course-title {
+  margin: 0;
+  color: $course-color;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  line-height: 1.15;
+
+  @include landscape {
+    font-size: 2rem;
+
+    @include small {
+      font-size: 1.4rem;
+    }
+  }
+
+  @include portrait {
+    font-size: 1.5rem;
+
+    @include small {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.course-meta {
+  margin: .6rem 0 0;
+  color: $body-text-color;
+  font-size: .95rem;
+
+  a {
+    color: $course-color;
+    text-decoration: underline;
+  }
+
+  @include small {
+    font-size: .85rem;
+  }
+}
+
+.course-code {
+  display: inline-block;
+  margin-right: .5rem;
+  padding: .1rem .45rem;
+  color: #fff;
+  background-color: $course-accent;
+  border-radius: 0.3rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .85em;
+  letter-spacing: .03em;
+}
+
+.course-instructor {
+  margin: .35rem 0 0;
+  font-size: .95rem;
+
+  a {
+    color: $body-text-color;
+
+    &:hover {
+      color: $course-color;
+    }
+  }
+
+  @include small {
+    font-size: .85rem;
+  }
+}
+
+.course-logo {
+  flex: 0 0 auto;
+
+  img {
+    display: block;
+    height: auto;
+    width: 190px;
+    max-width: 100%;
+    border-radius: 0;
+
+    @include small {
+      width: 140px;
+    }
+  }
+
+  @include portrait {
+    img {
+      width: 150px;
+    }
+  }
+}

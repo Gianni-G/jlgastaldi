@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+  <head>
+
+
+    <meta charset="UTF-8">
+
+{% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#263068">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    {% include head-custom.html %}
+
+  </head>
+
+  <body>
+
+    <!-- Course banner: the course identity and its institution, in place of the
+         photo and section buttons of `default`. Every path is absolute, since
+         course pages live one directory down (/courses/<slug>/). -->
+
+    <header class="course-header" role="banner">
+      <div class="course-header-inner">
+
+        <div class="course-identity">
+          <h1 class="course-title">{{ page.title }}</h1>
+
+          <p class="course-meta">
+            {% if page.code %}<span class="course-code">{{ page.code }}</span>{% endif %}
+            {% if page.institution %}{{ page.institution }}{% endif %}
+            {% if page.semester %}&middot; {{ page.semester }}{% endif %}
+            {% if page.catalog_url %}<br><a href="{{ page.catalog_url }}" target="_blank">Descriptif dans le catalogue des enseignements</a>{% endif %}
+          </p>
+
+          <p class="course-instructor">
+            <a href="{{ site.github.home | replace: './', '/' | relative_url }}">Juan Luis Gastaldi</a>
+          </p>
+        </div>
+
+        {% if page.logo %}
+        <div class="course-logo">
+          {% if page.institution_url %}<a href="{{ page.institution_url }}" target="_blank">{% endif %}
+            <img src="{{ page.logo | relative_url }}" alt="{{ page.logo_alt | default: page.institution }}">
+          {% if page.institution_url %}</a>{% endif %}
+        </div>
+        {% endif %}
+
+      </div>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+
+      {{ content }}
+
+
+    </main>
+
+    <div id="cookie-consent-banner" class="cookie-consent-banner">
+      <p>This site uses cookies to analyze traffic. By using this site, you agree to its use of cookies.</p>
+      <button id="btn-accept" class="cookie-consent-button btn-success">Got it</button>
+    </div>
+    <script src="{{ '/assets/js/consent.js' | relative_url }}"></script>
+
+  </body>
+</html>
