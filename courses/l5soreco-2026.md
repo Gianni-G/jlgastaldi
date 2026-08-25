@@ -1,12 +1,12 @@
 ---
 layout: course
 lang: fr
-title: "Représentation des connaissances pour les SHS"
+title: "Représentation des connaissances <br> pour les SHS"
 permalink: /courses/l5soreco-2026/
 
 # Rendus dans la bannière par _layouts/course.html
 code: L5SORECO
-institution: Sorbonne Université
+# institution: Sorbonne Université
 institution_url: https://www.sorbonne-universite.fr/
 semester: Semestre d'automne 2026
 logo: /assets/img/sorbonne_full.svg

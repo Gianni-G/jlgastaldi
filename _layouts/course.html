@@ -26,19 +26,37 @@
     <header class="course-header" role="banner">
       <div class="course-header-inner">
 
+
+        <!-- {% if page.logo %}
+        <div class="course-logo">
+          {% if page.institution_url %}<a href="{{ page.institution_url }}" target="_blank">{% endif %}
+            <img src="{{ page.logo | relative_url }}" alt="{{ page.logo_alt | default: page.institution }}">
+          {% if page.institution_url %}</a>{% endif %}
+        </div>
+        {% endif %} -->
+
         <div class="course-identity">
-          <h1 class="course-title">{{ page.title }}</h1>
 
           <p class="course-meta">
             {% if page.code %}<span class="course-code">{{ page.code }}</span>{% endif %}
             {% if page.institution %}{{ page.institution }}{% endif %}
-            {% if page.semester %}&middot; {{ page.semester }}{% endif %}
+            {% if page.semester %} {{ page.semester }}{% endif %}
             {% if page.catalog_url %}<br><a href="{{ page.catalog_url }}" target="_blank">Descriptif dans le catalogue des enseignements</a>{% endif %}
           </p>
+
+          <h1 class="course-title">{{ page.title }}</h1>
 
           <p class="course-instructor">
             <a href="{{ site.github.home | replace: './', '/' | relative_url }}">Juan Luis Gastaldi</a>
           </p>
+
+          <!-- <p class="course-meta">
+            {% if page.code %}<span class="course-code">{{ page.code }}</span>{% endif %}<br>
+            {% if page.institution %}{{ page.institution }}{% endif %}
+            {% if page.semester %}&middot; {{ page.semester }}{% endif %}
+            {% if page.catalog_url %}<br><a href="{{ page.catalog_url }}" target="_blank">Descriptif dans le catalogue des enseignements</a>{% endif %}
+          </p> -->
+
         </div>
 
         {% if page.logo %}
