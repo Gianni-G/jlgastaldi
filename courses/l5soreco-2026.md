@@ -8,7 +8,7 @@ permalink: /courses/l5soreco-2026/
 code: L5SORECO
 # institution: Sorbonne Université
 institution_url: https://www.sorbonne-universite.fr/
-semester: Semestre d'automne 2026
+semester: Semestre 5 · 2026/2027
 logo: /assets/img/sorbonne_full.svg
 logo_alt: Sorbonne Université
 
@@ -143,7 +143,7 @@ La note finale sera établie selon la répartition suivante :
       <td>Représentations vectorielles I</td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>Contrôle continu</td>
     </tr>
     <tr>
       <th scope="row">8</th>
@@ -185,7 +185,7 @@ La note finale sera établie selon la répartition suivante :
       <td>Catégories II</td>
       <td>{% cite spivak2012ologs %}</td>
       <td></td>
-      <td></td>
+      <td>Contrôle continu</td>
     </tr>
     <tr>
       <th scope="row">13</th>
