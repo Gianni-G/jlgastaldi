@@ -121,18 +121,18 @@ La note finale sera établie selon la répartition suivante :
       <td></td>
     </tr>
     <tr>
-      <th scope="row">5</th>
-      <td style='white-space:nowrap'>12.10.26</td>
-      <td>Graphes de connaissance</td>
-      <td>{% cite sowa2008conceptualgraphs %}</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
       <th scope="row">6</th>
       <td style='white-space:nowrap'>19.10.26</td>
       <td>Ingénierie des connaissances (Ontologies)</td>
       <td>{% cite schreiber2008knowledgeengineering %}</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td style='white-space:nowrap'>12.10.26</td>
+      <td>Graphes de connaissance</td>
+      <td>{% cite sowa2008conceptualgraphs %}</td>
       <td></td>
       <td></td>
     </tr>
