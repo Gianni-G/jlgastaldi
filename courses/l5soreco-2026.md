@@ -55,13 +55,6 @@ La note finale sera établie selon la répartition suivante :
 
 - Date: À définir 
 
-
-## Documents de cours
-
-- *(Syllabus — à compléter)*
-- *(Consignes des travaux hebdomadaires — à compléter)*
-- *(Grille d'évaluation — à compléter)*
-
 ## Actualités
 
 **25.08** &emsp; Mise en ligne du site du cours.
@@ -78,10 +71,10 @@ La note finale sera établie selon la répartition suivante :
 | **6** | 19/10 | **M1:<br>Graphes** | Graphes conceptuels et de connaissances | · {% cite sowa2008conceptualgraphs %} | | Contrôle continu |
 | **7** | 02/11 | **M2:<br>Vecteurs** | Représentations vectorielles | · **{% cite turney2010fromfrequency %}**<br> · {%cite foucault1969archeologie -L chapter -l III.I%} | | |
 | **8** | 09/11 | **M2:<br>Vecteurs** | Embeddings neuronaux | · **{% cite mikolov2013efficientestimation %}**<br>· {% cite levy2014implicitfactorization %} | | |
-| **9** | 16/11 | **M3:<br>Types** | Correspondance propositions-types | | | |
-| **10** | 23/11 | **M3:<br>Types** | Théorie des types | | | |
+| **9** | 16/11 | **M3:<br>Types** | Correspondance propositions-types | · **{%cite wadler2015propositionsastypes%}**| | |
+| **10** | 23/11 | **M3:<br>Types** | Théorie des types | · **{%cite merigoux2021catala%}**<br>· {%cite merigoux2024rulescomputationpolitics%}| | |
 | **11** | 30/11 | **M4:<br>Catégories** | Catégories et foncteurs | · **{% cite spivak2014categorytheoryforthesciences %}** | | |
-| **12** | 07/12 | **M4:<br>Catégories** | Ologs et profoncteurs | · {% cite spivak2012ologs %} | | Contrôle continu |
+| **12** | 07/12 | **M4:<br>Catégories** | Ologs et profoncteurs | · **{% cite spivak2012ologs %}** | | Contrôle continu |
 | **13** | 14/12 | **Révision** | Révision | | | |
 
 ## Bibliographie
