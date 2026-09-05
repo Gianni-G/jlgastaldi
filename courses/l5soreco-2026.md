@@ -70,19 +70,19 @@ La note finale sera établie selon la répartition suivante :
 
 | Séance | Date | Module | Thème | Lectures | Slides | TD |
 |:---:|:---|:---:|:---|:---|:---|:---|
-| **1** | 14.09.26 | **Introduction** | Introduction | {% cite nietzsche1873delaverite %} | | |
-| **2** | 21.09.26 | **Module 1 : Propositions** | Logique propositionnelle | {% cite lifschitz2008knowledgerepresentation %} | | |
-| **3** | 28.09.26 | **Module 1 : Propositions** | Logique de premier ordre | {% cite lifschitz2008knowledgerepresentation %} | | |
-| **4** | 05.10.26 | **Module 1 : Propositions** | Logiques de description | {% cite brachman2004knowledgerepresentation --label chapter --locator 9 %}; {% cite baader2008descriptionlogics %} | | |
-| **5** | 12.10.26 | **Module 1 : Objets** | Ontologies | **{% cite schreiber2008knowledgeengineering %}** | | |
-| **6** | 19.10.26 | **Module 1 : Graphes** | Graphes conceptuels et de connaissance | {% cite sowa2008conceptualgraphs %} | | Contrôle continu |
-| **7** | 02.11.26 | **Module 2 : Vecteurs** | Représentations vectorielles I | {% cite turney2010fromfrequency %} | | |
-| **8** | 09.11.26 | **Module 2 : Vecteurs** | Représentations vectorielles II |  {% cite mikolov2013efficientestimation levy2014implicitfactorization%} | | |
-| **9** | 16.11.26 | **Module 3 : Types** | Théorie des types I | | | |
-| **10** | 23.11.26 | **Module 3 : Types** | Théorie des types II | | | |
-| **11** | 30.11.26 | **Module 4 : Catégories** | Catégories I | {% cite fong2019invitation %} | | |
-| **12** | 07.12.26 | **Module 4 : Catégories** | Catégories II | {% cite spivak2012ologs %} | | Contrôle continu |
-| **13** | 14.12.26 | **Révision** | Révision | | | |
+| **1** | 14/09 | **Introduction** | Représentation des connaissances et sciences humaines | · **{% cite nietzsche1873delaverite %}**<br>· {% cite borges1957langueanalytiquewilkins %}<br>· {% cite foucault1966lesmotsetchoses --locator 7-16%}<br>· {% cite mccarthy1959programswithcommonsense %}<br>· {% cite brachman2004knowledgerepresentation_ch1 -L chapter -l 1 %} | | |
+| **2** | 21/09 | **M1:<br>Propositions** | Logique propositionnelle | · **{% cite lifschitz2008knowledgerepresentation %}** | | |
+| **3** | 28/09 | **M1:<br>Propositions** | Logique de premier ordre | · **{% cite lifschitz2008knowledgerepresentation %}**<br>· {% cite brachman2004knowledgerepresentation_ch2 -L chapter -l 2 %} | | |
+| **4** | 05/10 | **M1:<br>Propositions** | Logiques de description | · **{% cite brachman2004knowledgerepresentation_ch9 -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | |
+| **5** | 12/10 | **M1:<br>Objets** | Ontologies | · {% cite brachman2004knowledgerepresentation_ch8 -L chapter -l 8 %}<br>· {% cite schreiber2008knowledgeengineering %} | | |
+| **6** | 19/10 | **M1:<br>Graphes** | Graphes conceptuels et de connaissances | · {% cite sowa2008conceptualgraphs %} | | Contrôle continu |
+| **7** | 02/11 | **M2:<br>Vecteurs** | Représentations vectorielles | · **{% cite turney2010fromfrequency %}**<br> · {%cite foucault1969archeologie -L chapter -l III.I%} | | |
+| **8** | 09/11 | **M2:<br>Vecteurs** | Embeddings neuronaux | · **{% cite mikolov2013efficientestimation %}**<br>· {% cite levy2014implicitfactorization %} | | |
+| **9** | 16/11 | **M3:<br>Types** | Correspondance propositions-types | | | |
+| **10** | 23/11 | **M3:<br>Types** | Théorie des types | | | |
+| **11** | 30/11 | **M4:<br>Catégories** | Catégories et foncteurs | · **{% cite spivak2014categorytheoryforthesciences %}** | | |
+| **12** | 07/12 | **M4:<br>Catégories** | Ologs et profoncteurs | · {% cite spivak2012ologs %} | | Contrôle continu |
+| **13** | 14/12 | **Révision** | Révision | | | |
 
 ## Bibliographie
 
@@ -96,11 +96,15 @@ La note finale sera établie selon la répartition suivante :
      jekyll-scholar les conserverait littéralement et la requête ne renverrait
      alors aucune entrée. -->
 
+### Générale
+
+{% bibliography --query @*[keywords ~= general] %}
+
 ### Introduction
 
 {% bibliography --query @*[keywords ~= intro] %}
 
-### Module 1 --- Propositions
+### Module 1 --- Propositions, objets, graphes
 
 {% bibliography --query @*[keywords ~= module1] %}
 
