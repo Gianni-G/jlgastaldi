@@ -67,7 +67,7 @@ La note finale sera établie selon la répartition suivante :
 | **2** | 21/09 | **M1:<br>Propositions** | Logique propositionnelle | · **{% cite lifschitz2008knowledgerepresentation %}** | | |
 | **3** | 28/09 | **M1:<br>Propositions** | Logique de premier ordre | · **{% cite lifschitz2008knowledgerepresentation %}**<br>· {% cite brachman2004knowledgerepresentation_ch2 -L chapter -l 2 %} | | |
 | **4** | 05/10 | **M1:<br>Propositions** | Logiques de description | · **{% cite brachman2004knowledgerepresentation_ch9 -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | |
-| **5** | 12/10 | **M1:<br>Objets** | Ontologies | · {% cite brachman2004knowledgerepresentation_ch8 -L chapter -l 8 %}<br>· {% cite schreiber2008knowledgeengineering %} | | |
+| **5** | 12/10 | **M1:<br>Objets** | Ontologies | · **{% cite guarino2009whatisontology %}** | | |
 | **6** | 19/10 | **M1:<br>Graphes** | Graphes de connaissances | · **{% cite hogan2022knowledgegraphs %}**<br>· {% cite vrandecic2014wikidata %}  | | Contrôle continu |
 | **7** | 02/11 | **M2:<br>Vecteurs** | Représentations vectorielles | · **{% cite turney2010fromfrequency %}**<br>· {%cite baricco2014lesbarbares%}<br> · {%cite foucault1969archeologie -L chapter -l III.I%} | | |
 | **8** | 09/11 | **M2:<br>Vecteurs** | Embeddings neuronaux | · **{% cite mikolov2013efficientestimation %}**<br>· {% cite levy2014implicitfactorization %} | | |
