@@ -63,18 +63,18 @@ La note finale sera établie selon la répartition suivante :
 
 | Séance | Date | Module | Thème | Lectures | Slides | TD |
 |:---:|:---|:---:|:---|:---|:---|:---|
-| **1** | 14/09 | **Introduction** | Représentation des connaissances et sciences humaines | · **{% cite nietzsche1873delaverite %}**<br>· {% cite borges1957langueanalytiquewilkins %}<br>· {% cite foucault1966lesmotsetchoses --locator 7-16%}<br>· {% cite mccarthy1959programswithcommonsense %}<br>· {% cite brachman2004knowledgerepresentation_ch1 -L chapter -l 1 %} | | |
-| **2** | 21/09 | **M1:<br>Propositions** | Logique propositionnelle | · **{% cite lifschitz2008knowledgerepresentation %}** | | |
-| **3** | 28/09 | **M1:<br>Propositions** | Logique de premier ordre | · **{% cite lifschitz2008knowledgerepresentation %}**<br>· {% cite brachman2004knowledgerepresentation_ch2 -L chapter -l 2 %} | | |
-| **4** | 05/10 | **M1:<br>Propositions** | Logiques de description | · **{% cite brachman2004knowledgerepresentation_ch9 -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | |
-| **5** | 12/10 | **M1:<br>Objets** | Ontologies | · **{% cite guarino2009whatisontology %}** | | |
+| **1** | 14/09 | **Introduction** | Représentation des<br> connaissances et<br> sciences humaines | · **{% cite nietzsche1873delaverite %}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 1 %} | | |
+| **2** | 21/09 | **M1:<br>Propositions** | Logique<br>propositionnelle | · **{% cite lifschitz2008knowledgerepresentation %}** | | |
+| **3** | 28/09 | **M1:<br>Propositions** | Logique de<br>premier ordre | · **{% cite lifschitz2008knowledgerepresentation %}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 2 %} | | |
+| **4** | 05/10 | **M1:<br>Propositions** | Logiques de<br>description | · **{% cite brachman2004knowledgerepresentation -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | |
+| **5** | 12/10 | **M1:<br>Objets** | Ontologies | · **{% cite guarino2009whatisontology %}**<br>· {% cite pan2009rdf %}<br>· {% cite antoniou2009wol %} | | |
 | **6** | 19/10 | **M1:<br>Graphes** | Graphes de connaissances | · **{% cite hogan2022knowledgegraphs %}**<br>· {% cite vrandecic2014wikidata %}  | | Contrôle continu |
-| **7** | 02/11 | **M2:<br>Vecteurs** | Représentations vectorielles | · **{% cite turney2010fromfrequency %}**<br>· {%cite baricco2014lesbarbares%}<br> · {%cite foucault1969archeologie -L chapter -l III.I%} | | |
-| **8** | 09/11 | **M2:<br>Vecteurs** | Embeddings neuronaux | · **{% cite mikolov2013efficientestimation %}**<br>· {% cite levy2014implicitfactorization %} | | |
+| **7** | 02/11 | **M2:<br>Vecteurs** | Représentations vectorielles | · **{% cite turney2010fromfrequency %}**<br>· {% cite goodfellow2016deeplearning -L section -l 2.1-8 %} | | |
+| **8** | 09/11 | **M2:<br>Vecteurs** | Embeddings<br>neuronaux | · **{% cite mikolov2013efficientestimation %}**<br>· {% cite levy2014implicitfactorization %} | | |
 | **9** | 16/11 | **M3:<br>Types** | Correspondance propositions-types | · **{%cite wadler2015propositionsastypes%}**| | |
 | **10** | 23/11 | **M3:<br>Types** | Théorie des types | · **{%cite merigoux2021catala%}**<br>· {%cite merigoux2024rulescomputationpolitics%}| | |
-| **11** | 30/11 | **M4:<br>Catégories** | Catégories et foncteurs | · **{% cite spivak2014categorytheoryforthesciences %}** | | |
-| **12** | 07/12 | **M4:<br>Catégories** | Ologs et profoncteurs | · **{% cite spivak2012ologs %}** | | Contrôle continu |
+| **11** | 30/11 | **M4:<br>Catégories** | Catégories et<br>foncteurs | · **{% cite spivak2014categorytheoryforthesciences %}** | | |
+| **12** | 07/12 | **M4:<br>Catégories** | Ologs et<br>profoncteurs | · **{% cite spivak2012ologs %}**<br>· {% cite  bradley2024structureofmeaning %} | | Contrôle continu |
 | **13** | 14/12 | **Révision** | Révision | | | |
 
 ## Bibliographie
@@ -99,7 +99,14 @@ La note finale sera établie selon la répartition suivante :
 
 ### Module 1 --- Propositions, objets, graphes
 
-{% bibliography --query @*[keywords ~= module1] %}
+#### Propositions
+{% bibliography --query @*[keywords ~= propositions] %}
+
+#### Objets
+{% bibliography --query @*[keywords ~= objets] %}
+
+#### Graphes
+{% bibliography --query @*[keywords ~= graphes] %}
 
 ### Module 2 --- Vecteurs
 
@@ -112,6 +119,10 @@ La note finale sera établie selon la répartition suivante :
 ### Module 4 --- Catégories
 
 {% bibliography --query @*[keywords ~= module4] %}
+
+### Literature critique
+
+{% bibliography --query @*[keywords ~= critique] %}
 
 
 ## Ressources utiles
