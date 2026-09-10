@@ -69,11 +69,11 @@ La note finale sera établie selon la répartition suivante :
 | **4** | 05/10 | **M1:<br>Propositions** | Logiques de<br>description | · **{% cite brachman2004knowledgerepresentation -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | |
 | **5** | 12/10 | **M1:<br>Objets** | Ontologies | · **{% cite guarino2009whatisontology %}**<br>· {% cite pan2009rdf %}<br>· {% cite antoniou2009wol %} | | |
 | **6** | 19/10 | **M1:<br>Graphes** | Graphes de connaissances | · **{% cite hogan2022knowledgegraphs %}**<br>· {% cite vrandecic2014wikidata %}  | | Contrôle continu |
-| **7** | 02/11 | **M2:<br>Vecteurs** | Représentations vectorielles | · **{% cite turney2010fromfrequency %}**<br>· {% cite goodfellow2016deeplearning -L section -l 2.1-8 %} | | |
+| **7** | 02/11 | **M2:<br>Vecteurs** | Représentations vectorielles | · **{% cite turney2010fromfrequency %}**<br>· {% cite barbut1967mathématiquesetscienceshumaines1 -L chapter -l XI %}<br>· {% cite goodfellow2016deeplearning -L section -l 2.1-8 %} | | |
 | **8** | 09/11 | **M2:<br>Vecteurs** | Embeddings<br>neuronaux | · **{% cite mikolov2013efficientestimation %}**<br>· {% cite levy2014implicitfactorization %} | | |
-| **9** | 16/11 | **M3:<br>Types** | Correspondance propositions-types | · **{%cite wadler2015propositionsastypes%}**| | |
+| **9** | 16/11 | **M3:<br>Types** | Correspondance propositions-types | · **{%cite wadler2015propositionsastypes%}**<br>· {% cite milewski2019category  %}| | |
 | **10** | 23/11 | **M3:<br>Types** | Théorie des types | · **{%cite merigoux2021catala%}**<br>· {%cite merigoux2024rulescomputationpolitics%}| | |
-| **11** | 30/11 | **M4:<br>Catégories** | Catégories et<br>foncteurs | · **{% cite spivak2014categorytheoryforthesciences %}** | | |
+| **11** | 30/11 | **M4:<br>Catégories** | Catégories et<br>foncteurs | · **{% cite spivak2014categorytheoryforthesciences %}**<br>· {% cite milewski2019category  %} | | |
 | **12** | 07/12 | **M4:<br>Catégories** | Ologs et<br>profoncteurs | · **{% cite spivak2012ologs %}**<br>· {% cite  bradley2024structureofmeaning %} | | Contrôle continu |
 | **13** | 14/12 | **Révision** | Révision | | | |
 
@@ -130,6 +130,7 @@ La note finale sera établie selon la répartition suivante :
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Python](https://www.python.org)
 - [Z3 guide](https://microsoft.github.io/z3guide/docs/logic/intro/), [repo](https://github.com/z3prover/z3)
+- [Lean Game Server](https://adam.math.hhu.de)
 
 ## Contact
 
