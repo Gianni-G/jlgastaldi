@@ -63,7 +63,7 @@ La note finale sera établie selon la répartition suivante :
 
 | Séance | Date | Module | Thème | Lectures | Slides | TD |
 |:---:|:---|:---:|:---|:---|:---|:---|
-| **1** | 14/09 | **Introduction** | Représentation des<br> connaissances et<br> sciences humaines | · **{% cite nietzsche1873delaverite %}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 1 %} | | |
+| **1** | 14/09 | **Introduction** | Représentation des<br> connaissances et<br> sciences humaines | · **{% cite nietzsche1873delaverite %}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 1 %} |[Slides 01](https://www.giannigastaldi.com/assets/courses/26_l5soreco/l5soreco26_01.html) | |
 | **2** | 21/09 | **M1:<br>Propositions** | Logique<br>propositionnelle | · **{% cite lifschitz2008knowledgerepresentation %}** | | |
 | **3** | 28/09 | **M1:<br>Propositions** | Logique de<br>premier ordre | · **{% cite lifschitz2008knowledgerepresentation %}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 2 %} | | |
 | **4** | 05/10 | **M1:<br>Propositions** | Logiques de<br>description | · **{% cite brachman2004knowledgerepresentation -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | |
