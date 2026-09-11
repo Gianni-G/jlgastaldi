@@ -1,5 +1,5 @@
 ---
-layout: course
+layout: course_su
 lang: fr
 title: "Représentation des connaissances <br> pour les SHS"
 permalink: /courses/l5soreco-2026/
