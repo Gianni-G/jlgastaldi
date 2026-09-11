@@ -912,7 +912,7 @@ $course-header-bg: #fff !default;
 
 .course-instructor {
   margin: .35rem 0 0;
-  font-size: 1.25rem;
+  font-size: 1.7rem;
 
   a {
     color: $body-text-color;
@@ -946,5 +946,62 @@ $course-header-bg: #fff !default;
     img {
       width: 150px;
     }
+  }
+}
+
+// Course pages, Faculté des Lettres variant (layout: course_su_lettres)
+// ------------------------------------------------------------------
+// Same banner as above, with the palette of the Faculté des Lettres:
+// the navy of the faculty logo (#1D2769, slightly deeper than the
+// university navy) with its gold accent (#FAB600) in place of the red.
+// Gold on white fails contrast for text, so it is used as a solid rule
+// and as a badge ground carrying navy text, never as a text color.
+
+$lettres-color: #1d2769 !default;
+$lettres-accent: #fab600 !default;
+
+.course-header-lettres {
+  // Navy rule as in the base banner, doubled by a gold one just below it.
+  border-bottom: 3px solid $lettres-color;
+  box-shadow: 0 3px 0 0 $lettres-accent;
+
+  .course-title {
+    color: $lettres-color;
+  }
+
+  .course-meta a {
+    color: $lettres-color;
+  }
+
+  .course-code {
+    color: $lettres-color;
+    background-color: $lettres-accent;
+    font-weight: bold;
+  }
+
+  .course-instructor a:hover {
+    color: $lettres-color;
+  }
+}
+
+// The body headings default to the site accent (red), which happens to match
+// the university's own red; under this layout they take the faculty navy
+// instead, so the whole page reads in one palette.
+
+.course-lettres .main-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $lettres-color;
+  }
+
+  // Gold is too light for text, so the accent reaches the page as a rule
+  // under the top-level headings rather than as a heading color.
+  h2 {
+    padding-bottom: .3rem;
+    border-bottom: 2px solid $lettres-accent;
   }
 }

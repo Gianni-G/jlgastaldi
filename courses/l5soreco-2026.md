@@ -1,5 +1,5 @@
 ---
-layout: course_su
+layout: course_su_lettres
 lang: fr
 title: "Représentation des connaissances <br> pour les SHS"
 permalink: /courses/l5soreco-2026/
@@ -9,7 +9,7 @@ code: L5SORECO
 # institution: Sorbonne Université
 institution_url: https://www.sorbonne-universite.fr/
 semester: Semestre 5 · 2026/2027
-logo: /assets/img/sorbonne_full.svg
+logo: /assets/img/sorbonne_lettres.svg
 logo_alt: Sorbonne Université
 
 # Bibliographie par défaut de cette page : les balises cite/bibliography
