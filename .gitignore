@@ -2,5 +2,4 @@ _site/*
 # assets/courses/*
 .jekyll-metadata
 assets/courses/26_l5soreco/res/*
-assets/courses/26_l5soreco/media/*
 assets/courses/26_l5soreco/*.ipynb
