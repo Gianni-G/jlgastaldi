@@ -48,7 +48,7 @@ La note finale sera établie selon la répartition suivante :
 
 ### Contrôle continu
 
-- Réponses libres hebdomadaires aux lectures obligatoires (minimun 8 sur 12)
+- Réponses libres hebdomadaires aux lectures obligatoires (minimum 8 sur 12)
 - Premier contrôle: **19/10**
 - Second contrôle: **07/12**
 
