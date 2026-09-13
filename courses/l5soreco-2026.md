@@ -35,7 +35,7 @@ scholar:
 - **Lundis 16h-18h, Campus Malesherbes C220** (susceptible de changer!)
 
 ### Support et communication
-- [Moodle](https://moodle-lettres-26.sorbonne-universite.fr/course/view.php?id=1642#)
+- [**Moodle**](https://moodle-lettres-26.sorbonne-universite.fr/course/view.php?id=1642#)
 (code communiqué en cours)
 - Les étudiant·e·s sont responsables de la consultation des messages qui y sont diffusés.
 
@@ -53,7 +53,7 @@ La note finale sera établie selon la répartition suivante :
 
 ### Examen final
 
-- Date à définir 
+- Date à définir
 
 ## Actualités
 

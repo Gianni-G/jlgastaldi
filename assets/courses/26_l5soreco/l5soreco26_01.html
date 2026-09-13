@@ -34,6 +34,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -54,12 +119,13 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="l5soreco26_01_files/libs/revealjs/dist/theme/quarto-a65fdd9f752ffbab164f3afc48a0b949.css">
+  <link rel="stylesheet" href="l5soreco26_01_files/libs/revealjs/dist/theme/quarto-904744804afe20a34325ab00416eae89.css">
   <link href="l5soreco26_01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="l5soreco26_01_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="l5soreco26_01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="l5soreco26_01_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="l5soreco26_01_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="l5soreco26_01_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
   <link href="l5soreco26_01_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -211,16 +277,17 @@
 <h1>Présentations</h1>
 
 </section>
-<section id="gianni-gastaldi" class="slide level2 center">
-<h2>Gianni Gastaldi</h2>
-<iframe width="100%" height="500px" src="https://www.giannigastaldi.com" title="Webpage Title"></iframe>
+<section id="enseignant-gianni-gastaldi" class="slide level2 center">
+<h2>Enseignant: Gianni Gastaldi</h2>
+<iframe width="100%" height="600px" src="https://www.giannigastaldi.com/p.about.html"></iframe>
 </section>
 <section id="étudiantes" class="slide level2 center">
 <h2>Étudiant·e·s</h2>
 <ul>
-<li>Nom d’usage</li>
-<li>Domaine ou discipline</li>
+<li>Nom d’usage/pronoms</li>
+<li>Discipline principale/préférée</li>
 <li>Compétences informatiques</li>
+<li>Connaissances en logique/mathématiques</li>
 <li>Connaissances en philosophie</li>
 </ul>
 </section>
@@ -229,29 +296,942 @@
 <div style="text-align: center; margin-bottom: .75em; margin-top: .75em;">
 <p><a href="https://www.giannigastaldi.com/courses/l5soreco-2026/">www.giannigastaldi.com/courses/l5soreco-2026/</a></p>
 </div>
-<iframe width="100%" height="600px" src="https://www.giannigastaldi.com/courses/l5soreco-2026/" title="Webpage Title"></iframe>
+<iframe width="100%" height="600px" src="https://www.giannigastaldi.com/courses/l5soreco-2026/" title="Page web de Gastaldi"></iframe>
 </section>
 <section id="quest-que-la-représentation-des-connaissances" class="slide level2 center">
 <h2>Qu’est que la<br>“Représentation des connaissances”?</h2>
+<div class="r-stack">
+<iframe width="100%" height="600px" src="https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning" title="Page Wikipedia de knowledge representation and reasoning" class="fragment fade-out" data-fragment-index="0"></iframe>
+<iframe width="100%" height="600px" src="https://fr.wikipedia.org/wiki/Représentation_des_connaissances" title="Page Wikipedia de representation des connaissances" class="fragment current-visible" data-fragment-index="0"></iframe>
+</div>
+</section>
+<section id="intelligence-et-connaissance" class="slide level2 center">
+<h2>Intelligence et connaissance</h2>
+<ul>
+<li><p>Le comportement intelligent est <strong>conditionné par la connaissance</strong>.</p></li>
+<li><p>Dire de quelqu’un qu’il a agi bêtement, ce n’est pas dire qu’il <strong>ignorait</strong> quelque chose.</p></li>
+<li><p>C’est dire qu’il <strong>n’a pas mobilisé</strong> ce qu’il savait.</p></li>
+</ul>
+<div style="text-align: center; margin-top: 1em; font-size: 1.2em;">
+<p><em>Penser</em> = faire porter ce qu’on sait sur ce qu’on fait.</p>
+</div>
+</section>
+<section id="deux-définitions" class="slide level2 center">
+<h2>Deux définitions</h2>
+<dl>
+<dt><strong>Intelligence artificielle</strong></dt>
+<dd>
+le comportement intelligent obtenu par des moyens <strong>computationnels</strong>
+</dd>
+<dt><strong>Représentation des connaissances et raisonnement</strong></dt>
+<dd>
+comment un agent <strong>utilise ce qu’il sait</strong> pour décider quoi faire
+</dd>
+</dl>
+<div style="text-align: center; margin-top: 1.5em; font-size: 1.2em;">
+<p>La pensée comme <strong>processus computationnel</strong>.</p>
+</div>
+</section>
+<section id="trois-notions" class="slide level2 center">
+<h2>Trois notions</h2>
+<div style="text-align: center; font-size: 1.7em; margin-top: 2em;">
+<p>Connaissance<br>
+↓<br>
+Représentation<br>
+↓<br>
+Raisonnement</p>
+</div>
+</section></section>
+<section>
+<section id="connaissance" class="title-slide slide level1 center">
+<h1>Connaissance</h1>
+
+</section>
+<section id="la-connaissance-porte-sur-des-propositions" class="slide level2 center">
+<h2>La connaissance porte sur des propositions</h2>
+<p>Après « Jean sait que… », on complète par une <strong>phrase déclarative</strong>.</p>
+<div style="text-align: center; margin: 1em 0; font-size: 1.1em;">
+<p>sujet connaissant &nbsp;—&nbsp; <strong>proposition</strong></p>
+</div>
+<div title="Proposition">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Proposition</strong></p>
+</div>
+<div class="callout-content">
+<p>Entité <strong>abstraite</strong> susceptible d’être <strong>vraie ou fausse</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Ni la phrase, ni le fait : ce qui partage les mondes imaginables en deux — ceux où Jean aime Marie, ceux où il ne l’aime pas.</p>
+</section>
+<section id="savoir-cest-juger" class="slide level2 center">
+<h2>Savoir, c’est juger</h2>
+<p>« Jean sait que <em>p</em> » ⟺ « Jean sait qu’<strong>il est vrai</strong> que <em>p</em> »</p>
+<p>Jean tient le monde pour être d’une certaine façon <strong>et pas d’une autre</strong>.</p>
+<p>La proposition sert à <strong>classer</strong> ces deux cas.</p>
+</section>
+<section id="les-attitudes-propositionnelles" class="slide level2 center">
+<h2>Les attitudes propositionnelles</h2>
+<p>Même proposition — relation différente :</p>
+<div style="text-align: center; font-size: 1.15em; margin: 1em 0;">
+<p><strong>sait</strong> · <strong>croit</strong> · <strong>espère</strong> · <strong>est certain</strong> · <strong>soupçonne</strong></p>
+</div>
+<p>Elles diffèrent par le <strong>degré de conviction</strong>, pas par leur objet.</p>
+<div style="text-align: center; margin-top: 1em;">
+<p>→ La <strong>croyance</strong> est la notion de base.</p>
+</div>
+</section></section>
+<section>
+<section id="représentation" class="title-slide slide level1 center">
+<h1>Représentation</h1>
+
+</section>
+<section id="faire-tenir-du-concret-à-la-place-de-labstrait" class="slide level2 center">
+<h2>Faire tenir du concret à la place de l’abstrait</h2>
+<p>Une relation entre deux domaines : le premier <strong>tient lieu</strong> du second.</p>
+<p>Le représentant est plus <strong>concret</strong>, plus <strong>accessible</strong>.</p>
+<p>Ce qui nous intéresse : le <strong>symbole formel</strong>, pris dans un alphabet fixé d’avance.</p>
+<div style="text-align: center; margin: 0.8em 0;">
+<p>« Jean aime Marie » &nbsp;→&nbsp; la proposition que Jean aime Marie</p>
+</div>
+</section>
+<section id="définition" class="slide level2 center">
+<h2>Définition</h2>
+<div title="Représentation des connaissances">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Représentation des connaissances</strong></p>
+</div>
+<div class="callout-content">
+<p>L’usage de <strong>symboles formels</strong> pour représenter un ensemble de <strong>propositions crues</strong> par un agent.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Mais pas <strong>toutes</strong> les propositions crues : un agent peut en croire une <strong>infinité</strong>, dont un nombre <strong>fini</strong> seulement sera représenté.</p>
+<div style="text-align: center; margin-top: 1em; font-size: 1.15em;">
+<p>→ Le <strong>raisonnement</strong> comble l’écart.</p>
+</div>
+</section></section>
+<section>
+<section id="raisonnement" class="title-slide slide level1 center">
+<h1>Raisonnement</h1>
+
+</section>
+<section id="manipuler-des-symboles" class="slide level2 center">
+<h2>Manipuler des symboles</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>La <strong>manipulation formelle</strong> des symboles représentant des propositions crues, pour produire la représentation de <strong>nouvelles</strong> propositions.</p>
+</div>
+</div>
+</div>
+<p><strong>L’analogie arithmétique</strong></p>
+<div style="text-align: center; font-size: 1.3em; margin: 0.5em 0;">
+<p><code>1011</code> + <code>10</code> ⟶ <code>1101</code></p>
+</div>
+<p>C’est une <em>addition</em> parce que le résultat représente la <strong>somme</strong>. Le sens est extérieur à la manipulation — celle-ci le <strong>respecte</strong>.</p>
+</section>
+<section id="inférence-logique" class="slide level2 center">
+<h2>Inférence logique</h2>
+<blockquote>
+<p>« Jean aime Marie » + « Marie vient à la fête »</p>
+</blockquote>
+<div style="text-align: center; font-size: 1.2em; margin: 0.8em 0;">
+<p>⟶</p>
+</div>
+<blockquote>
+<p>« Quelqu’un que Jean aime vient à la fête »</p>
+</blockquote>
+<div style="text-align: center; margin-top: 1.2em;">
+<p><em>Leibniz : raisonner est un calcul — comme l’arithmétique, mais sur des symboles dénotant des propositions.</em></p>
+</div>
+</section></section>
+<section>
+<section id="lhypothèse-de-la-représentation-des-connaissances" class="title-slide slide level1 center">
+<h1>L’hypothèse de la représentation des connaissances</h1>
+
+</section>
+<section id="brian-cantwell-smith" class="slide level2 center">
+<h2>Brian Cantwell Smith</h2>
+<p>Tout processus intelligent réalisé mécaniquement comporte des ingrédients structurels qui :</p>
+<p><strong>(a)</strong> sont interprétables de l’extérieur comme un <strong>compte rendu propositionnel</strong> de ce que le système sait ;</p>
+<p><strong>(b)</strong> <strong>indépendamment</strong> de cette interprétation, jouent un rôle <strong>causal et essentiel</strong> dans le comportement produit.</p>
+<div style="text-align: center; margin-top: 1em;">
+<ol type="a">
+<li>l’<strong>observateur</strong> · (b) l’<strong>ingénieur</strong> → l’hypothèse exige qu’ils <strong>coïncident</strong>.</li>
+</ol>
+</div>
+</section>
+<section id="systèmes-à-base-de-connaissances" class="slide level2 center">
+<h2>Systèmes à base de connaissances</h2>
+<p>Deux programmes, <strong>exactement le même comportement</strong> :</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource prolog number-lines code-with-copy"><code class="sourceCode prolog"><span id="cb1-1"><a href="" aria-label="1"></a>printColor(snow) <span class="kw">:-</span></span>
+<span id="cb1-2"><a href="" aria-label="2"></a>  <span class="kw">!,</span> <span class="fu">write</span>(<span class="ot">"</span><span class="er">blanc</span><span class="ot">"</span>)<span class="kw">.</span></span>
+<span id="cb1-3"><a href="" aria-label="3"></a>printColor(grass) <span class="kw">:-</span></span>
+<span id="cb1-4"><a href="" aria-label="4"></a>  <span class="kw">!,</span> <span class="fu">write</span>(<span class="ot">"</span><span class="er">vert</span><span class="ot">"</span>)<span class="kw">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>connaissance compilée dans les procédures</em></p>
+</div><div class="column" style="width:48%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource prolog number-lines code-with-copy"><code class="sourceCode prolog"><span id="cb2-1"><a href="" aria-label="1"></a>color(snow<span class="kw">,</span>white)<span class="kw">.</span></span>
+<span id="cb2-2"><a href="" aria-label="2"></a>color(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>) <span class="kw">:-</span></span>
+<span id="cb2-3"><a href="" aria-label="3"></a>  madeof(<span class="dt">X</span><span class="kw">,</span><span class="dt">Z</span>)<span class="kw">,</span> color(<span class="dt">Z</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">.</span></span>
+<span id="cb2-4"><a href="" aria-label="4"></a>madeof(grass<span class="kw">,</span>vegetation)<span class="kw">.</span></span>
+<span id="cb2-5"><a href="" aria-label="5"></a>color(vegetation<span class="kw">,</span>green)<span class="kw">.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>connaissance explicite, séparée des procédures</em></p>
+</div></div>
+<p>Seul le second a une clause qui <strong>représente littéralement une croyance</strong>.</p>
+</section>
+<section id="le-critère" class="slide level2 center">
+<h2>Le critère</h2>
+<p>Ce n’est ni le formalisme logique, ni la complexité, ni la vérité de ce qui est cru.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>C’est la présence d’une <strong>base de connaissances</strong> : des structures symboliques représentant ce que le système croit, et sur lesquelles il <strong>raisonne pendant son fonctionnement</strong>.</p>
+</div>
+</div>
+</div>
+<div style="text-align: center; margin-top: 1em;">
+<p>Un tel système peut <strong>se faire dire</strong> des faits et ajuster son comportement.</p>
+</div>
+</section></section>
+<section>
+<section id="déduction-logique" class="title-slide slide level1 center">
+<h1>Déduction logique</h1>
+
+</section>
+<section id="aller-au-delà-de-ce-qui-est-stocké" class="slide level2 center">
+<h2>Aller au-delà de ce qui est stocké</h2>
+<p>Dans la base :</p>
+<ol type="1">
+<li><em>x</em> est allergique au médicament <em>m</em></li>
+<li>quiconque est allergique à <em>m</em> l’est aussi à <em>m′</em></li>
+</ol>
+<p>Rien ne dit que <em>x</em> est allergique à <em>m′</em> — <strong>et pourtant il faut écarter <em>m′</em></strong>.</p>
+<div style="text-align: center; margin-top: 1em;">
+<p>→ Ce n’est <strong>pas une base de données</strong>.</p>
+</div>
+</section>
+<section id="entailment" class="slide level2 center">
+<h2>Entailment</h2>
+<div title="Déduction logique">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Déduction logique</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>S entraîne p</strong> lorsque : si le monde est tel que <strong>chaque élément de S est vrai</strong>, alors <strong>p l’est aussi</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Il suffit d’un langage muni de <strong>conditions de vérité</strong> — que tout langage de représentation doit de toute façon avoir.</p>
+<div style="text-align: center; margin-top: 1em; font-size: 1.15em;">
+<p>Le rôle du raisonnement : <strong>calculer</strong> ces conséquences.</p>
+</div>
+</section>
+<section id="sur-ordinateur-cest-trop-simple" class="slide level2 center">
+<h2>Sur ordinateur, c’est trop simple</h2>
+<p><strong>Computationnellement</strong> — calculer les conséquences d’une base réaliste est trop coûteux. Toute procédure qui répond en temps raisonnable sera <strong>incomplète</strong> (elle en manque) ou <strong>non valide</strong> (elle en invente).</p>
+<p><strong>Conceptuellement</strong> — on peut le <em>vouloir</em> :</p>
+<ul>
+<li>conclure que Tweety vole → <strong>non valide</strong>, mais raisonnable ;</li>
+<li>base contradictoire → tout est trivialement entraîné, l’<strong>incomplétude</strong> devient préférable.</li>
+</ul>
+<div style="text-align: center; margin-top: 0.8em;">
+<p>Point de <strong>départ</strong>, pas point d’arrivée.</p>
+</div>
+</section></section>
+<section>
+<section id="logique-et-niveaux" class="title-slide slide level1 center">
+<h1>Logique et niveaux</h1>
+
+</section>
+<section id="la-logique-comme-théorie-de-la-déduction" class="slide level2 center">
+<h2>La logique comme théorie de la déduction</h2>
+<p>La logique <strong>est</strong> l’étude des relations de déduction :</p>
+<div style="text-align: center; margin: 0.8em 0; font-size: 1.1em;">
+<p>langages · conditions de vérité · règles d’inférence</p>
+</div>
+<p>D’où le premier langage retenu : la <strong>logique du premier ordre</strong>, inventée par <strong>Frege</strong> pour l’inférence mathématique, puis récupérée par l’IA.</p>
+<div style="text-align: center; margin-top: 1em;">
+<p><em>Un point de départ, pas un engagement définitif.</em></p>
+</div>
+</section>
+<section id="les-deux-niveaux-de-newell" class="slide level2 center">
+<h2>Les deux niveaux de Newell</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Niveau de la connaissance</strong></th>
+<th><strong>Niveau symbolique</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Question</td>
+<td><em>Que</em> sait le système ?</td>
+<td><em>Comment</em> est-ce réalisé ?</td>
+</tr>
+<tr class="even">
+<td>Objets</td>
+<td>langage, vérité, déduction</td>
+<td>structures de données, procédures</td>
+</tr>
+<tr class="odd">
+<td>Adéquation</td>
+<td>expressivité, complexité intrinsèque</td>
+<td>complexité algorithmique</td>
+</tr>
+<tr class="even">
+<td>Analogie</td>
+<td>la spécification</td>
+<td>l’implémentation</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align: center; margin-top: 0.8em;">
+<p>La logique formelle sert l’analyse au <strong>niveau de la connaissance</strong>.</p>
+</div>
+</section>
+<section id="le-fil-conducteur" class="slide level2 center">
+<h2>Le fil conducteur</h2>
+<!-- ::: {.incremental} -->
+<ol type="1">
+<li>Agir intelligemment = <strong>mobiliser</strong> ce qu’on sait</li>
+<li>Savoir = une <strong>attitude</strong> envers des <strong>propositions</strong></li>
+<li>Représenter = des <strong>symboles formels</strong> à leur place</li>
+<li>Raisonner = <strong>manipuler</strong> ces symboles</li>
+<li>Hypothèse de Smith : ces symboles sont <strong>causalement</strong> efficaces</li>
+<li>La norme de correction : la <strong>déduction logique</strong> <!-- ::: --></li>
+</ol>
+<!-- ## Deux définitions
+
+::: {.incremental}
+- **Intelligence artificielle** — l'étude du comportement intelligent obtenu par des moyens **computationnels**.
+
+- **Représentation des connaissances et raisonnement** — la partie de l'IA qui étudie comment un agent **utilise ce qu'il sait** pour décider quoi faire.
+:::
+
+. . .
+
+C'est l'étude de **la pensée comme processus computationnel**.
+## Trois notions à clarifier
+
+::: {style="font-size: 1.6em; text-align: center; margin-top: 1em;"}
+Connaissance  →  Représentation  →  Raisonnement
+:::
+# 1. Connaissance
+
+## Un argument par l'usage
+
+Après « Jean sait que… », on complète par une **phrase déclarative**.
+
+> Jean sait **que Marie viendra à la fête**.
+>
+> Jean sait **qu'Abraham Lincoln a été assassiné**.
+
+. . .
+
+La connaissance est donc une **relation** entre :
+
+- un sujet connaissant,
+- et une **proposition**.
+
+## Qu'est-ce qu'une proposition ?
+
+::: {.callout-note title="Définition"}
+Une **proposition** est une entité **abstraite** susceptible d'être **vraie ou fausse**.
+:::
+
+. . .
+
+Ce n'est pas la phrase : plusieurs phrases, dans plusieurs langues, expriment la même proposition.
+
+. . .
+
+Une proposition partage toutes les manières dont on peut imaginer le monde en deux groupes :
+
+- celles où Jean aime Marie,
+- celles où il ne l'aime pas.
+
+## Savoir, c'est juger
+
+« Jean sait que *p* » ⟺ « Jean sait qu'il est **vrai** que *p* »
+
+. . .
+
+Jean a formé un **jugement** : il tient le monde pour être d'une certaine façon, et pas d'une autre.
+
+La proposition sert à **classer** ces deux cas.
+
+## Les attitudes propositionnelles
+
+Même proposition, relation différente :
+
+::: {.incremental}
+- Jean **sait** que *p*
+- Jean **croit** que *p*
+- Jean **espère** que *p*
+- Jean **est certain** que *p*
+- Jean **soupçonne** que *p*
+:::
+
+. . .
+
+Elles diffèrent par le **degré de conviction** — pas par leur objet.
+
+. . .
+
+→ On ne les distinguera pas. **La croyance est la notion de base.** Toutes partagent la même idée : *prendre le monde pour être d'une certaine façon*.
+
+## Ce qu'on laisse de côté
+
+Certaines formulations se **déplient** en propositions :
+
+> « Jean sait qui Marie emmène » → « Jean sait que Marie emmène untel »
+
+. . .
+
+Deux formes résistent et sont **exclues** :
+
+- le **savoir-faire** — « Jean sait jouer du piano »
+- la **connaissance par familiarité** — « Jean connaît bien Bill »
+# 2. Représentation
+
+## Une relation entre deux domaines
+
+Le premier — le **représentant** — tient lieu du second.
+
+Il est plus **concret**, plus **immédiat**, plus **accessible**.
+
+. . .
+
+::: {.incremental}
+- un dessin de hamburger → un restaurant qu'on ne voit pas
+- un symbole conventionnel → le concept abstrait de féminité
+- un député élu → sa circonscription
+:::
+
+## Le symbole formel
+
+Un caractère ou groupe de caractères pris dans un **alphabet fixé d'avance**.
+
+::: {style="text-align: center; font-size: 1.3em;"}
+« 7 »  ·  « VII »  ·  « sept »  →  le nombre 7
+:::
+
+. . .
+
+Le cas qui nous intéresse : un groupe de symboles représente une **proposition**.
+
+« Jean aime Marie » est **concret** — trois mots, une syntaxe reconnaissable.
+La proposition, elle, est **abstraite**.
+
+## Définition
+
+::: {.callout-important title="Représentation des connaissances"}
+Le domaine qui étudie l'usage de **symboles formels** pour représenter un ensemble de **propositions crues** par un agent supposé.
+:::
+
+. . .
+
+**Nuance essentielle :** on n'exige pas que les symboles représentent *toutes* les propositions crues.
+
+Un agent peut en croire une **infinité**, dont un nombre **fini** seulement sera représenté.
+
+. . .
+
+→ C'est le **raisonnement** qui comble l'écart.
+# 3. Raisonnement
+
+## Définition
+
+::: {.callout-note}
+La **manipulation formelle** des symboles représentant des propositions crues, afin de produire les représentations de **nouvelles** propositions.
+:::
+
+. . .
+
+C'est parce que les symboles sont concrets qu'on peut les manipuler : les déplacer, les décomposer, les copier, les enchaîner.
+
+## L'analogie arithmétique
+
+L'addition binaire est une manipulation purement **formelle** :
+
+::: {style="text-align: center; font-size: 1.4em;"}
+`1011` + `10` ⟶ `1101`
+:::
+
+. . .
+
+On appelle cela une *addition* parce que le symbole final représente la **somme** des nombres représentés au départ.
+
+Le sens est **extérieur** à la manipulation — mais la manipulation le **respecte**.
+
+## Le raisonnement, pareillement
+
+On part de :
+
+> « Jean aime Marie »
+> « Marie vient à la fête »
+
+. . .
+
+On produit :
+
+> « Quelqu'un que Jean aime vient à la fête »
+
+. . .
+
+**Inférence logique** : la phrase finale représente une **conséquence logique** des propositions initiales.
+
+::: {.fragment}
+*Leibniz, XVIIᵉ s. : raisonner est une forme de calcul — comme l'arithmétique, mais sur des symboles dénotant des propositions.*
+:::
+# 4. L'hypothèse de la représentation des connaissances
+
+## D'abord : la posture intentionnelle
+
+Il est commode de décrire un système complexe en termes de **croyances**, **désirs**, **intentions**.
+
+. . .
+
+::: {.columns}
+::: {.column width="50%"}
+**Posture intentionnelle**
+
+« Il a joué ça parce qu'il *croyait* sa dame menacée mais *voulait* attaquer la tour. »
+:::
+::: {.column width="50%"}
+**Description exacte**
+
+« La procédure P a renvoyé +7 après une recherche alpha-bêta en profondeur 4. »
+:::
+:::
+
+. . .
+
+La seconde est peut-être correcte — mais au **mauvais niveau de détail**.
+
+## Deux mises en garde
+
+::: {.incremental}
+- **Pas toujours approprié** — dire d'un thermostat qu'il « veut » réchauffer la pièce : il existe une explication électrique parfaitement satisfaisante.
+
+- **Parfois trompeur** — on se persuade d'avoir affaire à quelque chose de bien plus sophistiqué que ce n'est le cas.
+:::
+
+## Le problème de fond
+
+La posture intentionnelle ne dit **rien** sur ce qui est réellement représenté **dans** le système.
+
+. . .
+
+Dans le programme d'échecs, la position est peut-être représentée — mais le but « sortir un cavalier tôt » peut n'**émerger** que de l'interaction de la fonction d'évaluation et de la bibliothèque d'ouvertures.
+
+. . .
+
+::: {style="text-align: center; font-size: 1.2em;"}
+Parler de connaissance, est-ce **juste une façon de parler** ?
+:::
+
+## L'hypothèse (Brian Cantwell Smith)
+
+Tout processus intelligent réalisé mécaniquement comportera des ingrédients structurels qui :
+
+::: {.incremental}
+**(a)** sont naturellement interprétés par nous, observateurs externes, comme un **compte rendu propositionnel** de la connaissance que le système manifeste ;
+
+**(b)** **indépendamment** de cette attribution sémantique externe, jouent un rôle formel mais **causal et essentiel** dans la production du comportement qui manifeste cette connaissance.
+:::
+
+. . .
+
+(a) = point de vue de l'**observateur** · (b) = point de vue de l'**ingénieur**
+
+→ L'hypothèse exige qu'ils **coïncident**.
+# 5. Systèmes à base de connaissances
+
+## Deux programmes, un seul comportement
+
+::: {.columns}
+::: {.column width="50%"}
+**Connaissance compilée**
+
+```prolog
+printColor(snow) :-
+  !, write("blanc").
+printColor(grass) :-
+  !, write("vert").
+printColor(sky) :-
+  !, write("jaune").
+printColor(X) :-
+  write("aucune idée").
+```
+:::
+::: {.column width="50%"}
+**Connaissance explicite**
+
+```prolog
+printColor(X) :-
+  color(X,Y), !, write(Y).
+printColor(X) :-
+  write("aucune idée").
+
+color(snow,white).
+color(sky,yellow).
+color(X,Y) :-
+  madeof(X,Z), color(Z,Y).
+madeof(grass,vegetation).
+color(vegetation,green).
+```
+:::
+:::
+
+## Où est la différence ?
+
+De l'extérieur, on dirait des deux qu'ils « savent » que la neige est blanche.
+
+. . .
+
+Mais seul le second est construit selon l'hypothèse :
+
+- `color(snow,white)` représente **littéralement** une croyance ;
+- dans le premier, la clause correspondante représente une croyance sur **ce qu'il faut imprimer**.
+
+. . .
+
+Et le second répond juste pour l'**herbe** — sans qu'aucune clause ne dise que l'herbe est verte.
+
+## Le critère
+
+Ce qui fait qu'un système est à base de connaissances, ce **n'est pas** :
+
+::: {.incremental}
+- l'usage d'un formalisme logique ;
+- une complexité suffisante pour mériter une description intentionnelle ;
+- la vérité de ce qu'il croit.
+:::
+
+. . .
+
+::: {.callout-important}
+C'est la présence d'une **base de connaissances** : une collection de structures symboliques représentant ce qu'il croit, et sur laquelle il **raisonne pendant son fonctionnement**.
+:::
+
+## Pourquoi payer ce prix ?
+
+Consulter une base et raisonner à l'exécution ne peut que **ralentir**.
+
+. . .
+
+**Réponse : les tâches ne sont pas fixées d'avance.**
+
+En lisant un livre de géographie, j'apprends qu'environ la moitié des Péruviens vivent dans les Andes.
+
+. . .
+
+Je ne peux pas distribuer ce fait aux routines qui en auront besoin — **je ne sais pas lesquelles**.
+
+Je l'assimile sous forme **déclarative**.
+
+## Trois avantages de conception
+
+::: {.incremental}
+- **Extension** — ajouter une tâche qui réutilise la connaissance déjà là (énumérer les objets d'une couleur).
+
+- **Débogage** — corriger une croyance erronée **en un seul endroit** corrige toutes les routines concernées.
+
+- **Explication** — « parce qu'il croit que l'herbe est de la végétation et que la végétation est verte ». Le *parce que* est justifié : retirer une clause changerait le comportement.
+:::
+
+. . .
+
+**La marque du système à base de connaissances :** il peut **se faire dire** des faits et ajuster son comportement.
+# 6. La déduction logique
+
+## Le problème
+
+Dans la base :
+
+1. Le patient *x* est allergique au médicament *m*.
+2. Quiconque est allergique à *m* est aussi allergique à *m′*.
+
+. . .
+
+Rien ne dit explicitement que *x* est allergique à *m′*.
+
+**Et pourtant il faut écarter *m′*.**
+
+. . .
+
+→ Ce n'est **pas une base de données**. On ne conditionne pas l'action sur les seuls faits récupérables.
+
+## Déduction logique (*entailment*)
+
+::: {.callout-note title="Définition"}
+Un ensemble de phrases **S entraîne** une phrase **p** lorsque : si le monde est tel que **chaque élément de S est vrai**, alors **p l'est aussi**.
+:::
+
+. . .
+
+Tout ce qu'il faut : un langage muni d'un compte rendu de ce que signifie **être vrai**.
+
+. . .
+
+Or connaître *p*, c'est tenir *p* pour vrai.
+
+→ **Tout langage de représentation des connaissances doit être muni d'une notion de déduction bien définie.**
+
+## La réponse simple
+
+::: {style="text-align: center; font-size: 1.2em; margin: 1em 0;"}
+Un système doit croire **toutes** les conséquences logiques de ce qu'il a représenté — **et rien d'autre**.
+:::
+
+::: {style="text-align: center;"}
+Le rôle du raisonnement est de **calculer** ces conséquences.
+:::
+
+. . .
+
+::: {style="text-align: center; margin-top: 1em;"}
+*C'est trop simple. Pour deux raisons.*
+:::
+
+## Raisons computationnelles
+
+Décider quelles phrases sont entraînées par une base réaliste est **trop coûteux**.
+
+. . .
+
+Toute procédure qui répond en temps raisonnable va :
+
+- soit **manquer** des conséquences → elle est logiquement **incomplète** ;
+- soit en **produire de fausses** → elle est logiquement **non valide** (*unsound*).
+
+## Raisons conceptuelles
+
+On peut **vouloir** ces déviations :
+
+. . .
+
+**Raisonnement par défaut** — de « Tweety est un oiseau », conclure qu'il vole.
+Logiquement **non valide** : on peut imaginer un monde où toute la base est vraie et où Tweety ne vole pas. Mais c'est une conjecture raisonnable.
+
+. . .
+
+**Contradiction** — si la base est incohérente, il n'existe **aucun** monde où elle est vraie : **toute** phrase y est trivialement entraînée.
+Un raisonnement **incomplet** est alors préférable.
+
+. . .
+
+→ Point de **départ**, pas point d'arrivée.
+# 7. Logique et niveaux
+
+## Pourquoi la logique ?
+
+Parce que la logique **est** l'étude des relations de déduction :
+
+::: {style="text-align: center;"}
+langages · conditions de vérité · règles d'inférence
+:::
+
+. . .
+
+Premier langage utilisé : le **calcul des prédicats**, ou **logique du premier ordre**.
+
+Inventé par **Frege** au tournant du XXᵉ siècle pour formaliser l'inférence **mathématique**, puis récupéré par l'IA.
+
+. . .
+
+*Réserve :* ce n'est qu'un point de départ — on considérera des sous-ensembles, des sur-ensembles, et des langages de forme très différente.
+
+## Les deux niveaux d'Allen Newell
+
+|  | **Niveau de la connaissance** | **Niveau symbolique** |
+|---|---|---|
+| Question | *Que* sait le système ? | *Comment* est-ce réalisé ? |
+| Objets | langage, conditions de vérité, relation de déduction | structures de données, architecture, procédures |
+| Adéquation | adéquation **expressive**, complexité **intrinsèque** | complexité **algorithmique** |
+| Analogie | la spécification | l'implémentation |
+
+. . .
+
+La logique formelle est idéalement adaptée à l'analyse au **niveau de la connaissance**.
+
+## Le fil conducteur
+
+::: {.incremental}
+1. Agir intelligemment = **mobiliser** ce qu'on sait.
+2. Savoir = entretenir une **attitude** envers des **propositions**.
+3. Représenter = faire tenir des **symboles formels** à leur place.
+4. Raisonner = **manipuler** ces symboles pour en produire de nouveaux.
+5. Hypothèse de Smith : ces symboles jouent un rôle **causal**, pas seulement interprétatif.
+6. La norme de correction de cette manipulation est la **déduction logique**.
+::: -->
+</section>
+<section id="critique-du-point-de-vue-de-lia" class="slide level2 center">
+<h2>Critique du point de vue de l’IA</h2>
+<h3 id="good-old-fashion-ai-gofai">Good Old Fashion AI (GOFAI)</h3>
+<div style="font-size: .8em;">
+<p>So why even consider knowledge-based systems? Unfortunately, no deﬁnitive answer can yet be given. We suspect, however, that the answer will emerge in our desire to build <span class="alert">a system that can deal with a set of tasks that is <em>open-ended</em></span>. For any ﬁxed set of tasks it might work to “compile out” what the system needs to know, but if the set of tasks is not determined in advance, the strategy will not work. <span class="alert">The ability to make behavior depend on explicitly represented knowledge seems to pay off</span> when we cannot specify in advance how that knowledge will be used.</p>
+</div>
+<div class="citation">
+<p><span class="citation" data-cites="brachman2004knowledgerepresentation">(<a href="#/références" role="doc-biblioref" onclick="">Brachman and Levesque 2004, 8</a>)</span></p>
+</div>
+<div class="fragment">
+<div style="font-size: .8em; margin-top=1em">
+<ol start="4" type="1">
+<li>It has become <span class="alert">fashionable</span> to attempt to achieve intelligent behavior in AI systems <span class="alert">without using propositional representations</span>. Speculate on what such a system should do when reading a book on South American geography.</li>
+</ol>
+</div>
+<div class="citation">
+<p><span class="citation" data-cites="brachman2004knowledgerepresentation">(<a href="#/références" role="doc-biblioref" onclick="">Brachman and Levesque 2004, 14</a>)</span></p>
+</div>
+</div>
+</section>
+<section id="critique-du-point-de-vue-des-shs" class="slide level2 center">
+<h2>Critique du point de vue des SHS</h2>
+<ul>
+<li class="fragment">La GOFAI presuppose une universalité non-historique de l’<span class="alert">être humain</span></li>
+<li class="fragment">La GOFAI voit la <span class="alert">représentation</span> comme un miroir neutre et fidèle du monde</li>
+<li class="fragment">Le développement de l’IA est en tension avec plusieurs <span class="alert">dimensions sociales</span></li>
+</ul>
+</section>
+<section id="lia-a-besoin-des-shs" class="slide level2 center">
+<h2>L’IA a besoin des SHS</h2>
+<div class="columns vcenter">
+<div class="column" style="width:32%;">
+<p><img data-src="./media/nyt_aishs_1.png"></p>
+<p><img data-src="./media/nyt_aishs_2.png"></p>
+</div><div class="column" style="width:68%;">
+<p>To navigate the shock waves of A.I., <span class="alert">we must restore social science research</span> as an enterprise that starts from the public interest.</p>
+</div></div>
 </section>
 <section id="connaissance-et-représentation-dans-la-pensée-moderne-i.-kant" class="slide level2 center">
-<h2>Connaissance et représentation<br>dans la pensée moderne: I. Kant</h2>
+<h2>Connaissance et représentation<br>dans la pensée <em>moderne</em>: I. Kant</h2>
+<div style="display: flex; justify-content: center; gap: 4em;">
+<p><img data-src="./media/kant_rationalismEmpricism3.gif"></p>
+<div class="fragment">
+<p><img data-src="./media/kant_world4.gif"></p>
+</div>
+</div>
+<div class="fragment">
+<center>
+<img data-src="./media/kant_mind.gif">
+</center>
+<div class="citation" style="font-size: .6em;">
+<p><span class="citation" data-cites="ammer2023kant">(crédits images: <a href="#/références" role="doc-biblioref" onclick="">Ammer 2023</a>)</span></p>
+</div>
+</div>
 </section>
 <section id="connaissance-et-représentation-dans-la-pensée-contemporaine-f.-nietzsche" class="slide level2 center">
-<h2>Connaissance et représentation<br>dans la pensée contemporaine: F. Nietzsche</h2>
+<h2>Connaissance et représentation<br>dans la pensée <em>contemporaine</em>: F. Nietzsche</h2>
 <div class="columns vcenter">
 <div class="column" style="width:35%;">
 <p><img data-src="./media/nietzsche1875.jpg"></p>
 </div><div class="column" style="width:65%;">
 <p>“Dans quelque coin reculé de l’univers ruisselant du scintillement d’innombrables systèmes solaires, il y eut un jour un astre sur lequel <span class="alert">des animaux intelligents inventèrent le connaître</span>. Ce fut la minute la plus <span class="alert">orgueilleuse</span> et la plus <span class="alert">menteuse</span> de l’« histoire universelle »…”</p>
+<div class="citation">
 <p><span class="citation" data-cites="nietzsche1873delaverite">(<a href="#/références" role="doc-biblioref" onclick="">Nietzsche 1873</a>)</span></p>
+</div>
 </div></div>
-</section>
-<section id="ia-et-représentation-de-connaissances" class="slide level2 center">
-<h2>IA et représentation de connaissances</h2>
 </section>
 <section id="langage-et-sciences-formelles" class="slide level2 center">
 <h2>Langage et sciences formelles</h2>
+<div class="columns vcenter">
+<div class="column" style="width:33%;">
+<div title="<center>Syntaxe logique du langage<br>(1934)<br></center>">
+<div class="callout callout-warning no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong></strong></p><center><strong><br>
+Syntaxe logique du langage<br>(1934)<br><br>
+</strong></center><p></p>
+</div>
+<div class="callout-content">
+<center>
+<p><img data-src="./media/author_carnap.jpg" height="300"></p>
+Logique<br> ↓<br> Sémantique
+</center>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div title="<center>Théorie de l'information<br>(1948)<br></center>">
+<div class="callout callout-warning no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong></strong></p><center><strong><br>
+Théorie de l’information<br>(1948)<br><br>
+</strong></center><p></p>
+</div>
+<div class="callout-content">
+<center>
+<p><img data-src="./media/author_shannon.jpg" height="300"></p>
+Mathématiques<br> ↓<br> Pragmatique
+</center>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div title="<center>Linguistique générative<br>(1957)<br></center>">
+<div class="callout callout-warning no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong></strong></p><center><strong><br>
+Linguistique générative<br>(1957)<br><br>
+</strong></center><p></p>
+</div>
+<div class="callout-content">
+<center>
+<p><img data-src="./media/author_chomsky.jpg" height="300"></p>
+Informatique<br> ↓<br> Syntaxe
+</center>
+</div>
+</div>
+</div>
+</div>
+</div></div>
 </section>
 <section id="mccarthy" class="slide level2 center">
 <h2>McCarthy</h2>
@@ -270,196 +1250,278 @@
 </section>
 <section id="organisation-du-cours" class="slide level2 center">
 <h2>Organisation du cours</h2>
+<h3 id="support-et-communication">Support et communication</h3>
+<ul>
+<li><a href="https://moodle-lettres-26.sorbonne-universite.fr/course/view.php?id=1642#"><strong>Moodle</strong></a> (code communiqué en cours)</li>
+<li>Les étudiant·e·s sont responsables de la consultation des messages qui y sont diffusés.</li>
+</ul>
+<h3 id="évaluation">Évaluation</h3>
+<p>La note finale sera établie selon la répartition suivante :</p>
+<ul>
+<li><strong>50% Contrôle continu</strong></li>
+<li><strong>50% Examen final</strong></li>
+</ul>
+<h3 id="contrôle-continu">Contrôle continu</h3>
+<ul>
+<li>Premier contrôle: <strong>19/10</strong></li>
+<li>Second contrôle: <strong>07/12</strong></li>
+</ul>
+<h3 id="examen-final">Examen final</h3>
+<ul>
+<li>Date à définir</li>
+</ul>
 </section>
 <section id="module-1-propositions-objets-graphes" class="slide level2 center">
 <h2>Module 1: Propositions, Objets, Graphes</h2>
+<div class="striped" style="font-size:.6em; font-weight: 200">
+<table class="caption-top" style="width:97%;">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Séance</th>
+<th style="text-align: left;">Date</th>
+<th style="text-align: center;">Module</th>
+<th style="text-align: left;">Thème</th>
+<th style="text-align: left;">Lectures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">21/09</td>
+<td rowspan="3" style="text-align: center;"><strong>M1:<br> Propositions</strong></td>
+<td style="text-align: left;">Logique<br> propositionnelle</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="lifschitz2008knowledgerepresentation">Lifschitz et al. (<a href="#/références" role="doc-biblioref" onclick="">2008</a>)</span></strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">28/09</td>
+<td style="text-align: left;">Logique de<br> premier ordre</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="lifschitz2008knowledgerepresentation">Lifschitz et al. (<a href="#/références" role="doc-biblioref" onclick="">2008</a>)</span></strong><br> · <span class="citation" data-cites="brachman2004knowledgerepresentation">Brachman and Levesque (<a href="#/références" role="doc-biblioref" onclick="">2004, chap. 2</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">05/10</td>
+<td style="text-align: left;">Logiques de<br> description</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="brachman2004knowledgerepresentation">Brachman and Levesque (<a href="#/références" role="doc-biblioref" onclick="">2004, chap. 9</a>)</span></strong><br> · <span class="citation" data-cites="baader2008descriptionlogics">Baader et al. (<a href="#/références" role="doc-biblioref" onclick="">2008</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>5</strong></td>
+<td style="text-align: left;">12/10</td>
+<td style="text-align: center;"><strong>M1:<br> Objets</strong></td>
+<td style="text-align: left;">Ontologies</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="guarino2009whatisontology">Guarino et al. (<a href="#/références" role="doc-biblioref" onclick="">2009</a>)</span></strong><br> · <span class="citation" data-cites="pan2009rdf">Pan (<a href="#/références" role="doc-biblioref" onclick="">2009</a>)</span> <br> · <span class="citation" data-cites="antoniou2009wol">Antoniou and Harmelen (<a href="#/références" role="doc-biblioref" onclick="">2009</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>6</strong></td>
+<td style="text-align: left;">19/10</td>
+<td style="text-align: center;"><strong>M1:<br> Graphes</strong></td>
+<td style="text-align: left;">Graphes de connaissances</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="hogan2022knowledgegraphs"><span class="nocase">Hogan et al.</span> (<a href="#/références" role="doc-biblioref" onclick="">2022</a>)</span></strong><br> · <span class="citation" data-cites="vrandecic2014wikidata">Vrandečić and Krötzsch (<a href="#/références" role="doc-biblioref" onclick="">2014</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="module-2-vecteurs" class="slide level2 center">
 <h2>Module 2: Vecteurs</h2>
+<div class="striped" style="font-size:.6em; font-weight: 200">
+<table class="caption-top" style="width:97%;">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Séance</th>
+<th style="text-align: left;">Date</th>
+<th style="text-align: center;">Module</th>
+<th style="text-align: left;">Thème</th>
+<th style="text-align: left;">Lectures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>7</strong></td>
+<td style="text-align: left;">02/11</td>
+<td rowspan="2" style="text-align: center;"><strong>M2:<br> Vecteurs</strong></td>
+<td style="text-align: left;">Représentations vectorielles</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="turney2010fromfrequency">Turney and Pantel (<a href="#/références" role="doc-biblioref" onclick="">2010</a>)</span></strong><br> · <span class="citation" data-cites="barbut1967mathématiquesetscienceshumaines1">Barbut (<a href="#/références" role="doc-biblioref" onclick="">1967</a>, chap.&nbsp;XI)</span><br> · <span class="citation" data-cites="goodfellow2016deeplearning">Goodfellow et al. (<a href="#/références" role="doc-biblioref" onclick="">2016, secs. 2.1–8</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>8</strong></td>
+<td style="text-align: left;">09/11</td>
+<td style="text-align: left;">Embeddings<br> neuronaux</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="mikolov2013efficientestimation">Mikolov et al. (<a href="#/références" role="doc-biblioref" onclick="">2013</a>)</span></strong><br> · <span class="citation" data-cites="levy2014implicitfactorization">Levy and Goldberg (<a href="#/références" role="doc-biblioref" onclick="">2014</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="module-3-types" class="slide level2 center">
 <h2>Module 3: Types</h2>
+<div class="striped" style="font-size:.6em; font-weight: 200">
+<table class="caption-top" style="width:97%;">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Séance</th>
+<th style="text-align: left;">Date</th>
+<th style="text-align: center;">Module</th>
+<th style="text-align: left;">Thème</th>
+<th style="text-align: left;">Lectures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>9</strong></td>
+<td style="text-align: left;">16/11</td>
+<td rowspan="2" style="text-align: center;"><strong>M3:<br> Types</strong></td>
+<td style="text-align: left;">Correspondance propositions- <br>types</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="wadler2015propositionsastypes">Wadler (<a href="#/références" role="doc-biblioref" onclick="">2015</a>)</span></strong><br> · <span class="citation" data-cites="milewski2019category">Milewski (<a href="#/références" role="doc-biblioref" onclick="">2019</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>10</strong></td>
+<td style="text-align: left;">23/11</td>
+<td style="text-align: left;">Théorie des types</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="merigoux2021catala">Merigoux et al. (<a href="#/références" role="doc-biblioref" onclick="">2021</a>)</span></strong><br> · <span class="citation" data-cites="merigoux2024rulescomputationpolitics">Merigoux et al. (<a href="#/références" role="doc-biblioref" onclick="">2024</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="module-4-catégories" class="slide level2 center">
 <h2>Module 4: Catégories</h2>
+<div class="striped" style="font-size:.6em; font-weight: 200">
+<table class="caption-top" style="width:97%;">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Séance</th>
+<th style="text-align: left;">Date</th>
+<th style="text-align: center;">Module</th>
+<th style="text-align: left;">Thème</th>
+<th style="text-align: left;">Lectures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>11</strong></td>
+<td style="text-align: left;">30/11</td>
+<td rowspan="2" style="text-align: center;"><strong>M4:<br> Catégories</strong></td>
+<td style="text-align: left;">Catégories et <br>foncteurs</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="spivak2014categorytheoryforthesciences">Spivak (<a href="#/références" role="doc-biblioref" onclick="">2014</a>)</span></strong><br> · <span class="citation" data-cites="milewski2019category">Milewski (<a href="#/références" role="doc-biblioref" onclick="">2019</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>12</strong></td>
+<td style="text-align: left;">07/12</td>
+<td style="text-align: left;">Ologs et<br> profoncteurs</td>
+<td style="text-align: left;">· <strong><span class="citation" data-cites="spivak2012ologs">Spivak and Kent (<a href="#/références" role="doc-biblioref" onclick="">2012</a>)</span></strong><br> · <span class="citation" data-cites="bradley2024structureofmeaning">Bradley et al. (<a href="#/références" role="doc-biblioref" onclick="">2024</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
-<section id="références" class="slide level2 smaller scrollable">
+<section id="références" class="slide level2 scrollable smaller">
 <h2>Références</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" style="margin-top: 1.5em;" role="list">
+<div id="ref-ammer2023kant" class="csl-entry" role="listitem">
+Ammer, Ralph. 2023. <em>Immanuel Kant — <span>W</span>hat Can We Know?</em> Ralph Ammer’s Blog. <a href="https://ralphammer.com/immanuel-kant-what-can-we-know/">https://ralphammer.com/immanuel-kant-what-can-we-know/</a>.
+</div>
+<div id="ref-antoniou2009wol" class="csl-entry" role="listitem">
+Antoniou, Grigoris, and Frank van Harmelen. 2009. <span>“Web Ontology Language: OWL.”</span> In <em>Handbook on Ontologies</em>, edited by Steffen Staab and Rudi Studer. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-540-92673-3_4">https://doi.org/10.1007/978-3-540-92673-3_4</a>.
+</div>
+<div id="ref-baader2008descriptionlogics" class="csl-entry" role="listitem">
+Baader, Franz, Ian Horrocks, and Ulrike Sattler. 2008. <span>“Chapter 3 Description Logics.”</span> In <em>Handbook of Knowledge Representation</em>, <span class="nocase">edited by Frank van Harmelen, Vladimir Lifschitz, and Bruce Porter</span>. Foundations of Artificial Intelligence. Elsevier. https://doi.org/<a href="https://doi.org/10.1016/S1574-6526(07)03003-9">https://doi.org/10.1016/S1574-6526(07)03003-9</a>.
+</div>
+<div id="ref-barbut1967mathématiquesetscienceshumaines1" class="csl-entry" role="listitem">
+Barbut, Marc. 1967. <em>Mathématiques Et Sciences Humaines. Tome i: Combinatoire Et Algèbre</em>. Presses Universitaires de France.
+</div>
 <div id="ref-borges1957langueanalytiquewilkins" class="csl-entry" role="listitem">
 Borges, Jorge Luis. 1957. <span>“La Langue Analytique de <span>J</span>ohn <span>W</span>ilkins.”</span> In <em>Enquêtes</em>, translated by Paul Bénichou and Sylvia Bénichou. Gallimard.
+</div>
+<div id="ref-brachman2004knowledgerepresentation" class="csl-entry" role="listitem">
+Brachman, Ronald J., and Hector J. Levesque. 2004. <em>Knowledge Representation and Reasoning</em>. The Morgan Kaufmann Series in Artificial Intelligence. Morgan Kaufmann. <a href="https://www.sciencedirect.com/book/monograph/9781558609327/knowledge-representation-and-reasoning">https://www.sciencedirect.com/book/monograph/9781558609327/knowledge-representation-and-reasoning</a>.
+</div>
+<div id="ref-bradley2024structureofmeaning" class="csl-entry" role="listitem">
+Bradley, Tai-Danae, Juan Luis Gastaldi, and John Terilla. 2024. <span>“<span class="nocase">The Structure of Meaning in Language: Parallel Narratives in Linear Algebra and Category Theory</span>.”</span> <em>Notices of the American Mathematical Society</em>, February.
 </div>
 <div id="ref-foucault1966lesmotsetchoses" class="csl-entry" role="listitem">
 Foucault, Michel. 1966. <em>Les Mots Et Les Choses : Une Archéologie Des Sciences Humaines</em>. Bibliothèque Des Sciences Humaines. Gallimard.
 </div>
+<div id="ref-goodfellow2016deeplearning" class="csl-entry" role="listitem">
+Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. <em>Deep Learning</em>. MIT Press.
+</div>
+<div id="ref-guarino2009whatisontology" class="csl-entry" role="listitem">
+Guarino, Nicola, Daniel Oberle, and Steffen Staab. 2009. <span>“What Is an Ontology?”</span> In <em>Handbook on Ontologies</em>, edited by Steffen Staab and Rudi Studer. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-540-92673-3_0">https://doi.org/10.1007/978-3-540-92673-3_0</a>.
+</div>
+<div id="ref-hogan2022knowledgegraphs" class="csl-entry" role="listitem">
+<span class="nocase">Hogan, Aidan, Eva Blomqvist, Michael Cochez, et al.</span> 2022. <em>Knowledge Graphs</em>. Synthesis Lectures on Data, Semantics, and Knowledge. Springer, Cham. <a href="https://doi.org/10.1007/978-3-031-01918-0">https://doi.org/10.1007/978-3-031-01918-0</a>.
+</div>
+<div id="ref-levy2014implicitfactorization" class="csl-entry" role="listitem">
+Levy, Omer, and Yoav Goldberg. 2014. <span>“Neural Word Embedding as Implicit Matrix Factorization.”</span> <em>Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2</em> (Cambridge, MA, USA), NIPS’14, 2177–85.
+</div>
+<div id="ref-lifschitz2008knowledgerepresentation" class="csl-entry" role="listitem">
+Lifschitz, Vladimir, Leora Morgenstern, and David Plaisted. 2008. <span>“Chapter 1 Knowledge Representation and Classical Logic.”</span> In <em>Handbook of Knowledge Representation</em>, <span class="nocase">edited by Frank van Harmelen, Vladimir Lifschitz, and Bruce Porter</span>. Foundations of Artificial Intelligence. Elsevier. https://doi.org/<a href="https://doi.org/10.1016/S1574-6526(07)03001-5">https://doi.org/10.1016/S1574-6526(07)03001-5</a>.
+</div>
 <div id="ref-mccarthy1959programswithcommonsense" class="csl-entry" role="listitem">
 McCarthy, John. 1959. <span>“Programs with Common Sense.”</span> <em><span class="nocase">Proceedings of the Teddington Conference on the Mechanization of Thought Processes</span></em> (London), 75–91. <a href="http://www-formal.stanford.edu/jmc/mcc59.html">http://www-formal.stanford.edu/jmc/mcc59.html</a>.
+</div>
+<div id="ref-merigoux2024rulescomputationpolitics" class="csl-entry" role="listitem">
+Merigoux, Denis, Marie Alauzen, and Wouroud Slimani. 2024. <span>“Rules, Computation and Politics: Scrutinizing Unnoticed Programming Choices in French Housing Benefits.”</span> <em>Journal of Cross-Disciplinary Research in Computational Law</em> 2 (1). <a href="https://journalcrcl.org/crcl/article/view/32">https://journalcrcl.org/crcl/article/view/32</a>.
+</div>
+<div id="ref-merigoux2021catala" class="csl-entry" role="listitem">
+Merigoux, Denis, Nicolas Chataing, and Jonathan Protzenko. 2021. <span>“Catala: A Programming Language for the Law.”</span> <em>Proc. ACM Program. Lang.</em> (New York, NY, USA) 5 (ICFP). <a href="https://doi.org/10.1145/3473582">https://doi.org/10.1145/3473582</a>.
+</div>
+<div id="ref-mikolov2013efficientestimation" class="csl-entry" role="listitem">
+Mikolov, Tomáš, Kai Chen, Greg Corrado, and Jeffrey Dean. 2013. <span>“Efficient Estimation of Word Representations in Vector Space.”</span> <em>CoRR</em> abs/1301.3781. <a href="https://arxiv.org/abs/1301.3781">https://arxiv.org/abs/1301.3781</a>.
+</div>
+<div id="ref-milewski2019category" class="csl-entry" role="listitem">
+Milewski, Bartosz. 2019. <em>Category Theory for Programmers</em>. Blurb.
 </div>
 <div id="ref-nietzsche1873delaverite" class="csl-entry" role="listitem">
 Nietzsche, Friedrich. 1873. <em>De La Vérité Et Du Mensonge Au Sens Extra-Moral</em>. Translated by Patrick Wotling. Flammarion.
 </div>
+<div id="ref-pan2009rdf" class="csl-entry" role="listitem">
+Pan, Jeff Z. 2009. <span>“Resource Description Framework.”</span> In <em>Handbook on Ontologies</em>, edited by Steffen Staab and Rudi Studer. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-540-92673-3_3">https://doi.org/10.1007/978-3-540-92673-3_3</a>.
 </div>
-</section></section>
-<section>
-<section id="travaux-dirigés-td-1" class="title-slide slide level1 center">
-<h1>Travaux dirigés (TD)</h1>
-
-</section>
-<section id="discussion" class="slide level2 center">
-<h2>Discussion</h2>
-</section>
-<section id="environnement-de-développement" class="slide level2 center">
-<h2>Environnement de développement</h2>
-<ul>
-<li>Python</li>
-<li>Jupyter</li>
-<li>VS Code?</li>
-<li>Environnement virtuel</li>
-</ul>
-</section>
-<section id="quiz-anonyme-de-niveau" class="slide level2 center">
-<h2>Quiz anonyme de niveau</h2>
-</section>
-<section id="logigramme" class="slide level2 center">
-<h2>Logigramme</h2>
-<div class="columns divided">
-<div class="column" style="text-align: center; margin-top: 1em;">
-<h3 id="logigramme-a">Logigramme A</h3>
-<div style="font-size: .55em; margin-top: 1.5em; margin-right: 1em;">
-<ol type="1">
-<li>La personne qui a commandé des capellini a payé moins cher que celle qui a choisi la sauce arrabiata</li>
-<li>La personne qui a commandé des tagliolini a payé plus cher qu’Angie</li>
-<li>La personne qui a commandé des tagliolini a payé moins cher que celle qui a choisi la sauce marinara</li>
-<li>Claudia n’a pas choisi la sauce puttanesca</li>
-<li>La personne qui a commandé des rotini est soit celle qui a payé 8 $ de plus que Damon, soit celle qui a payé 8 $ de moins que Damon</li>
-<li>La personne qui a commandé des capellini est soit Damon, soit Claudia</li>
-<li>La personne qui a choisi la sauce arrabiata est soit Angie, soit Elisa</li>
-<li>La personne qui a choisi la sauce arrabiata a commandé des farfalle</li>
-</ol>
+<div id="ref-spivak2014categorytheoryforthesciences" class="csl-entry" role="listitem">
+Spivak, David I. 2014. <em>Category Theory for the Sciences</em>. The MIT Press. <a href="https://mitpress.mit.edu/9780262028134/category-theory-for-the-sciences/">https://mitpress.mit.edu/9780262028134/category-theory-for-the-sciences/</a>.
 </div>
-</div><div class="column" style="text-align: center; margin-top: 1em;">
-<h3 id="logigramme-b">Logigramme B</h3>
-<div style="font-size: .55em; margin-top: 1.5em; margin-left: 2em;">
-<ol type="1">
-<li>Mattie a 113 ans</li>
-<li>La personne qui a 111 ans n’habite pas à Plymouth</li>
-<li>La personne qui habite à Shaver Lake a un an de moins que Roxanne</li>
-<li>La personne qui habite à Zearing n’est pas originaire d’Alaska</li>
-<li>Roxanne a deux ans de moins que la personne originaire du Kansas</li>
-<li>Parmi la personne qui habite à Tehama et Mattie, l’une est originaire d’Alaska et l’autre du Kansas</li>
-<li>Le centenaire qui habite à Plymouth n’est pas originaire d’Alaska</li>
-<li>La personne originaire de Washington a un an de plus qu’Ernesto</li>
-<li>La personne qui habite à Tehama est originaire soit du Kansas, soit de l’Oregon</li>
-<li>La personne originaire de l’Oregon est soit Zachary, soit la personne qui habite à Tehama</li>
-</ol>
+<div id="ref-spivak2012ologs" class="csl-entry" role="listitem">
+Spivak, David I., and Robert E. Kent. 2012. <span>“Ologs: A Categorical Framework for Knowledge Representation.”</span> <em>PLoS ONE</em> 7 (1). <a href="https://doi.org/10.1371/journal.pone.0024274">https://doi.org/10.1371/journal.pone.0024274</a>.
 </div>
-</div></div>
-</section>
-<section id="logigramme-a-1" class="slide level2 center">
-<h2>Logigramme A</h2>
-<div class="columns">
-<div class="column" style="text-align: center; margin-top: 1em;">
-<div style="font-size: .55em; margin-top: 1.5em; margin-right: 1em;">
-<ol type="1">
-<li>La personne qui a commandé des capellini a payé moins cher que celle qui a choisi la sauce arrabiata</li>
-<li>La personne qui a commandé des tagliolini a payé plus cher qu’Angie</li>
-<li>La personne qui a commandé des tagliolini a payé moins cher que celle qui a choisi la sauce marinara</li>
-<li>Claudia n’a pas choisi la sauce puttanesca</li>
-<li>La personne qui a commandé des rotini est soit celle qui a payé 8 $ de plus que Damon, soit celle qui a payé 8 $ de moins que Damon</li>
-<li>La personne qui a commandé des capellini est soit Damon, soit Claudia</li>
-<li>La personne qui a choisi la sauce arrabiata est soit Angie, soit Elisa</li>
-<li>La personne qui a choisi la sauce arrabiata a commandé des farfalle</li>
-</ol>
+<div id="ref-turney2010fromfrequency" class="csl-entry" role="listitem">
+Turney, Peter D., and Patrick Pantel. 2010. <span>“From Frequency to Meaning: Vector Space Models of Semantics.”</span> <em>Journal of Artificial Intelligence Research</em> 37: 141–88. <a href="https://doi.org/10.1613/jair.2934">https://doi.org/10.1613/jair.2934</a>.
 </div>
-</div><div class="column" style="text-align: center; margin-top: 2em;">
-<textarea class="reveal-skip-key-binding" rows="18" style="width: 90%; font-size: 24px; padding: 10px; border-radius: 5px;" placeholder="Inférences..."></textarea>
-</div></div>
-</section>
-<section id="logigramme-a-2" class="slide level2 center">
-<h2>Logigramme A</h2>
-<div class="columns">
-<div class="column" style="text-align: center; margin-top: 1em;">
-<div style="font-size: .55em; margin-top: 1.5em; margin-right: 2em;">
-<ol type="1">
-<li>La personne qui a commandé des capellini a payé moins cher que celle qui a choisi la sauce arrabiata</li>
-<li>La personne qui a commandé des tagliolini a payé plus cher qu’Angie</li>
-<li>La personne qui a commandé des tagliolini a payé moins cher que celle qui a choisi la sauce marinara</li>
-<li>Claudia n’a pas choisi la sauce puttanesca</li>
-<li>La personne qui a commandé des rotini est soit celle qui a payé 8 $ de plus que Damon, soit celle qui a payé 8 $ de moins que Damon</li>
-<li>La personne qui a commandé des capellini est soit Damon, soit Claudia</li>
-<li>La personne qui a choisi la sauce arrabiata est soit Angie, soit Elisa</li>
-<li>La personne qui a choisi la sauce arrabiata a commandé des farfalle</li>
-</ol>
+<div id="ref-vrandecic2014wikidata" class="csl-entry" role="listitem">
+Vrandečić, Denny, and Markus Krötzsch. 2014. <span>“Wikidata: A Free Collaborative Knowledgebase.”</span> <em>Commun. ACM</em> (New York, NY, USA) 57 (10): 78–85. <a href="https://doi.org/10.1145/2629489">https://doi.org/10.1145/2629489</a>.
 </div>
-</div><div class="column" style="text-align: center; margin-top: 2em;">
-<div class="r-stack">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./media/logigramme_a.png" class="fragment quarto-figure quarto-figure-center" height="600"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./media/logigramme_a_solved.png" class="fragment quarto-figure quarto-figure-center" height="600"></p>
-</figure>
+<div id="ref-wadler2015propositionsastypes" class="csl-entry" role="listitem">
+Wadler, Philip. 2015. <span>“Propositions as Types.”</span> <em>Commun. ACM</em> (New York, NY, USA) 58 (12): 75–84. <a href="https://doi.org/10.1145/2699407">https://doi.org/10.1145/2699407</a>.
 </div>
 </div>
-</div></div>
-</section>
-<section id="logigramme-b-1" class="slide level2 center">
-<h2>Logigramme B</h2>
-<div class="columns">
-<div class="column" style="text-align: center; margin-top: 2em;">
-<textarea class="reveal-skip-key-binding" rows="20" style="width: 90%; font-size: 24px; padding: 10px; border-radius: 5px;" placeholder="Inférences..."></textarea>
-</div><div class="column" style="text-align: center; margin-top: 1em;">
-<div style="font-size: .55em; margin-top: 1.5em; margin-left: 2em;">
-<ol type="1">
-<li>Mattie a 113 ans</li>
-<li>La personne qui a 111 ans n’habite pas à Plymouth</li>
-<li>La personne qui habite à Shaver Lake a un an de moins que Roxanne</li>
-<li>La personne qui habite à Zearing n’est pas originaire d’Alaska</li>
-<li>Roxanne a deux ans de moins que la personne originaire du Kansas</li>
-<li>Parmi la personne qui habite à Tehama et Mattie, l’une est originaire d’Alaska et l’autre du Kansas</li>
-<li>Le centenaire qui habite à Plymouth n’est pas originaire d’Alaska</li>
-<li>La personne originaire de Washington a un an de plus qu’Ernesto</li>
-<li>La personne qui habite à Tehama est originaire soit du Kansas, soit de l’Oregon</li>
-<li>La personne originaire de l’Oregon est soit Zachary, soit la personne qui habite à Tehama</li>
-</ol>
-</div>
-</div></div>
-</section>
-<section id="logigramme-b-2" class="slide level2 center">
-<h2>Logigramme B</h2>
-<div class="columns">
-<div class="column" style="text-align: center; margin-top: 1em;">
-<div class="r-stack">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./media/logigramme_b.png" class="fragment quarto-figure quarto-figure-center" height="600"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./media/logigramme_b_solved.png" class="fragment quarto-figure quarto-figure-center" height="600"></p>
-</figure>
-</div>
-</div>
-</div><div class="column" style="text-align: center; margin-top: 1em;">
-<div style="font-size: .55em; margin-top: 1.5em; margin-left: 2em;">
-<ol type="1">
-<li>Mattie a 113 ans</li>
-<li>La personne qui a 111 ans n’habite pas à Plymouth</li>
-<li>La personne qui habite à Shaver Lake a un an de moins que Roxanne</li>
-<li>La personne qui habite à Zearing n’est pas originaire d’Alaska</li>
-<li>Roxanne a deux ans de moins que la personne originaire du Kansas</li>
-<li>Parmi la personne qui habite à Tehama et Mattie, l’une est originaire d’Alaska et l’autre du Kansas</li>
-<li>Le centenaire qui habite à Plymouth n’est pas originaire d’Alaska</li>
-<li>La personne originaire de Washington a un an de plus qu’Ernesto</li>
-<li>La personne qui habite à Tehama est originaire soit du Kansas, soit de l’Oregon</li>
-<li>La personne originaire de l’Oregon est soit Zachary, soit la personne qui habite à Tehama</li>
-</ol>
-</div>
-</div></div>
 
 </section></section>
     </div>
@@ -477,6 +1539,7 @@ Nietzsche, Friedrich. 1873. <em>De La Vérité Et Du Mensonge Au Sens Extra-Mora
   <script src="l5soreco26_01_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="l5soreco26_01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="l5soreco26_01_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="l5soreco26_01_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
   <script src="l5soreco26_01_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -500,6 +1563,7 @@ Nietzsche, Friedrich. 1873. <em>De La Vérité Et Du Mensonge Au Sens Extra-Mora
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'chalkboard': {"buttons":true,"theme":"whiteboard","chalkEffect":0.2},
+'pointer': {"key":"q","color":"#ff0000","pointerSize":18,"alwaysVisible":false,"trail":true,"trailDuration":400,"trailSampling":2,"trailMaxPoints":30},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -670,7 +1734,7 @@ Nietzsche, Friedrich. 1873. <em>De La Vérité Et Du Mensonge Au Sens Extra-Mora
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealPointer, QuartoSupport,
 
           RevealMath,
           RevealNotes,
