@@ -48,6 +48,7 @@ La note finale sera établie selon la répartition suivante :
 
 ### Contrôle continu
 
+- Réponses libres hebdomadaires aux lectures obligatoires (minimun 8 sur 12)
 - Premier contrôle: **19/10**
 - Second contrôle: **07/12**
 
@@ -127,9 +128,10 @@ La note finale sera établie selon la répartition suivante :
 
 ## Ressources utiles
 
+- [Python](https://www.python.org), [Installation (tutoriel par S. Robert-Hayek)](https://github.com/SphRbtHyk/NLP_courses/tree/main/semaine_intensive)
 - [Visual Studio Code](https://code.visualstudio.com)
-- [Python](https://www.python.org)
 - [Z3 guide](https://microsoft.github.io/z3guide/docs/logic/intro/), [repo](https://github.com/z3prover/z3)
+- [Protégé](https://protege.stanford.edu)
 - [Lean Game Server](https://adam.math.hhu.de)
 
 ## Contact
