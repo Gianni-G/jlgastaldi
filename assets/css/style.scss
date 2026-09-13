@@ -1004,4 +1004,18 @@ $lettres-accent: #fab600 !default;
     padding-bottom: .3rem;
     border-bottom: 2px solid $lettres-accent;
   }
+
+  // Striped tables: navy header carrying white text, and every other body
+  // row on a pale tint of the gold, light enough to keep text readable.
+  table {
+    th {
+      color: #fff;
+      background-color: $lettres-color;
+      border-color: $lettres-color;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fef6e0; // $lettres-accent at 12% over white
+    }
+  }
 }
