@@ -137,4 +137,4 @@ La note finale sera établie selon la répartition suivante :
 ## Contact
 
 Toute communication doit se faire sur Moodle.\
-Dans des cas strictement nécessaires, vous pouvez contacter l'enseignant sur son adresse institutionnelle.
+En cas de stricte nécessité, vous pouvez contacter l'enseignant sur son adresse institutionnelle.
