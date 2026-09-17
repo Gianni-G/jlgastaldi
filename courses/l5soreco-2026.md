@@ -29,7 +29,7 @@ scholar:
 ## Organisation
 
 ### Cours Magistraux
-- **Lundis 14h-16h, Campus Malesherbes C220** (susceptible de changer!)
+- **Lundis 14h-16h, Campus Malesherbes ~~C220~~ 219!**
 
 ### Travaux dirigés
 - **Lundis 16h-18h, Campus Malesherbes C220** (susceptible de changer!)
@@ -58,6 +58,7 @@ La note finale sera établie selon la répartition suivante :
 
 ## Actualités
 
+**17/09** &emsp; Changement de salle CM\
 **14/09** &emsp; Mise en ligne du site du cours.
 
 ## Programme
