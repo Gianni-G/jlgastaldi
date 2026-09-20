@@ -29,10 +29,10 @@ scholar:
 ## Organisation
 
 ### Cours Magistraux
-- **Lundis 14h-16h, Campus Malesherbes ~~C220~~ 219!**
+- **Lundis 14h-16h, Campus Malesherbes ~~C220~~ C219!**
 
 ### Travaux dirigés
-- **Lundis 16h-18h, Campus Malesherbes C220** (susceptible de changer!)
+- **Lundis 16h-18h, Campus Malesherbes ~~C220~~ C219!**
 
 ### Support et communication
 - [**Moodle**](https://moodle-lettres-26.sorbonne-universite.fr/course/view.php?id=1642#)
@@ -58,6 +58,7 @@ La note finale sera établie selon la répartition suivante :
 
 ## Actualités
 
+**20/09** &emsp; Actualisation de la bibliographie\
 **17/09** &emsp; Changement de salle CM\
 **14/09** &emsp; Mise en ligne du site du cours.
 
@@ -66,7 +67,7 @@ La note finale sera établie selon la répartition suivante :
 | Séance | Date | Module | Thème | Lectures | Slides | TD |
 |:---:|:---|:---:|:---|:---|:---|:---|
 | **1** | 14/09 | **Introduction** | Connaissance,<br>représentation et<br>sciences humaines | · **{% cite nietzsche1873delaverite %}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 1 %} |[Slides 01](https://www.giannigastaldi.com/assets/courses/26_l5soreco/l5soreco26_01.html) | [Slides 01 TD](https://www.giannigastaldi.com/assets/courses/26_l5soreco/l5soreco26_01_td.html) |
-| **2** | 21/09 | **M1:<br>Propositions** | Logique<br>propositionnelle | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.1, 1.2.1, 1.31 %}**<br>· {% cite descles2010logiqueetlangage -L section -l 1.4, 1.5, 2.1-2.5 %} | | |
+| **2** | 21/09 | **M1:<br>Propositions** | Logique<br>propositionnelle | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.1, 1.2.1, 1.31 %}**<br>· {% cite barbut1967mathématiquesetscienceshumaines1 -L chapter -l 1 %}<br>· {% cite descles2010logiqueetlangage -L section -l 1.4, 1.5, 2.1-2.5 %} | | |
 | **3** | 28/09 | **M1:<br>Propositions** | Logique de<br>premier ordre | · **{% cite lifschitz2008knowledgerepresentation %}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 2 %} | | |
 | **4** | 05/10 | **M1:<br>Propositions** | Logiques de<br>description | · **{% cite brachman2004knowledgerepresentation -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | |
 | **5** | 12/10 | **M1:<br>Objets** | Ontologies | · **{% cite guarino2009whatisontology %}**<br>· {% cite pan2009rdf %}<br>· {% cite antoniou2009wol %} | | |
