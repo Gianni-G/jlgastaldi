@@ -1,0 +1,167 @@
+/*-- scss:defaults --*/
+
+// Palette of the course website (jlgastaldi/assets/css/style.scss).
+// Kept here so the cover slide and the site stay in step.
+$site-navy: #263068;        // course title, rules  ($course-color)
+$site-accent: #e6332a;      // course code badge    ($course-accent)
+$site-heading: #de604d;     // section headings     ($section-headings-color)
+$site-body-text: #606c71;   // body copy            ($body-text-color)
+$site-muted: #819198;       // blockquotes, dates   ($blockquote-text-color)
+$site-mono: "Courier New", Courier, monospace;  // all headings on the site
+
+$background-color: #bc3434;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$presentation-heading-font: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$presentation-font-size-root: 40px;      // overall scale
+$presentation-heading-font-weight: 200;  // Neue's bold is heavy at large sizes
+$presentation-body-font-weight: 200;  // Neue's bold is heavy at large sizes
+$presentation-h1-font-size: 2em;
+$presentation-h2-font-size: 1.6em;
+
+/*-- scss:rules --*/
+.reveal p,
+.reveal li,
+.reveal blockquote,
+.reveal custom-authors {
+  font-weight: 200;
+}
+
+.reveal .footer {
+  text-align: left;
+  padding-left: 1em;
+}
+
+.reveal .footer p {
+  text-align: left;   /* Quarto wraps the text in a <p> */
+  margin: 0;
+}
+
+.reveal .slide-number {
+  top: auto;
+  bottom: 0.5em;
+  left: auto;
+  right: 0.5em;
+  background-color: transparent;
+  font-size: 0.5em;
+}
+
+
+.reveal h2 {
+  text-align: right;
+}
+
+
+/* Cover slide ------------------------------------------------------------
+   Follows the course-page banner of the website: a white ground, the code
+   badge + semester line left and the institution logo right, top edges
+   aligned; the title and author below both; a navy rule under the lot, and
+   the subtitle and date beneath it. Markup comes from res/title-slide.html.
+   Everything is scoped to #title-slide so the rest of the deck is
+   untouched; colours are set explicitly because the deck's own background
+   is dark. */
+
+.reveal #title-slide {
+  text-align: left;
+}
+
+/* The banner on the site carries no footer, and both the footer and the
+   slide number are coloured for the dark slides, so drop them while the
+   cover is on screen. reveal.js sets `display: block` inline on both, hence
+   the !important. */
+body:has(#title-slide.present) {
+  .reveal .footer,
+  .reveal .slide-number {
+    display: none !important;
+  }
+}
+
+.reveal .cover-inner {
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid $site-navy;
+}
+
+/* Meta line and logo share the top row, hanging from the same top edge. */
+.reveal .cover-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  margin-bottom: 0.3em;
+}
+
+/* line-height: 1 so the badge's top edge is the top of the line box, and
+   hence level with the top of the logo. */
+.reveal .cover-meta {
+  margin: 0;
+  color: $site-body-text;
+  font-size: 0.6em;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.reveal .cover-code {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0.1em 0.45em;
+  color: #fff;
+  background-color: $site-accent;
+  border-radius: 0.3rem;
+  font-family: $site-mono;
+  font-size: 0.85em;
+  letter-spacing: 0.03em;
+}
+
+.reveal .cover-title {
+  margin: 0;
+  color: $site-navy;
+  font-family: $site-mono;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.reveal .cover-subtitle {
+  margin: 0.3em 0 0;
+  color: $site-heading;
+  font-family: $site-mono;
+  font-weight: normal;
+  font-size: 0.75em;
+  line-height: 1.2;
+}
+
+.reveal .cover-author,
+.reveal .cover-institute {
+  margin: 0.45em 0 0;
+  color: $site-body-text;
+  font-size: 0.65em;
+  font-weight: 200;
+}
+
+.reveal .cover-date {
+  margin: 0.4em 0 0;
+  color: $site-muted;
+  font-size: 0.5em;
+  font-weight: 200;
+}
+
+/* The auto left margin pushes the logo to the right edge, even when there
+   is no meta line to its left. The top margin makes up for the badge
+   sitting a hair below the top of its line box, so the tip of the dome is
+   level with the top of the badge. */
+.reveal .cover-logo {
+  flex: 0 0 auto;
+  margin-left: auto;
+  margin-top: 0.1em;
+
+  img {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    /* reveal.js frames slide images by default */
+    border: none;
+    box-shadow: none;
+    background: none;
+  }
+}

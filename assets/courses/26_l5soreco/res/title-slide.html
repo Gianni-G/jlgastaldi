@@ -1,0 +1,50 @@
+<!-- Cover slide for the course decks.
+
+     Mirrors the banner of the course website
+     (https://www.giannigastaldi.com/courses/l5soreco-2026/): a top row with
+     the code badge + semester on the left and the institution logo on the
+     right, their top edges aligned; the title and author below both; then a
+     rule separating them from the lecture subtitle and the date.
+
+     This file is a Quarto `title-slide.html` partial, so it must contain the
+     title <section> and nothing else. Styling lives in res/gianni.scss and
+     res/gianni_lettres.scss.
+
+     Metadata it reads, beyond the usual title/subtitle/author/date:
+       code        the course code shown in the red badge (e.g. L5SORECO)
+       pretitle    the line next to the badge (e.g. Semestre 5 · 2026/2027)
+       cover-logo  path to the institution logo (not Quarto's `logo`, which
+                   would stamp the image onto every slide)
+       cover-logo-alt  alt text for that logo
+-->
+$if(title)$
+<section id="$idprefix$title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$>
+  <div class="cover-inner">
+    <div class="cover-top">
+      $if(code)$
+      <p class="cover-meta"><span class="cover-code">$code$</span>$if(pretitle)$$pretitle$$endif$</p>
+      $elseif(pretitle)$
+      <p class="cover-meta">$pretitle$</p>
+      $endif$
+      $if(cover-logo)$
+      <div class="cover-logo">
+        <img src="$cover-logo$" alt="$if(cover-logo-alt)$$cover-logo-alt$$endif$">
+      </div>
+      $endif$
+    </div>
+    <h1 class="cover-title">$title$</h1>
+    $for(author)$
+    <p class="cover-author">$author$</p>
+    $endfor$
+    $for(institute)$
+    <p class="cover-institute">$institute$</p>
+    $endfor$
+  </div>
+  $if(subtitle)$
+  <p class="cover-subtitle">$subtitle$</p>
+  $endif$
+  $if(date)$
+  <p class="cover-date">$date$</p>
+  $endif$
+</section>
+$endif$
