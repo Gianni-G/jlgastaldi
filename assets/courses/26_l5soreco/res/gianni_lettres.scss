@@ -14,6 +14,13 @@ $site-code-border: #dce6f0;
 $site-rule: #e9ebec;        // table borders
 $site-mono: "Courier New", Courier, monospace;  // all headings on the site
 
+// Set-diagram colours (Σ*, L, S, I). Mirrored by the \cyellow, \cred,
+// \cblue and \cgreen MathJax macros in the decks: keep them in step.
+$set-yellow: #f2b705;       // Σ*
+$set-red: #d52b1e;          // L, syntax
+$set-blue: #1f4e9e;         // S, semantics
+$set-green: #1a7f37;        // I, interpretation
+
 $body-bg: #fff;
 // $body-color: $site-body-text;
 $body-color: #000000;
@@ -539,6 +546,12 @@ body:has(#title-slide.present) {
   color: #ff3333;
 }
 
+.reveal .cyellow { color: $set-yellow; }
+.reveal .cred    { color: $set-red; }
+.reveal .cblue   { color: $set-blue; }
+.reveal .cgreen  { color: $set-green; }
+.reveal .muted   { color: $site-muted; }   // the footer grey
+
 /* Chalkboard buttons ----------------------------------------------------
    Quarto drops them bottom left; move them to the middle of the footer
    line and tint them like the footer text. The box spans the full width
@@ -591,6 +604,13 @@ $chalkboard-icon: "rgb(196, 196, 196)";  /* = $site-muted, the footer text */
   text-align: right;
 }
 
+/* Pandoc gives the cite itself the class too, inside the `::: {.citation}`
+   div: let it take the div's size, so a `style="font-size: ..."` on the div
+   works. */
+.reveal .citation .citation {
+  font-size: inherit;
+}
+
 .reveal .citation a {
   font-weight: inherit;
 }
@@ -622,6 +642,70 @@ $chalkboard-icon: "rgb(196, 196, 196)";  /* = $site-muted, the footer text */
 .reveal .striped tbody tr:last-child > td,
 .reveal .striped tbody tr:last-child > th {
   border-bottom: 2px solid $lettres-navy;
+}
+
+/* `::: {.col1-box}`, `{.col2-box}` or `{.col3-box}` around a table frames
+   its first 1, 2 or 3 columns together in one navy box. */
+@each $n in 1, 2, 3 {
+  .reveal .col#{$n}-box {
+    table { border-collapse: collapse; }
+    tr > :first-child { border-left: 2px solid $lettres-navy; }
+    tr > :nth-child(#{$n}) { border-right: 2px solid $lettres-navy; }
+    thead tr:first-child > :nth-child(-n + #{$n}) {
+      border-top: 2px solid $lettres-navy;
+    }
+    tbody tr:last-child > :nth-child(-n + #{$n}) {
+      border-bottom: 2px solid $lettres-navy;
+    }
+  }
+}
+
+/* Table de vérité «à la Lucas et al.»: la formule est écrite dans l'en-tête,
+   un symbole par colonne, et chaque valeur s'inscrit sous son symbole.
+   `::: {.formule-serree}` resserre les colonnes à partir de la 4e (après les
+   étiquettes des modèles et les deux atomes), pour que la formule se lise
+   d'un trait;
+   `::: {.grise-colN}` grise la colonne N, celle du connecteur principal.
+   Pour ne la griser qu'à un clic donné, placer dans la table un span vide
+   `[]{.grise-colonne .fragment data-fragment-index="k"}`: tant qu'il n'est pas
+   révélé, la colonne reste sans gris. */
+.reveal .formule-serree tr > :nth-child(n + 4) {
+  padding-left: .2em;
+  padding-right: .2em;
+}
+
+@for $n from 1 through 16 {
+  .reveal .grise-col#{$n}:not(:has(.grise-colonne.fragment:not(.visible))) tbody tr > td:nth-child(#{$n}) {
+    background-color: #d6d6d6;
+  }
+}
+
+/* Filtrage des modèles dans une table de vérité, clic par clic.
+   `::: {.filtre1-colN .filtre2-colM}` encadre en rouge la colonne N à
+   l'étape 1, puis la colonne M à l'étape 2. Chaque étape est déclenchée
+   par un span vide `[]{.filtre-1 .fragment data-fragment-index="k"}`
+   (resp. `.filtre-2`) placé dans la table. Les lignes écartées à l'étape k
+   portent un span `.ecarte-k` (p. ex. autour de l'étiquette $I_1$) et
+   passent en gris dès que l'étape est révélée. */
+@for $n from 1 through 16 {
+  @each $k in 1, 2 {
+    .reveal .filtre#{$k}-col#{$n}:has(.filtre-#{$k}.visible) {
+      table { border-collapse: collapse; }
+      tr > :nth-child(#{$n}) {
+        border-left: 3px solid #ff0000;
+        border-right: 3px solid #ff0000;
+      }
+      thead tr:first-child > :nth-child(#{$n}) { border-top: 3px solid #ff0000; }
+      tbody tr:last-child > :nth-child(#{$n}) { border-bottom: 3px solid #ff0000; }
+    }
+  }
+}
+
+@each $k in 1, 2 {
+  .reveal table:has(.filtre-#{$k}.visible) tbody tr:has(.ecarte-#{$k}) > td,
+  .reveal table:has(.filtre-#{$k}.visible) tbody tr:has(.ecarte-#{$k}) > td * {
+    color: $site-muted;
+  }
 }
 
 // .reveal .striped thead th {

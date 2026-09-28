@@ -39,6 +39,13 @@
 //                                   goes with them); `dashed` draws a broken
 //                                   outline, which fades in rather than being
 //                                   traced;
+//           [{key, cx, cy, w, h, corner, …}]
+//                                   a rounded box instead, `w` wide and `h`
+//                                   high, its corners rounded by `corner`
+//                                   (a quarter of its smaller side if left
+//                                   out); a set may be one as well, and a
+//                                   circle turns smoothly into a box and back
+//                                   from one stage to the next;
 //   transform  {k, dx, dy}          x' = k·x + dx, y' = k·y + dy, applied to
 //                                   every coordinate of the stage — so one and
 //                                   the same cloud can be written once and
@@ -142,7 +149,10 @@ function setStages(container, stages, steps, options = {}) {
     };
     const round = (d) => {
       const { k, dx, dy } = own(d);
-      return { ...d, cx: k * d.cx + dx, cy: k * d.cy + dy, r: k * d.r };
+      const box = d.w == null ? {} : {
+        w: k * d.w, h: k * d.h, corner: k * (d.corner ?? Math.min(d.w, d.h) / 4),
+      };
+      return { ...d, cx: k * d.cx + dx, cy: k * d.cy + dy, r: k * d.r, ...box };
     };
     return {
       sets: (stage.sets ?? []).map(round),
@@ -184,27 +194,42 @@ function setStages(container, stages, steps, options = {}) {
   // goes; a circle that merely moves keeps its outline whole. A `dashed` one
   // cannot be traced, its dashes being the drawing itself, so it fades in and
   // out instead.
-  const circumference = (d) => 2 * Math.PI * d.r;
+  //
+  // Every circle is drawn as a rounded box: a circle is the box as wide and as
+  // high as its diameter, rounded by its radius — which is what lets one turn
+  // into the other. The outline of a box starts at the top, past the left
+  // corner, and goes clockwise; for a circle, that is the top.
+  const halfW = (d) => (d.w == null ? d.r : d.w / 2);
+  const halfH = (d) => (d.h == null ? d.r : d.h / 2);
+  const corner = (d) => (d.w == null ? d.r : d.corner);
+  const circumference = (d) =>
+    4 * (halfW(d) + halfH(d)) - (8 - 2 * Math.PI) * corner(d);
   const dashes = (d) => (d.dashed ? "9 7" : `${circumference(d)} ${circumference(d)}`);
+  // `target` gives, for the element's datum, the shape it takes.
+  const shape = (selection, target = (d) => d) => selection
+    .attr("x", (d) => target(d).cx - halfW(target(d)))
+    .attr("y", (d) => target(d).cy - halfH(target(d)))
+    .attr("width", (d) => 2 * halfW(target(d)))
+    .attr("height", (d) => 2 * halfH(target(d)))
+    .attr("rx", (d) => corner(target(d)))
+    .attr("ry", (d) => corner(target(d)));
 
   const circleLayer = (data, defaultColor, inside) => {
     const size = inside ? labelSize : groupLabelSize;
     const color = (d) => d.color ?? defaultColor;
-    const labelY = (d) => (inside ? d.cy - d.r + labelOffset : d.cy - d.r - 12);
+    const labelY = (d) =>
+      (inside ? d.cy - halfH(d) + labelOffset : d.cy - halfH(d) - 12);
 
     const groups = svg.append("g")
       .selectAll("g")
       .data(data, (d) => d.key)
       .join("g");
 
-    const fills = groups.append("circle")
-      .attr("cx", (d) => d.cx).attr("cy", (d) => d.cy).attr("r", (d) => d.r)
+    const fills = shape(groups.append("rect"))
       .attr("fill", color)
       .attr("fill-opacity", 0);
 
-    const outlines = groups.append("circle")
-      .attr("cx", (d) => d.cx).attr("cy", (d) => d.cy).attr("r", (d) => d.r)
-      .attr("transform", (d) => `rotate(-90 ${d.cx} ${d.cy})`)   // start at the top
+    const outlines = shape(groups.append("rect"))
       .attr("fill", "none")
       .attr("stroke", color)
       .attr("stroke-width", 3)
@@ -301,11 +326,15 @@ function setStages(container, stages, steps, options = {}) {
         ? { x: b.x - dotRadius - 10, y: b.y + (rank.get(link) ?? 0) * spread }
         : { x: cb.cx, y: cb.cy };
       const aim = Math.atan2(towards.y - from.y, towards.x - from.x);
+      // How far the outline lies from the centre, that way — a box taken
+      // without its rounded corners.
+      const reach = (c) => (c.w == null ? c.r : Math.min(
+        halfW(c) / Math.abs(Math.cos(aim)), halfH(c) / Math.abs(Math.sin(aim))));
       const p = ca
-        ? { x: ca.cx + (ca.r + 10) * Math.cos(aim), y: ca.cy + (ca.r + 10) * Math.sin(aim) }
+        ? { x: ca.cx + (reach(ca) + 10) * Math.cos(aim), y: ca.cy + (reach(ca) + 10) * Math.sin(aim) }
         : from;
       const q = cb
-        ? { x: cb.cx - (cb.r + 10) * Math.cos(aim), y: cb.cy - (cb.r + 10) * Math.sin(aim) }
+        ? { x: cb.cx - (reach(cb) + 10) * Math.cos(aim), y: cb.cy - (reach(cb) + 10) * Math.sin(aim) }
         : towards;
       // A bent arrow is a quadratic curve whose control point sits `curve`
       // pixels off the middle of the chord, to the left of the way the arrow
@@ -402,15 +431,8 @@ function setStages(container, stages, steps, options = {}) {
         .duration(dur(700))
         .ease(d3.easeCubicInOut);
 
-      staying(layer.fills)
-        .attr("cx", (d) => target(d).cx)
-        .attr("cy", (d) => target(d).cy)
-        .attr("r", (d) => target(d).r);
-      staying(layer.outlines)
-        .attr("cx", (d) => target(d).cx)
-        .attr("cy", (d) => target(d).cy)
-        .attr("r", (d) => target(d).r)
-        .attr("transform", (d) => `rotate(-90 ${target(d).cx} ${target(d).cy})`)
+      shape(staying(layer.fills), target);
+      shape(staying(layer.outlines), target)
         .attr("stroke-dasharray", (d) => dashes(target(d)));
       staying(layer.labels)
         .attr("x", (d) => target(d).cx)
