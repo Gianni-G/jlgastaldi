@@ -49,8 +49,8 @@ La note finale sera établie selon la répartition suivante :
 ### Contrôle continu
 
 - Réponses libres **hebdomadaires** aux lectures obligatoires (minimum 8 sur 12)
-- Premier contrôle: **19/10**
-- Second contrôle: **16/11**
+- Premier contrôle: **02/11**
+- Second contrôle: **23/11**
 - Troisième contrôle: **07/12**
 
 ### Examen final
@@ -59,6 +59,7 @@ La note finale sera établie selon la répartition suivante :
 
 ## Actualités
 
+**05/10** &emsp; Actualisation du syllabus\
 **22/09** &emsp; Actualisation du syllabus\
 **20/09** &emsp; Actualisation de la bibliographie\
 **17/09** &emsp; Changement de salle CM\
@@ -70,15 +71,15 @@ La note finale sera établie selon la répartition suivante :
 |:---:|:---|:---:|:---|:---|:---|:---|
 | **1** | 14/09 | **Introduction** | Connaissance,<br>représentation et<br>sciences humaines | · **{% cite nietzsche1873delaverite %}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 1 %} |[Slides 01](https://www.giannigastaldi.com/assets/courses/26_l5soreco/l5soreco26_01.html) | [Slides 01 TD](https://www.giannigastaldi.com/assets/courses/26_l5soreco/l5soreco26_01_td.html) |
 | **2** | 21/09 | **M1:<br>Propositions** | Logique<br>propositionnelle:<br>Syntaxe | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.1, 1.2.1 %}**<br>· {% cite barbut1967mathématiquesetscienceshumaines1 -L chapter -l 1 %}<br>· {% cite descles2010logiqueetlangage -L section -l 1.4, 1.5, 2.1-2.5 %} | [Slides 02](https://www.giannigastaldi.com/assets/courses/26_l5soreco/l5soreco26_02.html) | |
-| **3** | 28/09 | **M1:<br>Propositions** | Logique<br>propositionnelle:<br>Sémantique | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.1, 1.2.1 %}**<br>· {% cite barbut1967mathématiquesetscienceshumaines1 -L chapter -l 1 %}<br>· {% cite descles2010logiqueetlangage -L section -l 1.4, 1.5, 2.1-2.5 %} | [Slides 03](https://www.giannigastaldi.com/assets/courses/26_l5soreco/l5soreco26_03.html)| |
-| **4** | 05/10 | **M1:<br>Propositions** | Logique de<br>premier ordre:<br>Syntaxe | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.2.2%}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 2 %} | | |
-| **5** | 12/10 | **M1:<br>Propositions** | Logique de<br>premier ordre:<br>Sémantique | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.2.2%}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 2 %} | | |
-| **6** | 19/10 | **M2:<br>Descriptions** | Logiques de<br>description I| · **{% cite brachman2004knowledgerepresentation -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | **Contrôle continu M1** |
-| **7** | 02/11 | **M2:<br>Descriptions** | Logiques de<br>description II| · **{% cite brachman2004knowledgerepresentation -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | |
-| **8** | 09/11 | **M2:<br>Objets** | Ontologies | · **{% cite guarino2009whatisontology %}**<br>· {% cite pan2009rdf %}<br>· {% cite antoniou2009wol %} | | |
-| **9** | 16/11 | **M2:<br>Graphes** | Graphes de connaissances | · **{% cite hogan2022knowledgegraphs %}**<br>· {% cite vrandecic2014wikidata %}  | | **Contrôle continu M2** |
-| **10** | 23/11 | **M3:<br>Vecteurs** | Représentations vectorielles | · **{% cite turney2010fromfrequency %}** | | |
-| **11** | 30/11 | **M3:<br>Vecteurs** | Espaces<br>vectoriels | · **{% cite barbut1967mathématiquesetscienceshumaines1 -L chapter -l XI %}**<br>· {% cite goodfellow2016deeplearning -L section -l 2.1-8 %} | | |
+| **3** | 28/09 | **M1:<br>Propositions** | Logique<br>propositionnelle:<br>Sémantique | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.1, 1.2.1 %}**<br>· {% cite barbut1967mathématiquesetscienceshumaines1 -L chapter -l 1 %}<br>· {% cite lucas2014initiation %} | [Slides 03](https://www.giannigastaldi.com/assets/courses/26_l5soreco/l5soreco26_03.html)| |
+| **4** | 05/10 | **M1:<br>Propositions** | Logique<br>propositionnelle:<br>Sémantique | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.1, 1.2.1 %}**<br>· {% cite barbut1967mathématiquesetscienceshumaines1 -L chapter -l 1 %}<br>· {% cite lucas2014initiation %} | [Slides 04](https://www.giannigastaldi.com/assets/courses/26_l5soreco/l5soreco26_04.html)| |
+| **5** | 12/10 | **M1:<br>Propositions** | Logique de<br>premier ordre:<br>Syntaxe | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.2.2%}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 2 %}<br>· {% cite lucas2014initiation %} | | |
+| **6** | 19/10 | **M1:<br>Propositions** | Logique de<br>premier ordre:<br>Sémantique | · **{% cite lifschitz2008knowledgerepresentation -L section -l 1.2.2%}**<br>· {% cite brachman2004knowledgerepresentation -L chapter -l 2 %}<br>· {% cite lucas2014initiation %} | | |
+| **7** | 02/11 | **M2:<br>Descriptions** | Logiques de<br>description I| · **{% cite brachman2004knowledgerepresentation -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | **Contrôle continu M1** |
+| **8** | 09/11 | **M2:<br>Descriptions** | Logiques de<br>description II| · **{% cite brachman2004knowledgerepresentation -L chapter -l 9 %}**<br>· {% cite baader2008descriptionlogics %} | | |
+| **9** | 16/11 | **M2:<br>Objets** | Ontologies | · **{% cite guarino2009whatisontology %}**<br>· {% cite pan2009rdf %}<br>· {% cite antoniou2009wol %} | | |
+| **10** | 23/11 | **M2:<br>Graphes** | Graphes de connaissances | · **{% cite hogan2022knowledgegraphs %}**<br>· {% cite vrandecic2014wikidata %}  | | **Contrôle continu M2** |
+| **11** | 30/11 | **M3:<br>Vecteurs** | Représentations vectorielles | · **{% cite turney2010fromfrequency %}**<br>· **{% cite barbut1967mathématiquesetscienceshumaines1 -L chapter -l XI %}**<br>· {% cite goodfellow2016deeplearning -L section -l 2.1-8 %} | | |
 | **12** | 07/12 | **M3:<br>Vecteurs** | Embeddings<br>neuronaux | · **{% cite mikolov2013efficientestimation %}**<br>· {% cite levy2014implicitfactorization %} | | **Contrôle continu M3** |
 | **13** | 14/12 | **Révision** | Révision | | | |
 
