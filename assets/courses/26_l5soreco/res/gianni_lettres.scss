@@ -271,6 +271,17 @@ $code-color: $lettres-navy;
   text-align: center;
 }
 
+/* `::: {.callout-* .center}`: simple callouts are flex boxes, so the body
+   shrinks to its content and centred text or display math hugs the left.
+   Growing the body and content lets them span the box. Quarto moves the
+   extra class (and any style) onto a wrapper div around the callout. */
+.reveal div.center > div.callout {
+  .callout-body,
+  .callout-content {
+    flex-grow: 1;
+  }
+}
+
 /* `:::: {.columns .vcenter}` centres the columns vertically on one
    another. Quarto's reveal.js theme lays columns out as inline-blocks
    hung from the top (not as flex items), hence vertical-align. */
@@ -680,28 +691,198 @@ $chalkboard-icon: "rgb(196, 196, 196)";  /* = $site-muted, the footer text */
   }
 }
 
-/* Filtrage des modèles dans une table de vérité, clic par clic.
-   `::: {.filtre1-colN .filtre2-colM}` encadre en rouge la colonne N à
-   l'étape 1, puis la colonne M à l'étape 2. Chaque étape est déclenchée
-   par un span vide `[]{.filtre-1 .fragment data-fragment-index="k"}`
-   (resp. `.filtre-2`) placé dans la table. Les lignes écartées à l'étape k
-   portent un span `.ecarte-k` (p. ex. autour de l'étiquette $I_1$) et
-   passent en gris dès que l'étape est révélée. */
+/* Contexte d'un séquent révélé au clic. Dans une formule,
+   `\class{contexte}{…}` (p. ex. autour de `\cmuted{\Gamma \vdash}`) reste
+   invisible, place réservée, tant que le span vide
+   `[]{.montre-contexte .fragment}` placé dans la slide n'est pas révélé; il
+   apparaît alors en fondu. */
+.reveal section:has(.montre-contexte) .contexte {
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+.reveal section:has(.montre-contexte.visible) .contexte {
+  opacity: 1;
+}
+
+/* Arbre de preuve, pas à pas. Dans les maths, `\class{etape-N}{…}` reste
+   invisible, place réservée, tant que le span vide
+   `[]{.montre-etape-N .fragment}` placé dans la slide n'est pas révélé.
+   On joue sur `visibility` (et non `opacity`) pour qu'une étape imbriquée
+   dans une autre puisse apparaître avant elle: les prémisses d'abord, puis
+   la barre et la conclusion qui les englobent.
+   `\class{etape-0}{…}` reste visible dès le début, même à l'intérieur
+   d'une étape encore cachée (p. ex. la conclusion de l'arbre).
+   `\class{decharge-N}{…}` passe en orange (comme `\corange`) à l'étape N:
+   les hypothèses déchargées par la règle qui apparaît alors. */
+.reveal .etape-0 {
+  visibility: visible;
+}
+@for $n from 1 through 20 {
+  .reveal section:has(.montre-etape-#{$n}) .etape-#{$n} {
+    visibility: hidden;
+  }
+  .reveal section:has(.montre-etape-#{$n}.visible) .etape-#{$n} {
+    visibility: visible;
+  }
+  // MathJax écrit la couleur de `\cmuted` en style inline sur chaque
+  // symbole: d'où `!important` et la règle sur les descendants.
+  .reveal section:has(.montre-etape-#{$n}.visible) .decharge-#{$n},
+  .reveal section:has(.montre-etape-#{$n}.visible) .decharge-#{$n} * {
+    color: rgb(235, 120, 20) !important;
+  }
+}
+
+/* Cadres dans une table de vérité, clic par clic. Ils sont tracés en ombres
+   internes des cellules (un côté par variable `--cadre-<nom>-<t|b|l|r>`),
+   pour que deux cadres voisins ou sur le même bord restent visibles.
+   Chaque cadre est rempli de sa couleur, très transparente
+   (`--cadre-<nom>-fond`, opacité $cadre-fond); les fonds se cumulent là où
+   les cadres se croisent.
+
+   Filtrage des modèles. `::: {.filtre1-colN .filtre2-colM}` encadre la
+   colonne N à l'étape 1, puis la colonne M à l'étape 2 (jusqu'à 3 étapes).
+   Chaque étape est déclenchée par un span vide
+   `[]{.filtre-1 .fragment data-fragment-index="k"}` (resp. `.filtre-2`,
+   `.filtre-3`) placé dans la table. Les lignes écartées à l'étape k portent
+   un span `.ecarte-k` (p. ex. autour de l'étiquette $I_1$) et passent en gris
+   dès que l'étape est révélée. Le cadre est rouge par défaut; ajouter
+   `.filtre-cgreen` (ou `-cyellow`, `-cblue`, `-cred`) sur le même div pour
+   toutes les étapes, ou `.filtrek-cgreen` (etc.) pour la seule étape k. */
+$cadre: 3px;
+$cadre-fond: 12%;
+$cadre-couleurs: (cyellow: $set-yellow, cred: $set-red, cblue: $set-blue, cgreen: $set-green);
+
+@each $nom, $couleur in $cadre-couleurs {
+  .reveal .filtre-#{$nom} { --filtre-color: #{$couleur}; }
+  @each $k in 1, 2, 3 {
+    .reveal .filtre#{$k}-#{$nom} { --filtre-#{$k}-color: #{$couleur}; }
+  }
+}
+
 @for $n from 1 through 16 {
-  @each $k in 1, 2 {
+  @each $k in 1, 2, 3 {
     .reveal .filtre#{$k}-col#{$n}:has(.filtre-#{$k}.visible) {
-      table { border-collapse: collapse; }
+      $c: var(--filtre-#{$k}-color, var(--filtre-color, #ff0000));
       tr > :nth-child(#{$n}) {
-        border-left: 3px solid #ff0000;
-        border-right: 3px solid #ff0000;
+        --cadre-f#{$k}-l: inset #{$cadre} 0 #{$c};
+        --cadre-f#{$k}-r: inset -#{$cadre} 0 #{$c};
+        --cadre-f#{$k}-fond: inset 0 0 0 100vmax color-mix(in srgb, #{$c} #{$cadre-fond}, transparent);
       }
-      thead tr:first-child > :nth-child(#{$n}) { border-top: 3px solid #ff0000; }
-      tbody tr:last-child > :nth-child(#{$n}) { border-bottom: 3px solid #ff0000; }
+      thead tr:first-child > :nth-child(#{$n}) { --cadre-f#{$k}-t: inset 0 #{$cadre} #{$c}; }
+      tbody tr:last-child > :nth-child(#{$n}) { --cadre-f#{$k}-b: inset 0 -#{$cadre} #{$c}; }
     }
   }
 }
 
-@each $k in 1, 2 {
+/* Ensemble Mod(F) dans une table de vérité. Les lignes qui en font partie
+   portent un span `.modf` (p. ex. autour de l'étiquette $I_2$); un span vide
+   `[]{.cadre-modf .fragment data-fragment-index="j"}` placé dans la table
+   encadre en bleu (\cblue) chaque suite de lignes consécutives. Une seule
+   indication « Mod(F) » à droite, sur la ligne qui porte un span
+   `.modf-etiquette`: elle est centrée sur cette ligne et deux traits la
+   relient à la première et à la dernière des `--modf-lignes` lignes
+   centrées sur elle (défaut: 3, p. ex. I_2 et I_4 autour de I_3). */
+// Traits de l'indication Mod(F), en $set-blue (#1f4e9e: à garder en phase).
+$modf-traits: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 2 L100 50 L0 98' fill='none' stroke='%231f4e9e' stroke-width='3' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E";
+.reveal table:has(.cadre-modf.visible) tbody {
+  tr:has(.modf) {
+    > td { --cadre-modf-fond: inset 0 0 0 100vmax color-mix(in srgb, #{$set-blue} #{$cadre-fond}, transparent); }
+    > td:first-child { --cadre-modf-l: inset #{$cadre} 0 #{$set-blue}; }
+    > td:last-child { --cadre-modf-r: inset -#{$cadre} 0 #{$set-blue}; }
+  }
+  tr:first-child:has(.modf),
+  tr:not(:has(.modf)) + tr:has(.modf) {
+    > td { --cadre-modf-t: inset 0 #{$cadre} #{$set-blue}; }
+  }
+  tr:has(.modf-etiquette) > td:last-child {
+    position: relative;
+    &::before {
+      content: "Mod(F)";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      height: calc(var(--modf-lignes, 3) * 100%);
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      padding-left: 1.6em;
+      background: url("#{$modf-traits}") no-repeat left .3em center /
+        1.1em calc((var(--modf-lignes, 3) - 1) / var(--modf-lignes, 3) * 100%);
+      color: $set-blue;
+      white-space: nowrap;
+    }
+  }
+  tr:has(.modf):not(:has(+ tr .modf)) > td {
+    --cadre-modf-b: inset 0 -#{$cadre} #{$set-blue};
+  }
+}
+
+// Superposition: les traits au-dessus des fonds; Mod(F) au-dessus des
+// colonnes, puis les étapes dans l'ordre.
+$cadre-ombres: "0 0 transparent";
+@each $s in t, b, l, r, fond {
+  @each $nom in modf, f1, f2, f3 {
+    $cadre-ombres: $cadre-ombres + ", var(--cadre-#{$nom}-#{$s}, 0 0 transparent)";
+  }
+}
+.reveal table:has(:is(.filtre-1, .filtre-2, .filtre-3, .cadre-modf).visible) :is(th, td) {
+  box-shadow: #{$cadre-ombres};
+}
+
+/* Ensemble Mod(Γ) dans une table de vérité. Les lignes qui en font partie à
+   l'étape k portent un span `.mod-k` (p. ex. autour de l'étiquette $I_3$);
+   un span vide `[]{.cadre-mod-k .fragment data-fragment-index="j"}` placé
+   dans la table les encadre en rouge (le rouge de Mod(Γ) dans les
+   diagrammes), avec l'indication « Mod(Γ) » à gauche. Le cadre est en
+   retrait de $mod-retrait, à l'intérieur des autres cadres, comme Mod(Γ)
+   dans Mod(F). L'étape 2 remplace l'étape 1. `--mod-k-lignes` (sur le div)
+   donne le nombre de lignes de l'étape k, pour centrer l'indication sur le
+   cadre (défaut: 1). */
+$mod-red: #ff0000;
+$mod-retrait: 5px;
+$mod-etapes: (
+  1: ":has(.cadre-mod-1.visible):not(:has(.cadre-mod-2.visible))",
+  2: ":has(.cadre-mod-2.visible)"
+);
+@each $k, $active in $mod-etapes {
+  .reveal table#{$active} tbody {
+    tr:has(.mod-#{$k}) > td {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 0 solid $mod-red;
+        background-color: color-mix(in srgb, #{$mod-red} #{$cadre-fond}, transparent);
+        pointer-events: none;
+      }
+      &:first-child::after { left: $mod-retrait; border-left-width: $cadre; }
+      &:last-child::after { right: $mod-retrait; border-right-width: $cadre; }
+    }
+    tr:first-child:has(.mod-#{$k}),
+    tr:not(:has(.mod-#{$k})) + tr:has(.mod-#{$k}) {
+      > td::after { top: $mod-retrait; border-top-width: $cadre; }
+      > td:first-child::before {
+        content: "Mod(\0393)";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        height: calc(var(--mod-#{$k}-lignes, 1) * 100%);
+        display: flex;
+        align-items: center;
+        padding-right: .6em;
+        color: $mod-red;
+        white-space: nowrap;
+      }
+    }
+    tr:has(.mod-#{$k}):not(:has(+ tr .mod-#{$k})) > td::after {
+      bottom: $mod-retrait;
+      border-bottom-width: $cadre;
+    }
+  }
+}
+
+@each $k in 1, 2, 3 {
   .reveal table:has(.filtre-#{$k}.visible) tbody tr:has(.ecarte-#{$k}) > td,
   .reveal table:has(.filtre-#{$k}.visible) tbody tr:has(.ecarte-#{$k}) > td * {
     color: $site-muted;
