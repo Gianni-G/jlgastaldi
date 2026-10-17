@@ -11,13 +11,45 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 
 # News
 
+### 29/10/2026
+
+*What Escapes the Model? The Limits of Formalisation in AI*\
+Invited talk at the SNSF Scientific Exchange organized by the Immersive Arts Space (*Performing AI* project), followed by the public roundtable *Embodied AI, Formalisation, and Human–Machine Relations* (30/10, 4:00–6:00 pm CET).\
+Zurich University of the Arts (ZHdK) - Zurich, Switzerland.\
+Morning session, 29/10.
+
+### 14/10/2026
+
+*Inteligencia artificial y ciencias sociales: una conversación sobre sus futuros.*\
+Conversation with Nicolás Quiroga at the [XVIII Jornadas del GIMSSPAM](https://humanidades.com.ar/gimsspam){:target="_blank"} *Después del giro digital: Historia, ciencias sociales e inteligencia artificial* (Facultad de Humanidades, Universidad Nacional de Mar del Plata).\
+Online - 6:00 pm CEST (1:00 pm ART).\
+[[Video](https://www.youtube.com/watch?v=IEalWpVKq6Y){:target="_blank"}]
+
+
+### 02/10/2026
+
+*The Unexplained Surprise: Information at the Edge of Knowledge.*\
+Participant in the [*Error Correction Seminar*](https://ecs26.contralab.space/){:target="_blank"} organized by [contralab](https://contralab.online/error-correction-seminar){:target="_blank"} (Digital Humanities Lab, Universität Basel).\
+Universität Basel - Basel, Switzerland.\
+9:00 am–5:00 pm CEST, Regenzzimmer 111, Kollegienhaus, Petersplatz 1.
+
+
+### 30/09/2026
+
+*Toward a Critical Formalism.*\
+With John Terilla. Invited talk at [contralab](https://contralab.online/gastaldi-terilla){:target="_blank"} (Digital Humanities Lab, Universität Basel).\
+Universität Basel - Basel, Switzerland.\
+5:30 pm CEST, Allschwilerstr. 14.\
+[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260930_basel.pdf){:target="_blank"}]
+
+
 ### 07/07/2026
 
 *Wherefore art thou critique? From literary criticism to critical formalism in the age of AI*\
 Featured speaker at the [*Literary AI: Computational Writing and the Media of Language*](https://literaryai.org){:target="_blank"} Workshop\
 School of Arts and Social Sciences, Monash University Malaysia\
 20:00 Kuala Lumpur (MYT UTC+8) (online)\
-[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260707_literaryai.pdf){:target="_blank"}]
+[[Slides](https://www.giannigastaldi.com/assets/pdf/slides/gastaldi_260707_literaryai.pdf){:target="_blank"}, [Video](https://www.youtube.com/watch?v=kYT_LIC2pr0){:target="_blank"}]
 
 
 ### 18/06/2026
