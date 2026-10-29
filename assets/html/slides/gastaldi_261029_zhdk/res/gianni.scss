@@ -1,0 +1,1284 @@
+/*-- scss:defaults --*/
+
+// Palette of the course website (jlgastaldi/assets/css/style.scss).
+// Kept here so the decks and the site stay in step.
+$site-navy: #263068;        // course title, rules  ($course-color)
+$site-accent: #e6332a;      // course code badge    ($course-accent)
+$site-heading: #de604d;     // section headings     ($section-headings-color)
+$site-body-text: #606c71;   // body copy            ($body-text-color)
+$site-muted: #819198;       // blockquotes, dates   ($blockquote-text-color)
+$site-mono: "Courier New", Courier, monospace;  // all headings on the site
+
+$background-color: #bc3434;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$presentation-heading-font: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$presentation-font-size-root: 40px;      // overall scale
+$presentation-heading-font-weight: 200;  // Neue's bold is heavy at large sizes
+$presentation-body-font-weight: 200;  // Neue's bold is heavy at large sizes
+$presentation-h1-font-size: 2em;
+$presentation-h2-font-size: 1.6em;
+
+// reveal.js's link colour, in black: the progress bar's (the links on the
+// slides take the colour of their text, see the rules)
+$link-color: #000;
+$link-color-hover: #000;
+
+// Slide titles are raised by the space their line box leaves above the
+// capitals (Helvetica Neue's ascender gap and half-leading at line-height
+// 1.2), as a fraction of their size, so that the letters themselves start
+// at the slide's top edge.
+$title-raise: 0.25;
+
+// Colours of the beamer talks (res/beamer_style.tex of the Venice, Malaysia
+// and Basel decks). The blocks' are xcolor's dvipsnames converted from
+// CMYK: \setbeamercolor{block title}{bg=Maroon}, ... example: bg =
+// MidnightBlue, ... alerted: bg = OliveGreen. Bodies take 10% of the title
+// colour, as `Maroon!10` does.
+$block-maroon: #ad1737;
+$block-midnightblue: #037e91;
+$block-olivegreen: #379908;
+
+// \setbeamercolor{alerted text}{fg=red}, toned as in the course decks
+$alert-red: #ff3333;
+
+// The teal and orange of the diagrams (TikZ `teal`, `orange`)
+$diagram-teal: #008080;
+$diagram-orange: #ff8000;
+
+/*-- scss:rules --*/
+/* Hyperlinks (citations, URLs) take the colour of the text around them:
+   red in an alert, white on a dark background. */
+.reveal .slides a,
+.reveal .slides a:hover {
+  color: inherit;
+}
+
+.reveal p,
+.reveal li,
+.reveal blockquote,
+.reveal custom-authors {
+  font-weight: 200;
+}
+
+/* One weight for the whole deck, as in the course decks: every element
+   inherits the slide's light cut, whatever Quarto or reveal.js set, and
+   only real bold (**…**) steps up, like beamer's Helvetica Neue against
+   Helvetica Neue Light. */
+.reveal .slides {
+  font-weight: 200;
+}
+
+.reveal .slides * {
+  font-weight: inherit !important;
+}
+
+.reveal .slides :is(strong, b) {
+  font-weight: 400 !important;
+}
+
+/* Bullets per level, after the beamer style: \diamond, ---, \cdot. */
+.reveal ul       { list-style-type: "⬦ "; }
+.reveal ul ul    { list-style-type: "— "; }
+.reveal ul ul ul { list-style-type: "· "; }
+
+.reveal ul li::marker {
+  font-size: 0.75em;
+}
+
+.reveal li + li {
+  margin-top: 0.35em;
+}
+
+/* The footline of the beamer decks, in light grey. */
+.reveal .footer {
+  text-align: left;
+  padding-left: 1em;
+}
+
+.reveal .footer p {
+  text-align: left;   /* Quarto wraps the text in a <p> */
+  margin: 0;
+  color: $site-muted;
+}
+
+.reveal .slide-number {
+  top: auto;
+  bottom: 0.5em;
+  left: auto;
+  right: 0.5em;
+  background-color: transparent;
+  font-size: 0.5em;
+  color: $site-muted;
+}
+
+
+.reveal h2 {
+  text-align: right;
+}
+
+
+/* Content slides ---------------------------------------------------------
+   As in the course decks: the h2 (beamer's frame title, right-aligned
+   above) hangs from the top edge and the rest of the slide is centred in
+   the space left below it. A full-height slide gives reveal.js's `center`
+   nothing to centre; the two auto margins split the free space. reveal.js
+   sets `display` inline on each slide, hence the !important; it is kept to
+   the present slide so hidden slides stay `display: none`. The h2 is
+   raised by $title-raise relatively, so that nothing else moves. */
+.reveal .slides section.slide.level2:not(.scrollable):has(> h2) {
+  height: 100%;
+  box-sizing: border-box;
+
+  &.present {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  > h2 {
+    position: relative;
+    top: -$title-raise * 1em;
+    margin-top: 0;
+    margin-bottom: auto;
+  }
+
+  &::after {
+    content: "";
+    margin-top: auto;
+  }
+
+  /* Print mode (?print-pdf) puts each slide on its own page, where no slide
+     is `.present`, and sets `top` from the slide's natural height; pin it
+     back to a slide-sized box with the same layout, so that a PDF export
+     looks like the projected deck. */
+  html.reveal-print & {
+    display: flex !important;
+    flex-direction: column;
+    top: 0 !important;
+    bottom: 0;
+    height: var(--slide-height, 100%);
+    margin-block: auto !important;
+  }
+}
+
+/* Outline slides ---------------------------------------------------------
+   As in the beamer decks (res/beamer_style.tex), each section opens with an
+   "Outline" frame listing all the sections, the others shaded
+   (\tableofcontents[currentsection,hideallsubsections]): here the
+   `# N. Section` slide, which res/sections.lua gives that list, set as the
+   contents slide's (below), under the same "Outline" title, hung from the
+   top right like an h2 (same layout as the content slides above, the title
+   being generated). The section's own heading, which the list repeats, is
+   hidden. */
+.reveal .slides section.slide.level1:not(#title-slide) {
+  height: 100%;
+  box-sizing: border-box;
+  text-align: left;
+
+  &.present {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  &::before {
+    content: "Outline";
+    position: relative;
+    top: -$title-raise * 1em;
+    margin: 0 0 auto;
+    text-align: right;
+    font-family: var(--r-heading-font);
+    font-size: var(--r-heading2-size);
+    font-weight: var(--r-heading-font-weight);
+    color: var(--r-heading-color);
+    line-height: var(--r-heading-line-height);
+  }
+
+  &::after {
+    content: "";
+    margin-top: auto;
+  }
+
+  html.reveal-print & {
+    display: flex !important;
+    flex-direction: column;
+    top: 0 !important;
+    bottom: 0;
+    height: var(--slide-height, 100%);
+    margin-block: auto !important;
+  }
+
+  > h1 {
+    display: none;
+  }
+}
+
+/* Contents slide ---------------------------------------------------------
+   `toc: true` makes Quarto add `<section id="TOC"><nav><h2/><ul/></nav>`
+   after the cover, listing the section slides. It gets the content slides'
+   layout (h2 hanging from the top, list centred below); entries are the
+   numbered section titles, without bullets, from the left edge, as beamer's
+   \tableofcontents[hideallsubsections] with res/beamer_style.tex. */
+.reveal .slides section#TOC {
+  height: 100%;
+  box-sizing: border-box;
+
+  &.present {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  > nav {
+    display: contents;
+  }
+
+  h2 {
+    position: relative;
+    top: -$title-raise * 1em;
+    margin-top: 0;
+    margin-bottom: auto;
+  }
+
+  &::after {
+    content: "";
+    margin-top: auto;
+  }
+
+  html.reveal-print & {
+    display: flex !important;
+    flex-direction: column;
+    top: 0 !important;
+    bottom: 0;
+    height: var(--slide-height, 100%);
+    margin-block: auto !important;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+/* The sections as beamer_style.tex sets them in a table of contents, on the
+   contents slide and on each section slide alike, so that only the shading
+   changes from one to the next: numbered, without bullets, from the left
+   edge, in the text's font, as far apart as there (\vskip.75em before
+   each, .5em after); on a section slide, the others shaded as beamer
+   shades them, at 20% of the text's colour. */
+.reveal .slides section#TOC ul,
+.reveal .slides section.slide.level1 .sections ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+
+  li {
+    margin: 0;
+    font-size: 0.85em;
+    line-height: 1.2;
+  }
+
+  li + li {
+    margin-top: 1.1em;
+  }
+
+  li::marker {
+    content: none;
+  }
+
+  .shaded {
+    opacity: 0.2;
+  }
+}
+
+
+/* Body -------------------------------------------------------------------- */
+
+.reveal .alert {
+  color: $alert-red;
+}
+
+.reveal .muted {
+  color: $site-muted;
+}
+
+.reveal .teal   { color: $diagram-teal; }
+.reveal .orange { color: $diagram-orange; }
+
+/* `::: {.points}`: paragraphs set 1em further apart than reveal.js's
+   block margin, as separate points. */
+.reveal .points p + p {
+  margin-top: calc(var(--r-block-margin) + 1em);
+}
+.reveal .red    { color: red; }
+.reveal .blue   { color: blue; }
+.reveal .green  { color: green; }
+
+.reveal .small { font-size: 0.8em; }
+.reveal .tiny  { font-size: 0.45em; }
+.reveal .huge  { font-size: 1.6em; }
+.reveal .mono  { font-family: $site-mono; }
+
+/* `::: {.center}` centres each line of text within the block. Scoped to
+   divs: with `center: true`, Quarto also puts `center` on every slide
+   section. */
+.reveal div.center {
+  text-align: center;
+}
+
+/* `:::: {.columns .vcenter}` centres the columns vertically on one
+   another. Quarto lays columns out as inline-blocks hung from the top,
+   hence vertical-align. */
+.reveal .columns.vcenter > .column {
+  vertical-align: middle;
+}
+
+/* A live figure (a Plotly page, which can be turned) in a frame as wide as
+   its column, the page filling it: no border, and none of the 95% to which
+   reveal.js keeps iframes. Its height is the slide's to give. Give it `src`,
+   not reveal.js's lazy `data-src`: drawing the page freezes the deck for a
+   moment, better spent while the deck loads than a few slides ahead in the
+   middle of the talk; and a page with `src` is never dropped, so a figure
+   turned stays turned. */
+.reveal iframe.live {
+  display: block;
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  border: 0;
+}
+
+/* Images are not framed (reveal.js frames them by default). */
+.reveal .slides img {
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+/* Citations under figures and nodes (beamer \tiny\citep) */
+.reveal .cite {
+  font-size: 0.55em;
+  text-align: right;
+}
+
+/* Credits under figures and nodes (beamer \tiny\citep) */
+.reveal .credits{
+  font-size: 0.45em;
+  text-align: right;
+  color: $site-muted;
+}
+
+/* Formulas set apart, one per line */
+.reveal .formula {
+  margin: 0.25em 0;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* Formulas as thin as their font: on macOS, browsers thicken every glyph,
+   which makes Computer Modern's regular weight look bold next to the light
+   text of the slides. */
+.reveal .MathJax {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Blocks -----------------------------------------------------------------
+   beamer's block, exampleblock and alertblock:
+
+   :::: {.exampleblock}
+   ::: {.block-title}
+   Title
+   :::
+   Body
+   ::::                                                                   */
+.reveal :is(.block, .exampleblock, .alertblock) {
+  --block-color: #{$block-maroon};
+  background: rgba($block-maroon, 0.1);
+  border-radius: 0.2em;
+  overflow: hidden;
+  text-align: left;
+
+  > :not(.block-title) {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  > .block-title {
+    margin: 0 0 0.4em;
+    padding: 0.2em 0.5em;
+    color: white;
+    background: var(--block-color);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  > :last-child {
+    padding-bottom: 0.5em;
+  }
+}
+
+.reveal .exampleblock {
+  --block-color: #{$block-midnightblue};
+  background: rgba($block-midnightblue, 0.1);
+}
+
+.reveal .alertblock {
+  --block-color: #{$block-olivegreen};
+  background: rgba($block-olivegreen, 0.1);
+}
+
+
+/* Quotes and statements ------------------------------------------------- */
+
+/* Long quotations set as in the beamer decks: justified body text with
+   the reference flushed right below. */
+.reveal .quote {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.reveal .source {
+  margin-top: 0.4em;
+  text-align: right;
+  font-size: 0.7em;
+}
+
+/* A short closing line under a quote or a table, centred and spaced. */
+.reveal .punchline {
+  margin-top: 1em;
+  text-align: center;
+}
+
+/* Statement slides: a few lines set large and centred. */
+.reveal .statement {
+  font-size: 1.35em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Rows of aligned cells, e.g. "Formal | vs. Arbitrary" (beamer's
+   tabular{r l}) or "against ⟶ for (reference)". Each row is a paragraph
+   of spans laid out on the grid given by --cols:
+
+   ::: {.grid-row style="--cols: 1fr 1fr"}
+   [Formal]{.r} [vs. Arbitrary]{.alert}
+   :::                                                                     */
+.reveal .grid-row > p {
+  display: grid;
+  grid-template-columns: var(--cols, 1fr 1fr);
+  column-gap: 0.5em;
+  align-items: baseline;
+  margin: 0.25em 0;
+}
+
+.reveal .grid-row .r { text-align: right; }
+.reveal .grid-row .l { text-align: left; }
+.reveal .grid-row .c { text-align: center; }
+
+/* Column headers of such grids */
+.reveal .grid-head > p {
+  color: $site-muted;
+  font-size: 0.8em;
+}
+
+/* β-reductions: one term per line, joined by ⇝ turned downwards. */
+.reveal .reduction {
+  text-align: center;
+  line-height: 1.3;
+  font-size: 0.75em;
+
+  p {
+    margin: 0;
+  }
+
+  .steps p {
+    margin: 0.15em 0;
+  }
+}
+
+.reveal .down {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+
+/* Diagrams ---------------------------------------------------------------
+   The TikZ figures are rebuilt as a fixed-size box (`.diagram`, sized
+   inline) in which `.node`s are placed by their centre (left/top inline,
+   in px of the 1440 × 810 slide) and an `svg.arrows` covering the whole
+   box draws the edges. Both can carry fragment classes: reveal.js toggles
+   opacity and visibility, which SVG groups honour. The arrowheads are
+   defined once for the deck in res/arrowheads.html. */
+.reveal .diagram {
+  position: relative;
+  margin: 0 auto;
+  font-size: 0.8em;
+
+  > svg.arrows {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  .node {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.25;
+    white-space: nowrap;
+
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  /* A TikZ `draw, rounded corners` node */
+  .box {
+    padding: 0.4em 1.2em;
+    border: 2px solid currentColor;
+    border-radius: 10px;
+    background: white;
+  }
+
+  .u {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+.reveal svg.arrows {
+  line, path, polyline, rect, polygon {
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+  }
+
+  .red :is(line, path, polyline) {
+    stroke: red;
+  }
+
+  .dashed :is(line, path, polyline) {
+    stroke-dasharray: 8 6;
+  }
+
+  .double :is(line, path, polyline) {
+    stroke-width: 5;
+  }
+
+  .double .inner {
+    stroke: white;
+    stroke-width: 1.6;
+  }
+
+  text {
+    font-family: $font-family-sans-serif;
+    font-weight: 200;
+  }
+}
+
+/* The red question marks of the diagrams (TikZ \Huge\textbf{?}) */
+.reveal .qmark {
+  color: red;
+  font-size: 2.4em;
+  font-weight: 400 !important;
+  line-height: 1;
+}
+
+/* The critical argumentative matrix, and cascades of statements like it:
+   centred statements joined by down-arrows (svg), each arrow stacked with
+   its dashed red variant. */
+.reveal .matrix {
+  text-align: center;
+
+  .stmt {
+    margin: 0;
+  }
+
+  .label {
+    font-size: 0.8em;
+  }
+
+  /* The alerts of the statements that go out when the labels come in
+     (`.alert .fragment .custom .unalert`, reveal.js marking them visible
+     without hiding them first): their red gives way to the text's. */
+  .unalert {
+    transition: color 0.4s ease;
+  }
+
+  .unalert.visible {
+    color: inherit;
+  }
+
+  /* A word struck out in red for one step, what replaces it written in red
+     under it, where the labels come next (`.swap`: a custom fragment,
+     current for that step only, holding the `.word` and its `.below`, a
+     fade-in-then-out fragment of the same step). Under the word, the
+     replacement takes no room of its own. */
+  .swap {
+    position: relative;
+  }
+
+  .swap .word {
+    text-decoration: line-through;
+    text-decoration-color: transparent;
+    transition: color 0.4s ease, text-decoration-color 0.4s ease;
+  }
+
+  .swap.current-fragment .word {
+    text-decoration-color: $alert-red;
+  }
+
+  .swap .below {
+    position: absolute;
+    top: 100%;
+    left: -200%;
+    right: -200%;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    color: $alert-red;
+  }
+
+  /* An arrow with what secures the passage written beside it: the arrow
+     stays centred under the statements, the label hangs to its right. */
+  .passage {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    > .r-stack {
+      grid-column: 2;
+    }
+
+    > p {
+      grid-column: 3;
+      justify-self: start;
+      margin: 0 0 0 0.5em;
+      font-size: 0.8em;
+    }
+  }
+
+  .r-stack {
+    justify-items: center;
+  }
+
+  svg {
+    display: block;
+    margin: 0.15em auto;
+    overflow: visible;
+  }
+
+  /* No layer of its own for each fragment (reveal.js's will-change), which
+     rasterizes it slightly differently: the matrix is shown again after
+     "Critique radicalized", its arrows now fragments themselves rather than
+     inside one, and must look the same as they were left. */
+  .fragment:not(.custom) {
+    will-change: auto;
+  }
+}
+
+.reveal .cascade svg {
+  margin: 0.05em auto;
+}
+
+/* A list of theses, one more at each click (`- [...]{.fragment}`): each
+   item, bullet and all, hidden until its fragment shows, and set apart
+   from the next. */
+.reveal .theses {
+  li + li {
+    margin-top: 0.6em;
+  }
+
+  li:has(> .fragment) {
+    transition: opacity 0.2s ease;
+  }
+
+  li:has(> .fragment:not(.visible)) {
+    opacity: 0;
+  }
+}
+
+
+/* Slides of the critical formalism talks --------------------------------- */
+
+/* What is critique?: the title pages of the three Critiques, stacked */
+.reveal .kritik img {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.25em;
+}
+
+/* The birth of contemporary critique: the four stages of the beamer
+   overlay area share one cell, hung from the top as there (the opening
+   quote centred beside the portrait), and slightly smaller so the longest
+   one fits under the title. */
+.reveal .r-stack.nietzsche {
+  font-size: 0.85em;
+
+  > * {
+    width: 100%;
+    margin: 0;
+    align-self: start;
+  }
+
+  > :first-child {
+    align-self: center;
+  }
+}
+
+/* Three blocks side by side, with gutters and a portrait each */
+.reveal .three-blocks {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  > .column > div {
+    height: 100%;
+  }
+
+  .block-title {
+    font-size: 0.85em;
+  }
+
+  .portrait {
+    height: 350px;
+    margin: 0.2em auto 0.3em;
+  }
+
+  .author {
+    height: 250px;
+    margin: 0.1em auto 0.2em;
+  }
+
+  .small {
+    font-size: 0.68em;
+  }
+}
+
+/* "Formal | vs. Arbitrary" tables (beamer \huge) */
+.reveal .vs .grid-row > p {
+  --cols: 1fr 1fr;
+  font-size: 1.6em;
+  line-height: 1.5;
+}
+
+.reveal .vs-small .grid-row > p {
+  font-size: 1.25em;
+}
+
+/* A row under such a grid, laid over the space below it, so that the grid
+   stays where it is on the slides around, raised to hang just under the
+   last row. */
+.reveal .vs {
+  position: relative;
+
+  > .below {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    > p {
+      margin-top: -1em;
+    }
+  }
+}
+
+/* A word gathered under a brace (TikZ `decoration={brace}`), a label under
+   it: a box as wide as the word (an unseen copy of it, `.sizer`; of each,
+   for a column of words, as wide as the widest), the brace
+   drawn as four quarter circles, two to each half (`.half`), which meet in
+   the cusp, the label centred under it, whatever its width.
+
+   [[Formal]{.sizer}[[]{.half}[]{.half}]{.brace}[Natural]{.label}]{.underbrace} */
+.reveal .underbrace {
+  --curl: 0.2em;
+  --stroke: 2px;
+  position: relative;
+  display: inline-block;
+
+  .sizer {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .brace {
+    display: flex;
+    height: calc(2 * var(--curl));
+
+    > span {
+      position: relative;
+      flex: 1;
+    }
+
+    > span::before,
+    > span::after {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      height: var(--curl);
+      border: 0 solid currentColor;
+    }
+
+    // The ends, curling up into the line...
+    > :first-child::before {
+      left: 0;
+      top: 0;
+      width: calc(100% - var(--curl));
+      border-width: 0 0 var(--stroke) var(--stroke);
+      border-bottom-left-radius: var(--curl);
+    }
+
+    > :last-child::after {
+      right: 0;
+      top: 0;
+      width: calc(100% - var(--curl));
+      border-width: 0 var(--stroke) var(--stroke) 0;
+      border-bottom-right-radius: var(--curl);
+    }
+
+    // ...which curls down into the cusp.
+    > :first-child::after {
+      right: 0;
+      top: calc(var(--curl) - var(--stroke));
+      width: var(--curl);
+      border-width: var(--stroke) var(--stroke) 0 0;
+      border-top-right-radius: var(--curl);
+    }
+
+    > :last-child::before {
+      left: 0;
+      top: calc(var(--curl) - var(--stroke));
+      width: var(--curl);
+      border-width: var(--stroke) 0 0 var(--stroke);
+      border-top-left-radius: var(--curl);
+    }
+  }
+
+  .label {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+}
+
+/* Against/for grids with their references */
+.reveal :is(.critiques, .symptoms, .limits, .successes) {
+  width: 88%;
+  margin: 0 auto;
+  font-size: 1em;
+
+  .ref {
+    font-size: 0.75em;
+    color: $site-muted;
+  }
+
+  .cite {
+    font-size: 0.7em;
+    color: $site-muted;
+  }
+}
+
+/* Principles of the embodied and materialist critiques, and what current
+   AI makes of them: six rows of two lines, set smaller and closer to fit,
+   the closing line nearer. */
+.reveal .successes {
+  font-size: 0.8em;
+
+  .grid-row > p {
+    margin: 0.1em 0;
+  }
+
+  + .punchline {
+    margin-top: 0.6em;
+  }
+}
+
+.reveal .objections {
+  font-size: 0.95em;
+}
+
+/* Emoji in the "LLMs as programs computing functions" sequence */
+.reveal .emoji {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+
+/* λ-calculus slides: the program, the Church numerals, and the full term
+   of a program computing addition (lambdaterm.tex), set tiny, blue and
+   justified so that it fills the slide. */
+.reveal .p-line {
+  font-size: 0.85em;
+  text-align: left;
+}
+
+/* P, and P' under it: a block as wide as P', centred, so that P keeps its
+   place when P' comes (a fragment, which takes its place before), and from
+   one slide to the next (where P' is kept, unseen). */
+.reveal .p-pair {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.reveal .numerals {
+  font-size: 0.75em;
+
+  table {
+    margin: 0;
+    border: none;
+  }
+
+  td {
+    padding: 0.05em 0.3em;
+    border: none !important;
+  }
+}
+
+.reveal .lambdaterm {
+  margin-top: 0.3em;
+  color: blue;
+  font-family: "Latin Modern Math", "STIX Two Math", "Times New Roman", serif;
+  font-style: italic;
+  font-size: 0.4em;
+  line-height: 1.25;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.reveal .lambdaterm-def {
+  font-style: normal;
+}
+
+/* Formal specification: theory → structure → specification → program */
+.reveal .spec-chain {
+  text-align: center;
+
+  p {
+    margin: 0.1em 0;
+  }
+
+  .arrow {
+    font-size: 1.2em;
+    line-height: 1;
+  }
+}
+
+/* SVD of a PMI matrix: three heatmaps under their names */
+.reveal .svd-three {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 1.6em;
+
+  > div {
+    width: 32%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.reveal .truncate {
+  text-align: left;
+
+  p {
+    margin: 0 0 0.2em;
+  }
+
+  /* The matrices keep their aspect at their common height: the full one,
+     wider than its column, runs into the empty column at its right, as on
+     the beamer slide (reveal.js would keep it to 95% of its column). The
+     two share their left edge, rather than being centred by the stack, so
+     that the truncated one falls on the first columns of the full one. */
+  > * {
+    margin-left: 0;
+  }
+
+  img {
+    max-width: none;
+  }
+}
+
+/* M_*M^* as a covariance matrix: the product laid out as on the Venice
+   slide, the left factor beside it and the right one above it, each
+   matrix named across its middle. */
+.reveal .covariance {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: end;
+  column-gap: 20px;
+  row-gap: 12px;
+
+  > div {
+    position: relative;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+  }
+
+  .name {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+}
+
+/* Eigenvectors as fixed points: matrix times vector equals a number times
+   the vector, in a row. */
+.reveal .fixed-point p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2em;
+  margin: 0;
+}
+
+.reveal .svd-trio p {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+
+  img {
+    width: 115px;
+  }
+}
+
+/* Embedding dimensions as fixed points: one column of the matrix framed
+   in red (the dimension being a fixed point), as on the beamer slide. */
+.reveal .highlight-box {
+  position: relative;
+
+  img {
+    display: block;
+  }
+
+  .box-col {
+    position: absolute;
+    left: 35.1%;
+    width: 1.5%;
+    top: 4.6%;
+    height: 85%;
+    border: 3px solid red;
+  }
+}
+
+/* Structural features: eigenvector strips with their labels */
+.reveal .features {
+  font-size: 0.8em;
+  text-align: left;
+
+  p {
+    margin: 0.1em 0;
+  }
+
+  img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .eigw {
+    width: 22%;
+  }
+}
+
+/* Collaborations: the pictures of the Venice deck, a tall one on the left
+   and the others two by two on the right. The paragraphs Markdown wraps
+   them in are skipped, so that the pictures are the flex and grid items. */
+.reveal .collab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  p {
+    display: contents;
+  }
+
+  img {
+    display: block;
+    width: auto;
+    margin: 0;
+  }
+
+  .t1 { height: 480px; }
+
+  .collab-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 14px;
+
+    img { height: 230px; }
+  }
+}
+
+
+/* References -------------------------------------------------------------- */
+
+/* Reference papers: full entries (bibentry), in bold as the \fullcite of
+   the beamer decks. The class sits on the slide. */
+.reveal section.refpapers {
+  p {
+    margin: 0 0 0.9em;
+    font-size: 0.6em;
+    text-align: left;
+  }
+
+  p * {
+    font-weight: 400 !important;
+  }
+}
+
+/* The bibliography, in two columns */
+.reveal #refs {
+  columns: 2;
+  column-gap: 2em;
+  font-weight: 200;
+  line-height: 1.35;
+  text-align: left;
+
+  a {
+    overflow-wrap: anywhere;
+  }
+}
+
+.reveal #refs .csl-entry {
+  margin-bottom: 0.5em;
+  break-inside: avoid;
+}
+
+/* The references scroll (Quarto's .scrollable), and a scrolling box clips
+   what leaves it: the slide gets headroom above (a padding that its margin
+   takes back), for its title to be raised as the others. */
+.reveal .slides section.slide.scrollable {
+  margin-top: -1em;
+  padding-top: 1em;
+
+  > h2 {
+    position: relative;
+    top: -$title-raise * 1em;
+  }
+}
+
+
+/* Cover slide ------------------------------------------------------------
+   After the cover of the beamer talks (res/cover.tex of the Venice and
+   Basel decks): everything centred; the venue on three lines (the
+   institution, the event or host unit in italics, the date and place);
+   the title and subtitle; then each author in bold, with logos and website
+   below, side by side as beamer's minipages. Markup comes from
+   res/title-slide.html; a copy closes the deck (#closing-slide).
+
+   Sizes and spaces are beamer's: a 16 × 9 cm frame set in 11pt, scaled to
+   this 1440 × 810 deck (1 cm = 90px, 1pt ≈ 3.2px), i.e. \large 0.95em,
+   \Large 1.15em, \LARGE 1.35em, \small 0.8em of the 40px root. */
+
+.reveal :is(#title-slide, #closing-slide) {
+  text-align: center;
+}
+
+/* \disablefootline: neither footer nor slide number on the cover.
+   reveal.js sets `display: block` inline on both, hence the !important. */
+body:has(:is(#title-slide, #closing-slide).present) {
+  .reveal .footer,
+  .reveal .slide-number {
+    display: none !important;
+  }
+}
+
+/* No number either on the other slides left out of the count (outlines,
+   references; see the end of the deck), where reveal.js would show the
+   previous slide's: beamer's noframenumbering. */
+body:has(.reveal .slides section[data-visibility="uncounted"].present) {
+  .reveal .slide-number {
+    display: none !important;
+  }
+}
+
+.reveal .cover-venue p {
+  margin: 0;
+  font-size: 0.95em;          /* \large */
+  line-height: 1.2;
+}
+
+.reveal .cover-title {
+  margin: 108px 0 0;          /* \vspace{1.2cm} */
+  font-size: 1.35em;          /* \LARGE */
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.reveal .cover-subtitle {
+  margin: 18px 0 0;           /* \vspace{.2cm} */
+  font-size: 0.95em;          /* \large */
+  line-height: 1.2;
+}
+
+.reveal .cover-authors {
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;           /* \vspace{.8cm} */
+}
+
+/* One minipage per author, .45\textwidth wide */
+.reveal .cover-author {
+  width: 45%;
+}
+
+/* \Large\textbf: bold is Helvetica Neue Light in the beamer style */
+.reveal .slides .cover-name {
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: 300 !important;
+  line-height: 1.2;
+}
+
+/* The logos centred in a 1.2 cm high box, 2.5 cm wide each and 0.4 cm
+   apart, under a \vspace{.3cm} */
+.reveal .cover-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  height: 108px;
+  margin-top: 27px;
+
+  img {
+    width: 225px;
+    height: auto;
+    margin: 0;
+  }
+}
+
+/* \small\texttt under a \vspace{.2cm} */
+.reveal .cover-website {
+  margin: 18px 0 0;
+  font-family: $site-mono;
+  font-size: 0.8em;
+
+  a {
+    color: inherit;
+  }
+}

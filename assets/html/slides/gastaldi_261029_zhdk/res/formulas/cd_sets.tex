@@ -1,0 +1,28 @@
+% The square of "Embeddings as functions over sets" (Venice deck), whole
+% (\variant 0) or in layers for its overlays, all of one box, to be
+% stacked: 1, the sets and their maps; 2, the inclusions; 3, M_* and M^*;
+% 4, the same in red; 5, in blue. What a layer leaves out is drawn
+% transparent.
+\input{preamble}
+\begin{document}
+\color{ink}
+\tikzset{hide/.style={opacity=0, text opacity=0}}
+\tikzset{objects/.style={}, maps/.style={}, incl/.style={}, star/.style={}}
+\ifcase\variant
+\or
+  \tikzset{incl/.style={hide}, star/.style={hide}}
+\or
+  \tikzset{objects/.style={hide}, maps/.style={hide}, star/.style={hide}}
+\or
+  \tikzset{objects/.style={hide}, maps/.style={hide}, incl/.style={hide}}
+\or
+  \tikzset{objects/.style={hide}, maps/.style={hide}, incl/.style={hide}, star/.style={red}}
+\or
+  \tikzset{objects/.style={hide}, maps/.style={hide}, incl/.style={hide}, star/.style={blue}}
+\fi
+$\begin{tikzcd}[cramped, cells={nodes={objects}}]
+\W \arrow[rr, "M_w", maps] \arrow[dd, hook, incl] && \mathbb{R}^{\Cs} \arrow[lldd, dashed, "M_*", shift left=.5ex, star] \\
+\\
+\mathbb{R}^{\W} \arrow[rruu, dashed, "M^*", shift left=.5ex, star] && \Cs \arrow[ll, "M_c", maps] \arrow[uu, hook, incl]
+\end{tikzcd}$
+\end{document}

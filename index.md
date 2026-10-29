@@ -13,10 +13,12 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 
 ### 29/10/2026
 
-*What Escapes the Model? The Limits of Formalisation in AI*\
-Invited talk at the SNSF Scientific Exchange organized by the Immersive Arts Space (*Performing AI* project), followed by the public roundtable *Embodied AI, Formalisation, and Human–Machine Relations* (30/10, 4:00–6:00 pm CET).\
+*Formalization Is the Limit: For a Critical Formalism after Machine Learning.*\
+Invited talk at the workshop *What Escapes the Model? The Limits of Formalisation in AI* (Immersive Arts Space, ZHdK).\
+Followed by a the public roundtable on 30/10 [*Embodied AI, Formalisation, and Human–Machine Relations*](https://www.zhdk.ch/en/event/63255){:target="_blank"} (4:00–6:00 pm CET, Immersive Arts Space).\
 Zurich University of the Arts (ZHdK) - Zurich, Switzerland.\
-Morning session, 29/10.
+3:00–5:00 pm CET, Room ZT 8.T63, Toni-Areal, Pfingstweidstrasse 96.\
+[[Slides](assets/html/slides/gastaldi_261029_zhdk/Gastaldi_Slides.html){:target="_blank"}]
 
 ### 14/10/2026
 

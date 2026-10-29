@@ -1,0 +1,23 @@
+% Shared by the formulas and diagrams of the slides, rendered to SVG
+% (latex, then dvisvgm): the deck's ink and colours (CSS names, as MathJax
+% reads them, and the diagrams' orange), its naming (W, w red; C, c blue;
+% the categories C, D in orange and green sans serif).
+\documentclass[dvisvgm,border=0.5pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}
+\definecolor{ink}{HTML}{222222}
+\definecolor{red}{HTML}{FF0000}
+\definecolor{blue}{HTML}{0000FF}
+\definecolor{orange}{HTML}{FFA500}
+\definecolor{green}{HTML}{008000}
+\definecolor{alertred}{HTML}{FF3333}
+\definecolor{diagramorange}{HTML}{FF8000}
+\newcommand{\W}{{\color{red}W}}
+\newcommand{\Cs}{{\color{blue}C}}
+\newcommand{\w}{{\color{red}w}}
+\newcommand{\cc}{{\color{blue}c}}
+\newcommand{\C}{{\color{orange}\mathsf{C}}}
+\newcommand{\D}{{\color{green}\mathsf{D}}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\Rbar}{\bar{\mathbb{R}}}

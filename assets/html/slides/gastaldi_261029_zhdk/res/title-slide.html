@@ -1,0 +1,53 @@
+<!-- Cover slide for the talk decks, after the \coverpage of the beamer talks
+     (res/cover.tex of the Venice and Basel decks): everything centred; the
+     venue on three lines (the institution, the event or host unit in
+     italics, the date and place); the title and subtitle; then each author
+     in bold, with logos and website below, side by side as beamer's
+     minipages. No footline.
+
+     This file is a Quarto `title-slide.html` partial, so it must contain the
+     title <section> and nothing else. Styling lives in res/gianni.scss.
+
+     Metadata it reads, beyond the usual title/subtitle/date:
+       cover-host     the lines above the date (markdown, so the event or
+                      host unit can be set in *italics*)
+       cover-place    appended to the date: "October 29, 2026 – Zürich, ..."
+       cover-authors  list of {name, logos: list of {src, alt}, website};
+                      not Quarto's `author`, which it normalizes, nor `logo`,
+                      which would stamp the image onto every slide
+-->
+$if(title)$
+<section id="$idprefix$title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$>
+  <div class="cover-venue">
+    $for(cover-host)$
+    <p>$cover-host$</p>
+    $endfor$
+    $if(date)$
+    <p>$date$$if(cover-place)$ – $cover-place$$endif$</p>
+    $endif$
+  </div>
+  <h1 class="cover-title">$title$</h1>
+  $if(subtitle)$
+  <p class="cover-subtitle">$subtitle$</p>
+  $endif$
+  $if(cover-authors)$
+  <div class="cover-authors">
+    $for(cover-authors)$
+    <div class="cover-author">
+      <p class="cover-name">$it.name$</p>
+      $if(it.logos)$
+      <div class="cover-logos">
+        $for(it.logos)$
+        <img src="$it.src$" alt="$it.alt$">
+        $endfor$
+      </div>
+      $endif$
+      $if(it.website)$
+      <p class="cover-website"><a href="https://$it.website$">$it.website$</a></p>
+      $endif$
+    </div>
+    $endfor$
+  </div>
+  $endif$
+</section>
+$endif$

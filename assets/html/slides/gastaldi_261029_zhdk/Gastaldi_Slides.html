@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="Gastaldi_Slides_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Gastaldi_Slides_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Gastaldi_Slides_files/libs/quarto-html/popper.min.js"></script>
+<script src="Gastaldi_Slides_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Gastaldi_Slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Gastaldi_Slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Gastaldi_Slides_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Gianni Gastaldi">
+  <meta name="dcterms.date" content="2026-10-29">
+  <title>Formalization Is the Limit</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="Gastaldi_Slides_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Gastaldi_Slides_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="Gastaldi_Slides_files/libs/revealjs/dist/theme/quarto-07cef95b61864c3dbf7e9ddc6eedb645.css">
+  <link href="Gastaldi_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Gastaldi_Slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Gastaldi_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Gastaldi_Slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <!-- MathJax 2 (Quarto's default for reveal.js) prefers locally installed
+       STIX fonts over its own TeX web fonts. macOS ships the old STIXGeneral
+       fonts, which set the formulas visibly heavier than on the beamer slides
+       and lack some alphabets (\mathcal{S} comes out as a box). A global
+       `MathJax` object defined before MathJax.js loads is read as its
+       configuration, so this forces the TeX web fonts everywhere. It also
+       sets the formulas at the size of the text, as LaTeX does: MathJax would
+       enlarge them until their x-height matched the text's, and Helvetica
+       Neue's is so tall that they came out 19% larger, and as much heavier. -->
+  <script>
+    window.MathJax = {
+      "HTML-CSS": { availableFonts: [], preferredFont: null, webFont: "TeX",
+                    matchFontHeight: false }
+    };
+  </script>
+  <!-- A page shown live in a slide (a Plotly figure in an iframe) takes the
+       keyboard once it is clicked, and reveal.js would no longer hear the
+       keys, or the clicker, that move the slides: the keyboard is given back
+       at once, these pages needing only the mouse. -->
+  <script>
+    window.addEventListener("blur", () => setTimeout(() => {
+      const frame = document.activeElement;
+      if (frame?.tagName === "IFRAME" && frame.closest(".reveal .slides")) {
+        frame.blur();
+        window.focus();
+      }
+    }));
+  </script>
+</head>
+<body class="quarto-light">
+<!-- Arrowheads for the diagrams (TikZ `->`), defined once for the whole deck
+     and referenced from each slide's svg as marker-end="url(#ah)" etc.
+     Kept in a zero-size svg outside the slides, so that the markers stay
+     renderable whichever slide is shown (included with include-before-body). -->
+<svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="ah" viewbox="0 0 10 10" refx="8" refy="5" markerwidth="5" markerheight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 L2.5,5 z" fill="black"></path>
+    </marker>
+    <marker id="ah-red" viewbox="0 0 10 10" refx="8" refy="5" markerwidth="5" markerheight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 L2.5,5 z" fill="red"></path>
+    </marker>
+    <!-- for the 5px "double" arrows -->
+    <marker id="ah-red-double" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="2.6" markerheight="2.6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 L2.5,5 z" fill="red"></path>
+    </marker>
+  </defs>
+</svg>
+  <div class="reveal">
+    <div class="slides">
+
+<!-- Cover slide for the talk decks, after the \coverpage of the beamer talks
+     (res/cover.tex of the Venice and Basel decks): everything centred; the
+     venue on three lines (the institution, the event or host unit in
+     italics, the date and place); the title and subtitle; then each author
+     in bold, with logos and website below, side by side as beamer's
+     minipages. No footline.
+
+     This file is a Quarto `title-slide.html` partial, so it must contain the
+     title <section> and nothing else. Styling lives in res/gianni.scss.
+
+     Metadata it reads, beyond the usual title/subtitle/date:
+       cover-host     the lines above the date (markdown, so the event or
+                      host unit can be set in *italics*)
+       cover-place    appended to the date: "October 29, 2026 – Zürich, ..."
+       cover-authors  list of {name, logos: list of {src, alt}, website};
+                      not Quarto's `author`, which it normalizes, nor `logo`,
+                      which would stamp the image onto every slide
+-->
+<section id="title-slide" data-background-color="#ffffff" class="center">
+  <div class="cover-venue">
+        <p>Zurich University of the Arts · Immersive Arts Space</p>
+        <p><em>What Escapes the Model? The Limits of Formalisation in AI</em></p>
+            <p>October 29, 2026 – Zürich, Switzerland</p>
+      </div>
+  <h1 class="cover-title">Formalization Is the Limit</h1>
+    <p class="cover-subtitle">For a Critical Formalism after Machine Learning</p>
+      <div class="cover-authors">
+        <div class="cover-author">
+      <p class="cover-name">Gianni Gastaldi</p>
+            <div class="cover-logos">
+                <img src="media/logo_eth.png" alt="ETH Zürich">
+                <img src="media/logo_sorbonne.png" alt="Sorbonne Université">
+              </div>
+                  <p class="cover-website"><a href="https://www.giannigastaldi.com">www.giannigastaldi.com</a></p>
+          </div>
+      </div>
+  </section>
+<section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Outline</h2>
+<ul>
+<li><a href="#/the-critique-of-ai-is-ineffectual" id="/toc-the-critique-of-ai-is-ineffectual">1. The critique of AI is ineffectual</a></li>
+<li><a href="#/the-contemporary-critical-matrix-is-broken" id="/toc-the-contemporary-critical-matrix-is-broken">2. The contemporary critical matrix is broken</a></li>
+<li><a href="#/critique-has-been-dogmatic-about-formalization" id="/toc-critique-has-been-dogmatic-about-formalization">3. Critique has been dogmatic about formalization</a></li>
+<li><a href="#/formalization-can-ground-an-epistemological-critique" id="/toc-formalization-can-ground-an-epistemological-critique">4. Formalization can ground an epistemological critique</a></li>
+<li><a href="#/formalization-can-inform-a-theoretical-critique" id="/toc-formalization-can-inform-a-theoretical-critique">5. Formalization can inform a theoretical critique</a></li>
+<li><a href="#/formalism-is-a-realization-not-a-betrayal-of-critique" id="/toc-formalism-is-a-realization-not-a-betrayal-of-critique">6. Formalism is a realization, not a betrayal, of critique</a></li>
+<li><a href="#/conclusions-formalism-and-arbitrariness" id="/toc-conclusions-formalism-and-arbitrariness">7. Conclusions: Formalism and arbitrariness</a></li>
+</ul>
+</nav>
+</section>
+<section>
+<section id="the-critique-of-ai-is-ineffectual" class="title-slide slide level1 center">
+<h1>1. The critique of AI is ineffectual</h1>
+<div class="sections">
+<ul>
+<li><span>1. The critique of AI is ineffectual</span></li>
+<li><span class="shaded">2. The contemporary critical matrix is broken</span></li>
+<li><span class="shaded">3. Critique has been dogmatic about formalization</span></li>
+<li><span class="shaded">4. Formalization can ground an epistemological critique</span></li>
+<li><span class="shaded">5. Formalization can inform a theoretical critique</span></li>
+<li><span class="shaded">6. Formalism is a realization, not a betrayal, of critique</span></li>
+<li><span class="shaded">7. Conclusions: Formalism and arbitrariness</span></li>
+</ul>
+</div>
+</section>
+<section id="unbelievable-progress" class="slide level2 center">
+<h2>Unbelievable progress</h2>
+<div class="columns vcenter">
+<div class="column" style="width:40%;">
+<div class="center" style="font-size: 1.1em">
+<p><strong>2012/2014</strong></p>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="center" style="font-size: 1.1em">
+<p><strong>2024/2026</strong></p>
+</div>
+</div></div>
+<div class="columns vcenter" style="margin-top: -.8em;">
+<div class="column fragment" style="width:40%;">
+<div class="center">
+<p><img data-src="media/imagenet.png" height="330"> <img data-src="media/king_queen.png" height="300"></p>
+</div>
+</div><div class="column fragment" style="width:60%;">
+<div class="center">
+<p><span style="display: inline-block; position: relative; overflow: hidden; margin: var(--r-block-margin) 0; aspect-ratio: 634.000 / 564.000; height: 630px"><img data-src="media/musk.jpg" style="position: absolute; left: -0.0000%; top: -0.0000%; width: 139.4322%; height: auto; max-width: none; max-height: none; margin: 0"></span></p>
+</div>
+</div></div>
+</section>
+<section id="stochastic-parrots-vs.-agi" class="slide level2 center">
+<h2>Stochastic parrots vs.&nbsp;AGI</h2>
+<div class="columns vcenter">
+<div class="column" style="width:34%;">
+<div class="center">
+<p><span class="emoji">🤖🧠</span></p>
+<p>LLMs have a relation<br>to natural language,<br>therefore they are like us</p>
+</div>
+</div><div class="column" style="width:32%;">
+<svg viewbox="0 0 300 40" width="100%" height="40" style="overflow: visible">
+  <line x1="10" y1="20" x2="290" y2="20" stroke="black" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"></line>
+</svg>
+</div><div class="column" style="width:34%;">
+<div class="center">
+<p><span class="emoji">📉🦜</span></p>
+<p>LLMs are not like us,<br>therefore they do not<br>and can not have any<br>relation to natural language</p>
+</div>
+</div></div>
+</section>
+<section id="the-internal-critique-of-ai-is-disarmingly-poor" class="slide level2 center">
+<h2>The internal critique of AI is disarmingly poor</h2>
+<ul>
+<li><p><strong><span class="citation" data-cites="kirschenbaum2023againtheory">Kirschenbaum (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></strong>:<br> Bender et al.’s <span class="citation" data-cites="bender2021onthedangers">(<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span> paper “offers <span class="alert">a disarmingly linear account of how language, communication, intention, and meaning work</span>, one that would seem to sidestep decades of scholarship around these same issues in literary theory […] the passage would be <span class="alert">red meat for a graduate critical-theory seminar</span>.”</p></li>
+<li><p><strong><span class="citation" data-cites="underwood2023empiricaltriumph">Underwood (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></strong>:<br> “The beautiful <span class="alert">irony</span> of this situation […] is that a generation of <span class="alert">humanists trained on Foucault</span> have now rallied around ‘On the Dangers of Stochastic Parrots’ to <span class="alert">oppose a theory of language that their own disciplines invented</span>, just at the moment when computer scientists are reluctantly beginning to accept it.”</p></li>
+</ul>
+</section></section>
+<section>
+<section id="the-contemporary-critical-matrix-is-broken" class="title-slide slide level1 center">
+<h1>2. The contemporary critical matrix is broken</h1>
+<div class="sections">
+<ul>
+<li><span class="shaded">1. The critique of AI is ineffectual</span></li>
+<li><span>2. The contemporary critical matrix is broken</span></li>
+<li><span class="shaded">3. Critique has been dogmatic about formalization</span></li>
+<li><span class="shaded">4. Formalization can ground an epistemological critique</span></li>
+<li><span class="shaded">5. Formalization can inform a theoretical critique</span></li>
+<li><span class="shaded">6. Formalism is a realization, not a betrayal, of critique</span></li>
+<li><span class="shaded">7. Conclusions: Formalism and arbitrariness</span></li>
+</ul>
+</div>
+</section>
+<section id="what-is-critique" class="slide level2 center">
+<h2>What is critique?</h2>
+<div class="columns vcenter">
+<div class="column" style="width:64%;">
+<div class="center">
+<p><span class="alert"><strong>Anti-dogmaticity</strong></span><br> Knowledge does not bear on substances,<br>but on phenomena</p>
+<p><span class="alert"><strong>Conditionality</strong></span><br> Knowledge is not absolute,<br>but relative to very precise conditions</p>
+<p><span class="alert"><strong>Limitedness</strong></span><br> The legitimacy of knowledge is not unbounded,<br>but circumscribed within fairly precise limits</p>
+</div>
+</div><div class="column" style="width:34%;">
+<div class="kritik">
+<p><img data-src="media/kritik_1.jpg"> <img data-src="media/kritik_2.jpg"> <img data-src="media/kritik_3.jpg"></p>
+</div>
+</div></div>
+</section>
+<section id="the-birth-of-contemporary-critique" class="slide level2 center">
+<h2>The birth of contemporary critique</h2>
+<div class="columns vcenter">
+<div class="column" style="width:30%;">
+<p><img data-src="media/nietzsche1875.jpg" style="width:100.0%"></p>
+</div><div class="column" style="width:70%;">
+<div class="quote">
+<p>“In some remote corner of the universe, flickering in the light of the countless solar systems into which it had been poured, there was once a planet on which <span class="alert">clever animals invented cognition</span>. It was the most <span class="alert">arrogant</span> and most <span class="alert">mendacious</span> minute in the ‘history of the world’…”</p>
+</div>
+<div class="source">
+<p><em>On Truth and Lying in a Non-Moral Sense</em> <span class="citation" data-cites="nietzsche1873ontruth">(<a href="#/references" role="doc-biblioref" onclick="">Nietzsche, 1873</a>)</span></p>
+</div>
+</div></div>
+</section>
+<section id="the-critical-argumentative-matrix" class="slide level2 center">
+<h2>The critical argumentative matrix</h2>
+<div class="matrix">
+<div class="stmt">
+<p><span class="alert fragment custom unalert" data-fragment-index="3">Knowledge</span> is ineluctably conditioned by <span class="swap fragment custom" data-fragment-index="3"><span class="word alert fragment custom unalert" data-fragment-index="3">language</span><span class="below fragment fade-in-then-out" data-fragment-index="3">embodiment</span></span></p>
+</div>
+<div class="label fragment" data-fragment-index="4">
+<p><span class="alert fragment custom unalert" data-fragment-index="5">(Epistemological)</span></p>
+</div>
+<div class="fragment" data-fragment-index="1">
+<div class="passage">
+<div class="r-stack">
+<svg width="24" height="46"><line x1="12" y1="2" x2="12" y2="40" stroke="black" stroke-width="2" marker-end="url(#ah)"></line></svg>
+</div>
+<p><span class="alert fragment" data-fragment-index="5"><em>Language is arbitrary</em></span></p>
+</div>
+<div class="stmt">
+<p>Any regularity in <span class="swap fragment custom" data-fragment-index="3"><span class="word">language</span><span class="below fragment fade-in-then-out" data-fragment-index="3">bodies</span></span> and knowledge is <span class="alert fragment custom unalert" data-fragment-index="3">political</span></p>
+</div>
+<div class="label fragment" data-fragment-index="4">
+<p><span class="alert fragment custom unalert" data-fragment-index="5">(Political)</span></p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2">
+<div class="passage">
+<div class="r-stack">
+<svg width="24" height="46"><line x1="12" y1="2" x2="12" y2="40" stroke="black" stroke-width="2" marker-end="url(#ah)"></line></svg>
+</div>
+<p><span class="alert fragment" data-fragment-index="5"><em>Language is arbitrary</em></span></p>
+</div>
+<div class="stmt">
+<p>We must <span class="alert fragment custom unalert" data-fragment-index="3">resist</span> inherited (<span class="swap fragment custom" data-fragment-index="3"><span class="word">linguistic</span><span class="below fragment fade-in-then-out" data-fragment-index="3">embodied</span></span> and cognitive) regularities and <span class="alert fragment custom unalert" data-fragment-index="3">create</span> new ones</p>
+</div>
+<div class="label fragment" data-fragment-index="4">
+<p><span class="alert fragment custom unalert" data-fragment-index="5">(Aesthetic)</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="critique-radicalized" class="slide level2 center">
+<h2>Critique radicalized</h2>
+<div class="center points">
+<p><span class="alert"><strong>Anti-dogmaticity</strong></span><br> The divorce between knowledge and substances is pushed to the extreme</p>
+<p><span class="alert"><strong>Conditionality</strong></span><br> Conditions become maximally local</p>
+<p><span class="alert"><strong>Limitedness</strong></span><br> The search for alternative grounds turns from a possibility into a duty</p>
+</div>
+</section>
+<section id="the-critical-argumentative-matrix-1" class="slide level2 center">
+<h2>The critical argumentative matrix</h2>
+<div class="matrix">
+<div class="stmt">
+<p>Knowledge is ineluctably conditioned by language</p>
+</div>
+<div class="label">
+<p>(Epistemological)</p>
+</div>
+<div class="passage">
+<div class="r-stack">
+<svg width="24" height="46"><line x1="12" y1="2" x2="12" y2="40" stroke="black" stroke-width="2" marker-end="url(#ah)"></line></svg>
+<svg class="fragment" data-fragment-index="1" width="24" height="46"><path d="M-2,11 L26,35 M26,11 L-2,35" stroke="red" stroke-width="3" stroke-linecap="round"></path></svg>
+</div>
+<p><span class="alert"><em>Language is arbitrary<span class="fragment" data-fragment-index="1">?</span></em></span></p>
+</div>
+<div class="stmt">
+<p>Any regularity in language and knowledge is political</p>
+</div>
+<div class="label">
+<p>(Political)</p>
+</div>
+<div class="passage">
+<div class="r-stack">
+<svg class="fragment fade-out" data-fragment-index="1" width="24" height="46"><line x1="12" y1="2" x2="12" y2="40" stroke="black" stroke-width="2" marker-end="url(#ah)"></line></svg>
+<svg class="fragment" data-fragment-index="1" width="24" height="46"><line x1="12" y1="2" x2="12" y2="40" stroke="red" stroke-width="2" stroke-dasharray="6 5"></line></svg>
+</div>
+<p><span class="alert"><em>Language is arbitrary<span class="fragment" data-fragment-index="1">?</span></em></span></p>
+</div>
+<div class="stmt">
+<p>We must resist inherited (linguistic and cognitive) regularities and create new ones</p>
+</div>
+<div class="label">
+<p>(Aesthetic)</p>
+</div>
+</div>
+</section>
+<section id="the-formalization-of-language-theory" class="slide level2 center">
+<h2>The formalization of language theory</h2>
+<div class="columns three-blocks">
+<div class="column" style="width:32%;">
+<div class="exampleblock">
+<div class="block-title">
+<p>Logical Syntax of Language<br>(1934)</p>
+</div>
+<div class="center">
+<p><img data-src="media/author_carnap.jpg" class="portrait"></p>
+<p>Logic<br>↓<br>Semantics</p>
+</div>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="exampleblock">
+<div class="block-title">
+<p>Information Theory<br>(1948)</p>
+</div>
+<div class="center">
+<p><img data-src="media/author_shannon.jpg" class="portrait"></p>
+<p>Mathematics<br>↓<br>Pragmatics</p>
+</div>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="exampleblock">
+<div class="block-title">
+<p>Generative Linguistics<br>(1957)</p>
+</div>
+<div class="center">
+<p><img data-src="media/author_chomsky.jpg" class="portrait"></p>
+<p>Computer Science<br>↓<br>Syntax</p>
+</div>
+</div>
+</div></div>
+</section>
+<section id="dogmatic-use-of-formalism" class="slide level2 center">
+<h2>Dogmatic use of formalism</h2>
+<div class="vs">
+<div class="grid-row">
+<p><span class="r">Formal</span> <span class="alert">vs.&nbsp;Arbitrary</span></p>
+</div>
+<div class="grid-row fragment">
+<p><span class="r">Formal</span> <span class="alert">vs.&nbsp;Material</span></p>
+</div>
+<div class="grid-row fragment">
+<p><span class="r">Formal</span> <span class="alert">vs.&nbsp;Historical</span></p>
+</div>
+<div class="grid-row fragment below">
+<p><span class="r"><span class="underbrace"><span class="sizer">Formal</span><span class="brace"><span class="half"></span><span class="half"></span></span><span class="label green">Natural</span></span></span></p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="critique-has-been-dogmatic-about-formalization" class="title-slide slide level1 center">
+<h1>3. Critique has been dogmatic about formalization</h1>
+<div class="sections">
+<ul>
+<li><span class="shaded">1. The critique of AI is ineffectual</span></li>
+<li><span class="shaded">2. The contemporary critical matrix is broken</span></li>
+<li><span>3. Critique has been dogmatic about formalization</span></li>
+<li><span class="shaded">4. Formalization can ground an epistemological critique</span></li>
+<li><span class="shaded">5. Formalization can inform a theoretical critique</span></li>
+<li><span class="shaded">6. Formalism is a realization, not a betrayal, of critique</span></li>
+<li><span class="shaded">7. Conclusions: Formalism and arbitrariness</span></li>
+</ul>
+</div>
+</section>
+<section id="the-other-side-of-the-same-dogma" class="slide level2 center">
+<h2>The other side of the same dogma</h2>
+<div class="r-stack">
+<div class="vs fragment fade-out" data-fragment-index="1">
+<div class="grid-row">
+<p><span class="r">Formal</span> <span class="alert">vs.&nbsp;Arbitrary</span></p>
+</div>
+<div class="grid-row">
+<p><span class="r">Formal</span> <span class="alert">vs.&nbsp;Material</span></p>
+</div>
+<div class="grid-row">
+<p><span class="r">Formal</span> <span class="alert">vs.&nbsp;Historical</span></p>
+</div>
+</div>
+<div class="vs fragment" data-fragment-index="1">
+<div class="grid-row">
+<p><span class="r">Arbitrary</span> <span class="alert">vs.&nbsp;Formal</span></p>
+</div>
+<div class="grid-row">
+<p><span class="r">Material</span> <span class="alert">vs.&nbsp;Formal</span></p>
+</div>
+<div class="grid-row">
+<p><span class="r">Historical</span> <span class="alert">vs.&nbsp;Formal</span></p>
+</div>
+<div class="grid-row fragment below" data-fragment-index="2">
+<p><span class="r"><span class="underbrace"><span class="sizer">Arbitrary</span><span class="sizer">Material</span><span class="sizer">Historical</span><span class="brace"><span class="half"></span><span class="half"></span></span><span class="label green">Cultural</span></span></span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="nietzsche-against-forms" class="slide level2 center">
+<h2>Nietzsche against forms</h2>
+<div class="columns vcenter">
+<div class="column" style="width:24%;">
+<p><img data-src="media/nietzsche1875.jpg" style="width:100.0%"></p>
+</div><div class="column small" style="width:74%;">
+<ul>
+<li><p>“their eyes merely glide across the surface of things and see <span class="alert">‘forms’</span>; <span class="alert">nowhere</span> does their perception lead into <span class="alert">truth</span>; instead it is content to receive stimuli and, as it were, to play with its fingers on <span class="alert">the back of things</span>.”</p></li>
+<li><p>“…the great edifice of concepts exhibits the <span class="alert">rigid regularity</span> of a <em>Roman columbarium</em>, while <span class="alert">logic</span> breathes out that air of <span class="alert">severity and coolness</span> which is peculiar to <span class="alert">mathematics</span>.”</p></li>
+<li><p>“…the only things we really know about them [the laws of nature] are things which <span class="alert">we bring to bear on them</span>: time and space, in other words, <span class="alert">relations of succession and number</span>.”</p></li>
+</ul>
+<div class="source">
+<p><span class="citation" data-cites="nietzsche1873ontruth">(<a href="#/references" role="doc-biblioref" onclick="">Nietzsche, 1873</a>)</span></p>
+</div>
+</div></div>
+</section>
+<section id="empirical-limits" class="slide level2 center">
+<h2>Empirical limits</h2>
+<div class="limits">
+<div class="grid-row grid-head" style="--cols: 1.15fr 2.2em 1.3fr">
+<p><span class="r">Resists formalization</span> <span></span> <span>Automated</span></p>
+</div>
+<div class="grid-row" style="--cols: 1.15fr 2.2em 1.3fr">
+<p><span class="r">Chess programs have stalled<br><span class="cite"><span class="citation" data-cites="dreyfus1965alchemy">(<a href="#/references" role="doc-biblioref" onclick="">Dreyfus, 1965</a>)</span></span></span> <span class="c">⟶</span> <span>Mac Hack beats Dreyfus <span class="cite">(1967)</span><br>Deep Blue beats Kasparov <span class="cite">(1997)</span></span></p>
+</div>
+<div class="grid-row" style="--cols: 1.15fr 2.2em 1.3fr">
+<p><span class="r">Go is out of reach</span> <span class="c">⟶</span> <span>AlphaGo beats Lee Sedol <span class="cite">(2016)</span></span></p>
+</div>
+<div class="grid-row" style="--cols: 1.15fr 2.2em 1.3fr">
+<p><span class="r">Winograd Schema Challenge<br><span class="cite"><span class="citation" data-cites="levesque2012winograd">(<a href="#/references" role="doc-biblioref" onclick="">Levesque et al., 2012</a>)</span></span></span> <span class="c">⟶</span> <span>“The Defeat of the Winograd Schema Challenge”<br><span class="cite"><span class="citation" data-cites="kocijan2023defeat">(<a href="#/references" role="doc-biblioref" onclick="">Kocijan et al., 2023</a>)</span></span></span></p>
+</div>
+<div class="grid-row" style="--cols: 1.15fr 2.2em 1.3fr">
+<p><span class="r">…</span> <span class="c">⟶</span> <span>…</span></p>
+</div>
+</div>
+<div class="punchline">
+<p><span class="fragment">Empirical limits are <span class="alert">overcome as soon as they are set</span></span><br> <span class="fragment">not by formalization, but by <span class="alert">automation</span></span></p>
+</div>
+</section>
+<section id="not-a-betrayal-but-a-success" class="slide level2 center">
+<h2>Not a betrayal, but a success</h2>
+<div class="successes">
+<div class="grid-row grid-head" style="--cols: 1.3fr 2.2em 1fr">
+<p><span class="r">Embodied and materialist critique</span> <span></span> <span class="fragment" data-fragment-index="1">Current AI</span></p>
+</div>
+<div class="grid-row" style="--cols: 1.3fr 2.2em 1fr">
+<p><span class="r">Know-how is tacit, not rules<br><span class="cite"><span class="citation" data-cites="polanyi1966tacitdimension dreyfus1972whatcomputerscantdo">(<a href="#/references" role="doc-biblioref" onclick="">Dreyfus, 1972</a>; <a href="#/references" role="doc-biblioref" onclick="">Polanyi, 1966</a>)</span></span></span> <span class="c fragment" data-fragment-index="1">⟶</span> <span class="fragment" data-fragment-index="1">No rules, only weights</span></p>
+</div>
+<div class="grid-row" style="--cols: 1.3fr 2.2em 1fr">
+<p><span class="r">Intelligence needs no representations<br><span class="cite"><span class="citation" data-cites="brooks1991intelligence varela1991embodiedmind">(<a href="#/references" role="doc-biblioref" onclick="">Brooks, 1991</a>; <a href="#/references" role="doc-biblioref" onclick="">Varela et al., 1991</a>)</span></span></span> <span class="c fragment" data-fragment-index="1">⟶</span> <span class="fragment" data-fragment-index="1">Distributed, sub-symbolic activations</span></p>
+</div>
+<div class="grid-row" style="--cols: 1.3fr 2.2em 1fr">
+<p><span class="r">Skills come from immersion and practice<br><span class="cite"><span class="citation" data-cites="dreyfus1988makingamind">(<a href="#/references" role="doc-biblioref" onclick="">Dreyfus &amp; Dreyfus, 1988</a>)</span></span></span> <span class="c fragment" data-fragment-index="1">⟶</span> <span class="fragment" data-fragment-index="1">Learning from data, not specification</span></p>
+</div>
+<div class="grid-row" style="--cols: 1.3fr 2.2em 1fr">
+<p><span class="r">Action answers the whole situation<br><span class="cite"><span class="citation" data-cites="suchman1987plans">(<a href="#/references" role="doc-biblioref" onclick="">Suchman, 1987</a>)</span></span></span> <span class="c fragment" data-fragment-index="1">⟶</span> <span class="fragment" data-fragment-index="1">Extreme context sensitivity</span></p>
+</div>
+<div class="grid-row" style="--cols: 1.3fr 2.2em 1fr">
+<p><span class="r">Knowing is doing<br><span class="cite"><span class="citation" data-cites="barad2007meetinguniverse">(<a href="#/references" role="doc-biblioref" onclick="">Barad, 2007</a>)</span></span></span> <span class="c fragment" data-fragment-index="1">⟶</span> <span class="fragment" data-fragment-index="1">Performance taken as competence</span></p>
+</div>
+<div class="grid-row" style="--cols: 1.3fr 2.2em 1fr">
+<p><span class="r">Matter, not form, acts<br><span class="cite"><span class="citation" data-cites="bennett2010vibrantmatter">(<a href="#/references" role="doc-biblioref" onclick="">Bennett, 2010</a>)</span></span></span> <span class="c fragment" data-fragment-index="1">⟶</span> <span class="fragment" data-fragment-index="1">Compute, energy, data at scale</span></p>
+</div>
+</div>
+</section>
+<section id="critical-formalism" class="slide level2 center">
+<h2>Critical Formalism</h2>
+<div class="center points">
+<p>AI is not formalization, but <span class="alert">automation</span> disguised as science</p>
+<p><span class="fragment" data-fragment-index="1"><span class="alert">Formalization</span> is the one thing AI models miss</span></p>
+</div>
+<div id="cf" style="width: 1100px; margin: 0 auto;">
+
+</div>
+<div id="cf-1" class="fragment" data-fragment-index="2">
+
+</div>
+<div id="cf-2" class="fragment" data-fragment-index="3">
+
+</div>
+<script src="res/d3.v7.9.0.min.js"></script>
+<script src="res/flow_diagram.js"></script>
+<script>
+// The new alliance: critique and formal thought come together in a
+// critical formalism (one click), which affords the two critiques of the
+// next sections, the epistemological and the theoretical (another click).
+flowDiagram("#cf", {
+  nodes: [
+    { id: "critique", at: [-4, 1.6], title: "Critique" },
+    { id: "formal", at: [4, 1.6], title: "Formal thought" },
+    { id: "alliance", at: [0, 0], text: "Critical formalism",
+      box: true, minWidth: 4, minHeight: 0.9 },
+    { id: "epistemological", at: [-4, -1.6], title: "Epistemological critique",
+      stage: 2 },
+    { id: "theoretical", at: [4, -1.6], title: "Theoretical critique", stage: 2 },
+  ],
+  edges: [
+    { from: "critique", to: "alliance", fromAt: "east", toAt: 90, out: 0, in: 90 },
+    { from: "formal", to: "alliance", fromAt: "west", toAt: 90, out: 180, in: 90 },
+    { from: "alliance", to: "epistemological", fromAt: 270, toAt: "east",
+      out: 270, in: 0, stage: 2 },
+    { from: "alliance", to: "theoretical", fromAt: 270, toAt: "west",
+      out: 270, in: 180, stage: 2 },
+  ],
+}, ["#cf-1", "#cf-2"]);
+</script>
+</section></section>
+<section>
+<section id="formalization-can-ground-an-epistemological-critique" class="title-slide slide level1 center">
+<h1>4. Formalization can ground an epistemological critique</h1>
+<div class="sections">
+<ul>
+<li><span class="shaded">1. The critique of AI is ineffectual</span></li>
+<li><span class="shaded">2. The contemporary critical matrix is broken</span></li>
+<li><span class="shaded">3. Critique has been dogmatic about formalization</span></li>
+<li><span>4. Formalization can ground an epistemological critique</span></li>
+<li><span class="shaded">5. Formalization can inform a theoretical critique</span></li>
+<li><span class="shaded">6. Formalism is a realization, not a betrayal, of critique</span></li>
+<li><span class="shaded">7. Conclusions: Formalism and arbitrariness</span></li>
+</ul>
+</div>
+</section>
+<section id="llms-as-programs-computing-functions" class="slide level2 center">
+<h2>LLMs as programs computing functions</h2>
+<div class="diagram" style="width: 1300px; height: 610px; font-size: 0.95em;">
+<svg class="arrows" viewbox="0 0 1300 610">
+  <line x1="650" y1="46" x2="650" y2="86" marker-end="url(#ah)"></line>
+  <g class="fragment" data-fragment-index="9">
+    <line x1="650" y1="245" x2="650" y2="308" marker-end="url(#ah)"></line>
+  </g>
+  <g class="fragment" data-fragment-index="10">
+    <path d="M 600,245 Q 420,262 272,310" marker-end="url(#ah)"></path>
+    <path d="M 700,245 Q 880,262 1028,310" marker-end="url(#ah)"></path>
+  </g>
+</svg>
+<div class="node" style="left: 650px; top: 22px; font-size: 1.15em;">
+<p>Neural LM</p>
+</div>
+<div class="node" style="left: 650px; top: 165px;">
+<div class="r-stack">
+<div class="fragment fade-out" data-fragment-index="1">
+<p><span class="emoji">❓</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<p><span class="emoji">🧠❓</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<p><span class="emoji">🤖❓</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<p><span class="emoji">🦜❓</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+<p><span class="emoji">💻❓</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="5">
+<p><span class="emoji">🗺️❓</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="6">
+<p><span class="emoji"><span class="math inline">\(f\)</span>❗</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="7">
+<p><span style="visibility: hidden">Computable</span><br>Function<br> <span class="small"><span class="math inline">\(f\colon \mathbb{R}^n \overset{f_1}{\longrightarrow} \mathbb{R}^{n_1} \overset{f_2}{\longrightarrow}\cdots \overset{f_K}{\longrightarrow} \mathbb{R}^{n_K} \overset{g}{\longrightarrow}\mathbb{R}^m\)</span></span></p>
+</div>
+<div class="fragment" data-fragment-index="8">
+<p><span class="alert">Computable</span><br>Function<br> <span class="small"><span class="math inline">\(f\colon \mathbb{R}^n \overset{f_1}{\longrightarrow} \mathbb{R}^{n_1} \overset{f_2}{\longrightarrow}\cdots \overset{f_K}{\longrightarrow} \mathbb{R}^{n_K} \overset{g}{\longrightarrow}\mathbb{R}^m\)</span></span></p>
+</div>
+</div>
+</div>
+<div class="node fragment" data-fragment-index="9" style="left: 650px; top: 375px;">
+<p>Turing<br>Machine<br><span class="cite"><span class="citation" data-cites="turing1936oncomputablenumbers">(<a href="#/references" role="doc-biblioref" onclick="">Turing, 1937</a>)</span></span></p>
+</div>
+<div class="node fragment" data-fragment-index="10" style="left: 230px; top: 375px;">
+<p>Recursive<br>Function<br><span class="cite"><span class="citation" data-cites="godel1934onundecidablepropositions">(<a href="#/references" role="doc-biblioref" onclick="">Gödel, 1934/1986</a>)</span></span></p>
+</div>
+<div class="node fragment" data-fragment-index="10" style="left: 1070px; top: 375px;">
+<p><span class="fragment highlight-red" data-fragment-index="12">Lambda<br>Term<br><span class="cite"><span class="citation" data-cites="church1936anunsolvableproblem">(<a href="#/references" role="doc-biblioref" onclick="">Church, 1936</a>)</span></span></span></p>
+</div>
+<div class="node alert fragment" data-fragment-index="11" style="left: 440px; top: 375px; font-size: 1.6em;">
+<p><span class="math inline">\(\Longleftrightarrow\)</span></p>
+</div>
+<div class="node alert fragment" data-fragment-index="11" style="left: 860px; top: 375px; font-size: 1.6em;">
+<p><span class="math inline">\(\Longleftrightarrow\)</span></p>
+</div>
+<div class="node fragment" data-fragment-index="13" style="left: 650px; top: 535px;">
+<p><img data-src="media/turing_machine.svg" width="250"> <span class="cite muted">credit: <a href="https://commons.wikimedia.org/w/index.php?curid=10740952">Nynexman4464</a></span></p>
+</div>
+<div class="node alert fragment" data-fragment-index="13" style="left: 1070px; top: 520px; font-size: 1.1em;">
+<p><span class="math inline">\(\lambda m . \lambda n . \lambda f . \lambda x . m f ( n f x)\)</span></p>
+</div>
+</div>
+</section>
+<section id="empirical-evaluation" class="slide level2 center">
+<h2>Empirical evaluation</h2>
+<div class="p-line p-pair">
+<p><span class="math inline">\(P := {\color{blue}{\lambda m . \lambda n . \lambda f . \lambda x . m f ( n f x)}}\)</span><br> <span class="fragment" data-fragment-index="3"><span class="math inline">\(P' := {\color{#00a0c0}{\lambda r . \lambda s .\lambda f . \lambda x . f(f(f(f(fx))))}}\)</span></span></p>
+</div>
+<div class="columns vcenter">
+<div class="column numerals" style="width:34%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(0\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\(\lambda f . \lambda x . x\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(1\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\(\lambda f . \lambda x . fx\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(2\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\({\color{orange}{\lambda f . \lambda x . f(fx)}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(3\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\({\color{green}{\lambda f . \lambda x . f(f(fx))}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(4\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\(\lambda f . \lambda x . f(f(f(fx)))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(5\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\({\color{red}{\lambda f . \lambda x . f(f(f(f(fx))))}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><span class="math inline">\(\ldots\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(n\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\(\lambda f . \lambda x .\underbrace{f(\ldots(f}_{n \text{ times}}x)\ldots)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:66%;">
+<div class="reduction fragment" data-fragment-index="1">
+<div class="r-stack">
+<div class="fragment fade-out" data-fragment-index="3">
+<p><span class="math inline">\({\color{blue}{\lambda m . \lambda n . \lambda f . \lambda x . m f ( n f x)}}\,{\color{orange}{(\lambda f . \lambda x . f(fx))}}\,{\color{green}{(\lambda f . \lambda x . f(f(fx)))}}\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="3">
+<p><span class="math inline">\({\color{#00a0c0}{\lambda r . \lambda s .\lambda f . \lambda x . f(f(f(f(fx))))}}\,{\color{orange}{(\lambda f . \lambda x . f(fx))}}\,{\color{green}{(\lambda f . \lambda x . f(f(fx)))}}\)</span></p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2">
+<p><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span></p>
+<p><span class="math inline">\({\color{red}{\lambda f . \lambda x . f(f(f(f(fx))))}}\)</span></p>
+</div>
+</div>
+</div></div>
+</section>
+<section id="empirical-interpretability" class="slide level2 center">
+<h2>Empirical interpretability</h2>
+<!-- P' is kept, unseen, so that P stays where it is on the slide before. -->
+<div class="p-line p-pair">
+<p><span class="math inline">\(P :={\color{blue}{\lambda m . \lambda n . \lambda f . \lambda x . m f ( n f x)}}\)</span><br> <span style="visibility: hidden;"><span class="math inline">\(P' := {\color{#00a0c0}{\lambda r . \lambda s .\lambda f . \lambda x . f(f(f(f(fx))))}}\)</span></span></p>
+</div>
+<div class="columns vcenter">
+<div class="column numerals" style="width:34%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(0\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\(\lambda f . \lambda x . x\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(1\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\(\lambda f . \lambda x . fx\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(2\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\({\color{orange}{\lambda f . \lambda x . f(fx)}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(3\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\({\color{green}{\lambda f . \lambda x . f(f(fx))}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(4\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\(\lambda f . \lambda x . f(f(f(fx)))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(5\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\({\color{red}{\lambda f . \lambda x . f(f(f(f(fx))))}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><span class="math inline">\(\ldots\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(n\)</span>:</td>
+<td style="text-align: left;"><span class="math inline">\(\lambda f . \lambda x .\underbrace{f(\ldots(f}_{n \text{ times}}x)\ldots)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:66%;">
+<div class="reduction">
+<p><span class="math inline">\({\color{blue}{\lambda m . \lambda n . \lambda f . \lambda x . m f ( n f x)}}\,{\color{orange}{(\lambda g . \lambda y . g(gy))}}\,{\color{green}{(\lambda h . \lambda z . h(h(hz)))}}\)</span></p>
+<div class="r-stack">
+<div class="fragment fade-out" data-fragment-index="1">
+<p><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span><br><span class="down"><span class="math inline">\(\rightsquigarrow\)</span></span></p>
+</div>
+<div class="fragment steps" data-fragment-index="1">
+<p><span class="math inline">\({\color{blue}{\lambda n . \lambda f . \lambda x . {\color{orange}{(\lambda g . \lambda y . g(gy))}}\, f\, (n f x)}}\,{\color{green}{(\lambda h . \lambda z . h(h(hz)))}}\)</span></p>
+<p><span class="math inline">\({\color{blue}{\lambda f . \lambda x . {\color{orange}{(\lambda g . \lambda y . g(gy))}}\, f\, ({\color{green}{(\lambda h . \lambda z . h(h(hz)))}}\, f x)}}\)</span></p>
+<p><span class="math inline">\({\color{blue}{\lambda f . \lambda x . {\color{orange}{(\lambda y . {\color{blue}{f}}({\color{blue}{f}}y))}}\, ({\color{green}{(\lambda h . \lambda z . h(h(hz)))}}\, f x)}}\)</span></p>
+<p><span class="math inline">\({\color{blue}{\lambda f . \lambda x . {\color{orange}{(\lambda y . {\color{blue}{f}}({\color{blue}{f}}y))}}\, ({\color{green}{(\lambda z . {\color{blue}{f}}({\color{blue}{f}}({\color{blue}{f}}z)))}}\, x)}}\)</span></p>
+<p><span class="math inline">\({\color{blue}{\lambda f . \lambda x . {\color{orange}{(\lambda y . {\color{blue}{f}}({\color{blue}{f}}y))}}\, (f(f(fx)))}}\)</span></p>
+</div>
+</div>
+<p><span class="math inline">\({\color{red}{\lambda f . \lambda x . f(f(f(f(fx))))}}\)</span></p>
+</div>
+</div></div>
+</section>
+<section id="empirical-interpretability-1" class="slide level2 center">
+<h2>Empirical interpretability</h2>
+<!-- The term \lambdaterm of Material/lambdaterm.tex (generated by
+     church_add_noise.ipynb, SIZE=101, SEED=24): a program computing the
+     addition of Church numerals, with spurious +k/-k terms. -->
+<div class="lambdaterm"><span class="lambdaterm-def">P :=</span> λm. λn. (λd. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d)))) ((λc. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c)))) ((λb. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) b)))) ((λd. (λs. λz. s (s z)) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d) ((λc. (λs. λz. s (s z)) (λp. λs. λz. s (p s z)) c) ((λa. (λs. λz. s (s (s (s z)))) (λp. λs. λz. s (p s z)) a) ((λe. (λs. λz. s z) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) e) ((λd. (λs. λz. s (s (s z))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d) ((λa. (λs. λz. s (s z)) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) a) ((λa. λs. λz. s (a s z)) ((λe. (λs. λz. s (s (s (s z)))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) e) ((λb. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) b)) ((λb. (λs. λz. s z) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) b) ((λf. λs. λz. s (s (s (s (f s z))))) ((λb. (λs. λz. s z) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) b) ((λd. (λs. λz. s z) (λp. λs. λz. s (p s z)) d) ((λb. λs. λz. s (s (b s z))) ((λc. λs. λz. s (s (s (s (c s z))))) ((λf. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) f)))) ((λd. (λs. λz. s (s (s z))) (λp. λs. λz. s (p s z)) d) ((λc. λs. λz. s (s (s (s (c s z))))) ((λb. λs. λz. s (b s z)) ((λf. (λs. λz. s z) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) f) ((λb. (λs. λz. s (s (s z))) (λp. λs. λz. s (p s z)) b) ((λf. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) f)) ((λc. λs. λz. s (s (c s z))) ((λf. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) f) ((λe. λs. λz. s (s (e s z))) ((λd. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d) ((λb. (λs. λz. s (s z)) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) b) ((λd. λs. λz. s (s (s (d s z)))) ((λf. λs. λz. s (f s z)) ((λe. (λs. λz. s (s (s z))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) e) ((λb. (λs. λz. s (s z)) (λp. λs. λz. s (p s z)) b) ((λf. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) f))) ((λd. λs. λz. s (s (d s z))) ((λc. (λs. λz. s z) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c) ((λb. λs. λz. s (s (s (b s z)))) ((λe. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) e)) ((λc. (λs. λz. s (s (s (s z)))) (λp. λs. λz. s (p s z)) c) (λs. λz. (λa. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) a)))) ((λc. (λs. λz. s (s (s (s z)))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c) ((λa. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) a)))) ((λa. (λs. λz. s (s (s (s z)))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) a) ((λa. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) a)))) ((λa. λs. λz. s (s (s (s (a s z))))) ((λb. λs. λz. s (s (s (b s z)))) ((λd. λs. λz. s (s (s (d s z)))) ((λe. λs. λz. s (s (e s z))) ((λb. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) b))) ((λa. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) a)))) ((λd. (λs. λz. s (s (s z))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d) ((λd. λs. λz. s (s (s (s (d s z))))) ((λc. λs. λz. s (s (s (s (c s z))))) ((λf. (λs. λz. s (s z)) (λp. λs. λz. s (p s z)) f) ((λd. (λs. λz. s (s (s (s z)))) (λp. λs. λz. s (p s z)) d) ((λc. (λs. λz. s (s (s (s z)))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c) ((λd. (λs. λz. s (s (s (s z)))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d) ((λf. (λs. λz. s (s z)) (λp. λs. λz. s (p s z)) f) ((λc. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c) ((λe. λs. λz. s (s (e s z))) ((λf. λs. λz. s (s (s (f s z)))) ((λb. (λs. λz. s (s (s (s z)))) (λp. λs. λz. s (p s z)) b) ((λc. (λs. λz. s (s z)) (λp. λs. λz. s (p s z)) c) m))))))))))))))))))))))) s ((λb. (λs. λz. s (s (s (s z)))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) b) ((λd. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d)))) ((λa. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) a)) ((λd. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d) ((λc. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c))) ((λc. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c))) ((λe. (λs. λz. s (s (s z))) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) e) ((λb. (λs. λz. s (s (s (s z)))) (λp. λs. λz. s (p s z)) b) ((λe. (λs. λz. s z) (λp. λs. λz. s (p s z)) e) ((λe. (λs. λz. s z) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) e) ((λa. λs. λz. s (a s z)) ((λc. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c))) ((λb. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) b) ((λe. (λs. λz. s (s z)) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) e) ((λc. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c) ((λe. λs. λz. s (e s z)) ((λa. λs. λz. s (s (a s z))) ((λb. λs. λz. s (s (s (s (b s z))))) ((λd. (λs. λz. s (s z)) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d) ((λc. (λs. λz. s (s z)) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c) ((λd. (λs. λz. s (s z)) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) d) ((λa. (λs. λz. s z) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) a) ((λc. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) c))) ((λb. (λs. λz. s (s z)) (λp. λs. λz. s (p s z)) b) ((λb. (λs. λz. s (s z)) (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) b) ((λc. (λs. λz. s (s (s z))) (λp. λs. λz. s (p s z)) c) ((λa. λs. λz. s (s (s (a s z)))) ((λd. (λs. λz. s (s (s (s z)))) (λp. λs. λz. s (p s z)) d) ((λb. (λs. λz. s (s (s (s z)))) (λp. λs. λz. s (p s z)) b) ((λc. (λs. λz. s z) (λp. λs. λz. s (p s z)) c) ((λd. λs. λz. s (d s z)) ((λc. (λs. λz. s (s (s (s z)))) (λp. λs. λz. s (p s z)) c) ((λa. λs. λz. s (s (s (a s z)))) ((λf. (λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) ((λp. λg. λx. p (λu. λw. w (u g)) (λy. x) (λy. y)) f))) ((λb. λs. λz. s (s (s (b s z)))) ((λa. λs. λz. s (a s z)) ((λd. λs. λz. s (d s z)) n)))))))))))))))))))))))))))))))))))) s z)))))))))))))))))))))))))))))))))))))))))</div>
+</section>
+<section id="the-implicit-structure-of-data" class="slide level2 center">
+<h2>The implicit structure of data</h2>
+<div id="isd" style="width: 1300px; margin: 0 auto;">
+
+</div>
+<div id="isd-0">
+
+</div>
+<div id="isd-1" class="fragment" data-fragment-index="1">
+
+</div>
+<div id="isd-2" class="fragment" data-fragment-index="2">
+
+</div>
+<div id="isd-3" class="fragment" data-fragment-index="3">
+
+</div>
+<div id="isd-4" class="fragment" data-fragment-index="4">
+
+</div>
+<div id="isd-5" class="fragment" data-fragment-index="5">
+
+</div>
+<div id="isd-6" class="fragment" data-fragment-index="6">
+
+</div>
+<div id="isd-7" class="fragment" data-fragment-index="7">
+
+</div>
+<script src="res/d3.v7.9.0.min.js"></script>
+<script src="res/flow_diagram.js"></script>
+<script>
+// The TikZ picture of the Basel deck (slides/implicitstructure_fr.tex), at
+// its coordinates, the nodes placed by their labels, where the edges attach,
+// so that the upper and the lower paths mirror each other about the
+// program, their bent black edges sixths of circles bowing outwards, clear
+// of the input and the output. The program and its input and output come
+// with the slide; then, one click each, the classical case: the formal
+// specification the program implements, the structure it is defined over,
+// the theory the structure formalizes, with the example of "Formal
+// specification", addition (its formulas LaTeX's, res/formulas). Then the
+// translation example, in place of it all at once; machine learning, where
+// the task is given as data and the rest becomes a question; the structure
+// inferred from the data; and what it affords, formal explanation and
+// theoretical interpretation.
+{
+  const step = document.querySelector("#isd-0");
+  const slide = step.closest("section");
+  new MutationObserver(() =>
+    step.classList.toggle("visible", slide.classList.contains("present")))
+    .observe(slide, { attributes: true, attributeFilter: ["class"] });
+}
+{
+  const orange = "#ff8000", teal = "#008080", red = "red";
+  const question = (stage, until) =>
+    ({ text: "?", color: red, size: 2, bold: true, stage, until });
+  // The arithmetic example, then the translation one, at step 5.
+  const arithmetic = (line) => ({ color: orange, ...line, until: 5 });
+  const translation = (line) => ({ color: orange, ...line, stage: 5, until: 6 });
+  flowDiagram("#isd", {
+    nodes: [
+      { id: "program", at: [4.5, 0.25], text: "Program",
+        box: true, funnels: true, minWidth: 2.5, minHeight: 0.9 },
+      { id: "input", at: [4.5, 2.7], attach: "all", title: "Input", mono: true,
+        lines: [[arithmetic({ text: "2,3" }),
+                 { text: "Solo una cosa...", color: orange, stage: 5 }]] },
+      { id: "output", at: [4.5, -2.2], title: "Output", mono: true,
+        lines: [[arithmetic({ text: "5" }),
+                 { text: "One thing alone...", color: orange, stage: 5 }]] },
+      // { id: "specification", at: [2.175, 2.25], anchor: "edges east", stage: 2,
+      { id: "specification", at: [1.175, 2.25], anchor: "edges east", stage: 2,
+        title: "Formal specification",
+        lines: [[arithmetic({ src: "media/addition_spec.svg", width: 2.964, height: 1.046 }),
+                 translation({ text: "Transducer" }), question(6, 8)]] },
+      { id: "structure", at: [-4.5, 2.25], anchor: "edges", stage: 3, title: "Structure", alertAt: 7,
+        lines: [[arithmetic({ src: "media/peano_structure.svg", width: 0.707, height: 0.365 }),
+                 translation({ text: "Grammar" }), question(6, 7)]] },
+      { id: "theory", at: [-8.5, 1.2], anchor: "edges", stage: 4, title: "Theory",
+        lines: [[arithmetic({ text: "Arithmetic" }), translation({ text: "Linguistics" }),
+                 question(6, 8)]] },
+      { id: "task", at: [-8.5, -0.476], anchor: "edges", attach: "all", stage: 6, text: "“Task”",
+        lines: [{ text: "Translate", color: teal }] },
+      { id: "data", at: [-4.5, -1.75], anchor: "edges", stage: 6, title: "Data", alertAt: 7,
+        color: teal, size: 0.8,
+        lines: ["(*i*_1, *o*_1)", "(*i*_2, *o*_2)", "⋯", "(*i*_{*n*}, *o*_{*n*})"] },
+      { id: "learning", at: [1.175, -1.75], anchor: "edges east", stage: 6, title: "Learning model",
+        color: teal, size: 0.8,
+        lines: ["Loss function", "Architecture", "Hyperparameters", "⋯"] },
+    ],
+    edges: [
+      { from: "input", to: "program" },
+      { from: "program", to: "output" },
+      { from: "specification", to: "program", bend: 30, fromAt: "east", toAt: 155, stage: 2 },
+      { from: "structure", to: "specification", stage: 3 },
+      { from: "theory", to: "structure", bend: 20, fromAt: "north east", toAt: "west", stage: 4 },
+      { from: "task", to: "data", bend: -20, fromAt: "south east", toAt: "west", stage: 6 },
+      { from: "data", to: "learning", stage: 6 },
+      { from: "learning", to: "program", bend: -30, fromAt: "east", toAt: 205, stage: 6 },
+      { from: "data", to: "structure", style: "double", color: red, stage: 7 },
+      { from: "structure", to: "specification", bend: -50, style: "dashed",
+        color: red, stage: 8,
+        label: "Formal\nexplanation", labelBelow: 10 },
+      { from: "specification", to: "program", bend: -30, in: 180, style: "dashed",
+        color: red, stage: 8 },
+      { from: "structure", to: "theory", bend: 20, style: "dashed",
+        color: red, stage: 8,
+        label: "Theoretical\ninterpretation", labelBelow: 10 },
+      { from: "theory", to: "task", style: "dashed", color: red, stage: 8 },
+    ],
+  }, ["#isd-0", "#isd-1", "#isd-2", "#isd-3", "#isd-4", "#isd-5", "#isd-6", "#isd-7"]);
+}
+</script>
+</section></section>
+<section>
+<section id="formalization-can-inform-a-theoretical-critique" class="title-slide slide level1 center">
+<h1>5. Formalization can inform a theoretical critique</h1>
+<div class="sections">
+<ul>
+<li><span class="shaded">1. The critique of AI is ineffectual</span></li>
+<li><span class="shaded">2. The contemporary critical matrix is broken</span></li>
+<li><span class="shaded">3. Critique has been dogmatic about formalization</span></li>
+<li><span class="shaded">4. Formalization can ground an epistemological critique</span></li>
+<li><span>5. Formalization can inform a theoretical critique</span></li>
+<li><span class="shaded">6. Formalism is a realization, not a betrayal, of critique</span></li>
+<li><span class="shaded">7. Conclusions: Formalism and arbitrariness</span></li>
+</ul>
+</div>
+</section>
+<section id="formal-explainability" class="slide level2 center">
+<h2>Formal explainability</h2>
+<div id="fe" style="width: 1300px; margin: 0 auto;">
+
+</div>
+<div id="fe-0">
+
+</div>
+<div id="fe-1" class="fragment">
+
+</div>
+<div id="fe-2" class="fragment">
+
+</div>
+<div id="fe-3" class="fragment">
+
+</div>
+<div style="display: none;">
+<p><span id="fe-cite-tokenization"><span class="citation" data-cites="sennrich2016neuralmachine">(<a href="#/references" role="doc-biblioref" onclick="">Sennrich et al., 2016</a>)</span></span> <span id="fe-cite-embedding"><span class="citation" data-cites="mikolov2013distributedrepresentations">(<a href="#/references" role="doc-biblioref" onclick="">Mikolov et al., 2013</a>)</span></span> <span id="fe-cite-attention"><span class="citation" data-cites="vaswani2017attention">(<a href="#/references" role="doc-biblioref" onclick="">Vaswani et al., 2017</a>)</span></span></p>
+</div>
+<script src="res/d3.v7.9.0.min.js"></script>
+<script src="res/flow_diagram.js"></script>
+<script>
+// The Venice deck's "Formal Explainability", at its coordinates: the text
+// goes through tokenization, which gives its tokens; then, one click each,
+// the tokens through embedding and the vectors through attention, each
+// giving its picture; the last click keeps only the tokens going into the
+// embedding, as on the next slide. The arrows that end in a picture end at
+// an empty node, where the Venice ones did; those from one box to the next
+// are TikZ's `out=270, in=90, looseness=1.5`. As in TikZ, the arrows that
+// go into or across a picture are drawn over it. The citations are the ones
+// Quarto formats, above.
+{
+  const step = document.querySelector("#fe-0");
+  const slide = step.closest("section");
+  new MutationObserver(() =>
+    step.classList.toggle("visible", slide.classList.contains("present")))
+    .observe(slide, { attributes: true, attributeFilter: ["class"] });
+}
+{
+  const cite = (id) => document.getElementById(id)?.textContent.trim() ?? "";
+  const box = (id, x, title, stage, until) => ({
+    id, at: [x, 0.8], title, stage, until,
+    lines: [{ text: cite(`fe-cite-${id}`), size: 0.7 }],
+    box: true, funnels: true, minWidth: 4, minHeight: 2 });
+  const source = (id, at, url, stage, until) =>
+    ({ id, at, stage, until, lines: [{ text: `(${url})`, size: 0.55 }] });
+  const target = (id, at, stage, until) => ({ id, at, stage, until, lines: [""] });
+  flowDiagram("#fe", {
+    nodes: [
+      { id: "input", at: [-5, 3.2], until: 4, mono: true, size: 0.55,
+        lines: [{ text: "Epistemology of Machine Learning", bold: true },
+                { text: "Distributional Language Models", bold: true }] },
+      box("tokenization", -5, "Tokenization", 1, 4),
+      box("embedding", 0, "Embedding", 2),
+      box("attention", 5, "Attention", 3, 4),
+      { id: "tokens", at: [-5, -2.07],
+        image: { src: "media/llm_tokenization.png", width: 4.5, height: 0.765 } },
+      source("tokens-url", [-5, -2.62], "https://tiktokenizer.vercel.app"),
+      { id: "vectors", at: [0, -2.22], stage: 2,
+        image: { src: "media/llm_embedding.png", width: 5, height: 3.063 } },
+      source("vectors-url", [0, -3.92], "https://projector.tensorflow.org", 2),
+      target("vectors-in", [0, -1.92], 2, 3),
+      { id: "heads", at: [5, -2.31], stage: 3, until: 4,
+        image: { src: "media/llm_attention.png", width: 4.5, height: 3.243 } },
+      source("heads-url", [5, -4.1], "https://github.com/jessevig/bertviz", 3, 4),
+      target("heads-in", [5, -1.17], 3, 4),
+    ],
+    edges: [
+      { from: "input", to: "tokenization", until: 4 },
+      { from: "tokenization", to: "tokens", until: 2 },
+      { from: "tokenization", to: "embedding", out: 270, in: 90, looseness: 1.5,
+        stage: 2, until: 4 },
+      { from: "embedding", to: "vectors-in", over: true, stage: 2, until: 3 },
+      { from: "embedding", to: "attention", out: 270, in: 90, looseness: 1.5,
+        over: true, stage: 3, until: 4 },
+      { from: "attention", to: "heads-in", over: true, stage: 3, until: 4 },
+      { from: "tokens", to: "embedding", out: 90, in: 90, looseness: 0.75,
+        stage: 4 },
+    ],
+  }, ["#fe-0", "#fe-1", "#fe-2", "#fe-3"]);
+}
+</script>
+</section>
+<section id="the-structure-of-embeddings" class="slide level2 center">
+<h2>The structure of embeddings</h2>
+<div id="emb" style="width: 1300px; margin: 0 auto;">
+
+</div>
+<div id="emb-0">
+
+</div>
+<script src="res/d3.v7.9.0.min.js"></script>
+<script src="res/flow_diagram.js"></script>
+<script>
+// The TikZ picture of the Basel deck (slides/embeddingstructure2.tex), at
+// its coordinates, drawn as "The implicit structure of data": the units go
+// into the embedding, which gives their vectors; the data go through the
+// network to the embedding; the structure is the question. The vectors are
+// the Plotly figure itself, live (it can be turned), under the embedding
+// rather than at (5.65, -5), where the picture left the slide: its page
+// lays it out at 1000 by 1000 px after a margin of 8, and `view` cuts off
+// the empty band above the cube, not the sides, which the cube needs when
+// it turns. The data's edge is TikZ's `bend right=25, in=200`, whose
+// `in`, made relative by `bend`, counts from the line between the nodes
+// (15°): 215° here. Everything comes with the slide.
+{
+  const step = document.querySelector("#emb-0");
+  const slide = step.closest("section");
+  new MutationObserver(() =>
+    step.classList.toggle("visible", slide.classList.contains("present")))
+    .observe(slide, { attributes: true, attributeFilter: ["class"] });
+}
+flowDiagram("#emb", {
+  nodes: [
+    { id: "embedding", at: [7, 0], title: "Embedding",
+      box: true, funnels: true, minWidth: 4.4, minHeight: 2.4 },
+    { id: "units", at: [7, 2.63], attach: "all", mono: true, size: .7,
+      lines: ["{-,/,0,1,2,...,8,9,=,", "a,b,c,...,w,x,y,z,é}"] },
+    // { id: "vectors", at: [5.45, -2.405],
+    { id: "vectors", at: [7.45, -5],
+      image: { src: "media/w2v_scratch.png",
+              //  width: 4, height: 3.36 } },
+               width: 7, height: 6.36 } },
+    { id: "data", at: [-11.25, -6], attach: "all", title: "Data",
+      image: { src: "media/wikipedia_globe.png", width: 4.3, height: 3.9 } },
+    { id: "network", at: [-2.25, -6],
+      image: { src: "media/ann.png", width: 4.6, height: 4.17 } },
+    { id: "structure", at: [-11.25, 3], title: "Structure",
+      lines: [{ text: "?", color: "red", size: 2, bold: true }] },
+  ],
+  edges: [
+    { from: "units", to: "embedding" },
+    { from: "data", to: "embedding", bend: -25, in: 215 },
+  ],
+}, ["#emb-0"], {fontSize: 58});
+</script>
+</section>
+<section id="word2vec-explained-levy2014implicitfactorization" class="slide level2 center">
+<h2>word2vec explained <span class="citation" data-cites="levy2014implicitfactorization">(<a href="#/references" role="doc-biblioref" onclick="">Levy &amp; Goldberg, 2014</a>)</span></h2>
+<div class="formula">
+<p><span class="math inline">\(\ell = \sum\limits_{w\in V_w} \sum\limits_{c\in V_c} \#(w,c) \left(\log \sigma (\vec{w} \cdot \vec{c} ) + k \cdot \mathbb{E}_{c_N \sim P_D} [\log \sigma(-\vec{w}\cdot \vec{c}_N)]\right)\)</span></p>
+</div>
+<div class="formula fragment">
+<p><span class="math inline">\(\dfrac{\partial \ell }{\partial (\vec{w} \cdot \vec{c})} = 0 \quad\text{when}\quad \vec{w} \cdot \vec{c} = \log \left(\dfrac{\#(w,c) \cdot |D|}{\#(w)\cdot \#(c)}\right) - \log k\)</span></p>
+</div>
+<div class="formula fragment">
+<p><span class="math inline">\(\vec{w} \cdot \vec{c} = {\color{#ff3333}{\mathrm{PMI}(w,c)}} - \log k\)</span></p>
+</div>
+<div class="center fragment">
+<p>word2vec performs an <span class="alert">implicit</span>, <span class="alert">low-dimensional</span> <span class="alert">factorization</span> of a <span class="alert">pointwise mutual information</span> <span class="alert">word-context</span> <span class="alert">matrix</span></p>
+</div>
+<div class="center fragment">
+<p>The <span class="alert">Singular Value Decomposition (SVD)</span> provides an <span class="alert">exact solution</span> to this problem</p>
+</div>
+</section>
+<section id="example-characters-in-wikipedia" class="slide level2 center">
+<h2>Example: characters in Wikipedia</h2>
+<div class="center small">
+<p><span class="math inline">\(\color{red}{W} = \{\texttt{-},\texttt{/},\texttt{0},\texttt{1},\texttt{2},\texttt{3},\texttt{4},\texttt{5},\texttt{6},\texttt{7},\texttt{8},\texttt{9},\texttt{=},\texttt{a},\texttt{b},\texttt{c},\ldots,\texttt{w},\texttt{x},\texttt{y},\texttt{z},\texttt{é}\}\)</span><br> <span class="math inline">\(\color{blue}{C} = W \times W = \{\texttt{(-,-)},\texttt{(-,/)},\texttt{(-,0)},\ldots,\texttt{(é,z)},\texttt{(é,é)}\}\)</span></p>
+</div>
+<div class="columns vcenter" style="margin-top: -1em;">
+<div class="column" style="width:30%;">
+<div class="center" style="font-size: 1em;">
+<p><span class="math inline">\(\begin{aligned} M_{\color{red}{w}\color{blue}{c}} &amp;= \mathrm{pmi}(\color{red}{w},\color{blue}{c})\\ &amp;= \log \frac{p(\color{red}{w},\color{blue}{c})}{p(\color{red}{w})\,p(\color{blue}{c})} \end{aligned}\)</span></p>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="center">
+<p><img data-src="media/example_pmi_norm.svg" height="600"></p>
+</div>
+</div></div>
+</section>
+<section id="svd-of-a-pmi-matrix" class="slide level2 center">
+<h2>SVD of a PMI matrix</h2>
+<div class="svd-three">
+<div>
+<p><span class="math inline">\(U\)</span></p>
+<p><img data-src="media/svd_U.png"></p>
+</div>
+<div>
+<p><span class="math inline">\(\Sigma\)</span></p>
+<p><img data-src="media/svd_s.png"></p>
+</div>
+<div>
+<p><span class="math inline">\(V^T\)</span></p>
+<p><img data-src="media/svd_Vh.png"></p>
+</div>
+</div>
+</section>
+<section id="truncate" class="slide level2 center">
+<h2>Truncate</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="r-stack truncate">
+<div class="fragment fade-out" data-fragment-index="1">
+<p><span class="huge"><span class="math inline">\(U \times \Sigma\)</span></span></p>
+<p><img data-src="media/svd_Us.png" height="560"> <!-- ![](media/svd_Us.png) --></p>
+</div>
+<div class="fragment" data-fragment-index="1">
+<p><span class="huge"><span class="math inline">\(\hat{U} \times \hat{\Sigma}\)</span></span></p>
+<p><img data-src="media/svd_Us_trunc.png" height="560"></p>
+</div>
+</div>
+</div><div class="column" style="width:70%;">
+
+</div></div>
+</section>
+<section id="embed" class="slide level2 center">
+<h2>Embed</h2>
+<div class="columns vcenter">
+<div class="column" style="width:20%;">
+<div class="truncate">
+<p><span class="huge"><span class="math inline">\(\hat{U} \times \hat{\Sigma}\)</span></span></p>
+<p><img data-src="media/svd_Us_trunc.png" height="540"></p>
+</div>
+</div><div class="column" style="width:80%;">
+<iframe class="live" src="media/example_svd_3D.html" height="640">
+</iframe>
+</div></div>
+</section>
+<section id="the-structure-of-embeddings-1" class="slide level2 center">
+<h2>The structure of embeddings</h2>
+<div id="emb2" style="width: 1300px; margin: 0 auto;">
+
+</div>
+<div id="emb2-0">
+
+</div>
+<div id="emb2-1" class="fragment">
+
+</div>
+<script src="res/d3.v7.9.0.min.js"></script>
+<script src="res/flow_diagram.js"></script>
+<script>
+// "The structure of embeddings" again, once the embedding has been
+// computed (the Venice deck's slide at its second step): the SVD takes the
+// place of the network, and the plot of its embedding that of word2vec's;
+// the structure is still the question. Laid out as the first one.
+{
+  const step = document.querySelector("#emb2-0");
+  const slide = step.closest("section");
+  new MutationObserver(() =>
+    step.classList.toggle("visible", slide.classList.contains("present")))
+    .observe(slide, { attributes: true, attributeFilter: ["class"] });
+}
+flowDiagram("#emb2", {
+  nodes: [
+    { id: "embedding", at: [7, 0], title: "Embedding",
+      box: true, funnels: true, minWidth: 4.4, minHeight: 2.4 },
+    { id: "units", at: [7, 2.63], attach: "all", mono: true, size: .7,
+      lines: ["{-,/,0,1,2,...,8,9,=,", "a,b,c,...,w,x,y,z,é}"] },
+    { id: "vectors", at: [7.45, -5], until: 2,
+      image: { src: "media/w2v_scratch.png", width: 7, height: 6.36 } },
+    { id: "svd-vectors", at: [7.45, -5.5], stage: 2,
+      image: { src: "media/example_svd_3D.png", width: 7, height: 6.36 } },
+    { id: "data", at: [-11.25, -6], attach: "all", title: "Data",
+      image: { src: "media/wikipedia_globe.png", width: 4.3, height: 3.9 } },
+    { id: "network", at: [-2.25, -6], until: 2,
+      image: { src: "media/ann.png", width: 4.6, height: 4.17 } },
+    { id: "svd", at: [-2.25, -6], stage: 2, lines: ["SVD"],
+      image: { src: "media/svd_trio.png", width: 8, height: 3, first: true } },
+    { id: "structure", at: [-11.25, 3], title: "Structure",
+      lines: [{ text: "?", color: "red", size: 2, bold: true }] },
+  ],
+  edges: [
+    { from: "units", to: "embedding" },
+    { from: "data", to: "embedding", bend: -25, in: 215 },
+  ],
+}, ["#emb2-0", "#emb2-1"], { fontSize: 58 });
+</script>
+</section>
+<section id="but-why" class="slide level2 center">
+<h2>But why?</h2>
+<div class="center">
+<p><img data-src="media/goldberg_quote.png" style="width:78.0%"></p>
+</div>
+<div class="source">
+<p><span class="citation" data-cites="goldberg2014word2vecexplained">(<a href="#/references" role="doc-biblioref" onclick="">Goldberg &amp; Levy, 2014</a>)</span></p>
+</div>
+</section>
+<section id="embeddings-as-functions-over-sets" class="slide level2 center">
+<h2>Embeddings as functions over sets</h2>
+<div class="center small">
+<p><span class="math inline">\(\color{red}{W} = \{\texttt{-},\texttt{/},\texttt{0},\texttt{1},\texttt{2},\texttt{3},\texttt{4},\texttt{5},\texttt{6},\texttt{7},\texttt{8},\texttt{9},\texttt{=},\texttt{a},\texttt{b},\texttt{c},\ldots,\texttt{w},\texttt{x},\texttt{y},\texttt{z},\texttt{é}\}\)</span><br> <span class="math inline">\(\color{blue}{C} = W \times W = \{\texttt{(-,-)},\texttt{(-,/)},\texttt{(-,0)},\ldots,\texttt{(é,z)},\texttt{(é,é)}\}\)</span></p>
+</div>
+<div class="columns vcenter" style="margin-top: -1em;">
+<div class="column" style="width:40%;">
+<p><span class="math display">\[\begin{aligned} M \colon {\color{red}{W}} \times {\color{blue}{C}} &amp;\to \mathbb{R}\\ ({\color{red}{w}},{\color{blue}{c}}) &amp;\mapsto \mathrm{pmi}({\color{red}{w}},{\color{blue}{c}}) \end{aligned}\]</span></p>
+<div class="fragment" data-fragment-index="1">
+<p><span class="math display">\[\begin{aligned} M_w \colon {\color{red}{W}} &amp;\to \mathbb{R}^{\color{blue}{C}}\\ {\color{red}{w}} &amp;\mapsto {\color{blue}{M(w,-)}} \end{aligned}\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<p><span class="math display">\[\begin{aligned} M_c \colon {\color{blue}{C}} &amp;\to \mathbb{R}^{\color{red}{W}}\\ {\color{blue}{c}} &amp;\mapsto {\color{red}{M(-,c)}} \end{aligned}\]</span></p>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="r-stack">
+<!-- ![](media/pmi_mult.png){.fragment .fade-out fragment-index=3 height="440px"} -->
+<p><img data-src="media/example_pmi_norm.svg" class="fragment fade-out" data-fragment-index="3" height="600"></p>
+<div class="fragment" data-fragment-index="3">
+<div class="r-stack">
+<p><img data-src="media/cd_sets_base.svg" height="287"></p>
+<p><img data-src="media/cd_sets_incl.svg" class="fragment" data-fragment-index="4" height="287"></p>
+<p><img data-src="media/cd_sets_adj.svg" class="fragment" data-fragment-index="5" height="287"></p>
+</div>
+<div class="fragment" data-fragment-index="5">
+<p><span class="math inline">\(M^* \colon \mathbb{R}^{\color{red}{W}} \to \mathbb{R}^{\color{blue}{C}}\)</span><br> <span class="math inline">\(M_* \colon \mathbb{R}^{\color{blue}{C}} \to \mathbb{R}^{\color{red}{W}}\)</span></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="embeddings-as-functions-over-sets-1" class="slide level2 center">
+<h2>Embeddings as functions over sets</h2>
+<div class="columns vcenter">
+<div class="column" style="width:40%;">
+<div style="text-align: center;">
+<p><span class="math inline">\({\color{red}{M_* M^*}} \colon \mathbb{R}^{\color{red}{W}} \to \mathbb{R}^{\color{red}{W}}\)</span></p>
+<div class="fragment" data-fragment-index="1">
+<p><span class="math inline">\({\color{blue}{M^* M_*}} \colon \mathbb{R}^{\color{blue}{C}} \to \mathbb{R}^{\color{blue}{C}}\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<p><span class="math display">\[\begin{aligned} \{{\color{red}{u_1}}, \ldots, {\color{red}{u_m}}\} &amp;\subset \mathbb{R}^{\color{red}{W}}\\ \{{\color{blue}{v_1}}, \ldots, {\color{blue}{v_n}}\} &amp;\subset \mathbb{R}^{\color{blue}{C}}\\ \{\lambda_1, \ldots, \lambda_{\min(m,n)}&amp;, 0, \ldots, 0\} \end{aligned}\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="4">
+<p><span class="math inline">\({\color{red}{M_* M^* u_i}} = \lambda_i {\color{red}{u_i}}\)</span><br> <span class="math inline">\({\color{blue}{M^* M_* v_i}} = \lambda_i {\color{blue}{v_i}}\)</span></p>
+<p>The <span class="math inline">\({\color{red}{u_i}}\)</span> and <span class="math inline">\({\color{blue}{v_i}}\)</span> are (linear)<br><span class="alert">fixed points</span>!</p>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="r-stack">
+<p><img data-src="media/cd_sets_base.svg" height="287"></p>
+<p><img data-src="media/cd_sets_incl.svg" height="287"></p>
+<p><img data-src="media/cd_sets_adj_red.svg" class="fragment fade-out" data-fragment-index="1" height="287"></p>
+<p><img data-src="media/cd_sets_adj_blue.svg" class="fragment fade-in-then-out" data-fragment-index="1" height="287"></p>
+<p><img data-src="media/cd_sets_adj.svg" class="fragment" data-fragment-index="2" height="287"></p>
+</div>
+<div class="fragment" data-fragment-index="3">
+<p><span class="math display">\[M = U\Sigma V^T \qquad \begin{aligned} U &amp;:= [{\color{red}{u_1}}, \ldots, {\color{red}{u_m}}]\\ V &amp;:= [{\color{blue}{v_1}}, \ldots, {\color{blue}{v_n}}]\\ \Sigma &amp;:= \left[\begin{smallmatrix} \sqrt{\lambda_1} &amp; \cdots &amp; 0 \\ \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; \cdots &amp; \sqrt{\lambda_r} \end{smallmatrix}\right] \end{aligned}\]</span></p>
+</div>
+</div></div>
+</section>
+<section id="m_-m-as-a-covariance-matrix" class="slide level2 center">
+<h2><span class="math inline">\(M_* M^*\)</span> as a covariance matrix</h2>
+<div class="covariance">
+<div>
+
+</div>
+<div>
+<p><img data-src="media/pmi_mult_T.png" width="492"></p>
+<p><span class="name"><span class="math inline">\(M^*\)</span></span></p>
+</div>
+<div>
+<p><img data-src="media/pmi_mult.png" height="470"></p>
+<p><span class="name"><span class="math inline">\(M_*\)</span></span></p>
+</div>
+<div>
+<p><img data-src="media/MMt.png" height="470"></p>
+<p><span class="name"><span class="math inline">\({\color{red}{M_* M^*}}\)</span></span></p>
+</div>
+</div>
+</section>
+<section id="eigenvectors-as-fixed-points" class="slide level2 center">
+<h2>Eigenvectors as fixed points</h2>
+<div class="center" style="font-size: 1.3em;">
+<p><span class="math inline">\({\color{red}{M_* M^* u}} = \lambda {\color{red}{u}}\)</span></p>
+</div>
+<div class="fixed-point">
+<p><img data-src="media/MMt.png" height="520"> <span class="math inline">\(\times\)</span> <img data-src="media/svd_Us_vec.png" height="500"> <span class="math inline">\(=\)</span> <span style="font-size: 0.8em;"><span class="math inline">\(\begin{bmatrix} \lambda_1 &amp; \lambda_2 &amp; \lambda_3 \end{bmatrix}\)</span></span> <img data-src="media/svd_Us_vec.png" height="500"></p>
+</div>
+</section>
+<section id="eigenvectors-linear-fixed-points" class="slide level2 center">
+<h2>Eigenvectors (linear fixed points)</h2>
+<div class="center">
+<p><img data-src="media/eigenvectors.gif" height="620"></p>
+</div>
+<div class="credits">
+<p>(credits: Jacopo Bertolotti, CC0<br>
+via Wikimedia Commons)</p>
+</div>
+</section>
+<section id="embedding-dimensions-as-fixed-points" class="slide level2 center">
+<h2>Embedding dimensions as fixed points</h2>
+<div class="r-stack">
+<p><img data-src="media/w2v_vector.png" class="fragment fade-out" data-fragment-index="1" width="1250"></p>
+<div class="fragment" data-fragment-index="1">
+<p><img data-src="media/w2v_matrix.png" width="940"></p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<div class="diagram" style="width: 940px; font-size: 1em;">
+<p><img data-src="media/w2v_matrix_col.png" width="940"></p>
+<svg class="arrows" viewbox="0 0 940 652">
+  <g class="red">
+    <path d="M 440,612 C 380,612 334,612 334,575" marker-end="url(#ah-red)"></path>
+  </g>
+</svg>
+<div class="node alert" style="left: 520px; top: 612px; font-size: 0.8em;">
+<p>fixed point!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="chladni-figures" class="slide level2 center">
+<h2>Chladni figures</h2>
+<div class="columns vcenter">
+<div class="column" style="width:24%;">
+<p><img data-src="media/nietzsche1875.jpg" style="width:100.0%"></p>
+</div><div class="column" style="width:74%;">
+<div class="quote">
+<p>“One can conceive of a profoundly <span class="alert">deaf</span> human being who has never experienced sound or music; just as such a person will gaze in astonishment at the <span class="alert">Chladnian sound-figures in sand</span>, find their cause in the vibration of a string, and swear that <span class="alert">he must now know what men call sound</span> — this is precisely what happens to all of us with <span class="alert">language</span>.”</p>
+</div>
+<div class="source">
+<p><span class="citation" data-cites="nietzsche1873ontruth">(<a href="#/references" role="doc-biblioref" onclick="">Nietzsche, 1873</a>)</span></p>
+</div>
+</div></div>
+</section>
+<section id="chladni-figures-1" class="slide level2 video-slide center">
+<h2>Chladni figures</h2>
+<div class="center">
+<video data-autoplay="" loop="" src="media/chladni.mp4" poster="media/chladni_poster.jpg" style="height: 620px"></video>
+</div>
+</section>
+<section id="structural-features" class="slide level2 center">
+<h2>Structural features</h2>
+<div class="features">
+<p>Eigenvectors of <span class="math inline">\({\color{red}{M_* M^*}}\)</span>:</p>
+<p><img data-src="media/eig_v_full.png"></p>
+<p>Eigenvalues of <span class="math inline">\({\color{red}{M_* M^*}}\)</span> and <span class="math inline">\({\color{blue}{M^* M_*}}\)</span>:</p>
+<p><img data-src="media/eig_w.png" class="eigw"></p>
+<p>Eigenvectors of <span class="math inline">\({\color{blue}{M^* M_*}}\)</span>:</p>
+<p><img data-src="media/eig_v_c.png"></p>
+</div>
+</section>
+<section id="words" class="slide level2 center">
+<h2>Words</h2>
+<div class="center">
+<p><img data-src="media/words_top_svd.png" width="1300"></p>
+</div>
+</section>
+<section id="the-structure-of-embeddings-2" class="slide level2 center">
+<h2>The structure of embeddings</h2>
+<div id="emb3" style="width: 1300px; margin: 0 auto;">
+
+</div>
+<div id="emb3-0">
+
+</div>
+<div id="emb3-1" class="fragment">
+
+</div>
+<div id="emb3-2" class="fragment">
+
+</div>
+<script src="res/d3.v7.9.0.min.js"></script>
+<script src="res/flow_diagram.js"></script>
+<script>
+// "The structure of embeddings" once more, the structure found (the Venice
+// deck's slide of "The categories behind the structure"): the square of
+// "Embeddings as functions over sets", between the data and the structure,
+// gives the eigenvectors, under "Structure", as "The implicit structure of
+// data" gives its structure (a red double arrow). Then the SVD gives way
+// to the profunctor and the square to that of categories, and the
+// structure is the question again. Laid out as the first one; the squares
+// and the profunctor are LaTeX's (res/formulas), their lettering as large
+// as the units'. The red arrow goes straight up from the square: it comes
+// into the rows at 194.4°, which, from their centre, points under it.
+{
+  const step = document.querySelector("#emb3-0");
+  const slide = step.closest("section");
+  new MutationObserver(() =>
+    step.classList.toggle("visible", slide.classList.contains("present")))
+    .observe(slide, { attributes: true, attributeFilter: ["class"] });
+}
+flowDiagram("#emb3", {
+  nodes: [
+    { id: "embedding", at: [7, 0], title: "Embedding",
+      box: true, funnels: true, minWidth: 4.4, minHeight: 2.4 },
+    { id: "units", at: [7, 2.63], attach: "all", mono: true, size: .7,
+      lines: ["{-,/,0,1,2,...,8,9,=,", "a,b,c,...,w,x,y,z,é}"] },
+    { id: "vectors", at: [7.45, -5.5],
+      image: { src: "media/example_svd_3D.png", width: 7, height: 6.36 } },
+    { id: "data", at: [-11.25, -6], attach: "all", title: "Data",
+      image: { src: "media/wikipedia_globe.png", width: 4.3, height: 3.9 } },
+    { id: "svd", at: [-2.25, -6], until: 3, lines: ["SVD"],
+      image: { src: "media/svd_trio.png", width: 8, height: 3, first: true } },
+    { id: "profunctor", at: [-2.25, -6], stage: 3, fill: "white",
+      image: { src: "media/profunctor_set.svg", width: 6.47, height: 0.875 } },
+    { id: "square", at: [-9, -1], stage:2, until: 3,
+      image: { src: "media/cd_sets.svg", width: 4.35, height: 3.41 } },
+    { id: "categories", at: [-8, -1], stage: 3,
+      image: { src: "media/cd_categories.svg", width: 6.1, height: 3.66 } },
+    { id: "structure", at: [-11.25, 3], title: "Structure",
+      lines: [[{ text: "?", color: "red", size: 2, bold: true, until: 2 },
+               { text: "?", color: "red", size: 2, bold: true, stage: 3 }]] },
+    { id: "rows", at: [-6.4, 2.55], stage:2, until: 3,
+      image: { src: "media/eig_v_trim.png", width: 15, height: 3.153 } },
+  ],
+  edges: [
+    { from: "units", to: "embedding" },
+    { from: "data", to: "embedding", bend: -25, in: 215 },
+    {from: "data", to: "rows", fromAt: "north", toAt: 200.3,
+      style: "double", color: "red", stage:2},
+  ],
+}, ["#emb3-0", "#emb3-1","#emb3-2"], { fontSize: 58 });
+</script>
+</section>
+<section id="profunctor-and-nucleus-structures" class="slide level2 center">
+<h2>Profunctor and nucleus structures</h2>
+<div id="prof" style="width: 1300px; margin: 0 auto;">
+
+</div>
+<div id="prof-0">
+
+</div>
+<div id="prof-1" class="fragment">
+
+</div>
+<div id="prof-2" class="fragment">
+
+</div>
+<div id="prof-3" class="fragment">
+
+</div>
+<div id="prof-4" class="fragment">
+
+</div>
+<div id="prof-5" class="fragment">
+
+</div>
+<div style="display: none;">
+<p><span id="prof-cite-nucleus"><span class="citation" data-cites="gastaldi2026projectivemetricgeometrytropical">(<a href="#/references" role="doc-biblioref" onclick="">Gastaldi et al., 2026b</a>)</span></span> <span id="prof-cite-types"><span class="citation" data-cites="gastaldi2021calculusoflanguage gastaldi2026calculusoftypes">(<a href="#/references" role="doc-biblioref" onclick="">Gastaldi et al., 2026a</a>; <a href="#/references" role="doc-biblioref" onclick="">Gastaldi &amp; Pellissier, 2021</a>)</span></span></p>
+</div>
+<script src="res/d3.v7.9.0.min.js"></script>
+<script src="res/flow_diagram.js"></script>
+<script>
+// The Venice deck's "Nucleus and types", enriched over R-bar, drawn as
+// "The implicit structure of data": term, context and measure make the
+// profunctor, which gives the adjunction; its nucleus M_*M^* takes the
+// cube of all the pairs to the nucleus (red, as the structure that the
+// adjunction gives), and its other side gives the types; the two are tied.
+// The formulas are LaTeX's (res/formulas), as large as on the slide's
+// former version; the citations are the ones Quarto formats, above. Term
+// and measure come into the profunctor at 150° and 30°, over its letters
+// rather than at its corners.
+{
+  const step = document.querySelector("#prof-0");
+  const slide = step.closest("section");
+  new MutationObserver(() =>
+    step.classList.toggle("visible", slide.classList.contains("present")))
+    .observe(slide, { attributes: true, attributeFilter: ["class"] });
+}
+{
+  const teal = "#008080";
+  const cite = (id) => document.getElementById(id)?.textContent.trim() ?? "";
+  flowDiagram("#prof", {
+    nodes: [
+      { id: "profunctor", at: [0, -1.5625],
+        image: { src: "media/profunctor_rbar.svg", width: 4.66, height: 0.805 } },
+      { id: "term", at: [-2.75, 0.25], until: 3,
+        lines: [{ text: "*term*", color: teal }] },
+      { id: "context", at: [0, 0.25], until: 3,
+        lines: [{ text: "*context*", color: teal }] },
+      { id: "measure", at: [2.75, 0.25], until: 3, lines: ["measure"] },
+      { id: "implies", at: [0, -2.34], stage: 2,
+        image: { src: "media/downarrow.svg", width: 0.567, height: 0.788 } },
+      { id: "adjunction", at: [0, -3.15], stage: 2,
+        image: { src: "media/adjunction_rbar.svg", width: 7.96, height: 0.858 } },
+      { id: "before", at: [-4.375, 1.69], stage: 3, until: 5,
+        image: { src: "media/nucleus4d_pre.png", width: 4, height: 4.25} },
+      { id: "after", at: [-4.375, 1.69], stage: 4, until: 6,
+        image: { src: "media/nucleus4d_post.png", width: 4.5, height: 4.25 } },
+      { id: "nucleus-map", at: [0.19, 2.125], stage: 3, until: 5,
+        image: { src: "media/nucleus_op.svg", width: 2.045, height: 0.561 } },
+      { id: "nucleus", at: [-4.375, 1.3], stage: 5,
+        image: { src: "media/nucleus4d.png", width: 4.5, height: 4.25, first: true },
+        lines: [{ text: cite("prof-cite-nucleus"), size: 0.5 }] },
+      { id: "types", at: [4.5, 1.3], stage: 6,
+        image: { src: "media/types_tree.png", width: 2.66, height: 3.125, first: true },
+        lines: cite("prof-cite-types").split(/(?<=;) /)
+          .map((text) => ({ text, size: 0.5 })) },
+    ],
+    edges: [
+      { from: "term", to: "profunctor", fromAt: "south", toAt: 165, bend: -20,
+        until: 3 },
+      { from: "context", to: "profunctor", until: 3 },
+      { from: "measure", to: "profunctor", fromAt: "south", toAt: 15, bend: 20,
+        until: 3 },
+      { from: "before", to: "after", stage: 3, until: 5, fromAt: "east", toAt: "north", bend: -110, },
+      { from: "adjunction", to: "nucleus", fromAt: "west", toAt: 180, bend: 40,
+        // out: 180, in: 270,
+        style: "double", color: "red", stage: 5 },
+      { from: "adjunction", to: "types", fromAt: "east", toAt: 0, bend: -40,
+        style: "double", color: "red", stage: 6 },
+      { from: "types", to: "nucleus", both: true, color: "red", stage: 6 },
+    ],
+  }, ["#prof-0", "#prof-1", "#prof-2", "#prof-3", "#prof-4", "#prof-5"],
+  { fontSize: 44 });
+}
+</script>
+</section>
+<section id="critical-effects-of-a-formal-perspective" class="slide level2 center">
+<h2>Critical effects of a formal perspective</h2>
+<div class="center">
+<p><span class="alert"><strong>Anti-dogmaticity</strong></span><br> AI performance does not rely on any substantive property of the models,<br>but only on the formal objects that models implicitly approximate</p>
+<p><span class="alert"><strong>Conditionality</strong></span><br> Those formal objects establish the strict conditions<br>under which models can operate</p>
+<p><span class="alert"><strong>Limitedness</strong></span><br> A formal analysis of current implicit conditions can show in which way they are limited,<br>and how they can be changed</p>
+</div>
+</section></section>
+<section>
+<section id="formalism-is-a-realization-not-a-betrayal-of-critique" class="title-slide slide level1 center">
+<h1>6. Formalism is a realization, not a betrayal, of critique</h1>
+<div class="sections">
+<ul>
+<li><span class="shaded">1. The critique of AI is ineffectual</span></li>
+<li><span class="shaded">2. The contemporary critical matrix is broken</span></li>
+<li><span class="shaded">3. Critique has been dogmatic about formalization</span></li>
+<li><span class="shaded">4. Formalization can ground an epistemological critique</span></li>
+<li><span class="shaded">5. Formalization can inform a theoretical critique</span></li>
+<li><span>6. Formalism is a realization, not a betrayal, of critique</span></li>
+<li><span class="shaded">7. Conclusions: Formalism and arbitrariness</span></li>
+</ul>
+</div>
+</section>
+<section id="lévi-strauss-and-the-mathematics-of-man" class="slide level2 center">
+<h2>Lévi-Strauss and the mathematics of man</h2>
+<div class="columns vcenter">
+<div class="column" style="width:68%;">
+<div class="quote small">
+<p>In the past, the great difficulty has arisen from the <span class="alert">qualitative nature of our studies</span>. If they were to be treated quantitatively, it was either necessary to do a certain amount of juggling with them or to simplify to an excessive degree. Today, however, there are <span class="alert">many branches of mathematics</span> — <span class="alert">set theory, group theory, topology, etc.</span> — which are concerned with establishing exact relationships between classes of individuals distinguished from one another by <span class="alert">discontinuous values</span>, and this very discontinuity is <span class="alert">one of the essential characteristics of qualitative sets</span> in relation to one another and was <span class="alert">the feature in which their alleged ‘incommensurability’, ‘inexpressibility’, etc., consisted</span>.</p>
+</div>
+<div class="source">
+<p><span class="citation" data-cites="levistrauss1854mathematicsofman">Lévi-Strauss (<a href="#/references" role="doc-biblioref" onclick="">1954</a>)</span></p>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="center">
+<p><img data-src="media/book_mathematicsofman.png" style="width:90.0%"> <img data-src="media/author_levistrauss.jpg" height="380"></p>
+</div>
+</div></div>
+</section>
+<section id="the-power-of-the-formal" class="slide level2 center">
+<h2>The power of the formal</h2>
+<div class="columns three-blocks">
+<div class="column" style="width:32%;">
+<div class="block">
+<div class="block-title">
+<p><span class="citation" data-cites="derrida1968grammatology">Derrida (<a href="#/references" role="doc-biblioref" onclick="">1976</a>)</span></p>
+</div>
+<div class="center">
+<p><img data-src="media/author_derrida.jpg" class="author"></p>
+</div>
+<div class="small">
+<p>“Within cultures practicing so-called phonetic writing, <span class="alert">mathematics is not just an enclave</span>. […] This enclave is also the place where the practice of scientific language <span class="alert">challenges</span> intrinsically and with increasing profundity <span class="alert">the ideal of phonetic writing</span> and all its implicit metaphysics (<span class="alert">metaphysics <em>itself</em></span>)”</p>
+</div>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="block">
+<div class="block-title">
+<p><span class="citation" data-cites="deleuze1968differenceandrepetition">Deleuze (<a href="#/references" role="doc-biblioref" onclick="">1994</a>)</span></p>
+</div>
+<div class="center">
+<p><img data-src="media/author_deleuze.jpg" class="author"></p>
+</div>
+<div class="small">
+<p>“<span class="alert">Differential calculus</span> is not the unimaginative calculus of the utilitarian, the crude arithmetic calculus which subordinates thought to other things or to other ends, but <span class="alert">the algebra of pure thought</span>, <span class="alert">the superior irony of problems themselves</span> — <span class="alert">the only calculus ‘beyond good and evil’</span>”</p>
+</div>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="block">
+<div class="block-title">
+<p><span class="citation" data-cites="foucault1969archaeologyofknowledge">Foucault (<a href="#/references" role="doc-biblioref" onclick="">2002</a>)</span></p>
+</div>
+<div class="center">
+<p><img data-src="media/author_foucault.jpg" class="author"></p>
+</div>
+<div class="small">
+<p>“There is perhaps <span class="alert">only one science</span> for which one can neither distinguish these different thresholds, nor describe a similar set of shifts: <span class="alert">mathematics</span> […] Hence the fact that their establishment is both <span class="alert">so enigmatic</span> […] and <span class="alert">so valid</span> […]”</p>
+</div>
+</div>
+</div></div>
+</section>
+<section id="structuralism-is-a-formalism" class="slide level2 center">
+<h2>Structuralism is a formalism</h2>
+<div class="quote small">
+<p>I am not sure how interesting it would be to attempt a redefinition of what was known, at the time, as <span class="alert">structuralism</span>. It would be interesting, though, to <span class="alert">study formal thought</span> and the <span class="alert">different kinds of formalism</span> that ran through Western culture during the 20th century. When we consider the extraordinary destiny of formalism in painting or formal research in music, or the importance of formalism in the analysis of folklore and legend, in architecture, or its application to theoretical thought, it is clear that <span class="alert">formalism in general has probably been one of the strongest and at the same time one of the most varied currents in 20th century Europe</span>. And it is worth pointing out that formalism has very often been associated with political situations and even political movements. It would certainly be worth examining more closely the relation of Russian formalism to the Russian Revolution. […] <span class="alert">That is how I would situate the structuralist phenomenon: by relocating it within the broad current of formal thought</span>.</p>
+</div>
+<div class="source">
+<p><span class="citation" data-cites="foucault1983structuralismpoststructuralism">(Foucault, in <a href="#/references" role="doc-biblioref" onclick="">Raulet, 1983</a>)</span></p>
+</div>
+</section>
+<section id="russian-formalism-as-a-generative-device" class="slide level2 center">
+<h2>Russian formalism as a generative device</h2>
+<div class="columns vcenter">
+<div class="column" style="width:68%;">
+<div class="quote">
+<p>“The purpose of art, then, is to lead us to a knowledge of a thing through the organ of sight instead of recognition. <span class="alert">By ‘enstranging’ objects and complicating form, the device of art makes perception long and ‘laborious’</span>. The perceptual process in art has a purpose all its own and ought to be extended to the fullest. <em>Art is a means of experiencing the process of creativity. The artifact itself is quite unimportant.</em>”</p>
+</div>
+<div class="source">
+<p><span class="citation" data-cites="shklovsky1990artasdevice">Shklovsky (<a href="#/references" role="doc-biblioref" onclick="">1990</a>)</span></p>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="center">
+<p><img data-src="media/book_zangezi.jpg" style="width:85.0%"></p>
+<p><span class="cite"><span class="citation" data-cites="khlebnikov1922zangezi">(<a href="#/references" role="doc-biblioref" onclick="">Khlebnikov, 1922</a>)</span></span></p>
+</div>
+</div></div>
+</section>
+<section id="bourdieu-in-embedding-space" class="slide level2 center">
+<h2>Bourdieu in embedding space</h2>
+<div class="columns vcenter">
+<div class="column" style="width:38%;">
+<div class="quote small">
+<p>“If it is true […] that, first, <span class="alert">the dominant class</span> constitutes a relatively autonomous space whose <span class="alert">structure</span> is defined by the <span class="alert">distribution</span> of economic and cultural capital among its members, […] then <span class="alert">these structures should be found</span> in the space of life-styles […]. <span class="alert">To endeavour to establish this</span>, the whole set of survey data was subjected to <span class="alert">correspondence analysis</span>.”</p>
+</div>
+</div><div class="column" style="width:62%;">
+<p><img data-src="media/struct_bourdieu.jpg" height="560"></p>
+<div class="source">
+<p><span class="citation" data-cites="bourdieu1979distinction">(<a href="#/references" role="doc-biblioref" onclick="">Bourdieu, 1979</a>)</span></p>
+</div>
+</div></div>
+</section>
+<section id="structuralist-mathematics" class="slide level2 center">
+<h2>Structuralist mathematics</h2>
+<div class="columns vcenter">
+<div class="column" style="width:33%;">
+<div class="center">
+<p><img data-src="media/benzecri.png" height="520"></p>
+<p><span class="cite"><span class="citation" data-cites="benzecri1976codage">(<a href="#/references" role="doc-biblioref" onclick="">Benzécri, 1976</a>)</span></span></p>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="center">
+<p><img data-src="media/marcus.png" height="520"></p>
+<p><span class="cite"><span class="citation" data-cites="marcus1967introduction">(<a href="#/references" role="doc-biblioref" onclick="">Marcus, 1967</a>)</span></span></p>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="center">
+<p><img data-src="media/barbut.png" height="520"></p>
+<p><span class="cite"><span class="citation" data-cites="barbut1967mathematiques1">(<a href="#/references" role="doc-biblioref" onclick="">Barbut, 1967</a>)</span></span></p>
+</div>
+</div></div>
+</section>
+<section id="architectural-genius" class="slide level2 center">
+<h2>Architectural genius</h2>
+<div class="columns vcenter">
+<div class="column" style="width:24%;">
+<p><img data-src="media/nietzsche1875.jpg" style="width:100.0%"></p>
+</div><div class="column" style="width:74%;">
+<div class="quote">
+<p>“…all peoples have just such a <span class="alert">mathematically divided firmament of concepts</span> above them […] Here, one can certainly <span class="alert">admire humanity</span> as a mighty <span class="alert">architectural genius</span> who succeeds in erecting the infinitely complicated cathedral of concepts <span class="alert">on moving foundations</span>, or even, one might say, <span class="alert">on flowing water</span>; admittedly, in order to rest on such foundations, it has to be like a thing constructed from cobwebs, <span class="alert">so delicate</span> that it can be carried off on the waves and yet <span class="alert">so firm</span> as not to be blown apart by the wind.”</p>
+</div>
+<div class="source">
+<p><span class="citation" data-cites="nietzsche1873ontruth">(<a href="#/references" role="doc-biblioref" onclick="">Nietzsche, 1873</a>)</span></p>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="conclusions-formalism-and-arbitrariness" class="title-slide slide level1 center">
+<h1>7. Conclusions: Formalism and arbitrariness</h1>
+<div class="sections">
+<ul>
+<li><span class="shaded">1. The critique of AI is ineffectual</span></li>
+<li><span class="shaded">2. The contemporary critical matrix is broken</span></li>
+<li><span class="shaded">3. Critique has been dogmatic about formalization</span></li>
+<li><span class="shaded">4. Formalization can ground an epistemological critique</span></li>
+<li><span class="shaded">5. Formalization can inform a theoretical critique</span></li>
+<li><span class="shaded">6. Formalism is a realization, not a betrayal, of critique</span></li>
+<li><span>7. Conclusions: Formalism and arbitrariness</span></li>
+</ul>
+</div>
+</section>
+<section id="formalism-and-dogmatism" class="slide level2 center">
+<h2>Formalism and dogmatism</h2>
+<div class="objections">
+<ul>
+<li><em>After all, it was formalism that put us in this situation. Why would more formalism get us out of it?</em></li>
+<li><em>We do not want to correct AI’s formal errors, we want to exacerbate them, to see them explode in broad daylight</em></li>
+<li><em>Openness and creation come from contradiction and friction, not from consistency</em></li>
+<li><em>How would formalism not take our beloved materiality, difference, and friction from us?</em></li>
+</ul>
+</div>
+<div class="punchline fragment">
+<p>Doesn’t formalism entail a <span class="alert">risk of dogmatism</span>?</p>
+<p><span class="alert fragment">Of course!</span></p>
+<p><span class="fragment">But <span class="alert">dogmatic uses of critique</span> are of little help against it.</span></p>
+</div>
+</section>
+<section id="toward-a-critical-formalism" class="slide level2 center">
+<h2>Toward a critical formalism</h2>
+<div class="theses">
+<ul>
+<li class="fragment"><span class="alert">Arbitrary</span> does not mean random but <span class="alert">unmotivated</span></li>
+<li class="fragment">Arbitrariness does not exclude <span class="alert">necessity</span> (Saussure, Benveniste)</li>
+<li class="fragment">Necessity in language is <span class="alert">contingent</span></li>
+<li class="fragment">Regularity is the <span class="alert">mode of existence</span> of arbitrariness</li>
+<li class="fragment">As non-natural theories of regularities, formal sciences <span class="alert">guarantee</span> arbitrariness</li>
+<li class="fragment"><span class="alert">Formalization is not naturalization</span></li>
+<li class="fragment">A critical formalism calls for a <span class="alert">politics of the corpus</span></li>
+<li class="fragment">We need a <span class="alert">new alliance</span> between the formal sciences,<br>the human sciences, and the arts</li>
+</ul>
+</div>
+</section>
+<section id="reference-papers" class="slide level2 refpapers center">
+<h2>Reference papers</h2>
+<div>
+<p>Gastaldi, J. L. (2021). <span>Why Can Computers Understand Natural Language?</span> <em>Philosophy &amp; Technology</em>, <em>34</em>(1), 149–214. <a href="https://doi.org/10.1007/s13347-020-00393-9">https://doi.org/10.1007/s13347-020-00393-9</a></p>
+<div style="position:absolute;left:-10000px;top:-10000px;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+<p><span class="bibentry"><span class="citation" data-cites="gastaldi2021whycancomputers">Gastaldi (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></span></p>
+</div>
+</div>
+<div>
+<p>Gastaldi, J. L., &amp; Pellissier, L. (2021). <span class="nocase">The Calculus of Language: Explicit Representation of Emergent Linguistic Structure through Type-Theoretical Paradigms</span>. <em>Interdisciplinary Science Reviews</em>, <em>46</em>(4), 569–590. <a href="https://doi.org/10.1080/03080188.2021.1890484">https://doi.org/10.1080/03080188.2021.1890484</a></p>
+<div style="position:absolute;left:-10000px;top:-10000px;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+<p><span class="bibentry"><span class="citation" data-cites="gastaldi2021calculusoflanguage">Gastaldi &amp; Pellissier (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></span></p>
+</div>
+</div>
+<div>
+<p>Bradley, T.-D., Gastaldi, J. L., &amp; Terilla, J. (2024). <span class="nocase">The Structure of Meaning in Language: Parallel Narratives in Linear Algebra and Category Theory</span>. <em>Notices of the American Mathematical Society</em>.</p>
+<div style="position:absolute;left:-10000px;top:-10000px;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+<p><span class="bibentry"><span class="citation" data-cites="bradley2024structureofmeaning">Bradley et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></span></p>
+</div>
+</div>
+<div>
+<p>Gastaldi, J. L., Jarvis, S., Seiller, T., &amp; Terilla, J. (2026). <em>Projective metric geometry of tropical nuclei: Gap matrices, event loci, and order chambers</em>. <a href="https://arxiv.org/abs/2601.07900">https://arxiv.org/abs/2601.07900</a></p>
+<div style="position:absolute;left:-10000px;top:-10000px;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+<p><span class="bibentry"><span class="citation" data-cites="gastaldi2026projectivemetricgeometrytropical">Gastaldi et al. (<a href="#/references" role="doc-biblioref" onclick="">2026b</a>)</span></span></p>
+</div>
+</div>
+<div>
+<p>Gastaldi, J. L., Jarvis, S., Seiller, T., &amp; Terilla, J. (2026). <em>A calculus of types in isbell nuclei</em>. <a href="https://arxiv.org/abs/2606.03369">https://arxiv.org/abs/2606.03369</a></p>
+<div style="position:absolute;left:-10000px;top:-10000px;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+<p><span class="bibentry"><span class="citation" data-cites="gastaldi2026calculusoftypes">Gastaldi et al. (<a href="#/references" role="doc-biblioref" onclick="">2026a</a>)</span></span></p>
+</div>
+</div>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-barad2007meetinguniverse" class="csl-entry" role="listitem">
+Barad, K. (2007). <em>Meeting the universe halfway: Quantum physics and the entanglement of matter and meaning</em>. Duke University Press.
+</div>
+<div id="ref-barbut1967mathematiques1" class="csl-entry" role="listitem">
+Barbut, M. (1967). <em>Mathématiques et sciences humaines. Tome i: Combinatoire et algèbre</em>. Presses Universitaires de France.
+</div>
+<div id="ref-bender2021onthedangers" class="csl-entry" role="listitem">
+Bender, E. M., Gebru, T., McMillan-Major, A., &amp; Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? <em>Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</em>, 610–623. <a href="https://doi.org/10.1145/3442188.3445922">https://doi.org/10.1145/3442188.3445922</a>
+</div>
+<div id="ref-bennett2010vibrantmatter" class="csl-entry" role="listitem">
+Bennett, J. (2010). <em>Vibrant matter: A political ecology of things</em>. Duke University Press.
+</div>
+<div id="ref-benzecri1976codage" class="csl-entry" role="listitem">
+Benzécri, J.-P. (1976). Sur le codage réduit d’un vecteur de description en analyse des correspondances. <em>Les Cahiers de l’analyse Des Données</em>, <em>1</em>(2), 127–136.
+</div>
+<div id="ref-bourdieu1979distinction" class="csl-entry" role="listitem">
+Bourdieu, P. (1979). <em>La distinction. Critique sociale du jugement</em>. Les ’<span>E</span>ditions de Minuit.
+</div>
+<div id="ref-bradley2024structureofmeaning" class="csl-entry" role="listitem">
+Bradley, T.-D., Gastaldi, J. L., &amp; Terilla, J. (2024). <span class="nocase">The Structure of Meaning in Language: Parallel Narratives in Linear Algebra and Category Theory</span>. <em>Notices of the American Mathematical Society</em>.
+</div>
+<div id="ref-brooks1991intelligence" class="csl-entry" role="listitem">
+Brooks, R. A. (1991). Intelligence without representation. <em>Artificial Intelligence</em>, <em>47</em>(1–3), 139–159.
+</div>
+<div id="ref-church1936anunsolvableproblem" class="csl-entry" role="listitem">
+Church, A. (1936). An unsolvable problem of elementary number theory. <em>American Journal of Mathematics</em>, <em>58</em>(2), 345–363.
+</div>
+<div id="ref-deleuze1968differenceandrepetition" class="csl-entry" role="listitem">
+Deleuze, G. (1994). <em>Difference and repetition</em>. Columbia University Press.
+</div>
+<div id="ref-derrida1968grammatology" class="csl-entry" role="listitem">
+Derrida, J. (1976). <em>Of grammatology</em> (G. C. Spivak, Trans.). Johns Hopkins University Press.
+</div>
+<div id="ref-dreyfus1965alchemy" class="csl-entry" role="listitem">
+Dreyfus, H. L. (1965). <em>Alchemy and artificial intelligence</em> (Nos. P-3244). RAND Corporation.
+</div>
+<div id="ref-dreyfus1972whatcomputerscantdo" class="csl-entry" role="listitem">
+Dreyfus, H. L. (1972). <em>What computers can’t do: A critique of artificial reason</em>. Harper &amp; Row.
+</div>
+<div id="ref-dreyfus1988makingamind" class="csl-entry" role="listitem">
+Dreyfus, H. L., &amp; Dreyfus, S. E. (1988). Making a mind versus modeling the brain: Artificial intelligence back at a branchpoint. <em>Daedalus</em>, <em>117</em>(1), 15–43.
+</div>
+<div id="ref-foucault1969archaeologyofknowledge" class="csl-entry" role="listitem">
+Foucault, M. (2002). <em>Archaeology of knowledge</em>. Routledge.
+</div>
+<div id="ref-gastaldi2021whycancomputers" class="csl-entry" role="listitem">
+Gastaldi, J. L. (2021). <span>Why Can Computers Understand Natural Language?</span> <em>Philosophy &amp; Technology</em>, <em>34</em>(1), 149–214. <a href="https://doi.org/10.1007/s13347-020-00393-9">https://doi.org/10.1007/s13347-020-00393-9</a>
+</div>
+<div id="ref-gastaldi2026calculusoftypes" class="csl-entry" role="listitem">
+Gastaldi, J. L., Jarvis, S., Seiller, T., &amp; Terilla, J. (2026a). <em>A calculus of types in isbell nuclei</em>. <a href="https://arxiv.org/abs/2606.03369">https://arxiv.org/abs/2606.03369</a>
+</div>
+<div id="ref-gastaldi2026projectivemetricgeometrytropical" class="csl-entry" role="listitem">
+Gastaldi, J. L., Jarvis, S., Seiller, T., &amp; Terilla, J. (2026b). <em>Projective metric geometry of tropical nuclei: Gap matrices, event loci, and order chambers</em>. <a href="https://arxiv.org/abs/2601.07900">https://arxiv.org/abs/2601.07900</a>
+</div>
+<div id="ref-gastaldi2021calculusoflanguage" class="csl-entry" role="listitem">
+Gastaldi, J. L., &amp; Pellissier, L. (2021). <span class="nocase">The Calculus of Language: Explicit Representation of Emergent Linguistic Structure through Type-Theoretical Paradigms</span>. <em>Interdisciplinary Science Reviews</em>, <em>46</em>(4), 569–590. <a href="https://doi.org/10.1080/03080188.2021.1890484">https://doi.org/10.1080/03080188.2021.1890484</a>
+</div>
+<div id="ref-godel1934onundecidablepropositions" class="csl-entry" role="listitem">
+Gödel, K. (1934/1986). On undecidable propositions of formal mathematical systems. In <em>Collected works</em> (pp. 346–371). Clarendon Press Oxford University Press.
+</div>
+<div id="ref-goldberg2014word2vecexplained" class="csl-entry" role="listitem">
+Goldberg, Y., &amp; Levy, O. (2014). word2vec explained: Deriving <span>Mikolov</span> et al.’s negative-sampling word-embedding method. <em>CoRR</em>, <em>abs/1402.3722</em>.
+</div>
+<div id="ref-khlebnikov1922zangezi" class="csl-entry" role="listitem">
+Khlebnikov, V. (1922). <em>Zangezi</em>.
+</div>
+<div id="ref-kirschenbaum2023againtheory" class="csl-entry" role="listitem">
+Kirschenbaum, M. (2023). <em>Again theory: A forum on language, meaning, and intent in the time of stochastic parrot</em>. <a href="https://critinq.wordpress.com/2023/06/26/again-theory-a-forum-on-language-meaning-and-intent-in-the-time-of-stochastic-parrots/">https://critinq.wordpress.com/2023/06/26/again-theory-a-forum-on-language-meaning-and-intent-in-the-time-of-stochastic-parrots/</a>
+</div>
+<div id="ref-kocijan2023defeat" class="csl-entry" role="listitem">
+Kocijan, V., Davis, E., Lukasiewicz, T., Marcus, G., &amp; Morgenstern, L. (2023). The defeat of the <span>Winograd</span> schema challenge. <em>Artificial Intelligence</em>, <em>325</em>, 103971.
+</div>
+<div id="ref-levesque2012winograd" class="csl-entry" role="listitem">
+Levesque, H. J., Davis, E., &amp; Morgenstern, L. (2012). The <span>Winograd</span> schema challenge. <em>Proceedings of the Thirteenth International Conference on Principles of Knowledge Representation and Reasoning (KR 2012)</em>, 552–561.
+</div>
+<div id="ref-levistrauss1854mathematicsofman" class="csl-entry" role="listitem">
+Lévi-Strauss, C. (1954). The mathematics of man. <em>International Social Science Bulleting</em>, <em>VI</em>(4).
+</div>
+<div id="ref-levy2014implicitfactorization" class="csl-entry" role="listitem">
+Levy, O., &amp; Goldberg, Y. (2014). Neural word embedding as implicit matrix factorization. <em>Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2</em>, 2177–2185.
+</div>
+<div id="ref-marcus1967introduction" class="csl-entry" role="listitem">
+Marcus, S. (1967). <em>Introduction mathématique à la linguistique structurale</em>. Dunod.
+</div>
+<div id="ref-mikolov2013distributedrepresentations" class="csl-entry" role="listitem">
+Mikolov, T., Sutskever, I., Chen, K., Corrado, G., &amp; Dean, J. (2013). Distributed representations of words and phrases and their compositionality. <em>CoRR</em>, <em>abs/1310.4546</em>. <a href="https://arxiv.org/abs/1310.4546">https://arxiv.org/abs/1310.4546</a>
+</div>
+<div id="ref-nietzsche1873ontruth" class="csl-entry" role="listitem">
+Nietzsche, F. (1873). On truth and lying in a non-moral sense (R. Speirs, Trans.). In R. Geuss &amp; R. Speirs (Eds.), <em>The birth of tragedy and other writings</em> (pp. 141–153). Cambridge University Press.
+</div>
+<div id="ref-polanyi1966tacitdimension" class="csl-entry" role="listitem">
+Polanyi, M. (1966). <em>The tacit dimension</em>. Doubleday.
+</div>
+<div id="ref-foucault1983structuralismpoststructuralism" class="csl-entry" role="listitem">
+Raulet, G. (1983). Structuralism and post-structuralism: An interview with michel foucault. <em>Telos: Critical Theory of the Contemporary</em>, <em>1983</em>(55), 195–211. <a href="https://doi.org/10.3817/0383055195">https://doi.org/10.3817/0383055195</a>
+</div>
+<div id="ref-sennrich2016neuralmachine" class="csl-entry" role="listitem">
+Sennrich, R., Haddow, B., &amp; Birch, A. (2016). Neural machine translation of rare words with subword units. <em>Proceedings of the 54th Annual Meeting of the ACL</em>, 1715–1725.
+</div>
+<div id="ref-shklovsky1990artasdevice" class="csl-entry" role="listitem">
+Shklovsky, V. (1990). Art as device (B. Sher, Trans.). In <em>Theory of prose</em> (pp. 1–14). Dalkey Archive Press.
+</div>
+<div id="ref-suchman1987plans" class="csl-entry" role="listitem">
+Suchman, L. A. (1987). <em>Plans and situated actions: The problem of human-machine communication</em>. Cambridge University Press.
+</div>
+<div id="ref-turing1936oncomputablenumbers" class="csl-entry" role="listitem">
+Turing, A. (1937). <span class="nocase">On Computable Numbers, with an Application to the Entscheidungsproblem</span>. <em>Proceedings of the London Mathematical Society</em>, <em>s2-42</em>(1), 230–265. <a href="https://doi.org/10.1112/plms/s2-42.1.230">https://doi.org/10.1112/plms/s2-42.1.230</a>
+</div>
+<div id="ref-underwood2023empiricaltriumph" class="csl-entry" role="listitem">
+Underwood, T. (2023, October 15). <em>The empirical triumph of theory</em>. <a href="https://critinq.wordpress.com/2023/06/29/the-empirical-triumph-of-theory/">https://critinq.wordpress.com/2023/06/29/the-empirical-triumph-of-theory/</a>
+</div>
+<div id="ref-varela1991embodiedmind" class="csl-entry" role="listitem">
+Varela, F. J., Thompson, E., &amp; Rosch, E. (1991). <em>The embodied mind: Cognitive science and human experience</em>. MIT Press.
+</div>
+<div id="ref-vaswani2017attention" class="csl-entry" role="listitem">
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., &amp; Polosukhin, I. (2017). Attention is all you need. In I. Guyon, U. V. Luxburg, S. Bengio, H. Wallach, R. Fergus, S. Vishwanathan, &amp; R. Garnett (Eds.), <em>Advances in neural information processing systems</em> (Vol. 30). Curran Associates, Inc. <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf</a>
+</div>
+</div>
+<script>
+// While the page loads, before reveal.js starts: the slides the beamer
+// talks leave unnumbered (noframenumbering), the cover, the outlines (the
+// contents and the section slides) and the references, left out of the
+// slide count (reveal.js's data-visibility="uncounted"); then a copy of the
+// cover after the last slide, as the beamer talks end (the title slide of
+// res/title-slide.html, cloned, uncounted with it).
+{
+  const unnumbered = "#title-slide, #TOC, section.level1, #reference-papers, #references";
+  for (const slide of document.querySelectorAll(unnumbered)) {
+    slide.dataset.visibility = "uncounted";
+  }
+  const cover = document.getElementById("title-slide").cloneNode(true);
+  cover.id = "closing-slide";
+  document.querySelector(".reveal .slides").append(cover);
+}
+</script>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Gianni Gastaldi | <em>Formalization Is the Limit</em></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="Gastaldi_Slides_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="Gastaldi_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Gastaldi_Slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Gastaldi_Slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Gastaldi_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Gastaldi_Slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="Gastaldi_Slides_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Gastaldi_Slides_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Gastaldi_Slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Gastaldi_Slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1440,
+
+        height: 810,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 5.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

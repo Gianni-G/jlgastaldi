@@ -1,0 +1,27 @@
+% One formula per \variant (see build.sh): 1, the profunctor into Set; 2,
+% into R-bar; 3, the adjunction; 4, the nucleus; 5, the arrow between them;
+% 6, the specification of addition, its two conditions, and 7, the
+% structure it is defined over, the arithmetic example of "The implicit
+% structure of data", in the diagram's orange.
+\input{preamble}
+\begin{document}
+\color{ink}
+$\ifcase\variant\or
+  \C^{\op}\times\D\to\mathsf{Set}
+\or
+  \C^{\op}\times\D\to\Rbar
+\or
+  {\color{alertred}\M^*}\colon\Rbar^{\C^{\op}}\leftrightarrows(\Rbar^{\D})^{\op}\colon{\color{alertred}\M_*}
+\or
+  {\color{red}\M_*\M^*}
+\or
+  \Downarrow
+\or
+  {\color{diagramorange}\begin{gathered}
+    a+0=a\\
+    a+\mathcal{S}b=\mathcal{S}(a+b)
+  \end{gathered}}
+\or
+  {\color{diagramorange}0{,}\ \mathcal{S}}
+\fi$
+\end{document}

@@ -1,0 +1,13 @@
+<!-- A page shown live in a slide (a Plotly figure in an iframe) takes the
+     keyboard once it is clicked, and reveal.js would no longer hear the
+     keys, or the clicker, that move the slides: the keyboard is given back
+     at once, these pages needing only the mouse. -->
+<script>
+  window.addEventListener("blur", () => setTimeout(() => {
+    const frame = document.activeElement;
+    if (frame?.tagName === "IFRAME" && frame.closest(".reveal .slides")) {
+      frame.blur();
+      window.focus();
+    }
+  }));
+</script>
