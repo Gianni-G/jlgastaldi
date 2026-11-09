@@ -909,3 +909,168 @@ $mod-etapes: (
 .reveal .spaced-list li:not(:last-child) {
   margin-bottom: 1.2em !important;
 }
+.reveal .spaced-list.compact li:not(:last-child) {
+  margin-bottom: .5em !important;
+}
+.reveal .spaced-list.compact li li:not(:last-child) {
+  margin-bottom: .1em !important;
+}
+
+/* Accolade horizontale sous une formule, tracée en SVG (elle prend la couleur
+   du texte): MathJax assemble `\underbrace` à partir de morceaux de la police,
+   et les polices STIX locales du Mac la cassent.
+   `[$A \times \dots \times A$ [$n \text{ fois}$]{.sous}]{.accolade}` */
+$accolade: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M1 0 C1 5 3 5 6 5 H44 C47 5 49.5 5 50 10 C50.5 5 53 5 56 5 H94 C97 5 99 5 99 0' fill='none' stroke='black' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E";
+.reveal .accolade {
+  display: inline-flex;
+  flex-direction: column;
+  .sous {
+    font-size: .7em;
+    text-align: center;
+    &::before {
+      content: "";
+      display: block;
+      height: .6em;
+      background: currentColor;
+      mask: url("#{$accolade}") no-repeat center / 100% 100%;
+    }
+  }
+}
+
+/* Renvoi, dans le texte, à un nœud d'arbre syntaxique, dans le style du nœud:
+   `[$\neg$]{.noeud .connecteur}`, `.quantificateur`, `.egalite`, `.variable` (avec
+   `.liee` ou `.libre`),
+   `.predicat`, `.fonction`, ou `.noeud` seul pour une constante. Un contenu
+   long allonge le nœud sans changer sa hauteur. Fonds opaques, comme les nœuds
+   de l'arbre: ils ne prennent pas la couleur d'une rayure de `.striped`. */
+.reveal .noeud {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 1.5em;
+  height: 1.5em;
+  padding-inline: .3em;
+  border: 1.5px solid $lettres-navy;
+  border-radius: .75em;
+  background: #fff;
+  color: $lettres-navy;
+  line-height: 1;
+  vertical-align: middle;
+
+  &.connecteur {
+    background: $lettres-navy;
+    color: #fff;
+  }
+  &.quantificateur {
+    border-color: #5b2a86;
+    background: #5b2a86;
+    color: #fff;
+  }
+  &.egalite {
+    border-color: #0e6e7c;
+    background: #0e6e7c;
+    color: #fff;
+  }
+  &.variable {
+    border-style: dashed;
+  }
+  // Statut d'une occurrence, dans les arbres comme dans le texte
+  &.liee {
+    border-color: #5b2a86;
+    background: mix(#5b2a86, #fff, 18%);
+    color: #5b2a86;
+  }
+  &.libre {
+    border-color: $set-red;
+    background: mix($set-red, #fff, 14%);
+    color: $set-red;
+  }
+  &.predicat {
+    border-radius: .45em;
+    background: mix($lettres-yellow, #fff, 25%);
+  }
+  &.fonction {
+    border-radius: .45em;
+    background: mix($set-blue, #fff, 20%);
+  }
+}
+
+/* `::: {.striped .groupes-3}`: après la colonne des libellés, les colonnes vont
+   par groupes de trois sous un en-tête à deux niveaux. Un trait plein sépare les
+   groupes: bleu marine dans le corps, blanc sur le fond bleu marine de l'en-tête. */
+.reveal .groupes-3 {
+  th,
+  td {
+    padding-inline: .4em;
+  }
+  tbody td:nth-child(3n + 2) {
+    border-left: 3px solid $lettres-navy;
+  }
+  thead tr:first-child th:not(:first-child),
+  thead tr:nth-child(2) th:nth-child(3n + 1) {
+    border-left: 3px solid #fff;
+  }
+}
+
+/* `:::: {.arites}`: une ligne par arité, `::: {.arite}`, faite d'un nom, d'un
+   ensemble de départ (`[]{.arite-vide}` s'il n'y en a pas), d'une flèche avec
+   une notation au-dessus et un exemple au-dessous, et de l'ensemble d'arrivée.
+   Les ensembles reprennent les cercles des diagrammes (set_stages.js). */
+.reveal .arites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .45em;
+  font-size: .75em;
+  .arite > p {
+    display: grid;
+    grid-template-columns: 5em 4.6em 13em 4.6em;
+    align-items: center;
+    column-gap: .5em;
+    margin: 0;
+  }
+  .arite-nom {
+    text-align: right;
+    font-size: .8em;
+    color: #666;
+  }
+  .ensemble {
+    width: 4.6em;
+    height: 4.6em;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 3px solid $lettres-navy;
+    background: rgba($lettres-navy, .12);
+    color: $lettres-navy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+  }
+  .arite-fleche {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .arite-haut,
+  .arite-bas {
+    font-size: .85em;
+    line-height: 1.4;
+  }
+  .arite-trait {
+    position: relative;
+    height: 3px;
+    margin: .25em .5em .25em 0;
+    background: $lettres-navy;
+  }
+  .arite-trait::after {
+    content: "";
+    position: absolute;
+    right: -.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: .55em solid $lettres-navy;
+    border-block: .3em solid transparent;
+  }
+}

@@ -13,7 +13,7 @@
 //           [{key, image, x, y, width, height}]
 //                                   points labelled by an image instead,
 //                                   centred on the point's height;
-//   links   [{from, to, color, curve, dashed}]
+//   links   [{from, to, color, curve, dashed, key}]
 //                                   arrows, by key, between two items or two
 //                                   circles (the key of a set, or of a group,
 //                                   does as well); an arrow leaves past the
@@ -25,13 +25,17 @@
 //                                   that many pixels at its middle, to the left
 //                                   of the way it goes; `dashed` draws it
 //                                   broken, and it then fades in rather than
-//                                   being traced;
-//   labels  [{key, text, x, y, size, anchor, italic, color}]
+//                                   being traced; `key` names it, "from→to"
+//                                   by default — two arrows with the same ends
+//                                   but their own keys are two arrows, each
+//                                   with its colour, drawn and wiped in turn;
+//   labels  [{key, text, x, y, size, anchor, italic, color, font}]
 //                                   free text on the scene, in serif, italic
 //                                   unless said otherwise — the name of a
 //                                   bundle of arrows over them, a legend in a
 //                                   corner; keyed like the rest, so a stage can
-//                                   swap one for another, or drop it;
+//                                   swap one for another, or drop it; `font`,
+//                                   a CSS font family, replaces the serif;
 //   groups  [{key, cx, cy, r, label, color, dashed}]
 //                                   circles drawn under the points, around a
 //                                   part of a set, each labelled above itself
@@ -53,6 +57,11 @@
 //                                   group may carry its own `transform`, `{}`
 //                                   for none, and is then written where it
 //                                   really goes.
+//   together  true                  reaching this stage, what is already on
+//                                   screen moves as one block: its sets and
+//                                   groups keep the pace of the points and
+//                                   arrows, instead of the groups coming after
+//                                   the points they gather.
 //
 // In a label, "^" raises what follows and "_" lowers it — one character, or a
 // whole run between braces, as in "Σ^*", "S_V" and "F^I: L → M".
@@ -351,7 +360,7 @@ function setStages(container, stages, steps, options = {}) {
         q.y - arrowSize * Math.sin(angle + s * 0.4),
       ];
       return {
-        key: `${link.from}→${link.to}`,
+        key: link.key ?? `${link.from}→${link.to}`,
         color: link.color,
         dashed: link.dashed,
         line: bend
@@ -400,7 +409,7 @@ function setStages(container, stages, steps, options = {}) {
     .attr("text-anchor", (d) => d.anchor ?? "middle")
     .attr("dy", "0.35em")
     .attr("fill", (d) => d.color ?? navy)
-    .attr("font-family", '"Times New Roman", Times, serif')
+    .attr("font-family", (d) => d.font ?? '"Times New Roman", Times, serif')
     .attr("font-size", sized)
     .attr("font-style", (d) => (d.italic === false ? "normal" : "italic"))
     .attr("opacity", 0);
@@ -421,14 +430,21 @@ function setStages(container, stages, steps, options = {}) {
     const here = (map) => (d) => map.has(d.key);
     const to = (map) => (d) => map.get(d.key) ?? d;
 
+    // Points and arrows move at this pace. The circles keep their own — the
+    // rings after the points they gather — unless the stage is reached
+    // `together`, as one block.
+    const pace = { delay: 200, duration: 800 };
+    const together = Boolean(stages[at].together);
+
     // Each part has its own named transition, so that a later one does not cut
-    // an earlier one short.
-    const moveCircles = (layer, map, delay) => {
+    // an earlier one short. `move` times the circles as they take their place;
+    // `delay`, the tracing of those that appear.
+    const moveCircles = (layer, map, delay, move = { delay, duration: 700 }) => {
       const target = to(map);
       const staying = (selection) => selection.filter(here(map))
         .transition("move")
-        .delay(del(delay))
-        .duration(dur(700))
+        .delay(del(move.delay))
+        .duration(dur(move.duration))
         .ease(d3.easeCubicInOut);
 
       shape(staying(layer.fills), target);
@@ -438,12 +454,15 @@ function setStages(container, stages, steps, options = {}) {
         .attr("x", (d) => target(d).cx)
         .attr("y", (d) => layer.labelY(target(d)));
 
+      // A circle that goes is wiped along the outline it has on screen, which
+      // need not be the one it first had: its dash is as long as that outline.
       layer.outlines.transition("draw")
         .delay((d) => del(here(map)(d) ? delay : 0))
         .duration((d) => dur(here(map)(d) ? 900 : 400))
         .ease(d3.easeCubicInOut)
-        .attr("stroke-dashoffset", (d) =>
-          (d.dashed || here(map)(d) ? 0 : circumference(target(d))))
+        .attr("stroke-dashoffset", function (d) {
+          return d.dashed || here(map)(d) ? 0 : parseFloat(this.getAttribute("stroke-dasharray"));
+        })
         .attr("stroke-opacity", (d) => (d.dashed && !here(map)(d) ? 0 : 1));
       layer.fills.transition("fill")
         .delay((d) => del(here(map)(d) ? delay + 400 : 0))
@@ -455,12 +474,12 @@ function setStages(container, stages, steps, options = {}) {
         .attr("opacity", (d) => (here(map)(d) ? 1 : 0));
     };
 
-    moveCircles(sets, shownSet, 0);
+    moveCircles(sets, shownSet, 0, together ? pace : undefined);
 
     nodes.filter(here(shownItem))
       .transition("move")
-      .delay(del(200))
-      .duration(dur(800))
+      .delay(del(pace.delay))
+      .duration(dur(pace.duration))
       .ease(d3.easeCubicInOut)
       .attr("transform", (d) =>
         `translate(${to(shownItem)(d).x},${to(shownItem)(d).y})`);
@@ -470,14 +489,14 @@ function setStages(container, stages, steps, options = {}) {
       .attr("opacity", (d) => (here(shownItem)(d) ? 1 : 0));
 
     // The rings come last: the points have to gather inside them first.
-    moveCircles(rings, shownGroup, 900);
+    moveCircles(rings, shownGroup, 900, together ? pace : undefined);
 
     // An arrow already on screen stays whole while its two ends move; a new
     // one is traced once the points are in place.
     const moving = (selection) => selection.filter(here(shownArrow))
       .transition("move")
-      .delay(del(200))
-      .duration(dur(800))
+      .delay(del(pace.delay))
+      .duration(dur(pace.duration))
       .ease(d3.easeCubicInOut);
     moving(arrowLines).attr("d", (e) => to(shownArrow)(e).line);
     moving(arrowHeads).attr("d", (e) => to(shownArrow)(e).head);
