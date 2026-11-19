@@ -5,11 +5,18 @@ title: Juan Luis Gastaldi
 ---
 <!-- <script src="{{ 'assets/js/random-color.js' }}"></script> -->
 
-I am a philosopher of science, specialized in the philosophy of language and formal sciences (mathematics, logic, and computer science). After being a Professor in Philosophy and History of Ideas at MO.CO.ESBA (Montpellier, France) and a Marie Skłodowska-Curie Research Fellow at ETH (D-GESS), I am currently a researcher at ETH Zurich's Institute for Machine Learning (IML), where I am pursuing a second PhD in Computer Science and Natural Language Processing.
+I am a philosopher and a computer scientist, specialized in the philosophy of language and formal sciences (mathematics, logic, and computer science). After being a Professor in Philosophy and History of Ideas at MO.CO.ESBA (Montpellier, France) and a Marie Skłodowska-Curie Research Fellow at ETH (D-GESS), I am currently a researcher at ETH Zurich's Institute for Machine Learning (IML), where I am pursuing a second PhD in Computer Science and Natural Language Processing.
 
 My interests revolve around the linguistic aspects of formal sciences and the formal aspects of language and other sign systems, from a theoretical, philosophical, and historical perspective. I am also interested in the relationship between language and thought, the nature of meaning, and the possibility that a theory of language can inform both a theory of culture and a theory of science. My current research focuses on the computational and conceptual aspects of segmentation (and tokenization) and their relation to linguistic structure and meaning, at the crossroads of Computer Sciences, the Human Sciences, and AI.
 
 # News
+
+### 20/11/2026
+
+*The Structure Before the Tokens: Neural Language Models and the Renewal of the Structuralist Hypothesis.*\
+Invited talk at the conference *Relations and Elements* (FSU-HuME Joint Conference, Department of Philosophy, Università degli Studi di Milano).\
+Università degli Studi di Milano - Milan, Italy.\
+3:10 pm CET, Sala Lauree, Via Conservatorio 7.
 
 ### 29/10/2026
 
@@ -17,7 +24,7 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 Invited talk at the workshop *What Escapes the Model? The Limits of Formalisation in AI* (Immersive Arts Space, ZHdK).\
 Followed by a the public roundtable on 30/10 [*Embodied AI, Formalisation, and Human–Machine Relations*](https://www.zhdk.ch/en/event/63255){:target="_blank"} (4:00–6:00 pm CET, Immersive Arts Space).\
 Zurich University of the Arts (ZHdK) - Zurich, Switzerland.\
-3:00–5:00 pm CET, Room ZT 8.T63, Toni-Areal, Pfingstweidstrasse 96.\
+3:00 pm CET, Room ZT 8.T63, Toni-Areal, Pfingstweidstrasse 96.\
 [[Slides](assets/html/slides/gastaldi_261029_zhdk/Gastaldi_Slides.html){:target="_blank"}]
 
 ### 14/10/2026
