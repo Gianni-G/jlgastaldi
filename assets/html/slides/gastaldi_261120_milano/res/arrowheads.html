@@ -1,0 +1,18 @@
+<!-- Arrowheads for the diagrams (TikZ `->`), defined once for the whole deck
+     and referenced from each slide's svg as marker-end="url(#ah)" etc.
+     Kept in a zero-size svg outside the slides, so that the markers stay
+     renderable whichever slide is shown (included with include-before-body). -->
+<svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 L2.5,5 z" fill="black"/>
+    </marker>
+    <marker id="ah-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 L2.5,5 z" fill="red"/>
+    </marker>
+    <!-- for the 5px "double" arrows -->
+    <marker id="ah-red-double" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 L2.5,5 z" fill="red"/>
+    </marker>
+  </defs>
+</svg>

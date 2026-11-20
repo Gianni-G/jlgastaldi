@@ -16,7 +16,8 @@ My interests revolve around the linguistic aspects of formal sciences and the fo
 *The Structure Before the Tokens: Neural Language Models and the Renewal of the Structuralist Hypothesis.*\
 Invited talk at the conference *Relations and Elements* (FSU-HuME Joint Conference, Department of Philosophy, Università degli Studi di Milano).\
 Università degli Studi di Milano - Milan, Italy.\
-3:10 pm CET, Sala Lauree, Via Conservatorio 7.
+3:10 pm CET, Sala Lauree, Via Conservatorio 7.\
+[[Slides](assets/html/slides/gastaldi_261120_milano/Gastaldi_Slides.html){:target="_blank"}]
 
 ### 29/10/2026
 

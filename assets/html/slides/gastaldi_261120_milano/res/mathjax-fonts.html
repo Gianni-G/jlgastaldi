@@ -1,0 +1,15 @@
+<!-- MathJax 2 (Quarto's default for reveal.js) prefers locally installed
+     STIX fonts over its own TeX web fonts. macOS ships the old STIXGeneral
+     fonts, which set the formulas visibly heavier than on the beamer slides
+     and lack some alphabets (\mathcal{S} comes out as a box). A global
+     `MathJax` object defined before MathJax.js loads is read as its
+     configuration, so this forces the TeX web fonts everywhere. It also
+     sets the formulas at the size of the text, as LaTeX does: MathJax would
+     enlarge them until their x-height matched the text's, and Helvetica
+     Neue's is so tall that they came out 19% larger, and as much heavier. -->
+<script>
+  window.MathJax = {
+    "HTML-CSS": { availableFonts: [], preferredFont: null, webFont: "TeX",
+                  matchFontHeight: false }
+  };
+</script>

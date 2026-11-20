@@ -1,0 +1,44 @@
+% One formula per \variant (see build.sh): 1, the profunctor into Set; 2,
+% into R-bar; 3, the adjunction; 4, the nucleus; 5, the arrow between them;
+% 6, the specification of addition, its two conditions, and 7, the
+% structure it is defined over, the arithmetic example of "The implicit
+% structure of data", in the diagram's orange; 8 to 10, the profunctor
+% into Set, V and 2, the enriching category in red (\alert, "Profunctor of
+% enriched categories", after the EHESS deck), and 11, the adjunction it
+% gives into 2; 12 and 13, the profunctor into 2, then R-bar, in red
+% ("R-bar-enriched profunctors"), 2 as high as R-bar, its bar
+% included, so that the formulas, taking turns, keep their baseline.
+\input{preamble}
+\begin{document}
+\color{ink}
+$\ifcase\variant\or
+  \C^{\op}\times\D\to\mathsf{Set}
+\or
+  \C^{\op}\times\D\to\Rbar
+\or
+  {\color{alertred}\M^*}\colon\Rbar^{\C^{\op}}\leftrightarrows(\Rbar^{\D})^{\op}\colon{\color{alertred}\M_*}
+\or
+  {\color{red}\M_*\M^*}
+\or
+  \Downarrow
+\or
+  {\color{diagramorange}\begin{gathered}
+    a+0=a\\
+    a+\mathcal{S}b=\mathcal{S}(a+b)
+  \end{gathered}}
+\or
+  {\color{diagramorange}0{,}\ \mathcal{S}}
+\or
+  \C^{\op}\times\D\to{\color{alertred}\mathsf{Set}}
+\or
+  \C^{\op}\times\D\to{\color{alertred}\mathcal{V}}
+\or
+  \C^{\op}\times\D\to{\color{alertred}\mathsf{2}}
+\or
+  {\color{alertred}\M^*}\colon\mathsf{2}^{\C^{\op}}\leftrightarrows(\mathsf{2}^{\D})^{\op}\colon{\color{alertred}\M_*}
+\or
+  \C^{\op}\times\D\to{\color{alertred}\mathsf{2}}\vphantom{\Rbar}
+\or
+  \C^{\op}\times\D\to{\color{alertred}\Rbar}
+\fi$
+\end{document}
